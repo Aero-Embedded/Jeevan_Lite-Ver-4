@@ -1,0 +1,155 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+VC\+\_\+\+CMV/\+Vc\+\_\+\+Cmv.c File Reference}
+\hypertarget{_vc___cmv_8c}{}\label{_vc___cmv_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/VC\_CMV/Vc\_Cmv.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/VC\_CMV/Vc\_Cmv.c}}
+
+
+implementation of VCCMV mode.  
+
+
+{\ttfamily \#include "{}Vc\+\_\+\+Cmv.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{_vc___cmv_8c_a9c714a531d2eec983f0c74e3c6ce61a2}{Inspiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+VC\+\_\+\+CMV}} (uint16\+\_\+t Blower\+\_\+\+Signal)
+\begin{DoxyCompactList}\small\item\em Inspiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+VC\+\_\+\+CMV. This function uploads a DAC value to the DAC1 peripheral to control a blower every 2 milliseconds during inspiration time. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{_vc___cmv_8c_af4ad99a5aea7166a60ad7c02d8078163}{Expiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+VC\+\_\+\+CMV}} (uint16\+\_\+t Blower\+\_\+\+Signal, float PEEP, uint16\+\_\+t Expiratory\+\_\+\+Valve\+\_\+\+Open\+\_\+\+Time)
+\begin{DoxyCompactList}\small\item\em Expiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+VC\+\_\+\+CMV. This function uploads a DAC value to the DAC1 peripheral to control a blower every 2 milliseconds during inspiration time. \end{DoxyCompactList}\item 
+\Hypertarget{_vc___cmv_8c_a24eee624659b0f104e6356ebf0ec00d6}\label{_vc___cmv_8c_a24eee624659b0f104e6356ebf0ec00d6} 
+static void {\bfseries CHECK\+\_\+\+Flow\+\_\+\+Increment} ()
+\begin{DoxyCompactList}\small\item\em CHECK\+\_\+\+Flow\+\_\+\+Increment. This function identifies the flow achieved in the last breath cycle. \end{DoxyCompactList}\item 
+\Hypertarget{_vc___cmv_8c_af6532c345638f7d2b23bd4ce78e29173}\label{_vc___cmv_8c_af6532c345638f7d2b23bd4ce78e29173} 
+static void {\bfseries Check\+\_\+\+Flow\+\_\+\+Graph} (int8\+\_\+t flow\+\_\+rate)
+\begin{DoxyCompactList}\small\item\em Check\+\_\+\+Flow\+\_\+\+Graph. This function identifies the flow achieved in the last breath cycle using array element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_vc___cmv_8c_acc7c537216cb65805be1a07b2bfb3c48}{Vc\+\_\+\+Cmv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data}} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em Vc\+\_\+\+Cmv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data. This task is to extract the VCCMV mode variable from NRF Bluetooth. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_vc___cmv_8c_adb5642149e0a2f790a4796d40c88f043}{Vc\+\_\+\+Cmv\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Vc\+\_\+\+Cmv\+\_\+\+Task. This Task calls two function based on inspiration and expiration time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_vc___cmv_8c_a58666bb6decff49700882475287e9fe4}{VC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em VC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. This function resets variables to start an inspiration cycle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_vc___cmv_8c_a7625afbaaa8f6b9337e542a09fc17ef9}{VC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em VC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. This function resets variables to start an expiration cycle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_vc___cmv_8c_a77732e53de153a8750abe35ccc1eaf99}{Reset\+\_\+\+Blower\+\_\+\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Reset\+\_\+\+Blower\+\_\+\+Status. This function Reset the blower from abnormal breath. \end{DoxyCompactList}\item 
+\Hypertarget{_vc___cmv_8c_abe1c95e69e485850a3c2b0c601ac1130}\label{_vc___cmv_8c_abe1c95e69e485850a3c2b0c601ac1130} 
+void {\bfseries Volume\+\_\+\+Not\+\_\+\+Acheieved} ()
+\begin{DoxyCompactList}\small\item\em Volume\+\_\+\+Not\+\_\+\+Acheieved. \end{DoxyCompactList}\item 
+\Hypertarget{_vc___cmv_8c_ad8e4764770eaf63720d9b5cc0c78c689}\label{_vc___cmv_8c_ad8e4764770eaf63720d9b5cc0c78c689} 
+void {\bfseries Volume\+\_\+\+Acheieved} ()
+\begin{DoxyCompactList}\small\item\em Volume\+\_\+\+Acheieved. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_vc___cmv_8c_a71acff5fdc5af5d95f760022f76cc098}\label{_vc___cmv_8c_a71acff5fdc5af5d95f760022f76cc098} 
+uint8\+\_\+t {\bfseries Minimum\+\_\+\+Increment\+\_\+\+Limit} =3
+\begin{DoxyCompactList}\small\item\em minimum value of increment dac value. \end{DoxyCompactList}\item 
+\Hypertarget{_vc___cmv_8c_ad799b279483de107cbbf120a30397ef7}\label{_vc___cmv_8c_ad799b279483de107cbbf120a30397ef7} 
+uint8\+\_\+t {\bfseries Maximum\+\_\+\+Increment\+\_\+\+Limit} =20
+\begin{DoxyCompactList}\small\item\em maximum value of increment dac value. \end{DoxyCompactList}\item 
+\Hypertarget{_vc___cmv_8c_ab0fb057cebc606a06ba2c1bf34154f62}\label{_vc___cmv_8c_ab0fb057cebc606a06ba2c1bf34154f62} 
+uint8\+\_\+t {\bfseries Stop\+\_\+blower\+\_\+\+Performance\+\_\+\+Value} = 15
+\begin{DoxyCompactList}\small\item\em stop incrementing dac value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+implementation of VCCMV mode. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the implementation VCCMV mode variables 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_vc___cmv_8c_af4ad99a5aea7166a60ad7c02d8078163}\label{_vc___cmv_8c_af4ad99a5aea7166a60ad7c02d8078163} 
+\index{Vc\_Cmv.c@{Vc\_Cmv.c}!Expiration\_Time\_Blower\_Control\_VC\_CMV@{Expiration\_Time\_Blower\_Control\_VC\_CMV}}
+\index{Expiration\_Time\_Blower\_Control\_VC\_CMV@{Expiration\_Time\_Blower\_Control\_VC\_CMV}!Vc\_Cmv.c@{Vc\_Cmv.c}}
+\doxysubsubsection{\texorpdfstring{Expiration\_Time\_Blower\_Control\_VC\_CMV()}{Expiration\_Time\_Blower\_Control\_VC\_CMV()}}
+{\footnotesize\ttfamily static void Expiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+VC\+\_\+\+CMV (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Blower\+\_\+\+Signal,  }\item[{float}]{PEEP,  }\item[{uint16\+\_\+t}]{Expiratory\+\_\+\+Valve\+\_\+\+Open\+\_\+\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Expiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+VC\+\_\+\+CMV. This function uploads a DAC value to the DAC1 peripheral to control a blower every 2 milliseconds during inspiration time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Blower\+\_\+\+Signal} & as Pressure\+\_\+\+Mode\+\_\+blower\+\_\+control.\+BLOWER\+\_\+\+DAC\+\_\+\+VAL. \\
+\hline
+{\em PEEP} & to lock the expiratory valve in peep area. \\
+\hline
+{\em Expiratory\+\_\+\+Valve\+\_\+\+Open\+\_\+\+Time} & to control the expiratory valve lock delay. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_vc___cmv_8c_a9c714a531d2eec983f0c74e3c6ce61a2}\label{_vc___cmv_8c_a9c714a531d2eec983f0c74e3c6ce61a2} 
+\index{Vc\_Cmv.c@{Vc\_Cmv.c}!Inspiration\_Time\_Blower\_Control\_VC\_CMV@{Inspiration\_Time\_Blower\_Control\_VC\_CMV}}
+\index{Inspiration\_Time\_Blower\_Control\_VC\_CMV@{Inspiration\_Time\_Blower\_Control\_VC\_CMV}!Vc\_Cmv.c@{Vc\_Cmv.c}}
+\doxysubsubsection{\texorpdfstring{Inspiration\_Time\_Blower\_Control\_VC\_CMV()}{Inspiration\_Time\_Blower\_Control\_VC\_CMV()}}
+{\footnotesize\ttfamily static void Inspiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+VC\+\_\+\+CMV (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Blower\+\_\+\+Signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Inspiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+VC\+\_\+\+CMV. This function uploads a DAC value to the DAC1 peripheral to control a blower every 2 milliseconds during inspiration time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Blower\+\_\+\+Signal} & as Pressure\+\_\+\+Mode\+\_\+blower\+\_\+control.\+BLOWER\+\_\+\+DAC\+\_\+\+VAL. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_vc___cmv_8c_a77732e53de153a8750abe35ccc1eaf99}\label{_vc___cmv_8c_a77732e53de153a8750abe35ccc1eaf99} 
+\index{Vc\_Cmv.c@{Vc\_Cmv.c}!Reset\_Blower\_Status@{Reset\_Blower\_Status}}
+\index{Reset\_Blower\_Status@{Reset\_Blower\_Status}!Vc\_Cmv.c@{Vc\_Cmv.c}}
+\doxysubsubsection{\texorpdfstring{Reset\_Blower\_Status()}{Reset\_Blower\_Status()}}
+{\footnotesize\ttfamily void Reset\+\_\+\+Blower\+\_\+\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset\+\_\+\+Blower\+\_\+\+Status. This function Reset the blower from abnormal breath. 
+
+Reset\+\_\+\+Blower\+\_\+\+Status. \Hypertarget{_vc___cmv_8c_a7625afbaaa8f6b9337e542a09fc17ef9}\label{_vc___cmv_8c_a7625afbaaa8f6b9337e542a09fc17ef9} 
+\index{Vc\_Cmv.c@{Vc\_Cmv.c}!VC\_CMV\_Expiration\_Time\_Variables\_Reset@{VC\_CMV\_Expiration\_Time\_Variables\_Reset}}
+\index{VC\_CMV\_Expiration\_Time\_Variables\_Reset@{VC\_CMV\_Expiration\_Time\_Variables\_Reset}!Vc\_Cmv.c@{Vc\_Cmv.c}}
+\doxysubsubsection{\texorpdfstring{VC\_CMV\_Expiration\_Time\_Variables\_Reset()}{VC\_CMV\_Expiration\_Time\_Variables\_Reset()}}
+{\footnotesize\ttfamily void VC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+VC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. This function resets variables to start an expiration cycle. 
+
+VC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \Hypertarget{_vc___cmv_8c_a58666bb6decff49700882475287e9fe4}\label{_vc___cmv_8c_a58666bb6decff49700882475287e9fe4} 
+\index{Vc\_Cmv.c@{Vc\_Cmv.c}!VC\_CMV\_Inspiration\_Time\_Variables\_Reset@{VC\_CMV\_Inspiration\_Time\_Variables\_Reset}}
+\index{VC\_CMV\_Inspiration\_Time\_Variables\_Reset@{VC\_CMV\_Inspiration\_Time\_Variables\_Reset}!Vc\_Cmv.c@{Vc\_Cmv.c}}
+\doxysubsubsection{\texorpdfstring{VC\_CMV\_Inspiration\_Time\_Variables\_Reset()}{VC\_CMV\_Inspiration\_Time\_Variables\_Reset()}}
+{\footnotesize\ttfamily void VC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+VC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. This function resets variables to start an inspiration cycle. 
+
+VC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \Hypertarget{_vc___cmv_8c_acc7c537216cb65805be1a07b2bfb3c48}\label{_vc___cmv_8c_acc7c537216cb65805be1a07b2bfb3c48} 
+\index{Vc\_Cmv.c@{Vc\_Cmv.c}!Vc\_Cmv\_Mode\_Packet\_Data@{Vc\_Cmv\_Mode\_Packet\_Data}}
+\index{Vc\_Cmv\_Mode\_Packet\_Data@{Vc\_Cmv\_Mode\_Packet\_Data}!Vc\_Cmv.c@{Vc\_Cmv.c}}
+\doxysubsubsection{\texorpdfstring{Vc\_Cmv\_Mode\_Packet\_Data()}{Vc\_Cmv\_Mode\_Packet\_Data()}}
+{\footnotesize\ttfamily void Vc\+\_\+\+Cmv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}}]{Receive\+\_\+\+Graph\+\_\+\+Packet }\end{DoxyParamCaption})}
+
+
+
+Vc\+\_\+\+Cmv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data. This task is to extract the VCCMV mode variable from NRF Bluetooth. 
+
+split VC-\/\+CMV buffer from bluetooth received data .
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} & structure pointer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_vc___cmv_8c_adb5642149e0a2f790a4796d40c88f043}\label{_vc___cmv_8c_adb5642149e0a2f790a4796d40c88f043} 
+\index{Vc\_Cmv.c@{Vc\_Cmv.c}!Vc\_Cmv\_Task@{Vc\_Cmv\_Task}}
+\index{Vc\_Cmv\_Task@{Vc\_Cmv\_Task}!Vc\_Cmv.c@{Vc\_Cmv.c}}
+\doxysubsubsection{\texorpdfstring{Vc\_Cmv\_Task()}{Vc\_Cmv\_Task()}}
+{\footnotesize\ttfamily void Vc\+\_\+\+Cmv\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Vc\+\_\+\+Cmv\+\_\+\+Task. This Task calls two function based on inspiration and expiration time. 
+
+Task variable. 

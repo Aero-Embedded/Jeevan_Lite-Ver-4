@@ -1,0 +1,81 @@
+\doxysection{Nebuliser.\+h}
+\hypertarget{_nebuliser_8h_source}{}\label{_nebuliser_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/NEBULISER/Nebuliser.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/NEBULISER/Nebuliser.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Nebuliser.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Mar\ 14,\ 2023}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ asus}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_AERO\_INC\_NEBULISER\_NEBULISER\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_AERO\_INC\_NEBULISER\_NEBULISER\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ \ }\mbox{\hyperlink{_alert_8h_ab898071398b359603a35c202e9c65f3b}{\_\_attribute\_\_}}((packed))}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ uint16\_t\ \ \_header;}
+\DoxyCodeLine{00021\ \ \ \ \ uint8\_t\ \ \ \_length;}
+\DoxyCodeLine{00022\ \ \ \ \ uint8\_t\ \ \ NEBULISER;}
+\DoxyCodeLine{00023\ \ \ \ \ uint8\_t\ \ \ MANUOVER;}
+\DoxyCodeLine{00024\ \ \ \ \ uint8\_t\ \ \ VENTILATION\_SETTING;}
+\DoxyCodeLine{00025\ \ \ \ \ uint8\_t\ \ \ TUBE\_SIZE;}
+\DoxyCodeLine{00026\ \ \ \ \ uint8\_t\ \ \ COMPENSATION;}
+\DoxyCodeLine{00027\ \ \ \ \ uint8\_t\ \ \ NC1;}
+\DoxyCodeLine{00028\ \ \ \ \ uint8\_t\ \ \ NC2;}
+\DoxyCodeLine{00029\ \ \ \ \ uint8\_t\ \ \ NC3;}
+\DoxyCodeLine{00030\ \ \ \ \ uint8\_t\ \ \ NC4;}
+\DoxyCodeLine{00031\ \ \ \ \ uint8\_t\ \ \ NC5;}
+\DoxyCodeLine{00032\ \ \ \ \ uint8\_t\ \ \ NC6;}
+\DoxyCodeLine{00033\ \ \ \ \ uint8\_t\ \ \ NC7;}
+\DoxyCodeLine{00034\ \ \ \ \ uint8\_t\ \ \ NC8;}
+\DoxyCodeLine{00035\ \ \ \ \ uint8\_t\ \ \ NC9;}
+\DoxyCodeLine{00036\ \ \ \ \ uint8\_t\ \ \ NC10;}
+\DoxyCodeLine{00037\ \ \ \ \ uint8\_t\ \ \ NC11;}
+\DoxyCodeLine{00038\ \ \ \ \ uint8\_t\ \ \ \_CRC8\ ;}
+\DoxyCodeLine{00039\ \}\ NEBULISER\_PACKET\ ;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ uint8\_t\ NEBULISER\_ON\_Val;}
+\DoxyCodeLine{00045\ \ \ \ \ uint8\_t\ NEBULISER\_SYNC\_ON\_Val;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ NEBULISER\_TIME;}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ NEBULISER\_TIMER;}
+\DoxyCodeLine{00048\ \ \ \ \ uint8\_t\ SUCTION;}
+\DoxyCodeLine{00049\ \}\mbox{\hyperlink{struct_n_e_b_u_l_i_s_e_r___f_l_a_g_s}{NEBULISER\_FLAGS}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ xTaskHandle\ Nebuliser\_Handler;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ xTaskHandle\ O2\_Calibration\_Handler;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \mbox{\hyperlink{struct_n_e_b_u_l_i_s_e_r___f_l_a_g_s}{NEBULISER\_FLAGS}}\ Nebuliser;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{void}\ Nebuliser\_Task(\textcolor{keywordtype}{void}\ *argument);}
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{void}\ Split\_Nebuliser\_Packets(NEBULISER\_PACKET\ *\ );}
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{void}\ Nebuliser\_Func();}
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{void}\ Call\_Shutdown\_Func();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ uint8\_t\ chksum8\_cal\_neb(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *buff,\ \textcolor{keywordtype}{size\_t}\ len);}
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{void}\ Shutdown\_Task(\textcolor{keywordtype}{void}\ *argument);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{void}\ Nebuliser\_Timing();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_AERO\_INC\_NEBULISER\_NEBULISER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

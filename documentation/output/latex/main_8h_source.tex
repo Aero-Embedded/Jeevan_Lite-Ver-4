@@ -1,0 +1,185 @@
+\doxysection{main.\+h}
+\hypertarget{main_8h_source}{}\label{main_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/main.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/main.h}}
+\mbox{\hyperlink{main_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Header\ */}}
+\DoxyCodeLine{00019\ \textcolor{comment}{/*\ USER\ CODE\ END\ Header\ */}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#ifndef\ \_\_MAIN\_H}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ \_\_MAIN\_H}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{/*\ Private\ includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00033\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Includes\ */}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ "{}FreeRTOS.h"{}}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ "{}task.h"{}}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ "{}timers.h"{}}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ "{}queue.h"{}}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ "{}semphr.h"{}}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}event\_groups.h"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ "{}string.h"{}}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ "{}math.h"{}}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_sensor___offset_8h}{Sensor\_Offset.h}}"{}}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ "{}Task\_Create.h"{}}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#include\ "{}Problems\_Happen.h"{}}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_two___milli___second___task_8h}{Two\_Milli\_Second\_Task.h}}"{}}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_sensor___read_8h}{Sensor\_Read.h}}"{}}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_bluetooth___graph_8h}{Bluetooth\_Graph.h}}"{}}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#include\ "{}Macros.h"{}}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_bluetooth___data___split_8h}{Bluetooth\_Data\_Split.h}}"{}}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_pc__cmv_8h}{Pc\_cmv.h}}"{}}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_mode___initial___flag___set_8h}{Mode\_Initial\_Flag\_Set.h}}"{}}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_p_i_p___control_8h}{PIP\_Control.h}}"{}}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_common___parameter_8h}{Common\_Parameter.h}}"{}}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_vc___cmv_8h}{Vc\_Cmv.h}}"{}}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_volume__control_8h}{Volume\_control.h}}"{}}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_expiratory___valve___control___pressure___mode_8h}{Expiratory\_Valve\_Control\_Pressure\_Mode.h}}"{}}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#include\ "{}Expiratory\_Valve\_Control\_Volume\_Mode.h"{}}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_oxygen___blending_8h}{Oxygen\_Blending.h}}"{}}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_alert_8h}{Alert.h}}"{}}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_pc___simv___assist___o_n_8h}{Pc\_Simv\_Assist\_ON.h}}"{}}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#include\ "{}Pc\_Simv\_Assist\_OFF.h"{}}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_vc___simv___assist___o_n_8h}{Vc\_Simv\_Assist\_ON.h}}"{}}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#include\ "{}Vc\_Simv\_Assist\_OFF.h"{}}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#include\ "{}PSV.h"{}}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#include\ "{}Backup\_Pc\_cmv.h"{}}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#include\ "{}BiPap.h"{}}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#include\ "{}Cpap.h"{}}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#include\ "{}APRV.h"{}}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#include\ "{}Nebuliser.h"{}}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#include\ "{}SUCTION.h"{}}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_h_f_n_c_8h}{HFNC.h}}"{}}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#include\ "{}Calibration.h"{}}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#include\ "{}Sampled\_Parameter.h"{}}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{database_8h}{SENSORS\_INTERFACE/database.h}}>}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#include\ <SENSORS\_INTERFACE/sensor.h>}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#include\ <SENSORS\_INTERFACE/utilities.h>}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{wsen10101_8h}{SENSORS\_INTERFACE/wsen10101.h}}>}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{oom202_8h}{SENSORS\_INTERFACE/oom202.h}}>}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ads1115_8h}{SENSORS\_INTERFACE/ads1115.h}}>}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{controlsys_8h}{SENSORS\_INTERFACE/controlsys.h}}>}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#include\ "{}Service.h"{}}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{comment}{/*\ USER\ CODE\ END\ Includes\ */}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{comment}{/*\ Exported\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00093\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ ET\ */}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{comment}{/*\ USER\ CODE\ END\ ET\ */}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{comment}{/*\ Exported\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00098\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ EC\ */}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{comment}{/*\ USER\ CODE\ END\ EC\ */}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{comment}{/*\ Exported\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00103\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ EM\ */}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ VOL\_ARR\_SIZE\ 60}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ ADC\_HandleTypeDef\ hadc1;}
+\DoxyCodeLine{00108\ DMA\_HandleTypeDef\ hdma\_adc1;}
+\DoxyCodeLine{00109\ DAC\_HandleTypeDef\ hdac;}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ UART\_HandleTypeDef\ huart6;}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ TIM\_HandleTypeDef\ htim3;}
+\DoxyCodeLine{00114\ TIM\_HandleTypeDef\ htim4;}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ I2C\_HandleTypeDef\ hi2c1;}
+\DoxyCodeLine{00117\ I2C\_HandleTypeDef\ hi2c2;}
+\DoxyCodeLine{00118\ I2C\_HandleTypeDef\ hi2c3;}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ uint8\_t\ Device\_Control;}
+\DoxyCodeLine{00121\ \textcolor{keywordtype}{int}\ Pressure\_Trigger\_Offset;}
+\DoxyCodeLine{00122\ \textcolor{keywordtype}{int}\ Flow\_Trigger\_Offset;}
+\DoxyCodeLine{00123\ uint32\_t\ Patient\_Trigger\_Count;}
+\DoxyCodeLine{00124\ uint8\_t\ Smooth\_Ramp\_Time\_Val,Smooth\_Ramp\_Time\_Val\_Count;}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ uint8\_t\ FLOW\_TRIGGER,LAST\_FLOW\_TRIGGER;}
+\DoxyCodeLine{00128\ int16\_t\ Raw\_volt\_Flow\_Trigger,Raw\_volt\_Flow\_Trigger\_Temp;}
+\DoxyCodeLine{00129\ uint16\_t\ DAC\_VALUE,DAC\_VALUE\_2;}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ uint8\_t\ \ Volume\_Array[VOL\_ARR\_SIZE];}
+\DoxyCodeLine{00132\ uint16\_t\ Volume\_Array\_count;}
+\DoxyCodeLine{00133\ uint8\_t\ INCREMENT\_DAC\_VAL\_PER\_ITERATION;}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ uint16\_t\ HFNC\_O2\_DAC\_VALUE;}
+\DoxyCodeLine{00136\ uint16\_t\ One\_Minite\_Or\_60000\_Ms;}
+\DoxyCodeLine{00137\ uint8\_t\ Breath\_In\_Minite,Breath;}
+\DoxyCodeLine{00138\ \textcolor{keywordtype}{int}\ Received\_APP\_data\_found,Received\_index\_Number,Received\_index\_number2;}
+\DoxyCodeLine{00139\ \textcolor{keywordtype}{int}\ arrangecount;}
+\DoxyCodeLine{00140\ uint16\_t\ Total\_Volume\_Achieved\_Time;}
+\DoxyCodeLine{00141\ uint16\_t\ Volume\_Achieved\_Time;}
+\DoxyCodeLine{00142\ SemaphoreHandle\_t\ \ binarysem;}
+\DoxyCodeLine{00143\ \textcolor{keywordtype}{float}\ Bat\_Avg,Bat\_Avg\_count;}
+\DoxyCodeLine{00144\ uint8\_t\ Battery\_Voltage;}
+\DoxyCodeLine{00145\ uint8\_t\ Blower\_Status;}
+\DoxyCodeLine{00146\ uint32\_t\ Alert\_Check\_Time;}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ uint8\_t\ ET\_O2\_Envitec\_Tune\_Value1;}
+\DoxyCodeLine{00149\ uint8\_t\ ET\_O2\_Envitec\_Tune\_Value2;}
+\DoxyCodeLine{00150\ uint8\_t\ ET\_O2\_Envitec\_Tune\_Value3;}
+\DoxyCodeLine{00151\ \textcolor{comment}{/*\ USER\ CODE\ END\ EM\ */}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \textcolor{comment}{/*\ Exported\ functions\ prototypes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00154\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_a1730ffe1e560465665eb47d9264826f9}{Error\_Handler}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ EFP\ */}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \textcolor{comment}{/*\ USER\ CODE\ END\ EFP\ */}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \textcolor{comment}{/*\ Private\ defines\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#define\ Blower\_Enable\_Pin\ GPIO\_PIN\_5}}
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#define\ Blower\_Enable\_GPIO\_Port\ GPIOE}}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#define\ Pressure\_Sensor\_Pin\ GPIO\_PIN\_3}}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#define\ Pressure\_Sensor\_GPIO\_Port\ GPIOA}}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#define\ Blower\_Signal\_Pin\ GPIO\_PIN\_4}}
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#define\ Blower\_Signal\_GPIO\_Port\ GPIOA}}
+\DoxyCodeLine{00167\ \textcolor{preprocessor}{\#define\ Propotional\_valve\_signal\_Pin\ GPIO\_PIN\_5}}
+\DoxyCodeLine{00168\ \textcolor{preprocessor}{\#define\ Propotional\_valve\_signal\_GPIO\_Port\ GPIOA}}
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#define\ Battery\_Voltage\_Read\_New\_Pin\ GPIO\_PIN\_6}}
+\DoxyCodeLine{00170\ \textcolor{preprocessor}{\#define\ Battery\_Voltage\_Read\_New\_GPIO\_Port\ GPIOA}}
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#define\ AC\_DC\_Supply\_new\_Pin\ GPIO\_PIN\_7}}
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\#define\ AC\_DC\_Supply\_new\_GPIO\_Port\ GPIOA}}
+\DoxyCodeLine{00173\ \textcolor{preprocessor}{\#define\ AC\_DC\_Supply\_new\_EXTI\_IRQn\ EXTI9\_5\_IRQn}}
+\DoxyCodeLine{00174\ \textcolor{preprocessor}{\#define\ Battery\_Voltage\_Read\_Pin\ GPIO\_PIN\_5}}
+\DoxyCodeLine{00175\ \textcolor{preprocessor}{\#define\ Battery\_Voltage\_Read\_GPIO\_Port\ GPIOC}}
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#define\ ADS1115\_SCL\_Pin\ GPIO\_PIN\_10}}
+\DoxyCodeLine{00177\ \textcolor{preprocessor}{\#define\ ADS1115\_SCL\_GPIO\_Port\ GPIOB}}
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\#define\ ADS1115\_SDA\_Pin\ GPIO\_PIN\_11}}
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#define\ ADS1115\_SDA\_GPIO\_Port\ GPIOB}}
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#define\ Expiratory\_Valve\_Control\_Pin\ GPIO\_PIN\_13}}
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\#define\ Expiratory\_Valve\_Control\_GPIO\_Port\ GPIOB}}
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#define\ Nebuliser\_Motor\_Control\_Pin\ GPIO\_PIN\_15}}
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#define\ Nebuliser\_Motor\_Control\_GPIO\_Port\ GPIOB}}
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\#define\ Bluetooth\_Tx\_Pin\ GPIO\_PIN\_6}}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#define\ Bluetooth\_Tx\_GPIO\_Port\ GPIOC}}
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#define\ Blutooth\_Rx\_Pin\ GPIO\_PIN\_7}}
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\#define\ Blutooth\_Rx\_GPIO\_Port\ GPIOC}}
+\DoxyCodeLine{00188\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Private\ defines\ */}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \textcolor{comment}{/*\ USER\ CODE\ END\ Private\ defines\ */}}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00193\ \}}
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_MAIN\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

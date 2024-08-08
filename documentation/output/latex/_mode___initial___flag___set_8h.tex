@@ -1,0 +1,268 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+OTHERS/\+Mode\+\_\+\+Initial\+\_\+\+Flag\+\_\+\+Set.h File Reference}
+\hypertarget{_mode___initial___flag___set_8h}{}\label{_mode___initial___flag___set_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/OTHERS/Mode\_Initial\_Flag\_Set.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/OTHERS/Mode\_Initial\_Flag\_Set.h}}
+
+
+Declaration of Initial setup before starting the mode.  
+
+
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structold__flags}{old\+\_\+flags}}
+\begin{DoxyCompactList}\small\item\em Structure representing the final variables after the new changes. It stores the value of the last set value to identify and modify a certain operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_mode___initial___flag___set_8h_ae99af956ad12f080766481f27db72451}\label{_mode___initial___flag___set_8h_ae99af956ad12f080766481f27db72451} 
+enum \mbox{\hyperlink{_mode___initial___flag___set_8h_ae99af956ad12f080766481f27db72451}{Mode\+\_\+initial\+\_\+flag\+\_\+set}} \{ {\bfseries CLOSE}
+, {\bfseries OPEN}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for before starting the mode operation. To initialize variables before starting mode operation. \end{DoxyCompactList}\item 
+\Hypertarget{_mode___initial___flag___set_8h_a346918906961efabaafce0407a2cc1b3}\label{_mode___initial___flag___set_8h_a346918906961efabaafce0407a2cc1b3} 
+enum \mbox{\hyperlink{_mode___initial___flag___set_8h_a346918906961efabaafce0407a2cc1b3}{set\+\_\+value\+\_\+\+Change}} \{ {\bfseries NO\+\_\+\+CHANGES}
+, {\bfseries CHANGE\+\_\+\+HAPPEN}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to check for any changes in set values during mode operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8h_a09acb86ad90ca5d3af39760e5103d6be}{Mode\+\_\+\+Initial\+\_\+\+Flag\+\_\+\+Set\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Mode\+\_\+\+Initial\+\_\+\+Flag\+\_\+\+Set\+\_\+\+Task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8h_ad742626a1326ad4eb811673885387ea3}{PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8h_a8b57366785795594dbeadf05ffcf18ca}{VC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em VC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8h_a702a669a19b1494a0e94f285d5a575cd}{PC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em PC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8h_ad0100576c7a9ae8f894041e950a18064}{VC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em VC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8h_a933b5de1e2c5dce325f57561e75edd04}{PSV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em PSV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8h_a0a3d44959a6a663c849491456c06e2e2}{CPAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em CPAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8h_a5615a4e302f8d0dd220511813b9ab8c6}{BIBAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em BIBAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8h_ab5572b6ad05e5c1958e7475fd6694f3f}{APRV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em APRV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8h_a3a531dfcc72962c1e24e74da22cc8503}{Backup\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em Backup\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \end{DoxyCompactList}\item 
+\Hypertarget{_mode___initial___flag___set_8h_a8782acd112ef2818804253d2ecb5ae55}\label{_mode___initial___flag___set_8h_a8782acd112ef2818804253d2ecb5ae55} 
+void {\bfseries Backup\+\_\+\+VC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET} ()
+\begin{DoxyCompactList}\small\item\em Backup\+\_\+\+VC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8h_a370b6aaca34e06514663c358bcda641a}{Reset\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8h_aff0fe1e0fbd040a48538d40217ad2c65}{Reset\+\_\+\+VC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset\+\_\+\+VC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8h_a420fda4e0a67f8c11448a18f9e6c4ced}{Reset\+\_\+\+PC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset\+\_\+\+PC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8h_a47ff907c2b6e6a6e2c95ed194e583428}{Reset\+\_\+\+VC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset\+\_\+\+VC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. \end{DoxyCompactList}\item 
+\Hypertarget{_mode___initial___flag___set_8h_a8aa51c02ce5acc4a96b75d830624fe0f}\label{_mode___initial___flag___set_8h_a8aa51c02ce5acc4a96b75d830624fe0f} 
+void {\bfseries Reset\+\_\+\+PC\+\_\+\+CMV\+\_\+\+BACKUP\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset} ()
+\begin{DoxyCompactList}\small\item\em Reset\+\_\+\+PC\+\_\+\+CMV\+\_\+\+BACKUP\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. \end{DoxyCompactList}\item 
+\Hypertarget{_mode___initial___flag___set_8h_aedc25e069b30989525e83d68fa482cce}\label{_mode___initial___flag___set_8h_aedc25e069b30989525e83d68fa482cce} 
+void {\bfseries Reset\+\_\+\+VC\+\_\+\+CMV\+\_\+\+BACKUP\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset} ()
+\begin{DoxyCompactList}\small\item\em Reset\+\_\+\+VC\+\_\+\+CMV\+\_\+\+BACKUP\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. \end{DoxyCompactList}\item 
+\Hypertarget{_mode___initial___flag___set_8h_ad7e83751bdc617d0db21e7f4d28efce6}\label{_mode___initial___flag___set_8h_ad7e83751bdc617d0db21e7f4d28efce6} 
+void {\bfseries Reset\+\_\+\+Patient\+\_\+\+Circuit\+\_\+\+Diconnceted\+\_\+\+Alert\+\_\+\+Flags} ()
+\begin{DoxyCompactList}\small\item\em Reset\+\_\+\+Patient\+\_\+\+Circuit\+\_\+\+Diconnceted\+\_\+\+Alert\+\_\+\+Flags. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8h_a5f495ad24293e8cac1829347f4f81b9f}{Reset\+\_\+\+Flow\+\_\+\+Offset}} ()
+\begin{DoxyCompactList}\small\item\em Reset\+\_\+\+Flow\+\_\+\+Offset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_mode___initial___flag___set_8h_a9f095857aafe71ed57a3fb73b03089c6}\label{_mode___initial___flag___set_8h_a9f095857aafe71ed57a3fb73b03089c6} 
+\mbox{\hyperlink{_mode___initial___flag___set_8h_a346918906961efabaafce0407a2cc1b3}{set\+\_\+value\+\_\+\+Change}} {\bfseries Backup\+\_\+\+PC\+\_\+\+CMV\+\_\+\+SET\+\_\+\+VALUE}
+\item 
+\Hypertarget{_mode___initial___flag___set_8h_ad4d18f98eab4fa2c36d66924c355c015}\label{_mode___initial___flag___set_8h_ad4d18f98eab4fa2c36d66924c355c015} 
+\mbox{\hyperlink{_mode___initial___flag___set_8h_a346918906961efabaafce0407a2cc1b3}{set\+\_\+value\+\_\+\+Change}} {\bfseries Backup\+\_\+\+VC\+\_\+\+CMV\+\_\+\+SET\+\_\+\+VALUE}
+\begin{DoxyCompactList}\small\item\em enumeration variable \end{DoxyCompactList}\item 
+\Hypertarget{_mode___initial___flag___set_8h_a133ba0c8fdbad9cdce5ae9295bc0b97b}\label{_mode___initial___flag___set_8h_a133ba0c8fdbad9cdce5ae9295bc0b97b} 
+\mbox{\hyperlink{_mode___initial___flag___set_8h_ae99af956ad12f080766481f27db72451}{Mode\+\_\+initial\+\_\+flag\+\_\+set}} {\bfseries Mode\+\_\+\+Initial\+\_\+\+Flag\+\_\+\+Set}
+\begin{DoxyCompactList}\small\item\em enumeration variable \end{DoxyCompactList}\item 
+\Hypertarget{_mode___initial___flag___set_8h_a1e26aa4ae5ea75ef8dae233601104afc}\label{_mode___initial___flag___set_8h_a1e26aa4ae5ea75ef8dae233601104afc} 
+\mbox{\hyperlink{_mode___initial___flag___set_8h_ae99af956ad12f080766481f27db72451}{Mode\+\_\+initial\+\_\+flag\+\_\+set}} {\bfseries Back\+\_\+\+Up\+\_\+\+Mode\+\_\+\+Initial\+\_\+\+Flag\+\_\+\+Set}
+\begin{DoxyCompactList}\small\item\em enumeration variable \end{DoxyCompactList}\item 
+\Hypertarget{_mode___initial___flag___set_8h_aaeb9bf3cb05f5e3e5d525ceb6f70ab04}\label{_mode___initial___flag___set_8h_aaeb9bf3cb05f5e3e5d525ceb6f70ab04} 
+\mbox{\hyperlink{structold__flags}{old\+\_\+flags}} {\bfseries OLD}
+\begin{DoxyCompactList}\small\item\em structure variable \end{DoxyCompactList}\item 
+\Hypertarget{_mode___initial___flag___set_8h_aa62be453d0c39a8d810c1cde24eceb2b}\label{_mode___initial___flag___set_8h_aa62be453d0c39a8d810c1cde24eceb2b} 
+int {\bfseries Wait\+\_\+\+Time}
+\item 
+\Hypertarget{_mode___initial___flag___set_8h_a6d94cf82ebf5229301eb07c8558efb4d}\label{_mode___initial___flag___set_8h_a6d94cf82ebf5229301eb07c8558efb4d} 
+int {\bfseries Last\+\_\+\+Wait\+\_\+\+Time}
+\begin{DoxyCompactList}\small\item\em used in apnea modes \end{DoxyCompactList}\item 
+\Hypertarget{_mode___initial___flag___set_8h_a31cf0aed1ba3fbcecf167cb23661946b}\label{_mode___initial___flag___set_8h_a31cf0aed1ba3fbcecf167cb23661946b} 
+uint8\+\_\+t {\bfseries Apnea\+\_\+\+Mode}
+\begin{DoxyCompactList}\small\item\em used in apnea modes \end{DoxyCompactList}\item 
+\Hypertarget{_mode___initial___flag___set_8h_ace087af25da1f6f3265c03f12dabcdc5}\label{_mode___initial___flag___set_8h_ace087af25da1f6f3265c03f12dabcdc5} 
+x\+Task\+Handle {\bfseries Mode\+\_\+initial\+\_\+\+Flag\+\_\+\+Set\+\_\+\+Handler}
+\begin{DoxyCompactList}\small\item\em task variable \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of Initial setup before starting the mode. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Declaration of Initial setup before starting the mode. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_mode___initial___flag___set_8h_ab5572b6ad05e5c1958e7475fd6694f3f}\label{_mode___initial___flag___set_8h_ab5572b6ad05e5c1958e7475fd6694f3f} 
+\index{Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}!APRV\_Initial\_Flags\_SET@{APRV\_Initial\_Flags\_SET}}
+\index{APRV\_Initial\_Flags\_SET@{APRV\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}}
+\doxysubsubsection{\texorpdfstring{APRV\_Initial\_Flags\_SET()}{APRV\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void APRV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+APRV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. 
+
+APRV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \Hypertarget{_mode___initial___flag___set_8h_a3a531dfcc72962c1e24e74da22cc8503}\label{_mode___initial___flag___set_8h_a3a531dfcc72962c1e24e74da22cc8503} 
+\index{Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}!Backup\_PC\_CMV\_Initial\_Flags\_SET@{Backup\_PC\_CMV\_Initial\_Flags\_SET}}
+\index{Backup\_PC\_CMV\_Initial\_Flags\_SET@{Backup\_PC\_CMV\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}}
+\doxysubsubsection{\texorpdfstring{Backup\_PC\_CMV\_Initial\_Flags\_SET()}{Backup\_PC\_CMV\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void Backup\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Backup\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. 
+
+Backup\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \Hypertarget{_mode___initial___flag___set_8h_a5615a4e302f8d0dd220511813b9ab8c6}\label{_mode___initial___flag___set_8h_a5615a4e302f8d0dd220511813b9ab8c6} 
+\index{Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}!BIBAP\_Initial\_Flags\_SET@{BIBAP\_Initial\_Flags\_SET}}
+\index{BIBAP\_Initial\_Flags\_SET@{BIBAP\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}}
+\doxysubsubsection{\texorpdfstring{BIBAP\_Initial\_Flags\_SET()}{BIBAP\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void BIBAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+BIBAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. 
+
+BIBAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \Hypertarget{_mode___initial___flag___set_8h_a0a3d44959a6a663c849491456c06e2e2}\label{_mode___initial___flag___set_8h_a0a3d44959a6a663c849491456c06e2e2} 
+\index{Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}!CPAP\_Initial\_Flags\_SET@{CPAP\_Initial\_Flags\_SET}}
+\index{CPAP\_Initial\_Flags\_SET@{CPAP\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}}
+\doxysubsubsection{\texorpdfstring{CPAP\_Initial\_Flags\_SET()}{CPAP\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void CPAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+CPAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. 
+
+CPAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \Hypertarget{_mode___initial___flag___set_8h_a09acb86ad90ca5d3af39760e5103d6be}\label{_mode___initial___flag___set_8h_a09acb86ad90ca5d3af39760e5103d6be} 
+\index{Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}!Mode\_Initial\_Flag\_Set\_Task@{Mode\_Initial\_Flag\_Set\_Task}}
+\index{Mode\_Initial\_Flag\_Set\_Task@{Mode\_Initial\_Flag\_Set\_Task}!Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}}
+\doxysubsubsection{\texorpdfstring{Mode\_Initial\_Flag\_Set\_Task()}{Mode\_Initial\_Flag\_Set\_Task()}}
+{\footnotesize\ttfamily void Mode\+\_\+\+Initial\+\_\+\+Flag\+\_\+\+Set\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Mode\+\_\+\+Initial\+\_\+\+Flag\+\_\+\+Set\+\_\+\+Task. 
+
+Mode\+\_\+\+Initial\+\_\+\+Flag\+\_\+\+Set\+\_\+\+Task. \Hypertarget{_mode___initial___flag___set_8h_ad742626a1326ad4eb811673885387ea3}\label{_mode___initial___flag___set_8h_ad742626a1326ad4eb811673885387ea3} 
+\index{Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}!PC\_CMV\_Initial\_Flags\_SET@{PC\_CMV\_Initial\_Flags\_SET}}
+\index{PC\_CMV\_Initial\_Flags\_SET@{PC\_CMV\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}}
+\doxysubsubsection{\texorpdfstring{PC\_CMV\_Initial\_Flags\_SET()}{PC\_CMV\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. 
+
+PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \Hypertarget{_mode___initial___flag___set_8h_a702a669a19b1494a0e94f285d5a575cd}\label{_mode___initial___flag___set_8h_a702a669a19b1494a0e94f285d5a575cd} 
+\index{Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}!PC\_SIMV\_Initial\_Flags\_SET@{PC\_SIMV\_Initial\_Flags\_SET}}
+\index{PC\_SIMV\_Initial\_Flags\_SET@{PC\_SIMV\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}}
+\doxysubsubsection{\texorpdfstring{PC\_SIMV\_Initial\_Flags\_SET()}{PC\_SIMV\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void PC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. 
+
+PC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \Hypertarget{_mode___initial___flag___set_8h_a933b5de1e2c5dce325f57561e75edd04}\label{_mode___initial___flag___set_8h_a933b5de1e2c5dce325f57561e75edd04} 
+\index{Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}!PSV\_Initial\_Flags\_SET@{PSV\_Initial\_Flags\_SET}}
+\index{PSV\_Initial\_Flags\_SET@{PSV\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}}
+\doxysubsubsection{\texorpdfstring{PSV\_Initial\_Flags\_SET()}{PSV\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void PSV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PSV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. 
+
+PSV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \Hypertarget{_mode___initial___flag___set_8h_a5f495ad24293e8cac1829347f4f81b9f}\label{_mode___initial___flag___set_8h_a5f495ad24293e8cac1829347f4f81b9f} 
+\index{Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}!Reset\_Flow\_Offset@{Reset\_Flow\_Offset}}
+\index{Reset\_Flow\_Offset@{Reset\_Flow\_Offset}!Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}}
+\doxysubsubsection{\texorpdfstring{Reset\_Flow\_Offset()}{Reset\_Flow\_Offset()}}
+{\footnotesize\ttfamily void Reset\+\_\+\+Flow\+\_\+\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset\+\_\+\+Flow\+\_\+\+Offset. 
+
+Reset\+\_\+\+Flow\+\_\+\+Offset. \Hypertarget{_mode___initial___flag___set_8h_a370b6aaca34e06514663c358bcda641a}\label{_mode___initial___flag___set_8h_a370b6aaca34e06514663c358bcda641a} 
+\index{Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}!Reset\_PC\_CMV\_Old\_Flags\_Reset@{Reset\_PC\_CMV\_Old\_Flags\_Reset}}
+\index{Reset\_PC\_CMV\_Old\_Flags\_Reset@{Reset\_PC\_CMV\_Old\_Flags\_Reset}!Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}}
+\doxysubsubsection{\texorpdfstring{Reset\_PC\_CMV\_Old\_Flags\_Reset()}{Reset\_PC\_CMV\_Old\_Flags\_Reset()}}
+{\footnotesize\ttfamily void Reset\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. 
+
+Reset\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. \Hypertarget{_mode___initial___flag___set_8h_a420fda4e0a67f8c11448a18f9e6c4ced}\label{_mode___initial___flag___set_8h_a420fda4e0a67f8c11448a18f9e6c4ced} 
+\index{Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}!Reset\_PC\_SIMV\_Old\_Flags\_Reset@{Reset\_PC\_SIMV\_Old\_Flags\_Reset}}
+\index{Reset\_PC\_SIMV\_Old\_Flags\_Reset@{Reset\_PC\_SIMV\_Old\_Flags\_Reset}!Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}}
+\doxysubsubsection{\texorpdfstring{Reset\_PC\_SIMV\_Old\_Flags\_Reset()}{Reset\_PC\_SIMV\_Old\_Flags\_Reset()}}
+{\footnotesize\ttfamily void Reset\+\_\+\+PC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset\+\_\+\+PC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. 
+
+Reset\+\_\+\+PC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. \Hypertarget{_mode___initial___flag___set_8h_aff0fe1e0fbd040a48538d40217ad2c65}\label{_mode___initial___flag___set_8h_aff0fe1e0fbd040a48538d40217ad2c65} 
+\index{Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}!Reset\_VC\_CMV\_Old\_Flags\_Reset@{Reset\_VC\_CMV\_Old\_Flags\_Reset}}
+\index{Reset\_VC\_CMV\_Old\_Flags\_Reset@{Reset\_VC\_CMV\_Old\_Flags\_Reset}!Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}}
+\doxysubsubsection{\texorpdfstring{Reset\_VC\_CMV\_Old\_Flags\_Reset()}{Reset\_VC\_CMV\_Old\_Flags\_Reset()}}
+{\footnotesize\ttfamily void Reset\+\_\+\+VC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset\+\_\+\+VC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. 
+
+Reset\+\_\+\+VC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. \Hypertarget{_mode___initial___flag___set_8h_a47ff907c2b6e6a6e2c95ed194e583428}\label{_mode___initial___flag___set_8h_a47ff907c2b6e6a6e2c95ed194e583428} 
+\index{Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}!Reset\_VC\_SIMV\_Old\_Flags\_Reset@{Reset\_VC\_SIMV\_Old\_Flags\_Reset}}
+\index{Reset\_VC\_SIMV\_Old\_Flags\_Reset@{Reset\_VC\_SIMV\_Old\_Flags\_Reset}!Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}}
+\doxysubsubsection{\texorpdfstring{Reset\_VC\_SIMV\_Old\_Flags\_Reset()}{Reset\_VC\_SIMV\_Old\_Flags\_Reset()}}
+{\footnotesize\ttfamily void Reset\+\_\+\+VC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset\+\_\+\+VC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. 
+
+Reset\+\_\+\+VC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. \Hypertarget{_mode___initial___flag___set_8h_a8b57366785795594dbeadf05ffcf18ca}\label{_mode___initial___flag___set_8h_a8b57366785795594dbeadf05ffcf18ca} 
+\index{Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}!VC\_CMV\_Initial\_Flags\_SET@{VC\_CMV\_Initial\_Flags\_SET}}
+\index{VC\_CMV\_Initial\_Flags\_SET@{VC\_CMV\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}}
+\doxysubsubsection{\texorpdfstring{VC\_CMV\_Initial\_Flags\_SET()}{VC\_CMV\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void VC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+VC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. 
+
+VC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \Hypertarget{_mode___initial___flag___set_8h_ad0100576c7a9ae8f894041e950a18064}\label{_mode___initial___flag___set_8h_ad0100576c7a9ae8f894041e950a18064} 
+\index{Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}!VC\_SIMV\_Initial\_Flags\_SET@{VC\_SIMV\_Initial\_Flags\_SET}}
+\index{VC\_SIMV\_Initial\_Flags\_SET@{VC\_SIMV\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.h@{Mode\_Initial\_Flag\_Set.h}}
+\doxysubsubsection{\texorpdfstring{VC\_SIMV\_Initial\_Flags\_SET()}{VC\_SIMV\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void VC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+VC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. 
+
+VC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. 

@@ -1,0 +1,9 @@
+Oxygen_Blending.c:58:6:Oxygen_Blending_Task	16	static
+Oxygen_Blending.c:75:6:Oxygen_Blending	16	static
+Oxygen_Blending.c:197:6:Calculate_O2	16	static
+Oxygen_Blending.c:230:6:O2_Initial_Parameter	16	static
+Oxygen_Blending.c:260:6:Low_Oxygen_Achieved	16	static
+Oxygen_Blending.c:297:6:High_Oxygen_Achieved	16	static
+Oxygen_Blending.c:334:13:Tune_O2	16	static
+Oxygen_Blending.c:359:7:Adjust_O2_Flow	16	static
+Oxygen_Blending.c:379:6:O2_DAC_Control	16	static

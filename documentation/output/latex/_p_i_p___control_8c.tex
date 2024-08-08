@@ -1,0 +1,140 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+PIP\+\_\+\+CONTROL/\+PIP\+\_\+\+Control.c File Reference}
+\hypertarget{_p_i_p___control_8c}{}\label{_p_i_p___control_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/PIP\_CONTROL/PIP\_Control.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/PIP\_CONTROL/PIP\_Control.c}}
+
+
+Implementation to control a PIP.  
+
+
+{\ttfamily \#include "{}PIP\+\_\+\+Control.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_p_i_p___control_8c_ac779d397623a7d590237b78b564720e3}{PIP\+\_\+\+Control\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em PIP\+\_\+\+Control\+\_\+\+Task. This task controls the entire PIP during the inspiration time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_i_p___control_8c_a7c831a2a19bdb178c8bc8775daceb1a8}{PIP\+\_\+\+Control}} (uint8\+\_\+t PIP\+\_\+\+VAL)
+\begin{DoxyCompactList}\small\item\em PIP\+\_\+\+Control\+\_\+\+Task. This function is the core logic of PIP control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_i_p___control_8c_abcbc7ff7fd807b286194ef89c2119db5}{INCREASE\+\_\+\+EACH\+\_\+\+DAC\+\_\+\+SET\+\_\+\+CONST}} (uint8\+\_\+t PIP\+\_\+\+VAL, uint16\+\_\+t Rise\+\_\+\+Time\+\_\+\+MS)
+\begin{DoxyCompactList}\small\item\em INCREASE\+\_\+\+EACH\+\_\+\+DAC\+\_\+\+SET\+\_\+\+CONST. This function controls the ramptime of pip. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_i_p___control_8c_a2707f550847b5a2d44a6e7c5e2cb9737}{PIP\+\_\+\+ACHEIVED\+\_\+\+EARLY}} (uint8\+\_\+t PIP\+\_\+\+VAL, uint16\+\_\+t Rise\+\_\+\+Time\+\_\+\+MS)
+\begin{DoxyCompactList}\small\item\em PIP\+\_\+\+ACHEIVED\+\_\+\+EARLY. This function controls the ramp time of PIP because the PIP is achieved earlier than the set ramp time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_i_p___control_8c_aaa4c43214882e632853fe94ac4933a30}{PIP\+\_\+\+ACHEIVED\+\_\+\+SLOWLY}} (uint16\+\_\+t Rise\+\_\+\+Time\+\_\+\+MS)
+\begin{DoxyCompactList}\small\item\em PIP\+\_\+\+ACHEIVED\+\_\+\+SLOWLY. This function controls the ramp time of PIP because the PIP is achieved slower than the set ramp time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_i_p___control_8c_aeafc01f3e00bb7ccf2f10811de8f0707}{PIP\+\_\+\+ACHEIVED\+\_\+\+NORMALY}} ()
+\begin{DoxyCompactList}\small\item\em PIP\+\_\+\+ACHEIVED\+\_\+\+NORMALY. This function works fine when ramp time witin a set value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_i_p___control_8c_ab86b83c5e95306ba929f75a69463dc9a}{\+\_\+\+PIP\+\_\+\+NOT\+\_\+\+ACHEIVED}} ()
+\begin{DoxyCompactList}\small\item\em \+\_\+\+PIP\+\_\+\+NOT\+\_\+\+ACHEIVED. This function checks and controls whether the set PIP has been achieved or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_i_p___control_8c_af9a65caa0c72bde5ec4acd94e6278d0c}{BLOWER\+\_\+\+ENDING\+\_\+\+DAC\+\_\+\+SIGNAL\+\_\+\+TUNE}} (uint8\+\_\+t PIP\+\_\+\+VAL, uint32\+\_\+t Inspiration\+\_\+\+Time, uint8\+\_\+t Rise\+\_\+\+Time\+\_\+\+Percent)
+\begin{DoxyCompactList}\small\item\em BLOWER\+\_\+\+ENDING\+\_\+\+DAC\+\_\+\+SIGNAL\+\_\+\+TUNE. This function controls the ending DAC value to maintain the PIP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_p_i_p___control_8c_a8bc800de044d84fb720889f9ca441fca}\label{_p_i_p___control_8c_a8bc800de044d84fb720889f9ca441fca} 
+uint8\+\_\+t {\bfseries Minimum\+\_\+\+Inc\+\_\+\+Value\+\_\+1} =30
+\item 
+\Hypertarget{_p_i_p___control_8c_a6771ded6fc4b4f07b6d01e001a9af9b0}\label{_p_i_p___control_8c_a6771ded6fc4b4f07b6d01e001a9af9b0} 
+uint8\+\_\+t {\bfseries Minimum\+\_\+\+Inc\+\_\+\+Value\+\_\+2} =100
+\item 
+\Hypertarget{_p_i_p___control_8c_a8e982f25a1a54ba64be6b7dcbd9f1ddb}\label{_p_i_p___control_8c_a8e982f25a1a54ba64be6b7dcbd9f1ddb} 
+uint8\+\_\+t {\bfseries Maximum\+\_\+\+Inc\+\_\+\+Value} =140
+\item 
+\Hypertarget{_p_i_p___control_8c_a1670747e1a4f2dbecd4dbd6589b06389}\label{_p_i_p___control_8c_a1670747e1a4f2dbecd4dbd6589b06389} 
+uint8\+\_\+t {\bfseries Deviation} = 5
+\item 
+\Hypertarget{_p_i_p___control_8c_ac5eeddda021624f8a1affeab9df7555d}\label{_p_i_p___control_8c_ac5eeddda021624f8a1affeab9df7555d} 
+uint8\+\_\+t {\bfseries Maximum\+\_\+\+Time\+\_\+\+Limit} =200
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation to control a PIP. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the implementation to control a PIP. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_p_i_p___control_8c_ab86b83c5e95306ba929f75a69463dc9a}\label{_p_i_p___control_8c_ab86b83c5e95306ba929f75a69463dc9a} 
+\index{PIP\_Control.c@{PIP\_Control.c}!\_PIP\_NOT\_ACHEIVED@{\_PIP\_NOT\_ACHEIVED}}
+\index{\_PIP\_NOT\_ACHEIVED@{\_PIP\_NOT\_ACHEIVED}!PIP\_Control.c@{PIP\_Control.c}}
+\doxysubsubsection{\texorpdfstring{\_PIP\_NOT\_ACHEIVED()}{\_PIP\_NOT\_ACHEIVED()}}
+{\footnotesize\ttfamily void \+\_\+\+PIP\+\_\+\+NOT\+\_\+\+ACHEIVED (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\+\_\+\+PIP\+\_\+\+NOT\+\_\+\+ACHEIVED. This function checks and controls whether the set PIP has been achieved or not. 
+
+\+\_\+\+PIP\+\_\+\+NOT\+\_\+\+ACHEIVED. \Hypertarget{_p_i_p___control_8c_af9a65caa0c72bde5ec4acd94e6278d0c}\label{_p_i_p___control_8c_af9a65caa0c72bde5ec4acd94e6278d0c} 
+\index{PIP\_Control.c@{PIP\_Control.c}!BLOWER\_ENDING\_DAC\_SIGNAL\_TUNE@{BLOWER\_ENDING\_DAC\_SIGNAL\_TUNE}}
+\index{BLOWER\_ENDING\_DAC\_SIGNAL\_TUNE@{BLOWER\_ENDING\_DAC\_SIGNAL\_TUNE}!PIP\_Control.c@{PIP\_Control.c}}
+\doxysubsubsection{\texorpdfstring{BLOWER\_ENDING\_DAC\_SIGNAL\_TUNE()}{BLOWER\_ENDING\_DAC\_SIGNAL\_TUNE()}}
+{\footnotesize\ttfamily void BLOWER\+\_\+\+ENDING\+\_\+\+DAC\+\_\+\+SIGNAL\+\_\+\+TUNE (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{PIP\+\_\+\+VAL,  }\item[{uint32\+\_\+t}]{Inspiration\+\_\+\+Time,  }\item[{uint8\+\_\+t}]{Rise\+\_\+\+Time\+\_\+\+Percent }\end{DoxyParamCaption})}
+
+
+
+BLOWER\+\_\+\+ENDING\+\_\+\+DAC\+\_\+\+SIGNAL\+\_\+\+TUNE. This function controls the ending DAC value to maintain the PIP. 
+
+BLOWER\+\_\+\+ENDING\+\_\+\+DAC\+\_\+\+SIGNAL\+\_\+\+TUNE. \Hypertarget{_p_i_p___control_8c_abcbc7ff7fd807b286194ef89c2119db5}\label{_p_i_p___control_8c_abcbc7ff7fd807b286194ef89c2119db5} 
+\index{PIP\_Control.c@{PIP\_Control.c}!INCREASE\_EACH\_DAC\_SET\_CONST@{INCREASE\_EACH\_DAC\_SET\_CONST}}
+\index{INCREASE\_EACH\_DAC\_SET\_CONST@{INCREASE\_EACH\_DAC\_SET\_CONST}!PIP\_Control.c@{PIP\_Control.c}}
+\doxysubsubsection{\texorpdfstring{INCREASE\_EACH\_DAC\_SET\_CONST()}{INCREASE\_EACH\_DAC\_SET\_CONST()}}
+{\footnotesize\ttfamily void INCREASE\+\_\+\+EACH\+\_\+\+DAC\+\_\+\+SET\+\_\+\+CONST (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{PIP\+\_\+\+VAL,  }\item[{uint16\+\_\+t}]{Rise\+\_\+\+Time\+\_\+\+MS }\end{DoxyParamCaption})}
+
+
+
+INCREASE\+\_\+\+EACH\+\_\+\+DAC\+\_\+\+SET\+\_\+\+CONST. This function controls the ramptime of pip. 
+
+INCREASE\+\_\+\+EACH\+\_\+\+DAC\+\_\+\+SET\+\_\+\+CONST. \Hypertarget{_p_i_p___control_8c_a2707f550847b5a2d44a6e7c5e2cb9737}\label{_p_i_p___control_8c_a2707f550847b5a2d44a6e7c5e2cb9737} 
+\index{PIP\_Control.c@{PIP\_Control.c}!PIP\_ACHEIVED\_EARLY@{PIP\_ACHEIVED\_EARLY}}
+\index{PIP\_ACHEIVED\_EARLY@{PIP\_ACHEIVED\_EARLY}!PIP\_Control.c@{PIP\_Control.c}}
+\doxysubsubsection{\texorpdfstring{PIP\_ACHEIVED\_EARLY()}{PIP\_ACHEIVED\_EARLY()}}
+{\footnotesize\ttfamily void PIP\+\_\+\+ACHEIVED\+\_\+\+EARLY (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{PIP\+\_\+\+VAL,  }\item[{uint16\+\_\+t}]{Rise\+\_\+\+Time\+\_\+\+MS }\end{DoxyParamCaption})}
+
+
+
+PIP\+\_\+\+ACHEIVED\+\_\+\+EARLY. This function controls the ramp time of PIP because the PIP is achieved earlier than the set ramp time. 
+
+PIP\+\_\+\+ACHEIVED\+\_\+\+EARLY. \Hypertarget{_p_i_p___control_8c_aeafc01f3e00bb7ccf2f10811de8f0707}\label{_p_i_p___control_8c_aeafc01f3e00bb7ccf2f10811de8f0707} 
+\index{PIP\_Control.c@{PIP\_Control.c}!PIP\_ACHEIVED\_NORMALY@{PIP\_ACHEIVED\_NORMALY}}
+\index{PIP\_ACHEIVED\_NORMALY@{PIP\_ACHEIVED\_NORMALY}!PIP\_Control.c@{PIP\_Control.c}}
+\doxysubsubsection{\texorpdfstring{PIP\_ACHEIVED\_NORMALY()}{PIP\_ACHEIVED\_NORMALY()}}
+{\footnotesize\ttfamily void PIP\+\_\+\+ACHEIVED\+\_\+\+NORMALY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PIP\+\_\+\+ACHEIVED\+\_\+\+NORMALY. This function works fine when ramp time witin a set value. 
+
+PIP\+\_\+\+ACHEIVED\+\_\+\+NORMALY. \Hypertarget{_p_i_p___control_8c_aaa4c43214882e632853fe94ac4933a30}\label{_p_i_p___control_8c_aaa4c43214882e632853fe94ac4933a30} 
+\index{PIP\_Control.c@{PIP\_Control.c}!PIP\_ACHEIVED\_SLOWLY@{PIP\_ACHEIVED\_SLOWLY}}
+\index{PIP\_ACHEIVED\_SLOWLY@{PIP\_ACHEIVED\_SLOWLY}!PIP\_Control.c@{PIP\_Control.c}}
+\doxysubsubsection{\texorpdfstring{PIP\_ACHEIVED\_SLOWLY()}{PIP\_ACHEIVED\_SLOWLY()}}
+{\footnotesize\ttfamily void PIP\+\_\+\+ACHEIVED\+\_\+\+SLOWLY (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Rise\+\_\+\+Time\+\_\+\+MS }\end{DoxyParamCaption})}
+
+
+
+PIP\+\_\+\+ACHEIVED\+\_\+\+SLOWLY. This function controls the ramp time of PIP because the PIP is achieved slower than the set ramp time. 
+
+PIP\+\_\+\+ACHEIVED\+\_\+\+SLOWLY. \Hypertarget{_p_i_p___control_8c_a7c831a2a19bdb178c8bc8775daceb1a8}\label{_p_i_p___control_8c_a7c831a2a19bdb178c8bc8775daceb1a8} 
+\index{PIP\_Control.c@{PIP\_Control.c}!PIP\_Control@{PIP\_Control}}
+\index{PIP\_Control@{PIP\_Control}!PIP\_Control.c@{PIP\_Control.c}}
+\doxysubsubsection{\texorpdfstring{PIP\_Control()}{PIP\_Control()}}
+{\footnotesize\ttfamily void PIP\+\_\+\+Control (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{PIP\+\_\+\+VAL }\end{DoxyParamCaption})}
+
+
+
+PIP\+\_\+\+Control\+\_\+\+Task. This function is the core logic of PIP control. 
+
+PIP\+\_\+\+Control. \Hypertarget{_p_i_p___control_8c_ac779d397623a7d590237b78b564720e3}\label{_p_i_p___control_8c_ac779d397623a7d590237b78b564720e3} 
+\index{PIP\_Control.c@{PIP\_Control.c}!PIP\_Control\_Task@{PIP\_Control\_Task}}
+\index{PIP\_Control\_Task@{PIP\_Control\_Task}!PIP\_Control.c@{PIP\_Control.c}}
+\doxysubsubsection{\texorpdfstring{PIP\_Control\_Task()}{PIP\_Control\_Task()}}
+{\footnotesize\ttfamily void PIP\+\_\+\+Control\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+PIP\+\_\+\+Control\+\_\+\+Task. This task controls the entire PIP during the inspiration time. 
+
+PIP\+\_\+\+Control\+\_\+\+Task. 

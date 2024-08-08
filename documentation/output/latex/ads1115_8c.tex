@@ -1,0 +1,78 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+SENSORS/\+SENSORS\+\_\+\+INTERFACE/ads1115.c File Reference}
+\hypertarget{ads1115_8c}{}\label{ads1115_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/SENSORS\_INTERFACE/ads1115.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/SENSORS\_INTERFACE/ads1115.c}}
+
+
+Implementation of ADS1115 Module Configuration.  
+
+
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/ads1115.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/constants.\+h$>$}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}string.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+HAL\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{ads1115_8c_ad670b75ca76244d5040f4117f2b77973}{ADS1115\+\_\+\+Init}} (uint8\+\_\+t ads\+\_\+reference, I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}handler)
+\begin{DoxyCompactList}\small\item\em Initialize the ADS1115 I2C communication. \end{DoxyCompactList}\item 
+HAL\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{ads1115_8c_af88f963a71dbef4c121c3796e75eac72}{ADS1115\+\_\+\+Read}} (uint16\+\_\+t mux\+Port, float \texorpdfstring{$\ast$}{*}voltage, I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}handler)
+\begin{DoxyCompactList}\small\item\em Read the ADC value from the ADS1115. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of ADS1115 Module Configuration. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Implementation of ADS1115 Module Configuration, including the initialization 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ads1115_8c_ad670b75ca76244d5040f4117f2b77973}\label{ads1115_8c_ad670b75ca76244d5040f4117f2b77973} 
+\index{ads1115.c@{ads1115.c}!ADS1115\_Init@{ADS1115\_Init}}
+\index{ADS1115\_Init@{ADS1115\_Init}!ads1115.c@{ads1115.c}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_Init()}{ADS1115\_Init()}}
+{\footnotesize\ttfamily HAL\+\_\+\+Status\+Type\+Def ADS1115\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{ads\+\_\+reference,  }\item[{I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{handler }\end{DoxyParamCaption})}
+
+
+
+Initialize the ADS1115 I2C communication. 
+
+Initialize the ADS1115 ADC.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & Pointer to the I2C handler structure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em HAL} & status. \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{ads1115_8c_af88f963a71dbef4c121c3796e75eac72}\label{ads1115_8c_af88f963a71dbef4c121c3796e75eac72} 
+\index{ads1115.c@{ads1115.c}!ADS1115\_Read@{ADS1115\_Read}}
+\index{ADS1115\_Read@{ADS1115\_Read}!ads1115.c@{ads1115.c}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_Read()}{ADS1115\_Read()}}
+{\footnotesize\ttfamily HAL\+\_\+\+Status\+Type\+Def ADS1115\+\_\+\+Read (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mux\+Port,  }\item[{float \texorpdfstring{$\ast$}{*}}]{voltage,  }\item[{I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{handler }\end{DoxyParamCaption})}
+
+
+
+Read the ADC value from the ADS1115. 
+
+Read analog voltage from the ADS1115.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mux\+Port} & Multiplexer configuration for the ADC. \\
+\hline
+{\em voltage} & Pointer to store the converted voltage. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em HAL} & status. \\
+\hline
+\end{DoxyRetVals}

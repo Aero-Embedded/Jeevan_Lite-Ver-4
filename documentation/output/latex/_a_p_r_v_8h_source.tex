@@ -1,0 +1,107 @@
+\doxysection{APRV.\+h}
+\hypertarget{_a_p_r_v_8h_source}{}\label{_a_p_r_v_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/APRV/APRV.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/APRV/APRV.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ APRV.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Feb\ 27,\ 2023}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ asus}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_AERO\_INC\_APRV\_APRV\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_AERO\_INC\_APRV\_APRV\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ uint8\_t\ P\_HIGH;}
+\DoxyCodeLine{00019\ \ \ \ \ uint8\_t\ P\_LOW;}
+\DoxyCodeLine{00020\ \ \ \ \ uint8\_t\ T\_HIGH;}
+\DoxyCodeLine{00021\ \ \ \ \ uint8\_t\ T\_LOW;}
+\DoxyCodeLine{00022\ \ \ \ \ uint32\_t\ T\_HIGH\_VAL;}
+\DoxyCodeLine{00023\ \ \ \ \ uint32\_t\ T\_LOW\_VAL;}
+\DoxyCodeLine{00024\ \ \ \ \ uint32\_t\ T\_LOW\_VAL\_COUNTER;}
+\DoxyCodeLine{00025\ \ \ \ \ uint32\_t\ T\_HIGH\_VAL\_COUNTER;}
+\DoxyCodeLine{00026\ \ \ \ \ uint8\_t\ \ FIO2\_VAL;}
+\DoxyCodeLine{00027\ \ \ \ \ uint16\_t\ TRIG\_TYPE;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ TRIG\_LMT;}
+\DoxyCodeLine{00029\ \ \ \ \ uint16\_t\ TRIG\_TIME;}
+\DoxyCodeLine{00030\ \}\mbox{\hyperlink{structaprv__mode___parameter}{aprv\_mode\_Parameter}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ APRV\_Idle,}
+\DoxyCodeLine{00037\ \ \ \ \ APRV\_INSPIRATION,}
+\DoxyCodeLine{00038\ \ \ \ \ APRV\_EXPIRATION}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \}aprv\_breathe;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ APRV\_IDLE,}
+\DoxyCodeLine{00047\ \ \ \ \ APRV\_INS,}
+\DoxyCodeLine{00048\ \ \ \ \ APRV\_EXP}
+\DoxyCodeLine{00049\ \}aprv\_current\_breathe;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ uint16\_t\ BLOWER\_DAC\_VAL;}
+\DoxyCodeLine{00055\ \ \ \ \ uint16\_t\ LAST\_BLOWER\_DAC\_VAL;}
+\DoxyCodeLine{00056\ \ \ \ \ uint16\_t\ BLOWER\_ENDING\_DAC\_SIGNAL;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ Blower\_Signal\_Voltage;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ BLOWER\_VOLTAGE\_SIGNAL;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \}\mbox{\hyperlink{structaprv__mode__blower__control}{aprv\_mode\_blower\_control}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00064\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ uint32\_t\ PIP\_Cumulative\_Val;}
+\DoxyCodeLine{00066\ \ \ \ \ uint32\_t\ PIP\_Event\_Count;}
+\DoxyCodeLine{00067\ \ \ \ \ uint8\_t\ \ PIP\_AVG\_VAL;}
+\DoxyCodeLine{00068\ \}\mbox{\hyperlink{struct_aprv___p_i_p__average}{Aprv\_PIP\_average}};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00073\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ uint32\_t\ PEEP\_Cumulative\_Val;}
+\DoxyCodeLine{00075\ \ \ \ \ uint32\_t\ PEEP\_Event\_Count;}
+\DoxyCodeLine{00076\ \ \ \ \ uint8\_t\ \ PEEP\_AVG\_VAL;}
+\DoxyCodeLine{00077\ \}\mbox{\hyperlink{struct_aprv___p_e_e_p__average}{Aprv\_PEEP\_average}};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ xTaskHandle\ APRV\_Handler;}
+\DoxyCodeLine{00082\ xTaskHandle\ APRV\_ONE\_TIME\_Handler;}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ aprv\_breathe\ APRV\_Next\_Breathe;}
+\DoxyCodeLine{00086\ aprv\_current\_breathe\ APRV\_current\_breathe;}
+\DoxyCodeLine{00087\ \mbox{\hyperlink{structaprv__mode__blower__control}{aprv\_mode\_blower\_control}}\ APRV\_mode\_blower\_control;}
+\DoxyCodeLine{00088\ \mbox{\hyperlink{struct_aprv___p_i_p__average}{Aprv\_PIP\_average}}\ APRV\_PIP\_average;}
+\DoxyCodeLine{00089\ \mbox{\hyperlink{struct_aprv___p_e_e_p__average}{Aprv\_PEEP\_average}}\ APRV\_PEEP\_average;}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keywordtype}{int}\ Blower\_Wait\_Time;}
+\DoxyCodeLine{00092\ \textcolor{keywordtype}{int}\ APRV\_Trigger\_Check\_Time;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{keywordtype}{void}\ APRV\_Task(\textcolor{keywordtype}{void}\ *argument);}
+\DoxyCodeLine{00095\ \textcolor{keywordtype}{void}\ APRV\_ONE\_TIME\_Task(\textcolor{keywordtype}{void}\ *argument);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \mbox{\hyperlink{structaprv__mode___parameter}{aprv\_mode\_Parameter}}\ APRV;}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_AERO\_INC\_APRV\_APRV\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

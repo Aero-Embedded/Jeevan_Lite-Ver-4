@@ -1,0 +1,195 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+PC-\/\+SIMV/\+Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON.h File Reference}
+\hypertarget{_pc___simv___assist___o_n_8h}{}\label{_pc___simv___assist___o_n_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/PC-\/SIMV/Pc\_Simv\_Assist\_ON.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/PC-\/SIMV/Pc\_Simv\_Assist\_ON.h}}
+
+
+implementation of Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON mode.  
+
+
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_p_c___s_i_m_v__mode__parameter}{PC\+\_\+\+SIMV\+\_\+mode\+\_\+parameter}}
+\begin{DoxyCompactList}\small\item\em Structure Representing PCSIMV Mode parameter variables. it includes expiration time ,rise time percentage variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_pc___simv___assist___o_n_8h_a504d1e71095108db7f66b5d745f60073}\label{_pc___simv___assist___o_n_8h_a504d1e71095108db7f66b5d745f60073} 
+\#define {\bfseries E\+\_\+\+TIME\+\_\+\+TOLERANCE}~30u
+\begin{DoxyCompactList}\small\item\em ignore expiratory phase of initial 30 of time \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_pc___simv___assist___o_n_8h_a9fee642764adaf9fb8d2739a711a8298}{assist}} \{ \mbox{\hyperlink{_pc___simv___assist___o_n_8h_a9fee642764adaf9fb8d2739a711a8298ae267191d21457a7553f25f482ff5acbc}{ASSIST\+\_\+\+ON}}
+, \mbox{\hyperlink{_pc___simv___assist___o_n_8h_a9fee642764adaf9fb8d2739a711a8298ab73c5675d466fb74f94430bafceb6d2a}{ASSIST\+\_\+\+OFF}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for assist type. To set a running pcsimv mode is assist on or off. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_pc___simv___assist___o_n_8h_a591db6f0f8c4832426af6518c7b3e5ba}{trigger\+\_\+type}} \{ \mbox{\hyperlink{_pc___simv___assist___o_n_8h_a591db6f0f8c4832426af6518c7b3e5baa17d052ce563b8984eabbadb3ee9d32ac}{Pressure\+\_\+\+Trigger}}
+, \mbox{\hyperlink{_pc___simv___assist___o_n_8h_a591db6f0f8c4832426af6518c7b3e5baab57f838c68e4c2c6d1fd73fd53b669c3}{Flow\+\_\+\+Trigger}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for trigger type. To Select a pressure trigger or flow trigger. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_pc___simv___assist___o_n_8h_a8fe952631af287f8612d9f174234ed64}{Patient\+\_\+trigger}} \{ \mbox{\hyperlink{_pc___simv___assist___o_n_8h_a8fe952631af287f8612d9f174234ed64af7cd7a42e24effffd18e7f188b72e30e}{NO\+\_\+\+PATIENT\+\_\+\+TRIGGER}}
+, \mbox{\hyperlink{_pc___simv___assist___o_n_8h_a8fe952631af287f8612d9f174234ed64a9f1647a0d83b94d9488a5aa72d4205a1}{PATIENT\+\_\+\+TRIGGER\+\_\+\+HAPPEN}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for Patient trigger status. To Know about patient trigger status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_pc___simv___assist___o_n_8h_a4bdbdfd6f5bd0d03c318e8969fe1510d}{Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Task. This task is used for control a pc simv mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc___simv___assist___o_n_8h_aee16ebedc35ec15ed13e84b302a0ff0b}{PC\+\_\+\+SIMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em PC\+\_\+\+SIMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc___simv___assist___o_n_8h_aa86718970d80bf4c1760e546f32d037f}{PC\+\_\+\+SIMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em PC\+\_\+\+SIMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc___simv___assist___o_n_8h_a6b315faceec2baf4d8be9eead804a9a1}{PC\+\_\+\+SIMV\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em PC\+\_\+\+SIMV\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc___simv___assist___o_n_8h_a9daa4a23cb6045bc9eb93d7f8bc76b98}{PC\+\_\+\+SIMV\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em PC\+\_\+\+SIMV\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_pc___simv___assist___o_n_8h_aac94e3e8bfb1132c2e69eb8a9dc039a2}\label{_pc___simv___assist___o_n_8h_aac94e3e8bfb1132c2e69eb8a9dc039a2} 
+x\+Task\+Handle {\bfseries Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Handler}
+\begin{DoxyCompactList}\small\item\em pc simv asssit on handler \end{DoxyCompactList}\item 
+\Hypertarget{_pc___simv___assist___o_n_8h_ad2369facc3abe61d4e90ff486826bbdd}\label{_pc___simv___assist___o_n_8h_ad2369facc3abe61d4e90ff486826bbdd} 
+\mbox{\hyperlink{struct_p_c___s_i_m_v__mode__parameter}{PC\+\_\+\+SIMV\+\_\+mode\+\_\+parameter}} {\bfseries PC\+\_\+\+SIMV}
+\begin{DoxyCompactList}\small\item\em PCSIMV MODE structure variable. \end{DoxyCompactList}\item 
+\Hypertarget{_pc___simv___assist___o_n_8h_aa581da92b69380da87bd56ab25f1a4a8}\label{_pc___simv___assist___o_n_8h_aa581da92b69380da87bd56ab25f1a4a8} 
+\mbox{\hyperlink{_pc___simv___assist___o_n_8h_a9fee642764adaf9fb8d2739a711a8298}{assist}} {\bfseries Assist\+\_\+\+Control}
+\begin{DoxyCompactList}\small\item\em assist control structure variable. \end{DoxyCompactList}\item 
+\Hypertarget{_pc___simv___assist___o_n_8h_adf908b1069c65acb90171a1c720610ba}\label{_pc___simv___assist___o_n_8h_adf908b1069c65acb90171a1c720610ba} 
+\mbox{\hyperlink{_pc___simv___assist___o_n_8h_a591db6f0f8c4832426af6518c7b3e5ba}{trigger\+\_\+type}} {\bfseries Trigger\+\_\+\+Type}
+\begin{DoxyCompactList}\small\item\em trigger type structure variable. \end{DoxyCompactList}\item 
+\Hypertarget{_pc___simv___assist___o_n_8h_a6eec6901b51922df701c677222877a17}\label{_pc___simv___assist___o_n_8h_a6eec6901b51922df701c677222877a17} 
+\mbox{\hyperlink{_pc___simv___assist___o_n_8h_a8fe952631af287f8612d9f174234ed64}{Patient\+\_\+trigger}} {\bfseries Patient\+\_\+\+Trigger}
+\begin{DoxyCompactList}\small\item\em patient trigger status strucure variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+implementation of Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON mode. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the implementation Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON mode variables 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_pc___simv___assist___o_n_8h_a9fee642764adaf9fb8d2739a711a8298}\label{_pc___simv___assist___o_n_8h_a9fee642764adaf9fb8d2739a711a8298} 
+\index{Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}!assist@{assist}}
+\index{assist@{assist}!Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}}
+\doxysubsubsection{\texorpdfstring{assist}{assist}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_pc___simv___assist___o_n_8h_a9fee642764adaf9fb8d2739a711a8298}{assist}}}
+
+
+
+Enumeration for assist type. To set a running pcsimv mode is assist on or off. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ASSIST\_ON@{ASSIST\_ON}!Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}}\index{Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}!ASSIST\_ON@{ASSIST\_ON}}}\Hypertarget{_pc___simv___assist___o_n_8h_a9fee642764adaf9fb8d2739a711a8298ae267191d21457a7553f25f482ff5acbc}\label{_pc___simv___assist___o_n_8h_a9fee642764adaf9fb8d2739a711a8298ae267191d21457a7553f25f482ff5acbc} 
+ASSIST\+\_\+\+ON&Assist on type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ASSIST\_OFF@{ASSIST\_OFF}!Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}}\index{Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}!ASSIST\_OFF@{ASSIST\_OFF}}}\Hypertarget{_pc___simv___assist___o_n_8h_a9fee642764adaf9fb8d2739a711a8298ab73c5675d466fb74f94430bafceb6d2a}\label{_pc___simv___assist___o_n_8h_a9fee642764adaf9fb8d2739a711a8298ab73c5675d466fb74f94430bafceb6d2a} 
+ASSIST\+\_\+\+OFF&Assist off type. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_pc___simv___assist___o_n_8h_a8fe952631af287f8612d9f174234ed64}\label{_pc___simv___assist___o_n_8h_a8fe952631af287f8612d9f174234ed64} 
+\index{Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}!Patient\_trigger@{Patient\_trigger}}
+\index{Patient\_trigger@{Patient\_trigger}!Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}}
+\doxysubsubsection{\texorpdfstring{Patient\_trigger}{Patient\_trigger}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_pc___simv___assist___o_n_8h_a8fe952631af287f8612d9f174234ed64}{Patient\+\_\+trigger}}}
+
+
+
+Enumeration for Patient trigger status. To Know about patient trigger status. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NO\_PATIENT\_TRIGGER@{NO\_PATIENT\_TRIGGER}!Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}}\index{Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}!NO\_PATIENT\_TRIGGER@{NO\_PATIENT\_TRIGGER}}}\Hypertarget{_pc___simv___assist___o_n_8h_a8fe952631af287f8612d9f174234ed64af7cd7a42e24effffd18e7f188b72e30e}\label{_pc___simv___assist___o_n_8h_a8fe952631af287f8612d9f174234ed64af7cd7a42e24effffd18e7f188b72e30e} 
+NO\+\_\+\+PATIENT\+\_\+\+TRIGGER&no patient trigger \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PATIENT\_TRIGGER\_HAPPEN@{PATIENT\_TRIGGER\_HAPPEN}!Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}}\index{Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}!PATIENT\_TRIGGER\_HAPPEN@{PATIENT\_TRIGGER\_HAPPEN}}}\Hypertarget{_pc___simv___assist___o_n_8h_a8fe952631af287f8612d9f174234ed64a9f1647a0d83b94d9488a5aa72d4205a1}\label{_pc___simv___assist___o_n_8h_a8fe952631af287f8612d9f174234ed64a9f1647a0d83b94d9488a5aa72d4205a1} 
+PATIENT\+\_\+\+TRIGGER\+\_\+\+HAPPEN&patient trigger happen \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_pc___simv___assist___o_n_8h_a591db6f0f8c4832426af6518c7b3e5ba}\label{_pc___simv___assist___o_n_8h_a591db6f0f8c4832426af6518c7b3e5ba} 
+\index{Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}!trigger\_type@{trigger\_type}}
+\index{trigger\_type@{trigger\_type}!Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}}
+\doxysubsubsection{\texorpdfstring{trigger\_type}{trigger\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_pc___simv___assist___o_n_8h_a591db6f0f8c4832426af6518c7b3e5ba}{trigger\+\_\+type}}}
+
+
+
+Enumeration for trigger type. To Select a pressure trigger or flow trigger. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Pressure\_Trigger@{Pressure\_Trigger}!Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}}\index{Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}!Pressure\_Trigger@{Pressure\_Trigger}}}\Hypertarget{_pc___simv___assist___o_n_8h_a591db6f0f8c4832426af6518c7b3e5baa17d052ce563b8984eabbadb3ee9d32ac}\label{_pc___simv___assist___o_n_8h_a591db6f0f8c4832426af6518c7b3e5baa17d052ce563b8984eabbadb3ee9d32ac} 
+Pressure\+\_\+\+Trigger&Pressure trigger. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flow\_Trigger@{Flow\_Trigger}!Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}}\index{Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}!Flow\_Trigger@{Flow\_Trigger}}}\Hypertarget{_pc___simv___assist___o_n_8h_a591db6f0f8c4832426af6518c7b3e5baab57f838c68e4c2c6d1fd73fd53b669c3}\label{_pc___simv___assist___o_n_8h_a591db6f0f8c4832426af6518c7b3e5baab57f838c68e4c2c6d1fd73fd53b669c3} 
+Flow\+\_\+\+Trigger&Flow trigger. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_pc___simv___assist___o_n_8h_a9daa4a23cb6045bc9eb93d7f8bc76b98}\label{_pc___simv___assist___o_n_8h_a9daa4a23cb6045bc9eb93d7f8bc76b98} 
+\index{Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}!PC\_SIMV\_Assist\_ON\_Expiration\_Time\_Variables\_Reset@{PC\_SIMV\_Assist\_ON\_Expiration\_Time\_Variables\_Reset}}
+\index{PC\_SIMV\_Assist\_ON\_Expiration\_Time\_Variables\_Reset@{PC\_SIMV\_Assist\_ON\_Expiration\_Time\_Variables\_Reset}!Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}}
+\doxysubsubsection{\texorpdfstring{PC\_SIMV\_Assist\_ON\_Expiration\_Time\_Variables\_Reset()}{PC\_SIMV\_Assist\_ON\_Expiration\_Time\_Variables\_Reset()}}
+{\footnotesize\ttfamily void PC\+\_\+\+SIMV\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PC\+\_\+\+SIMV\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. 
+
+PC\+\_\+\+SIMV\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \Hypertarget{_pc___simv___assist___o_n_8h_a6b315faceec2baf4d8be9eead804a9a1}\label{_pc___simv___assist___o_n_8h_a6b315faceec2baf4d8be9eead804a9a1} 
+\index{Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}!PC\_SIMV\_Assist\_ON\_Inspiration\_Time\_Variables\_Reset@{PC\_SIMV\_Assist\_ON\_Inspiration\_Time\_Variables\_Reset}}
+\index{PC\_SIMV\_Assist\_ON\_Inspiration\_Time\_Variables\_Reset@{PC\_SIMV\_Assist\_ON\_Inspiration\_Time\_Variables\_Reset}!Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}}
+\doxysubsubsection{\texorpdfstring{PC\_SIMV\_Assist\_ON\_Inspiration\_Time\_Variables\_Reset()}{PC\_SIMV\_Assist\_ON\_Inspiration\_Time\_Variables\_Reset()}}
+{\footnotesize\ttfamily void PC\+\_\+\+SIMV\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PC\+\_\+\+SIMV\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. 
+
+PC\+\_\+\+SIMV\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \Hypertarget{_pc___simv___assist___o_n_8h_a4bdbdfd6f5bd0d03c318e8969fe1510d}\label{_pc___simv___assist___o_n_8h_a4bdbdfd6f5bd0d03c318e8969fe1510d} 
+\index{Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}!Pc\_Simv\_Assist\_ON\_Task@{Pc\_Simv\_Assist\_ON\_Task}}
+\index{Pc\_Simv\_Assist\_ON\_Task@{Pc\_Simv\_Assist\_ON\_Task}!Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}}
+\doxysubsubsection{\texorpdfstring{Pc\_Simv\_Assist\_ON\_Task()}{Pc\_Simv\_Assist\_ON\_Task()}}
+{\footnotesize\ttfamily void Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Task. This task is used for control a pc simv mode. 
+
+Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Task. This task is used for control a pc simv mode. \Hypertarget{_pc___simv___assist___o_n_8h_aa86718970d80bf4c1760e546f32d037f}\label{_pc___simv___assist___o_n_8h_aa86718970d80bf4c1760e546f32d037f} 
+\index{Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}!PC\_SIMV\_Expiration\_Time\_Variables\_Reset@{PC\_SIMV\_Expiration\_Time\_Variables\_Reset}}
+\index{PC\_SIMV\_Expiration\_Time\_Variables\_Reset@{PC\_SIMV\_Expiration\_Time\_Variables\_Reset}!Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}}
+\doxysubsubsection{\texorpdfstring{PC\_SIMV\_Expiration\_Time\_Variables\_Reset()}{PC\_SIMV\_Expiration\_Time\_Variables\_Reset()}}
+{\footnotesize\ttfamily void PC\+\_\+\+SIMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PC\+\_\+\+SIMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. 
+
+PC\+\_\+\+SIMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \Hypertarget{_pc___simv___assist___o_n_8h_aee16ebedc35ec15ed13e84b302a0ff0b}\label{_pc___simv___assist___o_n_8h_aee16ebedc35ec15ed13e84b302a0ff0b} 
+\index{Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}!PC\_SIMV\_Inspiration\_Time\_Variables\_Reset@{PC\_SIMV\_Inspiration\_Time\_Variables\_Reset}}
+\index{PC\_SIMV\_Inspiration\_Time\_Variables\_Reset@{PC\_SIMV\_Inspiration\_Time\_Variables\_Reset}!Pc\_Simv\_Assist\_ON.h@{Pc\_Simv\_Assist\_ON.h}}
+\doxysubsubsection{\texorpdfstring{PC\_SIMV\_Inspiration\_Time\_Variables\_Reset()}{PC\_SIMV\_Inspiration\_Time\_Variables\_Reset()}}
+{\footnotesize\ttfamily void PC\+\_\+\+SIMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PC\+\_\+\+SIMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. 
+
+PC\+\_\+\+SIMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. 

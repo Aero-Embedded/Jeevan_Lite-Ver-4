@@ -1,0 +1,54 @@
+\doxysection{Backup\+\_\+\+Pc\+\_\+cmv.\+h}
+\hypertarget{_backup___pc__cmv_8h_source}{}\label{_backup___pc__cmv_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/BACKUP\_PC\_CMV/Backup\_Pc\_cmv.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/BACKUP\_PC\_CMV/Backup\_Pc\_cmv.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Backup\_Pc\_cmv.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Feb\ 21,\ 2023}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ asus}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_AERO\_INC\_BACKUP\_PC\_CMV\_BACKUP\_PC\_CMV\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_AERO\_INC\_BACKUP\_PC\_CMV\_BACKUP\_PC\_CMV\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ uint8\_t\ \ PIP\_Val;}
+\DoxyCodeLine{00022\ \ \ \ \ uint8\_t\ \ PEEP\_Val;}
+\DoxyCodeLine{00023\ \ \ \ \ uint8\_t\ \ RESPIRATORY\_RATE\_Val;}
+\DoxyCodeLine{00024\ \ \ \ \ uint8\_t\ \ FIO2\_Val;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ RISE\_TIME\_MS\_Val;}
+\DoxyCodeLine{00026\ \ \ \ \ uint32\_t\ INSPIRATION\_TIME;}
+\DoxyCodeLine{00027\ \ \ \ \ uint32\_t\ EXPIRATION\_TIME;}
+\DoxyCodeLine{00028\ \ \ \ \ uint8\_t\ \ Inspiration\_Time\_Ratio;}
+\DoxyCodeLine{00029\ \ \ \ \ uint8\_t\ \ Expiration\_Time\_Ratio;}
+\DoxyCodeLine{00030\ \ \ \ \ uint8\_t\ \ Rise\_Time;}
+\DoxyCodeLine{00031\ \ \ \ \ uint8\_t\ \ Rise\_Time\_percentage;}
+\DoxyCodeLine{00032\ \ \ \ \ uint16\_t\ \ TRIG\_TIME;}
+\DoxyCodeLine{00033\ \}\mbox{\hyperlink{struct_b_a_c_k_u_p___p_c___c_m_v__mode__parameter}{BACKUP\_PC\_CMV\_mode\_parameter}};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ xTaskHandle\ BACKUP\_PC\_Handler;}
+\DoxyCodeLine{00037\ \mbox{\hyperlink{struct_b_a_c_k_u_p___p_c___c_m_v__mode__parameter}{BACKUP\_PC\_CMV\_mode\_parameter}}\ BACKUP\_PC\_CMV;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ uint8\_t\ Last\_Servo\_Position;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ BACKUP\_PC\_CMV\_Task(\textcolor{keywordtype}{void}\ *argument);}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ BACKUP\_PC\_CMV\_Inspiration\_Time\_Variables\_Reset();}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ BACKUP\_PC\_CMV\_Expiration\_Time\_Variables\_Reset();}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ START\_PSV();}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ START\_BIPAP();}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ START\_CPAP();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_AERO\_INC\_BACKUP\_PC\_CMV\_BACKUP\_PC\_CMV\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

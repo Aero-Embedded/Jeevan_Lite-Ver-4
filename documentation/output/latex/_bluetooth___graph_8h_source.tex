@@ -1,0 +1,166 @@
+\doxysection{Bluetooth\+\_\+\+Graph.\+h}
+\hypertarget{_bluetooth___graph_8h_source}{}\label{_bluetooth___graph_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/Bluetooth/Bluetooth\_Graph.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/Bluetooth/Bluetooth\_Graph.h}}
+\mbox{\hyperlink{_bluetooth___graph_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ INC\_BLUETOOTH\_GRAPH\_H\_}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ INC\_BLUETOOTH\_GRAPH\_H\_}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_g_r_a_p_h___p_a_c_k_e_t___s_e_n_d_ae750a2d57144fb24ce3e0d40c56c5765}{\_header}}\ ;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_g_r_a_p_h___p_a_c_k_e_t___s_e_n_d_ac9dc04c61fac720cbad8d52de5998167}{\_length}}\ ;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_g_r_a_p_h___p_a_c_k_e_t___s_e_n_d_a1a2de0da505c5acd5f2d841f6c20b3ef}{\_Pressure\_Val}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ int16\_t\ \ \mbox{\hyperlink{struct_g_r_a_p_h___p_a_c_k_e_t___s_e_n_d_a3b59b2052f94e2560f12456b1a169824}{\_Flow\_Val}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ int16\_t\ \ \mbox{\hyperlink{struct_g_r_a_p_h___p_a_c_k_e_t___s_e_n_d_aa74c2cf10f8c00e195db3161acce1ee7}{\_Volume\_Val}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_g_r_a_p_h___p_a_c_k_e_t___s_e_n_d_a9b62c16c6e1bc0596d0ba47afdc9be97}{\_Status}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_g_r_a_p_h___p_a_c_k_e_t___s_e_n_d_ae0bf3e11bcc663a4f32e1ecdc45dc4c9}{\_CRC8}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \}\mbox{\hyperlink{struct_g_r_a_p_h___p_a_c_k_e_t___s_e_n_d}{GRAPH\_PACKET\_SEND}}\ ;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_a01d0eda28871a99e25f7935bd503ba6b}{header}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_af8b35487c37a491080492de89cec3e6a}{length}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_a3c1d6d695254a12601d9816d7f841a7b}{Control\_Byte}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_aab6162e14ef72636b86732061c301e66}{PIP\_PS\_Phigh}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_ade9199fb35916c55284baf0456a45a18}{PEEP\_CPAP\_Plow}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_ac711c02918a17d212051890d791d6ea9}{VTI\_VS}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_a777dc7ed6ca3afb0af4f3ee4d85dcb19}{FiO2}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_a3241b0bcc79384a47f8b571f6351fc19}{RR}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_a5a14d43b4af9452a114a7bcc3150ed5b}{T\_high}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_a78e4f788574cbaf52bcb830f9e434890}{T\_low}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_a4f77c235b1e73d5fcaeb7e22329db03e}{Rise\_Time}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_a869d5f64b66c940d61817beede457612}{Flow\_Limit\_FiO2\_Flow\_Limit}};\ \ }
+\DoxyCodeLine{00058\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_aba3a0b7377180f316b5d28499929c19c}{Apnea\_Time}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_a888f05580d24ae15197b19619746f034}{Trigger\_Time}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_afd200d5c4ca82d7d1725c5b5ff5cfb14}{Trigger\_Limit}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_ab5a24470bdb83d5c077a951424f94ee3}{Vent\_Type\_Min\_O2}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_af8bcde07933d97f1148df5b47d219900}{Max\_O2}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t_a08e84a6e2340b41042f01b5bc02e6252}{CRC8}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00064\ \}\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\_GRAPH\_PACKET}}\ ;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00072\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6ad32982f7cd28a43996060563a3ff96d1}{BlueTooth\_Wait\_Time}}\ =\ 0,\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6ad4e1e402f25bd2b32c03da08604c3cfd}{Bluetooth\_Init}}\ ,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6a5daafd8bbcdf41f961c487d8c5157e6b}{Bluetooth\_Send\_Data}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00076\ \}\mbox{\hyperlink{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6}{Bluetooth\_T}};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00084\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ BlueTooth\_Status\_Wait\_Time\ =\ 0,}
+\DoxyCodeLine{00086\ \ \ \ \ Bluetooth\_Status\_Init,}
+\DoxyCodeLine{00087\ \ \ \ \ Bluetooth\_Status\_Send\_Data,}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \}\mbox{\hyperlink{_bluetooth___graph_8h_a8d38a9390f78d8cbcc93fd41ba7aaeff}{Bluetooth\_Status\_T}};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00098\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540cacb9690ee9fc4cbf57c907734a55ac5c9}{Send\_BlueTooth\_Graph\_Header}}\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x4C2A,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540ca104dc67f6aea4f29a01bcb48fefa5290}{Send\_BlueTooth\_Alert\_Header}}\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0x4D2A,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540ca98701605a766928f19ac70b458f8f117}{Send\_BlueTooth\_Sampled\_Parameter\_Header}}\ =\ 0x532A,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540ca578173d0c64c176b854a48986b337216}{Send\_BlueTooth\_Calibration\_Header}}\ \ \ \ \ \ \ =\ 0x542B,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ \mbox{\hyperlink{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540ca398a4ab6505f7ac8b19986c2c3c689d1}{Send\_BlueTooth\_Service\_Header}}\ \ \ \ \ \ \ \ \ \ \ =\ 0x532C\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \}\mbox{\hyperlink{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540c}{Send\_Graph\_header}};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00110\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00111\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4aabbe2887aef2c6ab3478940b90cb9033}{Receive\_BlueTooth\_Graph\_Header}}\ =\ 0x4D2B,\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4a9844a0a4929ee909ba5911978021d7bc}{Receive\_BlueTooth\_Alert\_Header}}\ =\ 0x412B,\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4ad3febbd3b20a3b214b4c5e982ff269ff}{Receive\_Nebuliser\_Header}}\ \ \ \ \ \ \ =\ 0x462B,\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4aa7c8a3c186228f17923c38b8f5e6fb22}{Receive\_Calibration\_Header}}\ \ \ \ \ =\ 0x542C,\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4aee1f64711ab49a7f7a108918d1f9a30c}{Receive\_Service\_Header}}\ \ \ \ \ \ \ \ \ =\ 0x532C\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00117\ \}\mbox{\hyperlink{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4}{Receive\_Graph\_header}};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00125\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00126\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_bluetooth__parameter_ad7dadf95f8f0820793db5a432f9c7cb8}{Bluetooth\_Transmit\_Delay}};\ \ \ \ }
+\DoxyCodeLine{00128\ \ \ \ \ uint8\_t\ Bluetooth\_RX\_BUF[20];\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00129\ \ \ \ \ uint8\_t\ UART\_RX\_BUF\_CURR[20];\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00130\ \}\mbox{\hyperlink{struct_bluetooth__parameter}{Bluetooth\_parameter}};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ xQueueHandle\ \mbox{\hyperlink{_bluetooth___graph_8h_a263a30de76152dd3d8f8f302ad896e45}{Bluetooth\_Receive}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \mbox{\hyperlink{struct_g_r_a_p_h___p_a_c_k_e_t___s_e_n_d}{GRAPH\_PACKET\_SEND}}\ \mbox{\hyperlink{_bluetooth___graph_8h_a0c68fa33328b46ac17f4a4b453333e4c}{Graph\_Data}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \mbox{\hyperlink{struct_bluetooth__parameter}{Bluetooth\_parameter}}\ \mbox{\hyperlink{_bluetooth___graph_8h_a7cebcdc40e46c87f9c118655857a2ee1}{Bluetooth\_Parameter}};\ \ \ }
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \mbox{\hyperlink{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6}{Bluetooth\_T}}\ \mbox{\hyperlink{_bluetooth___graph_8h_a841e075320f6fb3114f420741dfe66f2}{Bluetooth}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00141\ \mbox{\hyperlink{_bluetooth___graph_8h_a8d38a9390f78d8cbcc93fd41ba7aaeff}{Bluetooth\_Status\_T}}\ \mbox{\hyperlink{_bluetooth___graph_8h_a6e2b2b5c8a7ec34c3dc1f891cf81f9ef}{Bluetooth\_Status}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00142\ \mbox{\hyperlink{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540c}{Send\_Graph\_header}}\ \mbox{\hyperlink{_bluetooth___graph_8h_ac300317731a9839e94cc6ed23c9e7b13}{Send\_Graph\_Header}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00143\ \mbox{\hyperlink{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4}{Receive\_Graph\_header}}\ \mbox{\hyperlink{_bluetooth___graph_8h_ace42c4297622885e3aee1c169ccd5450}{Receive\_Graph\_Header}};\ }
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ xTaskHandle\ \mbox{\hyperlink{_bluetooth___graph_8h_a29c43fafd88821d8b83de7f00044d5ed}{Bluetooth\_data\_Split\_Handler}};\ \ \ }
+\DoxyCodeLine{00147\ xTaskHandle\ \mbox{\hyperlink{_bluetooth___graph_8h_a164c4fab6e7dad9abbef7db6fb1e2ffc}{Bluetooth\_Handler}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00148\ xTaskHandle\ \mbox{\hyperlink{_bluetooth___graph_8h_aec396ec9030f082440539a29cef6bbde}{Bluetooth\_Receiver\_Handler}};\ \ \ \ \ }
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00154\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_a82794c7b4a682c0c175185ba6e058a57}{Bluetooth\_Task}}(\textcolor{keywordtype}{void}\ *argument);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00159\ uint8\_t\ \mbox{\hyperlink{_bluetooth___graph_8h_ac822e66489e715ff5279b101b0daa8f9}{chksum8}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *buff,\ \textcolor{keywordtype}{size\_t}\ len);}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00164\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_a0c106571e50281348413240a8e802c65}{UART6\_Init}}();}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00169\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_ad04d7afae1f062b83d4860d617a43894}{UART5\_Init}}();}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00174\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_a49def77fa60e9ab8c6e0787fd941d900}{Bluetooth\_Graph\_Data\_Send}}();}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00179\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_afcfb3e5f0ff71d47e62030fe3453dda8}{Bluetooth\_Data\_Send}}();}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00184\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_a832b73767ff1650168aaad1832ef09a4}{BlueTooth\_Receiver\_Task}}(\textcolor{keywordtype}{void}\ *argument);}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00191\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_a6c154410f022fcb04bcd1b7173f3f1d4}{Bluetooth\_Packet\_Data\_Split}}(\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\_GRAPH\_PACKET}}\ *Receive\_Graph\_Packet);}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00198\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_a14b36e82e4e3166cb5ddd37813b7fcdd}{Bluetooth\_data\_split\_Task}}\ (\textcolor{keywordtype}{void}\ *argument);}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00204\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_ac4d300761c895062d3f4f8ba65712151}{Pc\_Cmv\_Mode\_Packet\_Data}}(\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\_GRAPH\_PACKET}}\ *Receive\_Graph\_Packet);}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00210\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_acc7c537216cb65805be1a07b2bfb3c48}{Vc\_Cmv\_Mode\_Packet\_Data}}(\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\_GRAPH\_PACKET}}\ *Receive\_Graph\_Packet);}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00216\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_a19dbaddc3b59b6281fdb93d970b27615}{Pc\_Simv\_Mode\_Packet\_Data}}(\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\_GRAPH\_PACKET}}\ *Receive\_Graph\_Packet);}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00222\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_aec91ebb32c6386f1266da711704172ab}{Vc\_Simv\_Mode\_Packet\_Data}}(\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\_GRAPH\_PACKET}}\ *Receive\_Graph\_Packet);}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00227\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_aaadf22f84022f5e5588023ab3929d76a}{PSV\_Mode\_Packet\_Data}}(\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\_GRAPH\_PACKET}}\ *Receive\_Graph\_Packet);}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00232\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_af52d75d573eae33c72ba02447613252c}{CPAP\_Mode\_Packet\_Data}}(\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\_GRAPH\_PACKET}}\ *Receive\_Graph\_Packet);}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00237\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_a80e4907044bc8ec6b7d8741700b7318d}{BIPAP\_Mode\_Packet\_Data}}(\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\_GRAPH\_PACKET}}\ *Receive\_Graph\_Packet);}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00242\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_a3e3f2f9612fd91817bd4631453d7eac9}{APRV\_Mode\_Packet\_Data}}(\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\_GRAPH\_PACKET}}\ *Receive\_Graph\_Packet);}
+\DoxyCodeLine{00246\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_a9ed28fe2aa113b9951f187da3565c5b2}{Backup\_Pc\_Cmv\_Mode\_Packet\_Data}}(\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\_GRAPH\_PACKET}}\ *Receive\_Graph\_Packet);}
+\DoxyCodeLine{00250\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_a4d6a38b29d6ad920c50e650dd3b6c7dc}{Backup\_Vc\_Cmv\_Mode\_Packet\_Data}}(\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\_GRAPH\_PACKET}}\ *Receive\_Graph\_Packet);}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00255\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_a15d6960ce445e60610f40ff3b6a015f5}{HFNC\_Packet\_Data}}(\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\_GRAPH\_PACKET}}\ *Receive\_Graph\_Packet);}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00260\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_a41d5a088c56de7d0b06c811f3328d714}{SUCTION\_Packet\_Data}}();}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00265\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_a03c118035f61d53ce9e830bc4a908404}{UART5\_GRAPH\_DATA\_DEBUG}}();}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00270\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_bluetooth___graph_8h_a1135b3d9e47328483d6ef48820fd4c1c}{USB\_GRAPH\_DATA\_DEBUG}}();}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_BLUETOOTH\_GRAPH\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

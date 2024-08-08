@@ -1,0 +1,35 @@
+\chapter{Aerobiosys Innovations jeevan Lite Project}
+\hypertarget{index}{}\label{index}\index{Aerobiosys Innovations jeevan Lite Project@{Aerobiosys Innovations jeevan Lite Project}}
+\hypertarget{index_intro_sec}{}\doxysection{\texorpdfstring{Introduction}{Introduction}}\label{index_intro_sec}
+Welcome to the documentation for Jeevan Lite Project. This project is designed to showcase a variety of functionalities of the STM32\+F407 microcontroller, focusing on peripheral initialization, system timebase management, and basic I/O operations like controlling LEDs and reading button states.\hypertarget{index_project_overview_sec}{}\doxysection{\texorpdfstring{Project Overview}{Project Overview}}\label{index_project_overview_sec}
+The project encompasses several Modes of ventilation, each dedicated to a specific aspect of the microcontroller\textquotesingle{}s capabilities\+:
+\begin{DoxyItemize}
+\item {\bfseries{BSP}} (Board Support Package)\+: Manages the basic input/output functionalities, including motor control, Valve control, and interfacing sensors.
+\item {\bfseries{FPU}} (Floating Point Unit)\+: Handles the enabling of the microcontroller\textquotesingle{}s floating point unit.
+\item {\bfseries{Timebase\+:}} Responsible for time-\/related operations, providing functionalities for system tick count and delay mechanisms.
+\end{DoxyItemize}\hypertarget{index_module_details_sec}{}\doxysection{\texorpdfstring{Module Details}{Module Details}}\label{index_module_details_sec}
+
+\begin{DoxyItemize}
+\item {\bfseries{BSP}} Module\+:
+\begin{DoxyItemize}
+\item Functions\+: Blower control,proportional valve control,expiratory valve control.
+\item Features\+: Control the motherboard LED and read the Sensor values.
+\end{DoxyItemize}
+\item {\bfseries{FPU}} Module\+:
+\begin{DoxyItemize}
+\item Function\+: fpu\+\_\+enable.
+\item Feature\+: Enable the Floating Point Unit for floating-\/point operations.
+\end{DoxyItemize}
+\item {\bfseries{Timebase}} Module\+:
+\begin{DoxyItemize}
+\item Functions\+: timebase\+\_\+init, get\+\_\+tick, delay.
+\item Features\+: Initialize the system tick timer, provide system tick count, and implement delay functionality.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{index_usage_sec}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{index_usage_sec}
+Each module is designed to be independent yet cohesive when combined in an application. The main function demonstrates the use of these modules by integrating them to create a simple application that toggles an LED based on a button\textquotesingle{}s state, while also utilizing system ticks for time management.\hypertarget{index_author_sec}{}\doxysection{\texorpdfstring{Author}{Author}}\label{index_author_sec}
+
+\begin{DoxyItemize}
+\item Developed by Sarathkumar
+\item Date\+: 01/04/2024
+\end{DoxyItemize}\hypertarget{index_notes_sec}{}\doxysection{\texorpdfstring{Additional Notes}{Additional Notes}}\label{index_notes_sec}
+This project is to make ventilator product in the STM32\+F407 microcontroller. It aims to provide a starting point for more complex projects and to demonstrate good practices in embedded software development, including code modularity and documentation. 

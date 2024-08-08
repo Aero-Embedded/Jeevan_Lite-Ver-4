@@ -1,0 +1,171 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+PC\+\_\+\+CMV/\+Pc\+\_\+cmv.c File Reference}
+\hypertarget{_pc__cmv_8c}{}\label{_pc__cmv_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/PC\_CMV/Pc\_cmv.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/PC\_CMV/Pc\_cmv.c}}
+
+
+implementation of PCCMV mode.  
+
+
+{\ttfamily \#include "{}Pc\+\_\+cmv.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{_pc__cmv_8c_a75945bb8b6812c3904456d50acdcce13}{Inspiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+CMV}} (uint16\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Inspiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+CMV. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{_pc__cmv_8c_af0f11f10de980eb8865055873a924526}{Expiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+CMV}} (uint16\+\_\+t, float, uint16\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Expiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+CMV. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{_pc__cmv_8c_a6781b5701439904ea2beba892efae43f}{Smooth\+\_\+\+Ramp\+\_\+\+Pressure}} ()
+\begin{DoxyCompactList}\small\item\em Smooth\+\_\+\+Ramp\+\_\+\+Pressure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc__cmv_8c_ac4d300761c895062d3f4f8ba65712151}{Pc\+\_\+\+Cmv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data}} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em Pc\+\_\+\+Cmv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data. This task is to extract the PCCMV mode variable from NRF Bluetooth. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc__cmv_8c_ac4c770b608b0a1167de01ede5c00b11c}{Pc\+\_\+\+Cmv\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Pc\+\_\+\+Cmv\+\_\+\+Task. This Task calls two function based on inspiration and expiration time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc__cmv_8c_a56306f8ae6fdadb1c596fbcd8be5f1ba}{PC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em PC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. This function resets variables to start an inspiration cycle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc__cmv_8c_a442a96b1a414a08651d3df90d24c5eb2}{PC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em PC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. This function resets variables to start an expiration cycle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc__cmv_8c_a4a09fe0d88290929dc288cdd00dc45b8}{Find\+\_\+\+Average\+\_\+\+Flow}} ()
+\begin{DoxyCompactList}\small\item\em Find\+\_\+\+Average\+\_\+\+Flow. This function is used to find the maximum flow delivered to the lungs in the oxygen blending concept. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc__cmv_8c_a46c20af750ea5de1169422886079afa6}{PIP\+\_\+\+Not\+\_\+\+Acheieved}} ()
+\begin{DoxyCompactList}\small\item\em PIP\+\_\+\+Not\+\_\+\+Acheieved. This Function used for debugging purpose. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc__cmv_8c_abc8f0b524603ddc5aa464384db3c0ded}{PIP\+\_\+\+Acheieved}} ()
+\begin{DoxyCompactList}\small\item\em PIP\+\_\+\+Acheieved. This Function used for debugging purpose. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+implementation of PCCMV mode. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the implementation PCCMV mode variables 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_pc__cmv_8c_af0f11f10de980eb8865055873a924526}\label{_pc__cmv_8c_af0f11f10de980eb8865055873a924526} 
+\index{Pc\_cmv.c@{Pc\_cmv.c}!Expiration\_Time\_Blower\_Control\_PC\_CMV@{Expiration\_Time\_Blower\_Control\_PC\_CMV}}
+\index{Expiration\_Time\_Blower\_Control\_PC\_CMV@{Expiration\_Time\_Blower\_Control\_PC\_CMV}!Pc\_cmv.c@{Pc\_cmv.c}}
+\doxysubsubsection{\texorpdfstring{Expiration\_Time\_Blower\_Control\_PC\_CMV()}{Expiration\_Time\_Blower\_Control\_PC\_CMV()}}
+{\footnotesize\ttfamily static void Expiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+CMV (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Blower\+\_\+\+Signal,  }\item[{float}]{PEEP,  }\item[{uint16\+\_\+t}]{Expiratory\+\_\+\+Valve\+\_\+\+Open\+\_\+\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Expiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+CMV. 
+
+Expiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+CMV. This function uploads a DAC value to the DAC1 peripheral to control a blower every 2 milliseconds during inspiration time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Blower\+\_\+\+Signal} & as Pressure\+\_\+\+Mode\+\_\+blower\+\_\+control.\+BLOWER\+\_\+\+DAC\+\_\+\+VAL. \\
+\hline
+{\em PEEP} & to lock the expiratory valve in peep area. \\
+\hline
+{\em Expiratory\+\_\+\+Valve\+\_\+\+Open\+\_\+\+Time} & to control the expiratory valve lock delay. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_pc__cmv_8c_a4a09fe0d88290929dc288cdd00dc45b8}\label{_pc__cmv_8c_a4a09fe0d88290929dc288cdd00dc45b8} 
+\index{Pc\_cmv.c@{Pc\_cmv.c}!Find\_Average\_Flow@{Find\_Average\_Flow}}
+\index{Find\_Average\_Flow@{Find\_Average\_Flow}!Pc\_cmv.c@{Pc\_cmv.c}}
+\doxysubsubsection{\texorpdfstring{Find\_Average\_Flow()}{Find\_Average\_Flow()}}
+{\footnotesize\ttfamily void Find\+\_\+\+Average\+\_\+\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Find\+\_\+\+Average\+\_\+\+Flow. This function is used to find the maximum flow delivered to the lungs in the oxygen blending concept. 
+
+Find\+\_\+\+Average\+\_\+\+Flow. \Hypertarget{_pc__cmv_8c_a75945bb8b6812c3904456d50acdcce13}\label{_pc__cmv_8c_a75945bb8b6812c3904456d50acdcce13} 
+\index{Pc\_cmv.c@{Pc\_cmv.c}!Inspiration\_Time\_Blower\_Control\_PC\_CMV@{Inspiration\_Time\_Blower\_Control\_PC\_CMV}}
+\index{Inspiration\_Time\_Blower\_Control\_PC\_CMV@{Inspiration\_Time\_Blower\_Control\_PC\_CMV}!Pc\_cmv.c@{Pc\_cmv.c}}
+\doxysubsubsection{\texorpdfstring{Inspiration\_Time\_Blower\_Control\_PC\_CMV()}{Inspiration\_Time\_Blower\_Control\_PC\_CMV()}}
+{\footnotesize\ttfamily static void Inspiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+CMV (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Blower\+\_\+\+Signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Inspiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+CMV. 
+
+Inspiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+CMV. This function uploads a DAC value to the DAC1 peripheral to control a blower every 2 milliseconds during inspiration time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Blower\+\_\+\+Signal} & as Pressure\+\_\+\+Mode\+\_\+blower\+\_\+control.\+BLOWER\+\_\+\+DAC\+\_\+\+VAL. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_pc__cmv_8c_a442a96b1a414a08651d3df90d24c5eb2}\label{_pc__cmv_8c_a442a96b1a414a08651d3df90d24c5eb2} 
+\index{Pc\_cmv.c@{Pc\_cmv.c}!PC\_CMV\_Expiration\_Time\_Variables\_Reset@{PC\_CMV\_Expiration\_Time\_Variables\_Reset}}
+\index{PC\_CMV\_Expiration\_Time\_Variables\_Reset@{PC\_CMV\_Expiration\_Time\_Variables\_Reset}!Pc\_cmv.c@{Pc\_cmv.c}}
+\doxysubsubsection{\texorpdfstring{PC\_CMV\_Expiration\_Time\_Variables\_Reset()}{PC\_CMV\_Expiration\_Time\_Variables\_Reset()}}
+{\footnotesize\ttfamily void PC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. This function resets variables to start an expiration cycle. 
+
+PC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \Hypertarget{_pc__cmv_8c_a56306f8ae6fdadb1c596fbcd8be5f1ba}\label{_pc__cmv_8c_a56306f8ae6fdadb1c596fbcd8be5f1ba} 
+\index{Pc\_cmv.c@{Pc\_cmv.c}!PC\_CMV\_Inspiration\_Time\_Variables\_Reset@{PC\_CMV\_Inspiration\_Time\_Variables\_Reset}}
+\index{PC\_CMV\_Inspiration\_Time\_Variables\_Reset@{PC\_CMV\_Inspiration\_Time\_Variables\_Reset}!Pc\_cmv.c@{Pc\_cmv.c}}
+\doxysubsubsection{\texorpdfstring{PC\_CMV\_Inspiration\_Time\_Variables\_Reset()}{PC\_CMV\_Inspiration\_Time\_Variables\_Reset()}}
+{\footnotesize\ttfamily void PC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. This function resets variables to start an inspiration cycle. 
+
+PC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \Hypertarget{_pc__cmv_8c_ac4d300761c895062d3f4f8ba65712151}\label{_pc__cmv_8c_ac4d300761c895062d3f4f8ba65712151} 
+\index{Pc\_cmv.c@{Pc\_cmv.c}!Pc\_Cmv\_Mode\_Packet\_Data@{Pc\_Cmv\_Mode\_Packet\_Data}}
+\index{Pc\_Cmv\_Mode\_Packet\_Data@{Pc\_Cmv\_Mode\_Packet\_Data}!Pc\_cmv.c@{Pc\_cmv.c}}
+\doxysubsubsection{\texorpdfstring{Pc\_Cmv\_Mode\_Packet\_Data()}{Pc\_Cmv\_Mode\_Packet\_Data()}}
+{\footnotesize\ttfamily void Pc\+\_\+\+Cmv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}}]{Receive\+\_\+\+Graph\+\_\+\+Packet }\end{DoxyParamCaption})}
+
+
+
+Pc\+\_\+\+Cmv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data. This task is to extract the PCCMV mode variable from NRF Bluetooth. 
+
+split PC-\/\+CMV buffer from bluetooth received data .
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} & structure pointer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_pc__cmv_8c_ac4c770b608b0a1167de01ede5c00b11c}\label{_pc__cmv_8c_ac4c770b608b0a1167de01ede5c00b11c} 
+\index{Pc\_cmv.c@{Pc\_cmv.c}!Pc\_Cmv\_Task@{Pc\_Cmv\_Task}}
+\index{Pc\_Cmv\_Task@{Pc\_Cmv\_Task}!Pc\_cmv.c@{Pc\_cmv.c}}
+\doxysubsubsection{\texorpdfstring{Pc\_Cmv\_Task()}{Pc\_Cmv\_Task()}}
+{\footnotesize\ttfamily void Pc\+\_\+\+Cmv\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Pc\+\_\+\+Cmv\+\_\+\+Task. This Task calls two function based on inspiration and expiration time. 
+
+Pc\+\_\+\+Cmv\+\_\+\+Task. \Hypertarget{_pc__cmv_8c_abc8f0b524603ddc5aa464384db3c0ded}\label{_pc__cmv_8c_abc8f0b524603ddc5aa464384db3c0ded} 
+\index{Pc\_cmv.c@{Pc\_cmv.c}!PIP\_Acheieved@{PIP\_Acheieved}}
+\index{PIP\_Acheieved@{PIP\_Acheieved}!Pc\_cmv.c@{Pc\_cmv.c}}
+\doxysubsubsection{\texorpdfstring{PIP\_Acheieved()}{PIP\_Acheieved()}}
+{\footnotesize\ttfamily void PIP\+\_\+\+Acheieved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PIP\+\_\+\+Acheieved. This Function used for debugging purpose. 
+
+PIP\+\_\+\+Acheieved. \Hypertarget{_pc__cmv_8c_a46c20af750ea5de1169422886079afa6}\label{_pc__cmv_8c_a46c20af750ea5de1169422886079afa6} 
+\index{Pc\_cmv.c@{Pc\_cmv.c}!PIP\_Not\_Acheieved@{PIP\_Not\_Acheieved}}
+\index{PIP\_Not\_Acheieved@{PIP\_Not\_Acheieved}!Pc\_cmv.c@{Pc\_cmv.c}}
+\doxysubsubsection{\texorpdfstring{PIP\_Not\_Acheieved()}{PIP\_Not\_Acheieved()}}
+{\footnotesize\ttfamily void PIP\+\_\+\+Not\+\_\+\+Acheieved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PIP\+\_\+\+Not\+\_\+\+Acheieved. This Function used for debugging purpose. 
+
+PIP\+\_\+\+Not\+\_\+\+Acheieved. \Hypertarget{_pc__cmv_8c_a6781b5701439904ea2beba892efae43f}\label{_pc__cmv_8c_a6781b5701439904ea2beba892efae43f} 
+\index{Pc\_cmv.c@{Pc\_cmv.c}!Smooth\_Ramp\_Pressure@{Smooth\_Ramp\_Pressure}}
+\index{Smooth\_Ramp\_Pressure@{Smooth\_Ramp\_Pressure}!Pc\_cmv.c@{Pc\_cmv.c}}
+\doxysubsubsection{\texorpdfstring{Smooth\_Ramp\_Pressure()}{Smooth\_Ramp\_Pressure()}}
+{\footnotesize\ttfamily static void Smooth\+\_\+\+Ramp\+\_\+\+Pressure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Smooth\+\_\+\+Ramp\+\_\+\+Pressure. 
+
+Smooth\+\_\+\+Ramp\+\_\+\+Pressure. This function is used to provide a pressure value smoothly based on lung characteristics. 

@@ -1,0 +1,71 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+SENSORS/\+SENSORS\+\_\+\+INTERFACE/controlsys.h File Reference}
+\hypertarget{controlsys_8h}{}\label{controlsys_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_INTERFACE/controlsys.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_INTERFACE/controlsys.h}}
+
+
+Declaration of control system.  
+
+
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcontrolsys}{controlsys}}
+\begin{DoxyCompactList}\small\item\em Structure Representing members used for pid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{controlsys_8h_a5eabca2ba2cfd3897bf7b86863b78944}{controlsys\+\_\+\+Init}} (\mbox{\hyperlink{structcontrolsys}{controlsys}} \texorpdfstring{$\ast$}{*}cs)
+\begin{DoxyCompactList}\small\item\em controlsys\+\_\+\+Init. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{controlsys_8h_a24e5ae784b0d68e8c9e386ad933c80cd}{controlsys\+\_\+\+Update}} (\mbox{\hyperlink{structcontrolsys}{controlsys}} \texorpdfstring{$\ast$}{*}cs, float set, float mea)
+\begin{DoxyCompactList}\small\item\em controlsys\+\_\+\+Update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{controlsys_8h_acb0df9f8de7ef164c729d9786766a44a}\label{controlsys_8h_acb0df9f8de7ef164c729d9786766a44a} 
+\mbox{\hyperlink{structcontrolsys}{controlsys}} {\bfseries Parker\+\_\+valve\+\_\+tune}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of control system. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24  
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{controlsys_8h_a5eabca2ba2cfd3897bf7b86863b78944}\label{controlsys_8h_a5eabca2ba2cfd3897bf7b86863b78944} 
+\index{controlsys.h@{controlsys.h}!controlsys\_Init@{controlsys\_Init}}
+\index{controlsys\_Init@{controlsys\_Init}!controlsys.h@{controlsys.h}}
+\doxysubsubsection{\texorpdfstring{controlsys\_Init()}{controlsys\_Init()}}
+{\footnotesize\ttfamily void controlsys\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcontrolsys}{controlsys}} \texorpdfstring{$\ast$}{*}}]{cs }\end{DoxyParamCaption})}
+
+
+
+controlsys\+\_\+\+Init. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em controlsys.} & \\
+\hline
+\end{DoxyParams}
+controlsys\+\_\+\+Init. \Hypertarget{controlsys_8h_a24e5ae784b0d68e8c9e386ad933c80cd}\label{controlsys_8h_a24e5ae784b0d68e8c9e386ad933c80cd} 
+\index{controlsys.h@{controlsys.h}!controlsys\_Update@{controlsys\_Update}}
+\index{controlsys\_Update@{controlsys\_Update}!controlsys.h@{controlsys.h}}
+\doxysubsubsection{\texorpdfstring{controlsys\_Update()}{controlsys\_Update()}}
+{\footnotesize\ttfamily float controlsys\+\_\+\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcontrolsys}{controlsys}} \texorpdfstring{$\ast$}{*}}]{cs,  }\item[{float}]{set,  }\item[{float}]{mea }\end{DoxyParamCaption})}
+
+
+
+controlsys\+\_\+\+Update. 
+
+\begin{DoxyReturn}{Returns}
+The DAC value corresponds to the proportional valve opening
+\end{DoxyReturn}
+controlsys\+\_\+\+Update. 

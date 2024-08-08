@@ -1,0 +1,40 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+SENSORS/\+SENSORS\+\_\+\+OFFSET/\+Sensor\+\_\+\+Offset.h File Reference}
+\hypertarget{_sensor___offset_8h}{}\label{_sensor___offset_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_OFFSET/Sensor\_Offset.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_OFFSET/Sensor\_Offset.h}}
+
+
+Implementation of Sensor offset calculation.  
+
+
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_sensor___offset_8h_a833055accd224b4cca9c4aaa8b9b98fb}\label{_sensor___offset_8h_a833055accd224b4cca9c4aaa8b9b98fb} 
+void {\bfseries Sensor\+\_\+\+Offset\+\_\+\+Task} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Sensor\+\_\+\+Offset\+\_\+\+Task. It is used to call the sensor offset function from within this task. \end{DoxyCompactList}\item 
+\Hypertarget{_sensor___offset_8h_a421cbbac50e2dbc972762505880fd4d3}\label{_sensor___offset_8h_a421cbbac50e2dbc972762505880fd4d3} 
+void {\bfseries One\+\_\+\+Time\+\_\+\+Task} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em One\+\_\+\+Time\+\_\+\+Task. It interchanges the phase of the breath cycle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_sensor___offset_8h_aeb8bdce8705e77423c95b7012863fc7b}\label{_sensor___offset_8h_aeb8bdce8705e77423c95b7012863fc7b} 
+x\+Task\+Handle {\bfseries Sensor\+\_\+\+Offset\+\_\+\+Handler}
+\begin{DoxyCompactList}\small\item\em Sensor offset handler task. \end{DoxyCompactList}\item 
+\Hypertarget{_sensor___offset_8h_a826322ea1a1db5b0b586ebf72050d16c}\label{_sensor___offset_8h_a826322ea1a1db5b0b586ebf72050d16c} 
+x\+Task\+Handle {\bfseries One\+\_\+\+Time\+\_\+\+Handler}
+\begin{DoxyCompactList}\small\item\em One\+\_\+\+Time\+\_\+\+Handler task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of Sensor offset calculation. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Implementation of Sensor offset calculation, including the initialization. 

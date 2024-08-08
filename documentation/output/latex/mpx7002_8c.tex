@@ -1,0 +1,114 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+SENSORS/\+SENSORS\+\_\+\+INTERFACE/mpx7002.c File Reference}
+\hypertarget{mpx7002_8c}{}\label{mpx7002_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/SENSORS\_INTERFACE/mpx7002.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/SENSORS\_INTERFACE/mpx7002.c}}
+
+
+Implementation of mpx7002 Sensor integration.  
+
+
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/ads1115.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/constants.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/database.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/mpx7002.\+h$>$}\newline
+{\ttfamily \#include "{}math.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{mpx7002_8c_a7e075f0ba285b1edecf88935d4069f63}\label{mpx7002_8c_a7e075f0ba285b1edecf88935d4069f63} 
+void {\bfseries Get\+\_\+\+AW\+\_\+\+Flow\+\_\+\+ADS1115\+\_\+\+OFFSET} ()
+\begin{DoxyCompactList}\small\item\em Get\+\_\+\+AW\+\_\+\+Flow\+\_\+\+ADS1115\+\_\+\+OFFSET. This function is used for ADS1115 RAW volt offset. \end{DoxyCompactList}\item 
+\Hypertarget{mpx7002_8c_a96095627b712c2a55dc0fb18afb5f8f8}\label{mpx7002_8c_a96095627b712c2a55dc0fb18afb5f8f8} 
+void {\bfseries Trigger\+\_\+\+Flow} ()
+\begin{DoxyCompactList}\small\item\em Trigger\+\_\+\+Flow. this function is used for find flow trigger accuracy. \end{DoxyCompactList}\item 
+\Hypertarget{mpx7002_8c_a664a3330d4828c7b8efb9215141836c5}\label{mpx7002_8c_a664a3330d4828c7b8efb9215141836c5} 
+double {\bfseries dp\+\_\+to\+\_\+flow} (float dp)
+\begin{DoxyCompactList}\small\item\em compute\+\_\+flow. This function is used calculate dp to flow of 2002 sensor. \end{DoxyCompactList}\item 
+\Hypertarget{mpx7002_8c_ac1eb94efe89676aac1e5920e088029c7}\label{mpx7002_8c_ac1eb94efe89676aac1e5920e088029c7} 
+void {\bfseries compute\+\_\+flow} ()
+\begin{DoxyCompactList}\small\item\em compute\+\_\+flow. This function is used for finally calculate Proximal sensor flow and volume. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mpx7002_8c_aa12978c524d9b8ace2bcd3e70edca527}{MPX7002\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the MPX7002 sensor. This function sets initial values for the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mpx7002_8c_ab89e4fb06100a568ab294344d944d4cc}{MPX7002\+\_\+calibrate}} ()
+\begin{DoxyCompactList}\small\item\em Calibrate the MPX7002 sensor. This function takes multiple readings to determine the sensor offset. It checks if the offset is within the allowable range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mpx7002_8c_a2e499a4486178d4bdcf437c454c956a7}{MPX7002\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em Read data from the MPX7002 sensor. This function uses Exponentially Weighted Moving Average filter and calculates the sensor value. References\+: \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{mpx7002_8c_a6c2a29d9249ff52479426317ce063ff5}{MPX7002\+\_\+read\+\_\+adc}} ()
+\begin{DoxyCompactList}\small\item\em Perform analog-\/to-\/digital value to voltage conversion for the MPX7002 sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{mpx7002_8c_ac56cffcef86f17421ba897a3ab963258}\label{mpx7002_8c_ac56cffcef86f17421ba897a3ab963258} 
+uint16\+\_\+t {\bfseries ADS1115\+\_\+7002\+\_\+\+FLOW\+\_\+\+SENSOR\+\_\+\+OFFSET}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of mpx7002 Sensor integration. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Implementation of mpx7002 Sensor integration, including the initialization. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mpx7002_8c_ab89e4fb06100a568ab294344d944d4cc}\label{mpx7002_8c_ab89e4fb06100a568ab294344d944d4cc} 
+\index{mpx7002.c@{mpx7002.c}!MPX7002\_calibrate@{MPX7002\_calibrate}}
+\index{MPX7002\_calibrate@{MPX7002\_calibrate}!mpx7002.c@{mpx7002.c}}
+\doxysubsubsection{\texorpdfstring{MPX7002\_calibrate()}{MPX7002\_calibrate()}}
+{\footnotesize\ttfamily void MPX7002\+\_\+calibrate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calibrate the MPX7002 sensor. This function takes multiple readings to determine the sensor offset. It checks if the offset is within the allowable range. 
+
+Calibrate the MPX7002 sensor. \Hypertarget{mpx7002_8c_aa12978c524d9b8ace2bcd3e70edca527}\label{mpx7002_8c_aa12978c524d9b8ace2bcd3e70edca527} 
+\index{mpx7002.c@{mpx7002.c}!MPX7002\_init@{MPX7002\_init}}
+\index{MPX7002\_init@{MPX7002\_init}!mpx7002.c@{mpx7002.c}}
+\doxysubsubsection{\texorpdfstring{MPX7002\_init()}{MPX7002\_init()}}
+{\footnotesize\ttfamily void MPX7002\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the MPX7002 sensor. This function sets initial values for the sensor. 
+
+Initialize the MPX7002 sensor.
+
+MPX7002\+\_\+init. This function is initialize flow sensor. \Hypertarget{mpx7002_8c_a2e499a4486178d4bdcf437c454c956a7}\label{mpx7002_8c_a2e499a4486178d4bdcf437c454c956a7} 
+\index{mpx7002.c@{mpx7002.c}!MPX7002\_read@{MPX7002\_read}}
+\index{MPX7002\_read@{MPX7002\_read}!mpx7002.c@{mpx7002.c}}
+\doxysubsubsection{\texorpdfstring{MPX7002\_read()}{MPX7002\_read()}}
+{\footnotesize\ttfamily void MPX7002\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read data from the MPX7002 sensor. This function uses Exponentially Weighted Moving Average filter and calculates the sensor value. References\+: 
+
+Read data from the MPX7002 sensor.
+
+MPX7002\+\_\+read. This function is Calculate the runtime Flow value in L/min.
+
+
+\begin{DoxyEnumerate}
+\item \href{https://hackaday.com/2019/09/06/sensor-filters-for-coders/}{\texttt{ https\+://hackaday.\+com/2019/09/06/sensor-\/filters-\/for-\/coders/}}
+\item \href{https://electronics.stackexchange.com/questions/30370/fast-and-memory-efficient-moving-average-calculation}{\texttt{ https\+://electronics.\+stackexchange.\+com/questions/30370/fast-\/and-\/memory-\/efficient-\/moving-\/average-\/calculation}}
+\item \href{https://stackoverflow.com/questions/12636613/how-to-calculate-moving-average-without-keeping-the-count-and-data-total}{\texttt{ https\+://stackoverflow.\+com/questions/12636613/how-\/to-\/calculate-\/moving-\/average-\/without-\/keeping-\/the-\/count-\/and-\/data-\/total}} 
+\end{DoxyEnumerate}\Hypertarget{mpx7002_8c_a6c2a29d9249ff52479426317ce063ff5}\label{mpx7002_8c_a6c2a29d9249ff52479426317ce063ff5} 
+\index{mpx7002.c@{mpx7002.c}!MPX7002\_read\_adc@{MPX7002\_read\_adc}}
+\index{MPX7002\_read\_adc@{MPX7002\_read\_adc}!mpx7002.c@{mpx7002.c}}
+\doxysubsubsection{\texorpdfstring{MPX7002\_read\_adc()}{MPX7002\_read\_adc()}}
+{\footnotesize\ttfamily float MPX7002\+\_\+read\+\_\+adc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Perform analog-\/to-\/digital value to voltage conversion for the MPX7002 sensor. 
+
+Perform analog-\/to-\/digital conversion for the MPX7002 sensor.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Vout} & (in mV) \\
+\hline
+\end{DoxyRetVals}

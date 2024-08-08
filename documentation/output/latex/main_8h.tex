@@ -1,0 +1,311 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/main.h File Reference}
+\hypertarget{main_8h}{}\label{main_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/main.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/main.h}}
+
+
+\+: Header for main.\+c file. This file contains the common defines of the application.  
+
+
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}Free\+RTOS.\+h"{}}\newline
+{\ttfamily \#include "{}task.\+h"{}}\newline
+{\ttfamily \#include "{}timers.\+h"{}}\newline
+{\ttfamily \#include "{}queue.\+h"{}}\newline
+{\ttfamily \#include "{}semphr.\+h"{}}\newline
+{\ttfamily \#include "{}event\+\_\+groups.\+h"{}}\newline
+{\ttfamily \#include "{}string.\+h"{}}\newline
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}math.\+h"{}}\newline
+{\ttfamily \#include "{}Sensor\+\_\+\+Offset.\+h"{}}\newline
+{\ttfamily \#include "{}Task\+\_\+\+Create.\+h"{}}\newline
+{\ttfamily \#include "{}Problems\+\_\+\+Happen.\+h"{}}\newline
+{\ttfamily \#include "{}Two\+\_\+\+Milli\+\_\+\+Second\+\_\+\+Task.\+h"{}}\newline
+{\ttfamily \#include "{}Sensor\+\_\+\+Read.\+h"{}}\newline
+{\ttfamily \#include "{}Bluetooth\+\_\+\+Graph.\+h"{}}\newline
+{\ttfamily \#include "{}Macros.\+h"{}}\newline
+{\ttfamily \#include "{}Bluetooth\+\_\+\+Data\+\_\+\+Split.\+h"{}}\newline
+{\ttfamily \#include "{}Pc\+\_\+cmv.\+h"{}}\newline
+{\ttfamily \#include "{}Mode\+\_\+\+Initial\+\_\+\+Flag\+\_\+\+Set.\+h"{}}\newline
+{\ttfamily \#include "{}PIP\+\_\+\+Control.\+h"{}}\newline
+{\ttfamily \#include "{}Common\+\_\+\+Parameter.\+h"{}}\newline
+{\ttfamily \#include "{}Vc\+\_\+\+Cmv.\+h"{}}\newline
+{\ttfamily \#include "{}Volume\+\_\+control.\+h"{}}\newline
+{\ttfamily \#include "{}Expiratory\+\_\+\+Valve\+\_\+\+Control\+\_\+\+Pressure\+\_\+\+Mode.\+h"{}}\newline
+{\ttfamily \#include "{}Expiratory\+\_\+\+Valve\+\_\+\+Control\+\_\+\+Volume\+\_\+\+Mode.\+h"{}}\newline
+{\ttfamily \#include "{}Oxygen\+\_\+\+Blending.\+h"{}}\newline
+{\ttfamily \#include "{}Alert.\+h"{}}\newline
+{\ttfamily \#include "{}Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON.\+h"{}}\newline
+{\ttfamily \#include "{}Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+OFF.\+h"{}}\newline
+{\ttfamily \#include "{}Vc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON.\+h"{}}\newline
+{\ttfamily \#include "{}Vc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+OFF.\+h"{}}\newline
+{\ttfamily \#include "{}PSV.\+h"{}}\newline
+{\ttfamily \#include "{}Backup\+\_\+\+Pc\+\_\+cmv.\+h"{}}\newline
+{\ttfamily \#include "{}Bi\+Pap.\+h"{}}\newline
+{\ttfamily \#include "{}Cpap.\+h"{}}\newline
+{\ttfamily \#include "{}APRV.\+h"{}}\newline
+{\ttfamily \#include "{}Nebuliser.\+h"{}}\newline
+{\ttfamily \#include "{}SUCTION.\+h"{}}\newline
+{\ttfamily \#include "{}HFNC.\+h"{}}\newline
+{\ttfamily \#include "{}Calibration.\+h"{}}\newline
+{\ttfamily \#include "{}Sampled\+\_\+\+Parameter.\+h"{}}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/database.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/sensor.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/utilities.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/wsen10101.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/oom202.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/ads1115.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/controlsys.\+h$>$}\newline
+{\ttfamily \#include "{}Service.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8h_a95adf13e54d74d6605535f7508ff3f2f}\label{main_8h_a95adf13e54d74d6605535f7508ff3f2f} 
+\#define {\bfseries VOL\+\_\+\+ARR\+\_\+\+SIZE}~60
+\item 
+\Hypertarget{main_8h_a34587d86339e6dafac95ba35c7b9dccb}\label{main_8h_a34587d86339e6dafac95ba35c7b9dccb} 
+\#define {\bfseries Blower\+\_\+\+Enable\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+5
+\item 
+\Hypertarget{main_8h_aeca6913639986eb788412b7ef611a709}\label{main_8h_aeca6913639986eb788412b7ef611a709} 
+\#define {\bfseries Blower\+\_\+\+Enable\+\_\+\+GPIO\+\_\+\+Port}~GPIOE
+\item 
+\Hypertarget{main_8h_a3680c20603a88dc55ebfdf4ed828f90c}\label{main_8h_a3680c20603a88dc55ebfdf4ed828f90c} 
+\#define {\bfseries Pressure\+\_\+\+Sensor\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+3
+\item 
+\Hypertarget{main_8h_ac142fab4f6bcf0807fa82ed5d6321fc6}\label{main_8h_ac142fab4f6bcf0807fa82ed5d6321fc6} 
+\#define {\bfseries Pressure\+\_\+\+Sensor\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_adcd4067f36374ceda0d610ef51f8e35a}\label{main_8h_adcd4067f36374ceda0d610ef51f8e35a} 
+\#define {\bfseries Blower\+\_\+\+Signal\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+4
+\item 
+\Hypertarget{main_8h_ac487c2664f52b8320ab64fecec016309}\label{main_8h_ac487c2664f52b8320ab64fecec016309} 
+\#define {\bfseries Blower\+\_\+\+Signal\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_a3e9894e63a9b448ad468d93dcffa36ad}\label{main_8h_a3e9894e63a9b448ad468d93dcffa36ad} 
+\#define {\bfseries Propotional\+\_\+valve\+\_\+signal\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+5
+\item 
+\Hypertarget{main_8h_a94cba126cf94a5682aaf3528ed277512}\label{main_8h_a94cba126cf94a5682aaf3528ed277512} 
+\#define {\bfseries Propotional\+\_\+valve\+\_\+signal\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_a9199340b40feb7a301b651b51b9e1265}\label{main_8h_a9199340b40feb7a301b651b51b9e1265} 
+\#define {\bfseries Battery\+\_\+\+Voltage\+\_\+\+Read\+\_\+\+New\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+6
+\item 
+\Hypertarget{main_8h_a6da4986cc281e9f86b30d535f03ec851}\label{main_8h_a6da4986cc281e9f86b30d535f03ec851} 
+\#define {\bfseries Battery\+\_\+\+Voltage\+\_\+\+Read\+\_\+\+New\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_aa73b5edd0ff60ce21ea065efde192e0c}\label{main_8h_aa73b5edd0ff60ce21ea065efde192e0c} 
+\#define {\bfseries AC\+\_\+\+DC\+\_\+\+Supply\+\_\+new\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+7
+\item 
+\Hypertarget{main_8h_aa2e2e3bc2be379a64223ddb1cbd5ead7}\label{main_8h_aa2e2e3bc2be379a64223ddb1cbd5ead7} 
+\#define {\bfseries AC\+\_\+\+DC\+\_\+\+Supply\+\_\+new\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_a9c9736dbeabac53d4b70d077051ab901}\label{main_8h_a9c9736dbeabac53d4b70d077051ab901} 
+\#define {\bfseries AC\+\_\+\+DC\+\_\+\+Supply\+\_\+new\+\_\+\+EXTI\+\_\+\+IRQn}~EXTI9\+\_\+5\+\_\+\+IRQn
+\item 
+\Hypertarget{main_8h_ae03f36d53087b44cafa8cb4dff08b825}\label{main_8h_ae03f36d53087b44cafa8cb4dff08b825} 
+\#define {\bfseries Battery\+\_\+\+Voltage\+\_\+\+Read\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+5
+\item 
+\Hypertarget{main_8h_a28a3d13113f4a787ed8cee70b9e154ef}\label{main_8h_a28a3d13113f4a787ed8cee70b9e154ef} 
+\#define {\bfseries Battery\+\_\+\+Voltage\+\_\+\+Read\+\_\+\+GPIO\+\_\+\+Port}~GPIOC
+\item 
+\Hypertarget{main_8h_aa239d9bdf0829d2d3a8469b195184083}\label{main_8h_aa239d9bdf0829d2d3a8469b195184083} 
+\#define {\bfseries ADS1115\+\_\+\+SCL\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+10
+\item 
+\Hypertarget{main_8h_a201417c48f12851af0bbaa554652f47d}\label{main_8h_a201417c48f12851af0bbaa554652f47d} 
+\#define {\bfseries ADS1115\+\_\+\+SCL\+\_\+\+GPIO\+\_\+\+Port}~GPIOB
+\item 
+\Hypertarget{main_8h_af9f1e3f4ced4a240bc55d475828dcf9d}\label{main_8h_af9f1e3f4ced4a240bc55d475828dcf9d} 
+\#define {\bfseries ADS1115\+\_\+\+SDA\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+11
+\item 
+\Hypertarget{main_8h_a96c4baa1d1b49bbc7f78dc1ab5da56ec}\label{main_8h_a96c4baa1d1b49bbc7f78dc1ab5da56ec} 
+\#define {\bfseries ADS1115\+\_\+\+SDA\+\_\+\+GPIO\+\_\+\+Port}~GPIOB
+\item 
+\Hypertarget{main_8h_a8d04874bf68840db20086d2b3dbecf99}\label{main_8h_a8d04874bf68840db20086d2b3dbecf99} 
+\#define {\bfseries Expiratory\+\_\+\+Valve\+\_\+\+Control\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+13
+\item 
+\Hypertarget{main_8h_a8f30c8d8fe2a893e8197208281017615}\label{main_8h_a8f30c8d8fe2a893e8197208281017615} 
+\#define {\bfseries Expiratory\+\_\+\+Valve\+\_\+\+Control\+\_\+\+GPIO\+\_\+\+Port}~GPIOB
+\item 
+\Hypertarget{main_8h_ae3b30e3f0fcfa01c95032fa1ffc64b24}\label{main_8h_ae3b30e3f0fcfa01c95032fa1ffc64b24} 
+\#define {\bfseries Nebuliser\+\_\+\+Motor\+\_\+\+Control\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+15
+\item 
+\Hypertarget{main_8h_ae9d9c71ebf447256f430972ee205b616}\label{main_8h_ae9d9c71ebf447256f430972ee205b616} 
+\#define {\bfseries Nebuliser\+\_\+\+Motor\+\_\+\+Control\+\_\+\+GPIO\+\_\+\+Port}~GPIOB
+\item 
+\Hypertarget{main_8h_ada8485553b6b0673f19957732727cd64}\label{main_8h_ada8485553b6b0673f19957732727cd64} 
+\#define {\bfseries Bluetooth\+\_\+\+Tx\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+6
+\item 
+\Hypertarget{main_8h_aaa1d04a582392ab93a6d4267d82fec33}\label{main_8h_aaa1d04a582392ab93a6d4267d82fec33} 
+\#define {\bfseries Bluetooth\+\_\+\+Tx\+\_\+\+GPIO\+\_\+\+Port}~GPIOC
+\item 
+\Hypertarget{main_8h_a6c37ebb934ca45c3d5e4dde5c1134e6c}\label{main_8h_a6c37ebb934ca45c3d5e4dde5c1134e6c} 
+\#define {\bfseries Blutooth\+\_\+\+Rx\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+7
+\item 
+\Hypertarget{main_8h_a7ee47a0a2e1b3bc1103f9db51b6a4174}\label{main_8h_a7ee47a0a2e1b3bc1103f9db51b6a4174} 
+\#define {\bfseries Blutooth\+\_\+\+Rx\+\_\+\+GPIO\+\_\+\+Port}~GPIOC
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8h_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8h_a22b804736f5648d52f639b2647d4ed13}\label{main_8h_a22b804736f5648d52f639b2647d4ed13} 
+ADC\+\_\+\+Handle\+Type\+Def {\bfseries hadc1}
+\item 
+\Hypertarget{main_8h_a1c126854bb1813d31ab4776b21dcc51f}\label{main_8h_a1c126854bb1813d31ab4776b21dcc51f} 
+DMA\+\_\+\+Handle\+Type\+Def {\bfseries hdma\+\_\+adc1}
+\item 
+\Hypertarget{main_8h_a40a0d1383beda58531dfda6218720e45}\label{main_8h_a40a0d1383beda58531dfda6218720e45} 
+DAC\+\_\+\+Handle\+Type\+Def {\bfseries hdac}
+\item 
+\Hypertarget{main_8h_a38905dda1d2fbff006c69db48eddba9d}\label{main_8h_a38905dda1d2fbff006c69db48eddba9d} 
+UART\+\_\+\+Handle\+Type\+Def {\bfseries huart6}
+\item 
+\Hypertarget{main_8h_aac3d2c59ee0e3bbae1b99529a154eb62}\label{main_8h_aac3d2c59ee0e3bbae1b99529a154eb62} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim3}
+\item 
+\Hypertarget{main_8h_a85788cec5a97ee377e4ee2e74f026484}\label{main_8h_a85788cec5a97ee377e4ee2e74f026484} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim4}
+\item 
+\Hypertarget{main_8h_af7b2c26e44dadaaa798a5c3d82914ba7}\label{main_8h_af7b2c26e44dadaaa798a5c3d82914ba7} 
+I2\+C\+\_\+\+Handle\+Type\+Def {\bfseries hi2c1}
+\item 
+\Hypertarget{main_8h_ac379bcc152d860f08b1279fd3e232295}\label{main_8h_ac379bcc152d860f08b1279fd3e232295} 
+I2\+C\+\_\+\+Handle\+Type\+Def {\bfseries hi2c2}
+\item 
+\Hypertarget{main_8h_a5ccf4a01a8d7f08d3190181f843f7515}\label{main_8h_a5ccf4a01a8d7f08d3190181f843f7515} 
+I2\+C\+\_\+\+Handle\+Type\+Def {\bfseries hi2c3}
+\item 
+\Hypertarget{main_8h_a1aa2a04c203cabb1847680f0f21c9d6f}\label{main_8h_a1aa2a04c203cabb1847680f0f21c9d6f} 
+uint8\+\_\+t {\bfseries Device\+\_\+\+Control}
+\item 
+\Hypertarget{main_8h_aff2370d808b183ea89a4e4dab9ac1abe}\label{main_8h_aff2370d808b183ea89a4e4dab9ac1abe} 
+int {\bfseries Pressure\+\_\+\+Trigger\+\_\+\+Offset}
+\item 
+\Hypertarget{main_8h_a59d9b7eefc943c58ff69416cbbd2a08a}\label{main_8h_a59d9b7eefc943c58ff69416cbbd2a08a} 
+int {\bfseries Flow\+\_\+\+Trigger\+\_\+\+Offset}
+\item 
+\Hypertarget{main_8h_af4e62f43dad076bac7d5fa2a835f78cf}\label{main_8h_af4e62f43dad076bac7d5fa2a835f78cf} 
+uint32\+\_\+t {\bfseries Patient\+\_\+\+Trigger\+\_\+\+Count}
+\item 
+\Hypertarget{main_8h_a4ae9356eb77631f2b86ce31f542d275e}\label{main_8h_a4ae9356eb77631f2b86ce31f542d275e} 
+uint8\+\_\+t {\bfseries Smooth\+\_\+\+Ramp\+\_\+\+Time\+\_\+\+Val}
+\item 
+\Hypertarget{main_8h_ac42454165fcbdad3470144d51a60d717}\label{main_8h_ac42454165fcbdad3470144d51a60d717} 
+uint8\+\_\+t {\bfseries Smooth\+\_\+\+Ramp\+\_\+\+Time\+\_\+\+Val\+\_\+\+Count}
+\item 
+\Hypertarget{main_8h_af1928f2bc1f3b2f7b2df05967a13422e}\label{main_8h_af1928f2bc1f3b2f7b2df05967a13422e} 
+uint8\+\_\+t {\bfseries FLOW\+\_\+\+TRIGGER}
+\item 
+\Hypertarget{main_8h_a8ff96d5311486847703e57e72675b6df}\label{main_8h_a8ff96d5311486847703e57e72675b6df} 
+uint8\+\_\+t {\bfseries LAST\+\_\+\+FLOW\+\_\+\+TRIGGER}
+\item 
+\Hypertarget{main_8h_a7d726e1819ca187f442c6edd2af9d90c}\label{main_8h_a7d726e1819ca187f442c6edd2af9d90c} 
+int16\+\_\+t {\bfseries Raw\+\_\+volt\+\_\+\+Flow\+\_\+\+Trigger}
+\item 
+\Hypertarget{main_8h_a08e064f63e567e19467829577592b634}\label{main_8h_a08e064f63e567e19467829577592b634} 
+int16\+\_\+t {\bfseries Raw\+\_\+volt\+\_\+\+Flow\+\_\+\+Trigger\+\_\+\+Temp}
+\item 
+\Hypertarget{main_8h_a3b6e6884c5c85595e9e0388d755b9f35}\label{main_8h_a3b6e6884c5c85595e9e0388d755b9f35} 
+uint16\+\_\+t {\bfseries DAC\+\_\+\+VALUE}
+\item 
+\Hypertarget{main_8h_a87f7f3abdde7301db24027b71a1fe311}\label{main_8h_a87f7f3abdde7301db24027b71a1fe311} 
+uint16\+\_\+t {\bfseries DAC\+\_\+\+VALUE\+\_\+2}
+\item 
+\Hypertarget{main_8h_a1ffb54f2f0a6e69f880b64a1f513dcf3}\label{main_8h_a1ffb54f2f0a6e69f880b64a1f513dcf3} 
+uint8\+\_\+t {\bfseries Volume\+\_\+\+Array} \mbox{[}VOL\+\_\+\+ARR\+\_\+\+SIZE\mbox{]}
+\item 
+\Hypertarget{main_8h_a346d100d93384353a7d6d3e625c2bada}\label{main_8h_a346d100d93384353a7d6d3e625c2bada} 
+uint16\+\_\+t {\bfseries Volume\+\_\+\+Array\+\_\+count}
+\item 
+\Hypertarget{main_8h_ada1004315e6c5fba7f96e97f26f2739b}\label{main_8h_ada1004315e6c5fba7f96e97f26f2739b} 
+uint8\+\_\+t {\bfseries INCREMENT\+\_\+\+DAC\+\_\+\+VAL\+\_\+\+PER\+\_\+\+ITERATION}
+\item 
+\Hypertarget{main_8h_a276958c43b4a01f112067aae8b7f171c}\label{main_8h_a276958c43b4a01f112067aae8b7f171c} 
+uint16\+\_\+t {\bfseries HFNC\+\_\+\+O2\+\_\+\+DAC\+\_\+\+VALUE}
+\item 
+\Hypertarget{main_8h_af98d8fb0f1ba15be803d49620c473af6}\label{main_8h_af98d8fb0f1ba15be803d49620c473af6} 
+uint16\+\_\+t {\bfseries One\+\_\+\+Minite\+\_\+\+Or\+\_\+60000\+\_\+\+Ms}
+\item 
+\Hypertarget{main_8h_a4ad09157fc1566f2737dd77918bf7f9d}\label{main_8h_a4ad09157fc1566f2737dd77918bf7f9d} 
+uint8\+\_\+t {\bfseries Breath\+\_\+\+In\+\_\+\+Minite}
+\item 
+\Hypertarget{main_8h_adb7c8485d42f03bf53f644aeadfc89cc}\label{main_8h_adb7c8485d42f03bf53f644aeadfc89cc} 
+uint8\+\_\+t {\bfseries Breath}
+\item 
+\Hypertarget{main_8h_ab085e8f334ab92bf0afea203056c3915}\label{main_8h_ab085e8f334ab92bf0afea203056c3915} 
+int {\bfseries Received\+\_\+\+APP\+\_\+data\+\_\+found}
+\item 
+\Hypertarget{main_8h_ad58b7d38b38334c752121582aa74b7b0}\label{main_8h_ad58b7d38b38334c752121582aa74b7b0} 
+int {\bfseries Received\+\_\+index\+\_\+\+Number}
+\item 
+\Hypertarget{main_8h_aac5d67e7950e06da77a7adacffa17e16}\label{main_8h_aac5d67e7950e06da77a7adacffa17e16} 
+int {\bfseries Received\+\_\+index\+\_\+number2}
+\item 
+\Hypertarget{main_8h_abe58e03da96ee552593d6c2e68ce78c0}\label{main_8h_abe58e03da96ee552593d6c2e68ce78c0} 
+int {\bfseries arrangecount}
+\item 
+\Hypertarget{main_8h_a0dff8eb3980f9f15aad0cf7d16e2bbf4}\label{main_8h_a0dff8eb3980f9f15aad0cf7d16e2bbf4} 
+uint16\+\_\+t {\bfseries Total\+\_\+\+Volume\+\_\+\+Achieved\+\_\+\+Time}
+\item 
+\Hypertarget{main_8h_ab212470d1082f054107a64420792b53e}\label{main_8h_ab212470d1082f054107a64420792b53e} 
+uint16\+\_\+t {\bfseries Volume\+\_\+\+Achieved\+\_\+\+Time}
+\item 
+\Hypertarget{main_8h_a6a1bc306d0501493afee74ce424c7a50}\label{main_8h_a6a1bc306d0501493afee74ce424c7a50} 
+Semaphore\+Handle\+\_\+t {\bfseries binarysem}
+\item 
+\Hypertarget{main_8h_a87176ab30e921544ce59f07bbf3ff6e4}\label{main_8h_a87176ab30e921544ce59f07bbf3ff6e4} 
+float {\bfseries Bat\+\_\+\+Avg}
+\item 
+\Hypertarget{main_8h_ae14d52c90c3c9125edb29be3d559708e}\label{main_8h_ae14d52c90c3c9125edb29be3d559708e} 
+float {\bfseries Bat\+\_\+\+Avg\+\_\+count}
+\item 
+\Hypertarget{main_8h_a7b75e24d2c941bac569a7b755cd7513d}\label{main_8h_a7b75e24d2c941bac569a7b755cd7513d} 
+uint8\+\_\+t {\bfseries Battery\+\_\+\+Voltage}
+\item 
+\Hypertarget{main_8h_a61aeee2e4f9d8735600a72bec0f240de}\label{main_8h_a61aeee2e4f9d8735600a72bec0f240de} 
+uint8\+\_\+t {\bfseries Blower\+\_\+\+Status}
+\item 
+\Hypertarget{main_8h_a91e6377be277b5db6a36ea327f92c176}\label{main_8h_a91e6377be277b5db6a36ea327f92c176} 
+uint32\+\_\+t {\bfseries Alert\+\_\+\+Check\+\_\+\+Time}
+\item 
+\Hypertarget{main_8h_a226e0d410a4c20ecd9c2dd8625da1535}\label{main_8h_a226e0d410a4c20ecd9c2dd8625da1535} 
+uint8\+\_\+t {\bfseries ET\+\_\+\+O2\+\_\+\+Envitec\+\_\+\+Tune\+\_\+\+Value1}
+\item 
+\Hypertarget{main_8h_a1e4de29b8668af2dd6c0c4cf34f613c4}\label{main_8h_a1e4de29b8668af2dd6c0c4cf34f613c4} 
+uint8\+\_\+t {\bfseries ET\+\_\+\+O2\+\_\+\+Envitec\+\_\+\+Tune\+\_\+\+Value2}
+\item 
+\Hypertarget{main_8h_ab6f63c81e34dfdd71f54cb04af816265}\label{main_8h_ab6f63c81e34dfdd71f54cb04af816265} 
+uint8\+\_\+t {\bfseries ET\+\_\+\+O2\+\_\+\+Envitec\+\_\+\+Tune\+\_\+\+Value3}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Header for main.\+c file. This file contains the common defines of the application. 
+
+\+: Main program body
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2023 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8h_a1730ffe1e560465665eb47d9264826f9}\label{main_8h_a1730ffe1e560465665eb47d9264826f9} 
+\index{main.h@{main.h}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

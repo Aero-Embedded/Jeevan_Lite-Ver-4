@@ -1,0 +1,70 @@
+\doxysection{Problems\+\_\+\+Happen.\+h}
+\hypertarget{_problems___happen_8h_source}{}\label{_problems___happen_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/OTHERS/Problems\_Happen.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/OTHERS/Problems\_Happen.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Problems\_Happen.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Jan\ 18,\ 2023}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ asus}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_PROBLEMS\_HAPPEN\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_PROBLEMS\_HAPPEN\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{/*\ Free\ rtos\ based\ bugs}}
+\DoxyCodeLine{00014\ \textcolor{comment}{}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ check\ freertos\ heap\ size.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ check\ task\ stack\ size.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ check\ priority\ base\ concepts\ works\ or\ not.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ check\ Queue\ takes\ more\ time\ or\ not.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ check\ semaphore\ works\ or\ not.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ check\ one\ shot\ timer\ works\ or\ not.}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ check\ how\ much\ RAM\ Space\ consumes.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{}}
+\DoxyCodeLine{00023\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{/*device\ based\ problem}}
+\DoxyCodeLine{00027\ \textcolor{comment}{}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *\ check\ expiratory\ valve\ flop,connection.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ check\ nrv.}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *\ check\ lung.}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ check\ blower\ leak.}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ *\ check\ sensor\ voltages.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ *\ check\ Oxygen\ input\ bar\ pressure.}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ *\ Don't\ use\ multiple\ lines\ in\ interrupt\ code\ it\ will\ cause\ or\ not\ execute\ some\ lines.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ *\ suspend\ a\ take\ in\ sensor\ offset\ task.}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ *\ suspend\ a\ task\ in\ Mode\ initial\ Flag\ set.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ *\ Check\ all\ Task\ Run\ in\ Respected\ Millisecond\ Delay.}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ *\ Check\ Variables\ are\ Reset\ or\ Not.}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ *\ hard\ fault\ handler\ happen\ for\ anything\ divisible\ by\ zero}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ *\ check\ Tubing\ in\ case\ any\ peep\ problem\ oscillations.}}
+\DoxyCodeLine{00041\ \textcolor{comment}{}}
+\DoxyCodeLine{00042\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{comment}{/*hints\ \ for\ re\ modifying\ coding\ 09/09/23}}
+\DoxyCodeLine{00046\ \textcolor{comment}{}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ *\ fuel\ gauge\ method\ is\ hided\ and\ normal\ battery\ read\ mode\ is\ used}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ *\ in\ sampled\ parameter\ frame\ one\ only\ used\ another\ all\ are\ commented}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ *\ in\ uart\ to\ Bluetooth\ communication\ sampled\ parameter\ and\ fuel\ gauge\ method\ are\ hide.please\ verify\ it.}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ *\ fio2\ blending\ values\ are\ changed\ please\ change\ it.}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ *\ please\ check\ ws812\ alert\ indication\ led.}}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ *\ check\ the\ pressure\ and\ o2\ flow\ sensor\ read\ pin\ area\ may\ be\ it\ will\ be\ change.}}
+\DoxyCodeLine{00053\ \textcolor{comment}{}}
+\DoxyCodeLine{00054\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00057\ \textcolor{comment}{\ *\ changes\ in\ doxywizrd}}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ *\ bluetooth\ graph.h\ \_\_attribute\_\_((packed))\ has\ changed}}
+\DoxyCodeLine{00060\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00061\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_PROBLEMS\_HAPPEN\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

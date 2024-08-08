@@ -1,0 +1,49 @@
+\doxysection{Vc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON.\+h}
+\hypertarget{_vc___simv___assist___o_n_8h_source}{}\label{_vc___simv___assist___o_n_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/VC-\/SIMV/Vc\_Simv\_Assist\_ON.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/VC-\/SIMV/Vc\_Simv\_Assist\_ON.h}}
+\mbox{\hyperlink{_vc___simv___assist___o_n_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ INC\_AERO\_INC\_VC\_SIMV\_VC\_SIMV\_ASSIST\_ON\_H\_}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ INC\_AERO\_INC\_VC\_SIMV\_VC\_SIMV\_ASSIST\_ON\_H\_}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ uint16\_t\ VOLUME\_Val;}
+\DoxyCodeLine{00027\ \ \ \ \ uint8\_t\ \ PEEP\_Val;}
+\DoxyCodeLine{00028\ \ \ \ \ uint8\_t\ \ RESPIRATORY\_RATE\_Val;}
+\DoxyCodeLine{00029\ \ \ \ \ uint8\_t\ \ FIO2\_Val;}
+\DoxyCodeLine{00030\ \ \ \ \ uint32\_t\ INSPIRATION\_TIME;}
+\DoxyCodeLine{00031\ \ \ \ \ uint32\_t\ EXPIRATION\_TIME;}
+\DoxyCodeLine{00032\ \ \ \ \ uint8\_t\ \ Inspiration\_Time\_Ratio;}
+\DoxyCodeLine{00033\ \ \ \ \ uint8\_t\ \ Expiration\_Time\_Ratio;}
+\DoxyCodeLine{00034\ \ \ \ \ uint8\_t\ \ FLOW\_RATE\_Val;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ uint8\_t\ \ TRIG\_TYPE;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{float}\ \ TRIG\_LMT;}
+\DoxyCodeLine{00038\ \ \ \ \ uint16\_t\ \ TRIG\_TIME;}
+\DoxyCodeLine{00039\ \ \ \ \ uint16\_t\ CALC\_TRIG\_VAL;}
+\DoxyCodeLine{00040\ \ \ \ \ uint16\_t\ TOLERANCE\_EWAVE;}
+\DoxyCodeLine{00041\ \ \ \ \ uint16\_t\ TRIG\_WINDOW;}
+\DoxyCodeLine{00042\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{_pc___simv___assist___o_n_8h_aa581da92b69380da87bd56ab25f1a4a8}{Assist\_Control}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \}\mbox{\hyperlink{struct_v_c___s_i_m_v__mode__parameter}{VC\_SIMV\_mode\_parameter}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_vc___simv___assist___o_n_8h_a87fa008f690168ee90e4188f3e8359b5}{Volume\_max}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \mbox{\hyperlink{struct_v_c___s_i_m_v__mode__parameter}{VC\_SIMV\_mode\_parameter}}\ \mbox{\hyperlink{_vc___simv___assist___o_n_8h_af68b97e5a34a31550bcb84a48bb24153}{VC\_SIMV}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ xTaskHandle\ \mbox{\hyperlink{_vc___simv___assist___o_n_8h_afd8ffff9660201e3fa69e06ee5eeb54c}{Vc\_Simv\_Assist\_ON\_Handler}};\ \ \ \ \ \ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_vc___simv___assist___o_n_8h_ab17e83cf8ae58f0b4e17a5362130973a}{Vc\_Simv\_Assist\_ON\_Task}}(\textcolor{keywordtype}{void}\ *argument);}
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_vc___simv___assist___o_n_8h_a80bd1b4e4c4b998d47f9b630ae8cdbba}{VC\_SIMV\_Expiration\_Time\_Variables\_Reset}}();}
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_vc___simv___assist___o_n_8h_a9450232b7c64b9a730304167f6f4caba}{VC\_SIMV\_Inspiration\_Time\_Variables\_Reset}}();}
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_vc___simv___assist___o_n_8h_a8c06a4ba3b460988c22191cffead731c}{VC\_SIMV\_Assist\_ON\_Expiration\_Time\_Variables\_Reset}}();}
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_vc___simv___assist___o_n_8h_ac7e47eb8146647814807c7330e221ead}{VC\_SIMV\_Assist\_ON\_Inspiration\_Time\_Variables\_Reset}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_AERO\_INC\_VC\_SIMV\_VC\_SIMV\_ASSIST\_ON\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

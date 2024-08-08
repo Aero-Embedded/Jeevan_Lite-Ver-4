@@ -1,0 +1,211 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+OTHERS/\+Common\+\_\+\+Parameter.h File Reference}
+\hypertarget{_common___parameter_8h}{}\label{_common___parameter_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/OTHERS/Common\_Parameter.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/OTHERS/Common\_Parameter.h}}
+
+
+Declaration of Finding average of PIP,peep.  
+
+
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_common___mode__parameter}{Common\+\_\+\+Mode\+\_\+parameter}}
+\begin{DoxyCompactList}\small\item\em Structure contains common variables to check the alert. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_p_e_e_p__maintain__parameter}{PEEP\+\_\+maintain\+\_\+parameter}}
+\begin{DoxyCompactList}\small\item\em Structure contains peep related variables. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_p_i_p__average__parameter}{PIP\+\_\+average\+\_\+parameter}}
+\begin{DoxyCompactList}\small\item\em Structure contains pip related variables. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_t_i_m_e__base__parameter}{TIME\+\_\+base\+\_\+parameter}}
+\begin{DoxyCompactList}\small\item\em Structure contains time based variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_common___parameter_8h_ae8e8f7612b79ab14c563f5071e83ee63}\label{_common___parameter_8h_ae8e8f7612b79ab14c563f5071e83ee63} 
+enum \mbox{\hyperlink{_common___parameter_8h_ae8e8f7612b79ab14c563f5071e83ee63}{Peep\+\_\+status}} \{ {\bfseries PEEP\+\_\+\+NOT\+\_\+\+ACHEIVED}
+, {\bfseries PEEP\+\_\+\+ACHEIVED}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for Peep Achieved status. \end{DoxyCompactList}\item 
+\Hypertarget{_common___parameter_8h_ab83448bd196a9a5f2ec542df6d9267a3}\label{_common___parameter_8h_ab83448bd196a9a5f2ec542df6d9267a3} 
+enum \mbox{\hyperlink{_common___parameter_8h_ab83448bd196a9a5f2ec542df6d9267a3}{Expiratory\+\_\+\+Valve\+\_\+\+Lock\+\_\+delay}} \{ {\bfseries OPENED}
+, {\bfseries CLOSED}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for Expiratory valve status. \end{DoxyCompactList}\item 
+\Hypertarget{_common___parameter_8h_a9b157d5bf330f36b6b285de703323567}\label{_common___parameter_8h_a9b157d5bf330f36b6b285de703323567} 
+enum \mbox{\hyperlink{_common___parameter_8h_a9b157d5bf330f36b6b285de703323567}{Breathe\+\_\+state}} \{ \newline
+{\bfseries INSPIRATION\+\_\+\+CYCLE} = 0
+, {\bfseries EXPIRATION\+\_\+\+CYCLE} = 1
+, {\bfseries PATIENT\+\_\+\+TRIGGER\+\_\+\+INSPIRATION} = 2
+, {\bfseries PATIENT\+\_\+\+TRIGGER\+\_\+\+EXPIRATION} = 3
+, \newline
+{\bfseries NO\+\_\+\+CYCLE}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to check which type of breath cycle is running. \end{DoxyCompactList}\item 
+\Hypertarget{_common___parameter_8h_a961597c618f904b6a6cc4f57d3a5afd0}\label{_common___parameter_8h_a961597c618f904b6a6cc4f57d3a5afd0} 
+enum \mbox{\hyperlink{_common___parameter_8h_a961597c618f904b6a6cc4f57d3a5afd0}{Device\+\_\+control}} \{ {\bfseries RESUME}
+, {\bfseries PAUSE}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to check the device status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_common___parameter_8h_a3b310863a45a577ee03c771266f6a8f6}{Find\+\_\+\+Max\+\_\+\+PIP}} ()
+\begin{DoxyCompactList}\small\item\em Find\+\_\+\+Max\+\_\+\+PIP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_common___parameter_8h_acac114033a5959c18345a6729ee24480}{Find\+\_\+\+Maximum\+\_\+\+PEEP}} ()
+\begin{DoxyCompactList}\small\item\em Find\+\_\+\+Maximum\+\_\+\+PEEP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_common___parameter_8h_acab24268939814d64d2b0a0b92815428}{PIP\+\_\+\+AVERAGE}} ()
+\begin{DoxyCompactList}\small\item\em PIP\+\_\+\+AVERAGE. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_common___parameter_8h_a69583f9c3685294eec2e4b3cc497aa29}{PEEP\+\_\+\+AVERAGE}} ()
+\begin{DoxyCompactList}\small\item\em PEEP\+\_\+\+AVERAGE. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_common___parameter_8h_a1144482a06e411d8c489c834740f5427}{INITIAL\+\_\+\+DAC\+\_\+\+VALUE}} ()
+\begin{DoxyCompactList}\small\item\em INITIAL\+\_\+\+DAC\+\_\+\+VALUE. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{_common___parameter_8h_a637a71b8f2a4a5c98eecd5d952422f48}{DAC\+\_\+\+VAL}} (uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em DAC\+\_\+\+VAL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_common___parameter_8h_ab09b2369503d6f8a2d9fd477e843b8c8}{Change\+\_\+\+DAC\+\_\+\+Values}} (uint8\+\_\+t, uint16\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Change\+\_\+\+DAC\+\_\+\+Values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_common___parameter_8h_aaabab12892d5cc288876f84cb564ac5c}{Change\+\_\+\+CPAP\+\_\+\+DAC\+\_\+\+Values\+\_\+\+INVASIVE}} (uint8\+\_\+t, uint16\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Change\+\_\+\+CPAP\+\_\+\+DAC\+\_\+\+Values\+\_\+\+INVASIVE. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{_common___parameter_8h_a801d631b7e35cf085ae64997e3607cfa}{APNEA\+\_\+\+DAC\+\_\+\+VAL}} (uint8\+\_\+t Set\+\_\+\+VAL)
+\begin{DoxyCompactList}\small\item\em APNEA\+\_\+\+DAC\+\_\+\+VAL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_common___parameter_8h_aa432588732d1aa99a364073c763d0d4c}{INITIAL\+\_\+\+CPAP\+\_\+\+DAC\+\_\+\+VALUE\+\_\+\+INVASIVE}} ()
+\begin{DoxyCompactList}\small\item\em INITIAL\+\_\+\+CPAP\+\_\+\+DAC\+\_\+\+VALUE\+\_\+\+INVASIVE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_common___parameter_8h_ab7cfb955495e8cbdb903855b925f73ff}\label{_common___parameter_8h_ab7cfb955495e8cbdb903855b925f73ff} 
+\mbox{\hyperlink{_common___parameter_8h_ae8e8f7612b79ab14c563f5071e83ee63}{Peep\+\_\+status}} {\bfseries Peep\+\_\+\+Status}
+\begin{DoxyCompactList}\small\item\em Enumeration variable. \end{DoxyCompactList}\item 
+\Hypertarget{_common___parameter_8h_a809b6d5a812d5f0a2d1b79f51a2e5ad2}\label{_common___parameter_8h_a809b6d5a812d5f0a2d1b79f51a2e5ad2} 
+\mbox{\hyperlink{_common___parameter_8h_ab83448bd196a9a5f2ec542df6d9267a3}{Expiratory\+\_\+\+Valve\+\_\+\+Lock\+\_\+delay}} {\bfseries Expiratory\+\_\+\+Valve\+\_\+\+Lock\+\_\+\+Delay}
+\begin{DoxyCompactList}\small\item\em Enumeration variable. \end{DoxyCompactList}\item 
+\Hypertarget{_common___parameter_8h_a7930a5aad9a3df863a01720b1c5044e3}\label{_common___parameter_8h_a7930a5aad9a3df863a01720b1c5044e3} 
+\mbox{\hyperlink{struct_common___mode__parameter}{Common\+\_\+\+Mode\+\_\+parameter}} {\bfseries Common\+\_\+\+Mode\+\_\+\+Parameter}
+\begin{DoxyCompactList}\small\item\em Structure variable. \end{DoxyCompactList}\item 
+\Hypertarget{_common___parameter_8h_af16432386b666efd41944ccdc4995d63}\label{_common___parameter_8h_af16432386b666efd41944ccdc4995d63} 
+\mbox{\hyperlink{struct_p_i_p__average__parameter}{PIP\+\_\+average\+\_\+parameter}} {\bfseries PIP\+\_\+\+Average\+\_\+\+Parameter}
+\begin{DoxyCompactList}\small\item\em Structure variable. \end{DoxyCompactList}\item 
+\Hypertarget{_common___parameter_8h_af9a9a7e9370da0f9f7e8380c1d9ecf1c}\label{_common___parameter_8h_af9a9a7e9370da0f9f7e8380c1d9ecf1c} 
+\mbox{\hyperlink{struct_t_i_m_e__base__parameter}{TIME\+\_\+base\+\_\+parameter}} {\bfseries TIME\+\_\+\+Base\+\_\+parameter}
+\begin{DoxyCompactList}\small\item\em Structure variable. \end{DoxyCompactList}\item 
+\Hypertarget{_common___parameter_8h_acdd3844ae541b7a513915affdca6273e}\label{_common___parameter_8h_acdd3844ae541b7a513915affdca6273e} 
+\mbox{\hyperlink{struct_p_e_e_p__maintain__parameter}{PEEP\+\_\+maintain\+\_\+parameter}} {\bfseries PEEP\+\_\+\+Maintain\+\_\+\+Parameter}
+\item 
+\Hypertarget{_common___parameter_8h_a58f609d656b3fb2cc705ca319d5afd4c}\label{_common___parameter_8h_a58f609d656b3fb2cc705ca319d5afd4c} 
+\mbox{\hyperlink{_common___parameter_8h_a9b157d5bf330f36b6b285de703323567}{Breathe\+\_\+state}} {\bfseries BREATH\+\_\+\+STATE}
+\begin{DoxyCompactList}\small\item\em Enumeration variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of Finding average of PIP,peep. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Declaration of Finding average of PIP,peep. and also initializes DAC values. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_common___parameter_8h_a801d631b7e35cf085ae64997e3607cfa}\label{_common___parameter_8h_a801d631b7e35cf085ae64997e3607cfa} 
+\index{Common\_Parameter.h@{Common\_Parameter.h}!APNEA\_DAC\_VAL@{APNEA\_DAC\_VAL}}
+\index{APNEA\_DAC\_VAL@{APNEA\_DAC\_VAL}!Common\_Parameter.h@{Common\_Parameter.h}}
+\doxysubsubsection{\texorpdfstring{APNEA\_DAC\_VAL()}{APNEA\_DAC\_VAL()}}
+{\footnotesize\ttfamily uint16\+\_\+t APNEA\+\_\+\+DAC\+\_\+\+VAL (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Set\+\_\+\+VAL }\end{DoxyParamCaption})}
+
+
+
+APNEA\+\_\+\+DAC\+\_\+\+VAL. 
+
+APNEA\+\_\+\+DAC\+\_\+\+VAL. \Hypertarget{_common___parameter_8h_aaabab12892d5cc288876f84cb564ac5c}\label{_common___parameter_8h_aaabab12892d5cc288876f84cb564ac5c} 
+\index{Common\_Parameter.h@{Common\_Parameter.h}!Change\_CPAP\_DAC\_Values\_INVASIVE@{Change\_CPAP\_DAC\_Values\_INVASIVE}}
+\index{Change\_CPAP\_DAC\_Values\_INVASIVE@{Change\_CPAP\_DAC\_Values\_INVASIVE}!Common\_Parameter.h@{Common\_Parameter.h}}
+\doxysubsubsection{\texorpdfstring{Change\_CPAP\_DAC\_Values\_INVASIVE()}{Change\_CPAP\_DAC\_Values\_INVASIVE()}}
+{\footnotesize\ttfamily void Change\+\_\+\+CPAP\+\_\+\+DAC\+\_\+\+Values\+\_\+\+INVASIVE (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Set\+\_\+\+Value,  }\item[{uint16\+\_\+t}]{Blower\+\_\+\+Value }\end{DoxyParamCaption})}
+
+
+
+Change\+\_\+\+CPAP\+\_\+\+DAC\+\_\+\+Values\+\_\+\+INVASIVE. 
+
+Change\+\_\+\+CPAP\+\_\+\+DAC\+\_\+\+Values\+\_\+\+INVASIVE. \Hypertarget{_common___parameter_8h_ab09b2369503d6f8a2d9fd477e843b8c8}\label{_common___parameter_8h_ab09b2369503d6f8a2d9fd477e843b8c8} 
+\index{Common\_Parameter.h@{Common\_Parameter.h}!Change\_DAC\_Values@{Change\_DAC\_Values}}
+\index{Change\_DAC\_Values@{Change\_DAC\_Values}!Common\_Parameter.h@{Common\_Parameter.h}}
+\doxysubsubsection{\texorpdfstring{Change\_DAC\_Values()}{Change\_DAC\_Values()}}
+{\footnotesize\ttfamily void Change\+\_\+\+DAC\+\_\+\+Values (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Set\+\_\+\+Value,  }\item[{uint16\+\_\+t}]{Blower\+\_\+\+Value }\end{DoxyParamCaption})}
+
+
+
+Change\+\_\+\+DAC\+\_\+\+Values. 
+
+Change\+\_\+\+DAC\+\_\+\+Values. \Hypertarget{_common___parameter_8h_a637a71b8f2a4a5c98eecd5d952422f48}\label{_common___parameter_8h_a637a71b8f2a4a5c98eecd5d952422f48} 
+\index{Common\_Parameter.h@{Common\_Parameter.h}!DAC\_VAL@{DAC\_VAL}}
+\index{DAC\_VAL@{DAC\_VAL}!Common\_Parameter.h@{Common\_Parameter.h}}
+\doxysubsubsection{\texorpdfstring{DAC\_VAL()}{DAC\_VAL()}}
+{\footnotesize\ttfamily uint16\+\_\+t DAC\+\_\+\+VAL (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Set\+\_\+\+VAL }\end{DoxyParamCaption})}
+
+
+
+DAC\+\_\+\+VAL. 
+
+DAC\+\_\+\+VAL. \Hypertarget{_common___parameter_8h_a3b310863a45a577ee03c771266f6a8f6}\label{_common___parameter_8h_a3b310863a45a577ee03c771266f6a8f6} 
+\index{Common\_Parameter.h@{Common\_Parameter.h}!Find\_Max\_PIP@{Find\_Max\_PIP}}
+\index{Find\_Max\_PIP@{Find\_Max\_PIP}!Common\_Parameter.h@{Common\_Parameter.h}}
+\doxysubsubsection{\texorpdfstring{Find\_Max\_PIP()}{Find\_Max\_PIP()}}
+{\footnotesize\ttfamily void Find\+\_\+\+Max\+\_\+\+PIP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Find\+\_\+\+Max\+\_\+\+PIP. 
+
+Find\+\_\+\+Max\+\_\+\+PIP. \Hypertarget{_common___parameter_8h_acac114033a5959c18345a6729ee24480}\label{_common___parameter_8h_acac114033a5959c18345a6729ee24480} 
+\index{Common\_Parameter.h@{Common\_Parameter.h}!Find\_Maximum\_PEEP@{Find\_Maximum\_PEEP}}
+\index{Find\_Maximum\_PEEP@{Find\_Maximum\_PEEP}!Common\_Parameter.h@{Common\_Parameter.h}}
+\doxysubsubsection{\texorpdfstring{Find\_Maximum\_PEEP()}{Find\_Maximum\_PEEP()}}
+{\footnotesize\ttfamily void Find\+\_\+\+Maximum\+\_\+\+PEEP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Find\+\_\+\+Maximum\+\_\+\+PEEP. 
+
+Find\+\_\+\+Maximum\+\_\+\+PEEP. \Hypertarget{_common___parameter_8h_aa432588732d1aa99a364073c763d0d4c}\label{_common___parameter_8h_aa432588732d1aa99a364073c763d0d4c} 
+\index{Common\_Parameter.h@{Common\_Parameter.h}!INITIAL\_CPAP\_DAC\_VALUE\_INVASIVE@{INITIAL\_CPAP\_DAC\_VALUE\_INVASIVE}}
+\index{INITIAL\_CPAP\_DAC\_VALUE\_INVASIVE@{INITIAL\_CPAP\_DAC\_VALUE\_INVASIVE}!Common\_Parameter.h@{Common\_Parameter.h}}
+\doxysubsubsection{\texorpdfstring{INITIAL\_CPAP\_DAC\_VALUE\_INVASIVE()}{INITIAL\_CPAP\_DAC\_VALUE\_INVASIVE()}}
+{\footnotesize\ttfamily void INITIAL\+\_\+\+CPAP\+\_\+\+DAC\+\_\+\+VALUE\+\_\+\+INVASIVE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+INITIAL\+\_\+\+CPAP\+\_\+\+DAC\+\_\+\+VALUE\+\_\+\+INVASIVE. 
+
+INITIAL\+\_\+\+CPAP\+\_\+\+DAC\+\_\+\+VALUE\+\_\+\+INVASIVE. \Hypertarget{_common___parameter_8h_a1144482a06e411d8c489c834740f5427}\label{_common___parameter_8h_a1144482a06e411d8c489c834740f5427} 
+\index{Common\_Parameter.h@{Common\_Parameter.h}!INITIAL\_DAC\_VALUE@{INITIAL\_DAC\_VALUE}}
+\index{INITIAL\_DAC\_VALUE@{INITIAL\_DAC\_VALUE}!Common\_Parameter.h@{Common\_Parameter.h}}
+\doxysubsubsection{\texorpdfstring{INITIAL\_DAC\_VALUE()}{INITIAL\_DAC\_VALUE()}}
+{\footnotesize\ttfamily void INITIAL\+\_\+\+DAC\+\_\+\+VALUE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+INITIAL\+\_\+\+DAC\+\_\+\+VALUE. 
+
+INITIAL\+\_\+\+DAC\+\_\+\+VALUE. \Hypertarget{_common___parameter_8h_a69583f9c3685294eec2e4b3cc497aa29}\label{_common___parameter_8h_a69583f9c3685294eec2e4b3cc497aa29} 
+\index{Common\_Parameter.h@{Common\_Parameter.h}!PEEP\_AVERAGE@{PEEP\_AVERAGE}}
+\index{PEEP\_AVERAGE@{PEEP\_AVERAGE}!Common\_Parameter.h@{Common\_Parameter.h}}
+\doxysubsubsection{\texorpdfstring{PEEP\_AVERAGE()}{PEEP\_AVERAGE()}}
+{\footnotesize\ttfamily void PEEP\+\_\+\+AVERAGE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PEEP\+\_\+\+AVERAGE. 
+
+PEEP\+\_\+\+AVERAGE. \Hypertarget{_common___parameter_8h_acab24268939814d64d2b0a0b92815428}\label{_common___parameter_8h_acab24268939814d64d2b0a0b92815428} 
+\index{Common\_Parameter.h@{Common\_Parameter.h}!PIP\_AVERAGE@{PIP\_AVERAGE}}
+\index{PIP\_AVERAGE@{PIP\_AVERAGE}!Common\_Parameter.h@{Common\_Parameter.h}}
+\doxysubsubsection{\texorpdfstring{PIP\_AVERAGE()}{PIP\_AVERAGE()}}
+{\footnotesize\ttfamily void PIP\+\_\+\+AVERAGE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PIP\+\_\+\+AVERAGE. 
+
+PIP\+\_\+\+AVERAGE. 

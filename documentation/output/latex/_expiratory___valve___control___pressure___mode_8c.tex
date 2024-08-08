@@ -1,0 +1,102 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+Expiratory\+\_\+\+Valve\+\_\+\+Control/\+Expiratory\+\_\+\+Valve\+\_\+\+Control\+\_\+\+Pressure\+\_\+\+Mode.c File Reference}
+\hypertarget{_expiratory___valve___control___pressure___mode_8c}{}\label{_expiratory___valve___control___pressure___mode_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/Expiratory\_Valve\_Control/Expiratory\_Valve\_Control\_Pressure\_Mode.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/Expiratory\_Valve\_Control/Expiratory\_Valve\_Control\_Pressure\_Mode.c}}
+
+
+Implementation of Expiratory\+\_\+\+Valve\+\_\+\+Control\+\_\+\+Pressure\+\_\+\+Mode Concept.  
+
+
+{\ttfamily \#include "{}Expiratory\+\_\+\+Valve\+\_\+\+Control\+\_\+\+Pressure\+\_\+\+Mode.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint16\+\_\+t \mbox{\hyperlink{_expiratory___valve___control___pressure___mode_8c_aa0260ffcb355083e3e414922d2286417}{Below\+\_\+30\+\_\+\+RR\+\_\+\+Control}} (uint8\+\_\+t Achieved\+\_\+\+PEEP, uint8\+\_\+t Set\+\_\+\+Respiratory\+\_\+\+Rate, uint32\+\_\+t Inspiration\+\_\+\+Time\+\_\+in\+\_\+\+MS, uint8\+\_\+t Set\+\_\+\+PEEP, uint16\+\_\+t Valve\+\_\+\+Open\+\_\+\+Time)
+\begin{DoxyCompactList}\small\item\em Below\+\_\+30\+\_\+\+RR\+\_\+\+Control. This function control valve open time and temp peep control. \end{DoxyCompactList}\item 
+static uint16\+\_\+t \mbox{\hyperlink{_expiratory___valve___control___pressure___mode_8c_a2b81222ddbe983eb091eb9255f745eb9}{Above\+\_\+30\+\_\+\+RR\+\_\+\+Control}} (uint8\+\_\+t Achieved\+\_\+\+PEEP, uint8\+\_\+t Set\+\_\+\+Respiratory\+\_\+\+Rate, uint32\+\_\+t Inspiration\+\_\+\+Time\+\_\+in\+\_\+\+MS, uint8\+\_\+t Set\+\_\+\+PEEP, uint16\+\_\+t Valve\+\_\+\+Open\+\_\+\+Time)
+\begin{DoxyCompactList}\small\item\em Above\+\_\+30\+\_\+\+RR\+\_\+\+Control. This function control valve open time and temp peep control. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{_expiratory___valve___control___pressure___mode_8c_a9a358065b1fc9c867787d7bc5cf92a87}{PEEP\+\_\+\+Control\+\_\+\+For\+\_\+\+Expiratory\+\_\+\+Valve\+\_\+\+Open\+\_\+\+Time\+\_\+\+In\+\_\+\+Pressure\+\_\+\+Mode}} (uint8\+\_\+t Achieved\+\_\+\+PEEP, uint8\+\_\+t Set\+\_\+\+Respiratory\+\_\+\+Rate, uint32\+\_\+t Inspiration\+\_\+\+Time\+\_\+in\+\_\+\+MS, uint8\+\_\+t Set\+\_\+\+PEEP, uint16\+\_\+t Valve\+\_\+\+Open\+\_\+\+Time)
+\begin{DoxyCompactList}\small\item\em PEEP\+\_\+\+Control\+\_\+\+For\+\_\+\+Expiratory\+\_\+\+Valve\+\_\+\+Open\+\_\+\+Time\+\_\+\+In\+\_\+\+Pressure\+\_\+\+Mode. This function call the any one function based upon set value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of Expiratory\+\_\+\+Valve\+\_\+\+Control\+\_\+\+Pressure\+\_\+\+Mode Concept. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the implementation of Expiratory\+\_\+\+Valve\+\_\+\+Control\+\_\+\+Pressure\+\_\+\+Mode Concept within a mode, including the initialization 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_expiratory___valve___control___pressure___mode_8c_a2b81222ddbe983eb091eb9255f745eb9}\label{_expiratory___valve___control___pressure___mode_8c_a2b81222ddbe983eb091eb9255f745eb9} 
+\index{Expiratory\_Valve\_Control\_Pressure\_Mode.c@{Expiratory\_Valve\_Control\_Pressure\_Mode.c}!Above\_30\_RR\_Control@{Above\_30\_RR\_Control}}
+\index{Above\_30\_RR\_Control@{Above\_30\_RR\_Control}!Expiratory\_Valve\_Control\_Pressure\_Mode.c@{Expiratory\_Valve\_Control\_Pressure\_Mode.c}}
+\doxysubsubsection{\texorpdfstring{Above\_30\_RR\_Control()}{Above\_30\_RR\_Control()}}
+{\footnotesize\ttfamily static uint16\+\_\+t Above\+\_\+30\+\_\+\+RR\+\_\+\+Control (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Achieved\+\_\+\+PEEP,  }\item[{uint8\+\_\+t}]{Set\+\_\+\+Respiratory\+\_\+\+Rate,  }\item[{uint32\+\_\+t}]{Inspiration\+\_\+\+Time\+\_\+in\+\_\+\+MS,  }\item[{uint8\+\_\+t}]{Set\+\_\+\+PEEP,  }\item[{uint16\+\_\+t}]{Valve\+\_\+\+Open\+\_\+\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Above\+\_\+30\+\_\+\+RR\+\_\+\+Control. This function control valve open time and temp peep control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Achieved\+\_\+\+PEEP} & \\
+\hline
+{\em Set\+\_\+\+Respiratory\+\_\+\+Rate} & \\
+\hline
+{\em Inspiration\+\_\+\+Time\+\_\+in\+\_\+\+MS} & \\
+\hline
+{\em Set\+\_\+\+PEEP} & \\
+\hline
+{\em Valve\+\_\+\+Open\+\_\+\+Time} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_expiratory___valve___control___pressure___mode_8c_aa0260ffcb355083e3e414922d2286417}\label{_expiratory___valve___control___pressure___mode_8c_aa0260ffcb355083e3e414922d2286417} 
+\index{Expiratory\_Valve\_Control\_Pressure\_Mode.c@{Expiratory\_Valve\_Control\_Pressure\_Mode.c}!Below\_30\_RR\_Control@{Below\_30\_RR\_Control}}
+\index{Below\_30\_RR\_Control@{Below\_30\_RR\_Control}!Expiratory\_Valve\_Control\_Pressure\_Mode.c@{Expiratory\_Valve\_Control\_Pressure\_Mode.c}}
+\doxysubsubsection{\texorpdfstring{Below\_30\_RR\_Control()}{Below\_30\_RR\_Control()}}
+{\footnotesize\ttfamily static uint16\+\_\+t Below\+\_\+30\+\_\+\+RR\+\_\+\+Control (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Achieved\+\_\+\+PEEP,  }\item[{uint8\+\_\+t}]{Set\+\_\+\+Respiratory\+\_\+\+Rate,  }\item[{uint32\+\_\+t}]{Inspiration\+\_\+\+Time\+\_\+in\+\_\+\+MS,  }\item[{uint8\+\_\+t}]{Set\+\_\+\+PEEP,  }\item[{uint16\+\_\+t}]{Valve\+\_\+\+Open\+\_\+\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Below\+\_\+30\+\_\+\+RR\+\_\+\+Control. This function control valve open time and temp peep control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Achieved\+\_\+\+PEEP} & \\
+\hline
+{\em Set\+\_\+\+Respiratory\+\_\+\+Rate} & \\
+\hline
+{\em Inspiration\+\_\+\+Time\+\_\+in\+\_\+\+MS} & \\
+\hline
+{\em Set\+\_\+\+PEEP} & \\
+\hline
+{\em Valve\+\_\+\+Open\+\_\+\+Time} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_expiratory___valve___control___pressure___mode_8c_a9a358065b1fc9c867787d7bc5cf92a87}\label{_expiratory___valve___control___pressure___mode_8c_a9a358065b1fc9c867787d7bc5cf92a87} 
+\index{Expiratory\_Valve\_Control\_Pressure\_Mode.c@{Expiratory\_Valve\_Control\_Pressure\_Mode.c}!PEEP\_Control\_For\_Expiratory\_Valve\_Open\_Time\_In\_Pressure\_Mode@{PEEP\_Control\_For\_Expiratory\_Valve\_Open\_Time\_In\_Pressure\_Mode}}
+\index{PEEP\_Control\_For\_Expiratory\_Valve\_Open\_Time\_In\_Pressure\_Mode@{PEEP\_Control\_For\_Expiratory\_Valve\_Open\_Time\_In\_Pressure\_Mode}!Expiratory\_Valve\_Control\_Pressure\_Mode.c@{Expiratory\_Valve\_Control\_Pressure\_Mode.c}}
+\doxysubsubsection{\texorpdfstring{PEEP\_Control\_For\_Expiratory\_Valve\_Open\_Time\_In\_Pressure\_Mode()}{PEEP\_Control\_For\_Expiratory\_Valve\_Open\_Time\_In\_Pressure\_Mode()}}
+{\footnotesize\ttfamily uint16\+\_\+t PEEP\+\_\+\+Control\+\_\+\+For\+\_\+\+Expiratory\+\_\+\+Valve\+\_\+\+Open\+\_\+\+Time\+\_\+\+In\+\_\+\+Pressure\+\_\+\+Mode (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Achieved\+\_\+\+PEEP,  }\item[{uint8\+\_\+t}]{Set\+\_\+\+Respiratory\+\_\+\+Rate,  }\item[{uint32\+\_\+t}]{Inspiration\+\_\+\+Time\+\_\+in\+\_\+\+MS,  }\item[{uint8\+\_\+t}]{Set\+\_\+\+PEEP,  }\item[{uint16\+\_\+t}]{Valve\+\_\+\+Open\+\_\+\+Time }\end{DoxyParamCaption})}
+
+
+
+PEEP\+\_\+\+Control\+\_\+\+For\+\_\+\+Expiratory\+\_\+\+Valve\+\_\+\+Open\+\_\+\+Time\+\_\+\+In\+\_\+\+Pressure\+\_\+\+Mode. This function call the any one function based upon set value. 
+
+control PEEP\+\_\+\+Control\+\_\+\+For\+\_\+\+Expiratory\+\_\+\+Valve\+\_\+\+Open\+\_\+\+Time\+\_\+\+In\+\_\+\+Pressure\+\_\+\+Modee.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Achieved\+\_\+\+PEEP} & \\
+\hline
+{\em Set\+\_\+\+Respiratory\+\_\+\+Rate} & \\
+\hline
+{\em Inspiration\+\_\+\+Time\+\_\+in\+\_\+\+MS} & \\
+\hline
+{\em Set\+\_\+\+PEEP} & \\
+\hline
+{\em Valve\+\_\+\+Open\+\_\+\+Time} & \\
+\hline
+\end{DoxyParams}

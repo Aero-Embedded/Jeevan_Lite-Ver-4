@@ -1,0 +1,40 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+SENSORS/\+SENSORS\+\_\+\+INTERFACE/digital\+\_\+filters.c File Reference}
+\hypertarget{digital__filters_8c}{}\label{digital__filters_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/SENSORS\_INTERFACE/digital\_filters.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/SENSORS\_INTERFACE/digital\_filters.c}}
+
+
+Implementation of Sensor Filter.  
+
+
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/utilities.\+h$>$}\newline
+{\ttfamily \#include "{}stdint.\+h"{}}\newline
+{\ttfamily \#include "{}math.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{digital__filters_8c_a9a470236582d77763b16889d3d5ce251}{kalman\+\_\+filter}} (float mea, float \texorpdfstring{$\ast$}{*}err\+\_\+estimate, float err\+\_\+measure, float q, int8\+\_\+t last\+\_\+estimate)
+\begin{DoxyCompactList}\small\item\em kalman\+\_\+filter function neglects the noise in the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of Sensor Filter. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Implementation of Filter for Sensor values. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{digital__filters_8c_a9a470236582d77763b16889d3d5ce251}\label{digital__filters_8c_a9a470236582d77763b16889d3d5ce251} 
+\index{digital\_filters.c@{digital\_filters.c}!kalman\_filter@{kalman\_filter}}
+\index{kalman\_filter@{kalman\_filter}!digital\_filters.c@{digital\_filters.c}}
+\doxysubsubsection{\texorpdfstring{kalman\_filter()}{kalman\_filter()}}
+{\footnotesize\ttfamily float kalman\+\_\+filter (\begin{DoxyParamCaption}\item[{float}]{mea,  }\item[{float \texorpdfstring{$\ast$}{*}}]{err\+\_\+estimate,  }\item[{float}]{err\+\_\+measure,  }\item[{float}]{q,  }\item[{int8\+\_\+t}]{last\+\_\+estimate }\end{DoxyParamCaption})}
+
+
+
+kalman\+\_\+filter function neglects the noise in the sensor. 
+
+Kalman Filter. 

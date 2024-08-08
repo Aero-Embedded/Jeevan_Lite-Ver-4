@@ -1,0 +1,73 @@
+\doxysection{Vc\+\_\+\+Cmv.\+h}
+\hypertarget{_vc___cmv_8h_source}{}\label{_vc___cmv_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/VC\_CMV/Vc\_Cmv.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/VC\_CMV/Vc\_Cmv.h}}
+\mbox{\hyperlink{_vc___cmv_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ INC\_VC\_CMV\_H\_}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ INC\_VC\_CMV\_H\_}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_v_c___c_m_v__mode__parameter_a43dd41b42725cb04e4232409def12b62}{VOLUME\_Val}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_v_c___c_m_v__mode__parameter_a922273bb02ae4e072bb2911c722076fe}{PEEP\_Val}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_v_c___c_m_v__mode__parameter_a8566eb5953e1215b70b8b680ef3eab9d}{RESPIRATORY\_RATE\_Val}};\ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_v_c___c_m_v__mode__parameter_a8772d3b1c888cbe2c13771d283d8742d}{FIO2\_Val}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_v_c___c_m_v__mode__parameter_af2e610a938549dd53619e5ba79247882}{INSPIRATION\_TIME}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_v_c___c_m_v__mode__parameter_aacd536994fd601856776e72f018effcf}{EXPIRATION\_TIME}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_v_c___c_m_v__mode__parameter_a4b8ff5762bb94f002737d0919bd1a92e}{Inspiration\_Time\_Ratio}};\ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_v_c___c_m_v__mode__parameter_a46bdcb7ee0d5dfd932c7e26c0598b82b}{Expiration\_Time\_Ratio}};\ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_v_c___c_m_v__mode__parameter_a05cd4230e16e61737ba332c858199db7}{FLOW\_RATE\_Val}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \}\mbox{\hyperlink{struct_v_c___c_m_v__mode__parameter}{VC\_CMV\_mode\_parameter}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344aecbade4b3b0377311754fcf23cde17fc}{Flow\_fine}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344a6480740febd449b2635f9eded65728e5}{Low\_Flow\_Problem}},\ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344ad3c640f0655efc0e317aabf0c765fcfd}{High\_Flow\_Problem}}\ \ \ \ \ }
+\DoxyCodeLine{00048\ \}\mbox{\hyperlink{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344}{Flow\_status}};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00055\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{_vc___cmv_8h_a0edf205e8bc249b473584d1fdc3f1e27adf3f893976b7eee79447ddf6d8e51e05}{Not\_Detect}},\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{_vc___cmv_8h_a0edf205e8bc249b473584d1fdc3f1e27a48a95ceab76284afa466622424eba555}{Detect}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \}\mbox{\hyperlink{_vc___cmv_8h_a0edf205e8bc249b473584d1fdc3f1e27}{set\_flow\_value}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00067\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{_vc___cmv_8h_affbc8d7edc573354bbbffd1752d52193ad5289c88b5b7179d0616da02c5fe6c96}{BlOWER\_ON}},\ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{_vc___cmv_8h_affbc8d7edc573354bbbffd1752d52193ae9d1a0f897786688897bfb37bad4a1bb}{BlOWER\_OFF}}\ \ \ \ \ }
+\DoxyCodeLine{00070\ \}\mbox{\hyperlink{_vc___cmv_8h_affbc8d7edc573354bbbffd1752d52193}{Blower\_stat}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \mbox{\hyperlink{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344}{Flow\_status}}\ \mbox{\hyperlink{_vc___cmv_8h_a13b068b51b7ebc403f06ac675aef9f7a}{Flow\_increment}};\ \ \ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \mbox{\hyperlink{_vc___cmv_8h_a0edf205e8bc249b473584d1fdc3f1e27}{set\_flow\_value}}\ \mbox{\hyperlink{_vc___cmv_8h_a7081f6952cd81de31a38febf879bb676}{Set\_Flow\_value}};\ \ \ \ }
+\DoxyCodeLine{00075\ uint16\_t\ \mbox{\hyperlink{_vc___cmv_8h_a2ffef94dba66f7b63a455fef9c1cadbf}{LOW\_COMPLIANCE\_DAC}};\ \ \ \ \ \ }
+\DoxyCodeLine{00076\ int8\_t\ \mbox{\hyperlink{_vc___cmv_8h_aaa36002036666e3f9f6f91733b48a13b}{Low\_Flow\_Rate}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ uint8\_t\ Stop\_Increment\_Count,\mbox{\hyperlink{_vc___cmv_8h_abd174e303ff68603d59b24cf7484d064}{Last\_Flow\_increment}};\ \ \ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \mbox{\hyperlink{struct_v_c___c_m_v__mode__parameter}{VC\_CMV\_mode\_parameter}}\ \mbox{\hyperlink{_vc___cmv_8h_a8526e85742b4908551ac06facad072af}{VC\_CMV}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ xTaskHandle\ \mbox{\hyperlink{_vc___cmv_8h_aa338ae7c90a08163d6dd7c949b812c45}{Vc\_Cmv\_Handler}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_vc___cmv_8h_adb5642149e0a2f790a4796d40c88f043}{Vc\_Cmv\_Task}}\ (\textcolor{keywordtype}{void}\ *argument);\ \ \ \ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_vc___cmv_8h_a58666bb6decff49700882475287e9fe4}{VC\_CMV\_Inspiration\_Time\_Variables\_Reset}}();}
+\DoxyCodeLine{00093\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_vc___cmv_8h_a7625afbaaa8f6b9337e542a09fc17ef9}{VC\_CMV\_Expiration\_Time\_Variables\_Reset}}();}
+\DoxyCodeLine{00097\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_vc___cmv_8h_abe1c95e69e485850a3c2b0c601ac1130}{Volume\_Not\_Acheieved}}();}
+\DoxyCodeLine{00101\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_vc___cmv_8h_ad8e4764770eaf63720d9b5cc0c78c689}{Volume\_Acheieved}}();}
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_vc___cmv_8h_a77732e53de153a8750abe35ccc1eaf99}{Reset\_Blower\_Status}}();}
+\DoxyCodeLine{00109\ uint16\_t\ \mbox{\hyperlink{_vc___cmv_8h_a4d1a837943b7e0cc08716b3a6322bb45}{LOW\_Compliance\_DAC\_value}}(uint8\_t);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_VC\_CMV\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

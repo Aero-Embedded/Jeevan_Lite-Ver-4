@@ -1,0 +1,92 @@
+\doxysection{Pc\+\_\+cmv.\+h}
+\hypertarget{_pc__cmv_8h_source}{}\label{_pc__cmv_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/PC\_CMV/Pc\_cmv.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/PC\_CMV/Pc\_cmv.h}}
+\mbox{\hyperlink{_pc__cmv_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ INC\_PC\_CMV\_H\_}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ INC\_PC\_CMV\_H\_}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{00016\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INCLUDE\ FILES\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00017\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{00025\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FUNCTION\ BODY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00026\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ One\_Minite\_In\_MS\ 60000\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_p_c___c_m_v__mode__parameter_af1efc14ef9613215a02edd0fc9f653af}{PIP\_Val}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_p_c___c_m_v__mode__parameter_a7297a533b7f77a5d15dedaea291e6b53}{PEEP\_Val}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_p_c___c_m_v__mode__parameter_a442d9468f338fb19c22f7f91cec7f366}{RESPIRATORY\_RATE\_Val}};\ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_p_c___c_m_v__mode__parameter_a9cf988c210f32e61ede10647fc02075b}{FIO2\_Val}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \mbox{\hyperlink{struct_p_c___c_m_v__mode__parameter_a51081aed2dfb3539195aaa2d72d37044}{RISE\_TIME\_MS\_Val}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_p_c___c_m_v__mode__parameter_ab73499210a063c578b4fae689b13c507}{INSPIRATION\_TIME}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_p_c___c_m_v__mode__parameter_af8319e91a8d2e568c188d056430af207}{EXPIRATION\_TIME}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_p_c___c_m_v__mode__parameter_a91631d39d8619a807eb34ab1ed0074e6}{Inspiration\_Time\_Ratio}};\ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_p_c___c_m_v__mode__parameter_a56e8e9006ded511bdefe26f324d9985e}{Expiration\_Time\_Ratio}};\ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_p_c___c_m_v__mode__parameter_a57dcf905e0329758447b03e61d2b42c0}{Rise\_Time}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_p_c___c_m_v__mode__parameter_a40e887803c22157d7df88e241d2f2ff3}{Rise\_Time\_percentage}};\ \ \ \ \ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \}\mbox{\hyperlink{struct_p_c___c_m_v__mode__parameter}{PC\_CMV\_mode\_parameter}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00060\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fdaafec59f68d838ce58ab11785c87e35eb}{ET\_TUBE\_MODE}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fdaeb71f320083bdea028268f17c1c40d22}{MASK\_MODE}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fda3e51fb946570e643ba0a3ffd95c70537}{NO\_MODE}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00064\ \}\mbox{\hyperlink{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fd}{Vent\_type}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \mbox{\hyperlink{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fd}{Vent\_type}}\ \mbox{\hyperlink{_pc__cmv_8h_ada422cbe965d4273ceceef6243b6cdc4}{Vent\_Type}};\ \ \ \ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00075\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{_pc__cmv_8h_a92eab25e65ef4f9b241023e59d3d421ea1c51ae788d7036ca40f30f050b0badb1}{Smooth\_Ramp\_Time\_Val\_Pending}},\ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{_pc__cmv_8h_a92eab25e65ef4f9b241023e59d3d421ea08984d00f742b889a383fce0c3bfc585}{Smooth\_Ramp\_Time\_Val\_Finished}}\ \ \ \ \ \ }
+\DoxyCodeLine{00078\ \}\mbox{\hyperlink{_pc__cmv_8h_a92eab25e65ef4f9b241023e59d3d421e}{smooth\_ramp\_time}};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00087\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{_pc__cmv_8h_a70da912b62aae900690d98a1d29b8b5ba6f9b367b18dbc20c26c5834aa4278062}{Leave\_Count\_The\_Breath}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{_pc__cmv_8h_a70da912b62aae900690d98a1d29b8b5baf92416091659b797f4fefebf97d14b63}{Count\_The\_Breath}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00090\ \}\mbox{\hyperlink{_pc__cmv_8h_a70da912b62aae900690d98a1d29b8b5b}{breath}};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \mbox{\hyperlink{_pc__cmv_8h_a70da912b62aae900690d98a1d29b8b5b}{breath}}\ \mbox{\hyperlink{_pc__cmv_8h_a05ef45788b9b37bfcc33d27861a4cf4a}{Breath\_Count}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \mbox{\hyperlink{_pc__cmv_8h_a92eab25e65ef4f9b241023e59d3d421e}{smooth\_ramp\_time}}\ \mbox{\hyperlink{_pc__cmv_8h_a27eaf22b1f2850bac1f0cc449eed9394}{Smooth\_Ramp\_Time}};\ \ \ \ \ }
+\DoxyCodeLine{00096\ \mbox{\hyperlink{struct_p_c___c_m_v__mode__parameter}{PC\_CMV\_mode\_parameter}}\ \mbox{\hyperlink{_pc__cmv_8h_a765e3e78648f79c1bb6d5963b256d616}{PC\_CMV}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ xTaskHandle\ \mbox{\hyperlink{_pc__cmv_8h_ad1803c6dabfaa1c8cb23eac3612ab6ce}{Pc\_Cmv\_Handler}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pc__cmv_8h_ac4c770b608b0a1167de01ede5c00b11c}{Pc\_Cmv\_Task}}\ (\textcolor{keywordtype}{void}\ *argument);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00110\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pc__cmv_8h_a56306f8ae6fdadb1c596fbcd8be5f1ba}{PC\_CMV\_Inspiration\_Time\_Variables\_Reset}}();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00115\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pc__cmv_8h_a442a96b1a414a08651d3df90d24c5eb2}{PC\_CMV\_Expiration\_Time\_Variables\_Reset}}();}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00120\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pc__cmv_8h_a46c20af750ea5de1169422886079afa6}{PIP\_Not\_Acheieved}}();}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00125\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pc__cmv_8h_abc8f0b524603ddc5aa464384db3c0ded}{PIP\_Acheieved}}();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00130\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pc__cmv_8h_a4a09fe0d88290929dc288cdd00dc45b8}{Find\_Average\_Flow}}();\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//new}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_PC\_CMV\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

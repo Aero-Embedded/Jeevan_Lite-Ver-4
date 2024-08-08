@@ -1,0 +1,448 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+ALERT/\+Alert.c File Reference}
+\hypertarget{_alert_8c}{}\label{_alert_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/ALERT/Alert.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/ALERT/Alert.c}}
+
+
+Implementation of an indicator for abnormal status of the ventilator.  
+
+
+{\ttfamily \#include "{}Alert.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_alert_8c_aa374f7d2ebb77c5353aa67e14e074ee5}\label{_alert_8c_aa374f7d2ebb77c5353aa67e14e074ee5} 
+void {\bfseries Convert\+\_\+\+Battery\+\_\+\+Percentage} ()
+\begin{DoxyCompactList}\small\item\em Convert\+\_\+\+Battery\+\_\+\+Percentage. This function calculate the battery percentage in device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_afb6bb69843314de657e57bff3e0a7920}{Split\+\_\+\+Alert\+\_\+\+Parameter\+\_\+\+Packets}} (ALERT\+\_\+\+RANGE\+\_\+\+PACKET \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em SEND\+\_\+\+ALERT\+\_\+\+PACKET. This function store the alert range data using alert\+\_\+\+Range structure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_a9e00b6f1d48ca07ee5ca602515daedd9}{SEND\+\_\+\+ALERT\+\_\+\+PACKET}} ()
+\begin{DoxyCompactList}\small\item\em SEND\+\_\+\+ALERT\+\_\+\+PACKET. This function send the alert frame from the \doxylink{_bluetooth___graph_8h_afcfb3e5f0ff71d47e62030fe3453dda8}{Bluetooth\+\_\+\+Data\+\_\+\+Send()} function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_a2253dd564c36712be59695c76dcc73d7}{Clear\+\_\+\+All\+\_\+\+Alert\+\_\+\+Bits}} ()
+\begin{DoxyCompactList}\small\item\em Clear\+\_\+\+All\+\_\+\+Alert\+\_\+\+Bits. This function resets all alert bits when the alert frame is sent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_a065d25e4822c883f4ee13c6fdabcb4fe}{Alert\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Alert\+\_\+\+Task. This alert task runs only during inspiration time to check for patient circuit disconnection alerts and proximal sensor reverse direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_ac5beb1a7b53dd0b1fa0b8b259c5e8e42}{Alert\+\_\+\+Flags\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em Alert\+\_\+\+Flags\+\_\+\+Reset. This function resets all the alerts that occur once when the mode starts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_af8c175c1a42e8ce35b6602c33a90310d}{Check\+\_\+\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Check\+\_\+\+Alert. This function calls all alert functions from here. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_a160f470400517ea3a7b35b16d88b3433}{Alert\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Parameter}} ()
+\begin{DoxyCompactList}\small\item\em Alert\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Parameter. This function stores the data from the previous breath. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_a71c98585ba7c8c1006bf155cf059df61}{AC\+\_\+\+Supply\+\_\+or\+\_\+\+Battery\+\_\+\+Supply\+\_\+\+Indication}} ()
+\begin{DoxyCompactList}\small\item\em AC\+\_\+\+Supply\+\_\+or\+\_\+\+Battery\+\_\+\+Supply\+\_\+\+Indication. This This function checks whether the device is running on battery mode or AC supply mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_a888d1a9bcc1bbaa8c9c7513ee14bdfa8}{Alert\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Parameter}} ()
+\begin{DoxyCompactList}\small\item\em Alert\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Parameter. This function reset the alert flags during expiration time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_ad2f678fd2e0f294ebec325f42f3aa241}{Pip\+\_\+\+Alert}} (uint8\+\_\+t PIP)
+\begin{DoxyCompactList}\small\item\em Pip\+\_\+\+Alert. This function checks whether the PIP value exceeds the alert limit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_a501e4d3a3aa9bcf773554a5480570b49}{Peep\+\_\+\+Alert}} (uint8\+\_\+t PEEP)
+\begin{DoxyCompactList}\small\item\em Peep\+\_\+\+Alert. This function checks whether the PEEP value exceeds the alert limit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_a2a3bdd75c673079b84aec7591b58b990}{Tidal\+\_\+\+Volume\+\_\+\+Alert}} (int Maximum\+\_\+\+Volume\+\_\+\+Achieved)
+\begin{DoxyCompactList}\small\item\em Tidal\+\_\+\+Volume\+\_\+\+Alert. This function checks whether the Tidal volume value exceeds the alert limit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_a5697c77c677b5f1acb84aad219135ebf}{Minite\+\_\+\+Volume\+\_\+\+Alert}} (int \mbox{\hyperlink{_alert_8c_a460236f8c9a67c95d3d366442f8eb957}{Achieved\+\_\+\+Minite\+\_\+\+Volume}})
+\begin{DoxyCompactList}\small\item\em Minite\+\_\+\+Volume\+\_\+\+Alert. This function checks whether the minite volume value exceeds the alert limit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_af525705b1833f77021579756701f5a28}{Respiratory\+\_\+\+Rate\+\_\+\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Respiratory\+\_\+\+Rate\+\_\+\+Alert. This function checks whether the Respiratory rate value exceeds the alert limit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_ae55909dd98e61be2b0490d1e747d59fa}{Oxygen\+\_\+\+Supply\+\_\+\+Alert}} (uint8\+\_\+t FIO2\+\_\+\+Val, uint8\+\_\+t Maximum\+\_\+oxygen\+\_\+flow)
+\begin{DoxyCompactList}\small\item\em Oxygen\+\_\+\+Supply\+\_\+\+Alert. This function checks whether any abnormal condition has occurred in the oxygen inlet section. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_a96e8c5a3d45e8da5983369caec718eba}{Oxygen\+\_\+\+Blending\+\_\+\+Alert}} (uint8\+\_\+t FIO2\+\_\+\+Val, uint8\+\_\+t Achieved\+\_\+\+Oxygen)
+\begin{DoxyCompactList}\small\item\em Oxygen\+\_\+\+Blending\+\_\+\+Alert. his function Checks whether Achieved\+\_\+\+Oxygen value exceeds the alert limit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_a6e0d827c720bb58393192115ddf2c33a}{Leak\+\_\+\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Leak\+\_\+\+Alert. This function Checks for any leaks in the breathing circuit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_a1ff3eee6a9b75d1741a716ad4ff8a8f0}{Patient\+\_\+\+Circuit\+\_\+\+Disconnected\+\_\+\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Patient\+\_\+\+Circuit\+\_\+\+Disconnected\+\_\+\+Alert. This function checks if the breathing circuit is disconnected from the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_a2507cf8e603a27f5c6bce4dbf17c610d}{Proximal\+\_\+\+Flow\+\_\+\+Sensor\+\_\+\+Reverse\+\_\+\+Direction}} ()
+\begin{DoxyCompactList}\small\item\em Proximal\+\_\+\+Flow\+\_\+\+Sensor\+\_\+\+Reverse\+\_\+\+Direction. This function checks if the proximal flow sensor is connected in the reverse direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_ad838c7b34bfe54b36ea3c5c6e53cb969}{LED\+\_\+\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em LED\+\_\+\+Alert. This function controls the alert indication LED. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_a1627d1a1d04e814d16b4b02e955b1909}{Hide\+\_\+\+Alert\+\_\+1}} ()
+\begin{DoxyCompactList}\small\item\em Hide\+\_\+\+Alert\+\_\+1. This function resets the alert bits when an alert occurs due to the patient circuit being disconnected from the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_aec855e5db2c0da7797d934db926267a2}{Hide\+\_\+\+Alert\+\_\+2}} ()
+\begin{DoxyCompactList}\small\item\em Hide\+\_\+\+Alert\+\_\+2. This function resets the alert bits when an alert occurs due to the proximal flow sensor is connected in the reverse direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_alert_8c_ab4d3c2328d29a5ed1f3b2caab89e0843}{Read\+\_\+\+Battery\+\_\+\+Voltage}} ()
+\begin{DoxyCompactList}\small\item\em Convert\+\_\+\+Battery\+\_\+\+Percentage. This function calculate the analog value of battery percentage in device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_alert_8c_a66e6bd9aee43505a939fc1cb14c448a2}\label{_alert_8c_a66e6bd9aee43505a939fc1cb14c448a2} 
+uint8\+\_\+t {\bfseries Achieved\+\_\+\+Respiratory\+\_\+\+Count} =0
+\begin{DoxyCompactList}\small\item\em stores Achieved\+\_\+\+Respiratory\+\_\+\+Count \end{DoxyCompactList}\item 
+\Hypertarget{_alert_8c_aa9ae1be69b6ae35191c50cfbfc70fdfc}\label{_alert_8c_aa9ae1be69b6ae35191c50cfbfc70fdfc} 
+uint8\+\_\+t {\bfseries Achieved\+\_\+\+One\+\_\+\+RR} =0
+\begin{DoxyCompactList}\small\item\em stores Achieved\+\_\+\+One\+\_\+\+RR \end{DoxyCompactList}\item 
+\Hypertarget{_alert_8c_a2f839efd8d55e82916fa788c80479366}\label{_alert_8c_a2f839efd8d55e82916fa788c80479366} 
+int {\bfseries Total\+\_\+\+Tidal\+\_\+volume}
+\item 
+\Hypertarget{_alert_8c_a523b10fae89f9163eca48faa81abc7d5}\label{_alert_8c_a523b10fae89f9163eca48faa81abc7d5} 
+int {\bfseries Maximum\+\_\+\+Tidal\+\_\+\+Volume\+\_\+\+Achieved}
+\item 
+\Hypertarget{_alert_8c_a460236f8c9a67c95d3d366442f8eb957}\label{_alert_8c_a460236f8c9a67c95d3d366442f8eb957} 
+int {\bfseries Achieved\+\_\+\+Minite\+\_\+\+Volume} =0
+\begin{DoxyCompactList}\small\item\em stores volume related data \end{DoxyCompactList}\item 
+\Hypertarget{_alert_8c_ad8044fbc898d529051d11288008197d1}\label{_alert_8c_ad8044fbc898d529051d11288008197d1} 
+int {\bfseries RR\+\_\+\+E\+\_\+\+TIME\+\_\+\+ACHIEVED} =0
+\begin{DoxyCompactList}\small\item\em trace expiration time \end{DoxyCompactList}\item 
+\Hypertarget{_alert_8c_aaeadcc5782c2b75811a61532ab6b470c}\label{_alert_8c_aaeadcc5782c2b75811a61532ab6b470c} 
+int {\bfseries RR\+\_\+\+I\+\_\+\+TIME\+\_\+\+ACHIEVED} =0
+\begin{DoxyCompactList}\small\item\em trace inspiration time \end{DoxyCompactList}\item 
+\Hypertarget{_alert_8c_a1b98fea851599a7650655839157f388a}\label{_alert_8c_a1b98fea851599a7650655839157f388a} 
+int {\bfseries Insp\+\_\+\+Volume}
+\item 
+\Hypertarget{_alert_8c_ad26ef1c2fda44cd6bd9ebd7b30aed1e5}\label{_alert_8c_ad26ef1c2fda44cd6bd9ebd7b30aed1e5} 
+int {\bfseries Exp\+\_\+\+Volume}
+\begin{DoxyCompactList}\small\item\em stores volume related data \end{DoxyCompactList}\item 
+\Hypertarget{_alert_8c_ac7828f71d24f83be220f4009992ef1eb}\label{_alert_8c_ac7828f71d24f83be220f4009992ef1eb} 
+int {\bfseries Leak}
+\begin{DoxyCompactList}\small\item\em stores leak information \end{DoxyCompactList}\item 
+\Hypertarget{_alert_8c_a9426ea11a249db99e6878e12a6e28f42}\label{_alert_8c_a9426ea11a249db99e6878e12a6e28f42} 
+uint8\+\_\+t {\bfseries Oxygen\+\_\+\+Supply\+\_\+\+Failed} = NO
+\begin{DoxyCompactList}\small\item\em stores oxygen supply status \end{DoxyCompactList}\item 
+\Hypertarget{_alert_8c_a1d55115cd9cf3ddd727200b7308c746d}\label{_alert_8c_a1d55115cd9cf3ddd727200b7308c746d} 
+uint8\+\_\+t {\bfseries Patient\+\_\+\+Ckt\+\_\+\+Discon} = 0
+\begin{DoxyCompactList}\small\item\em stores patient circuit disconnection \end{DoxyCompactList}\item 
+\Hypertarget{_alert_8c_a77a97019c05775743075f419c76ef915}\label{_alert_8c_a77a97019c05775743075f419c76ef915} 
+uint8\+\_\+t {\bfseries Proximal\+\_\+\+Flow\+\_\+\+Sensor\+\_\+\+Reverse} = 0
+\begin{DoxyCompactList}\small\item\em stores Proximal\+\_\+\+Flow\+\_\+\+Sensor\+\_\+\+Reverse \end{DoxyCompactList}\item 
+\Hypertarget{_alert_8c_a62910551c460bc23a74a45a677413a9f}\label{_alert_8c_a62910551c460bc23a74a45a677413a9f} 
+uint8\+\_\+t {\bfseries Toggle} =0
+\begin{DoxyCompactList}\small\item\em battery related variables \end{DoxyCompactList}\item 
+\Hypertarget{_alert_8c_a0fe8e765993a82d1ca6e5360a42e3e07}\label{_alert_8c_a0fe8e765993a82d1ca6e5360a42e3e07} 
+uint8\+\_\+t {\bfseries old\+\_\+\+State} =1
+\item 
+\Hypertarget{_alert_8c_a2ace8387c770424abf4f7a23cb84063a}\label{_alert_8c_a2ace8387c770424abf4f7a23cb84063a} 
+uint8\+\_\+t {\bfseries Newstate} =0
+\begin{DoxyCompactList}\small\item\em battery related variables \end{DoxyCompactList}\item 
+\Hypertarget{_alert_8c_a0ccd20aea4bba4d6ee0af625b62d8d7f}\label{_alert_8c_a0ccd20aea4bba4d6ee0af625b62d8d7f} 
+float {\bfseries Battery\+\_\+\+Raw\+\_\+\+Value}
+\begin{DoxyCompactList}\small\item\em battery related variables \end{DoxyCompactList}\item 
+\Hypertarget{_alert_8c_abb21e7cfd504375bf5866ed0bf4a924d}\label{_alert_8c_abb21e7cfd504375bf5866ed0bf4a924d} 
+uint8\+\_\+t {\bfseries Battery\+\_\+\+Voltage\+\_\+old} =100
+\item 
+\Hypertarget{_alert_8c_a1d56a56e952377cb6602c6863a2aa8f9}\label{_alert_8c_a1d56a56e952377cb6602c6863a2aa8f9} 
+uint8\+\_\+t {\bfseries Battery\+\_\+\+Voltage\+\_\+new} =0
+\begin{DoxyCompactList}\small\item\em battery related variables \end{DoxyCompactList}\item 
+\Hypertarget{_alert_8c_a5a324e081931552d15b8c57a7d847977}\label{_alert_8c_a5a324e081931552d15b8c57a7d847977} 
+uint8\+\_\+t {\bfseries Alert\+\_\+\+Check\+\_\+\+Time\+\_\+vc} = 50
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of an indicator for abnormal status of the ventilator. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Implementation of an indicator for abnormal status of the ventilator, including the initialization. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_alert_8c_a71c98585ba7c8c1006bf155cf059df61}\label{_alert_8c_a71c98585ba7c8c1006bf155cf059df61} 
+\index{Alert.c@{Alert.c}!AC\_Supply\_or\_Battery\_Supply\_Indication@{AC\_Supply\_or\_Battery\_Supply\_Indication}}
+\index{AC\_Supply\_or\_Battery\_Supply\_Indication@{AC\_Supply\_or\_Battery\_Supply\_Indication}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{AC\_Supply\_or\_Battery\_Supply\_Indication()}{AC\_Supply\_or\_Battery\_Supply\_Indication()}}
+{\footnotesize\ttfamily void AC\+\_\+\+Supply\+\_\+or\+\_\+\+Battery\+\_\+\+Supply\+\_\+\+Indication (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+AC\+\_\+\+Supply\+\_\+or\+\_\+\+Battery\+\_\+\+Supply\+\_\+\+Indication. This This function checks whether the device is running on battery mode or AC supply mode. 
+
+AC\+\_\+\+Supply\+\_\+or\+\_\+\+Battery\+\_\+\+Supply\+\_\+\+Indication. \Hypertarget{_alert_8c_a888d1a9bcc1bbaa8c9c7513ee14bdfa8}\label{_alert_8c_a888d1a9bcc1bbaa8c9c7513ee14bdfa8} 
+\index{Alert.c@{Alert.c}!Alert\_Expiration\_Time\_Parameter@{Alert\_Expiration\_Time\_Parameter}}
+\index{Alert\_Expiration\_Time\_Parameter@{Alert\_Expiration\_Time\_Parameter}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Alert\_Expiration\_Time\_Parameter()}{Alert\_Expiration\_Time\_Parameter()}}
+{\footnotesize\ttfamily void Alert\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Alert\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Parameter. This function reset the alert flags during expiration time. 
+
+Alert\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Parameter. \Hypertarget{_alert_8c_ac5beb1a7b53dd0b1fa0b8b259c5e8e42}\label{_alert_8c_ac5beb1a7b53dd0b1fa0b8b259c5e8e42} 
+\index{Alert.c@{Alert.c}!Alert\_Flags\_Reset@{Alert\_Flags\_Reset}}
+\index{Alert\_Flags\_Reset@{Alert\_Flags\_Reset}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Alert\_Flags\_Reset()}{Alert\_Flags\_Reset()}}
+{\footnotesize\ttfamily void Alert\+\_\+\+Flags\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Alert\+\_\+\+Flags\+\_\+\+Reset. This function resets all the alerts that occur once when the mode starts. 
+
+Alert\+\_\+\+Flags\+\_\+\+Reset. \Hypertarget{_alert_8c_a160f470400517ea3a7b35b16d88b3433}\label{_alert_8c_a160f470400517ea3a7b35b16d88b3433} 
+\index{Alert.c@{Alert.c}!Alert\_Inspiration\_Time\_Parameter@{Alert\_Inspiration\_Time\_Parameter}}
+\index{Alert\_Inspiration\_Time\_Parameter@{Alert\_Inspiration\_Time\_Parameter}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Alert\_Inspiration\_Time\_Parameter()}{Alert\_Inspiration\_Time\_Parameter()}}
+{\footnotesize\ttfamily void Alert\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Alert\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Parameter. This function stores the data from the previous breath. 
+
+Alert\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Parameter. \Hypertarget{_alert_8c_a065d25e4822c883f4ee13c6fdabcb4fe}\label{_alert_8c_a065d25e4822c883f4ee13c6fdabcb4fe} 
+\index{Alert.c@{Alert.c}!Alert\_Task@{Alert\_Task}}
+\index{Alert\_Task@{Alert\_Task}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Alert\_Task()}{Alert\_Task()}}
+{\footnotesize\ttfamily void Alert\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Alert\+\_\+\+Task. This alert task runs only during inspiration time to check for patient circuit disconnection alerts and proximal sensor reverse direction. 
+
+Alert\+\_\+\+Task. \Hypertarget{_alert_8c_af8c175c1a42e8ce35b6602c33a90310d}\label{_alert_8c_af8c175c1a42e8ce35b6602c33a90310d} 
+\index{Alert.c@{Alert.c}!Check\_Alert@{Check\_Alert}}
+\index{Check\_Alert@{Check\_Alert}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Check\_Alert()}{Check\_Alert()}}
+{\footnotesize\ttfamily void Check\+\_\+\+Alert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check\+\_\+\+Alert. This function calls all alert functions from here. 
+
+Check\+\_\+\+Alert. \Hypertarget{_alert_8c_a2253dd564c36712be59695c76dcc73d7}\label{_alert_8c_a2253dd564c36712be59695c76dcc73d7} 
+\index{Alert.c@{Alert.c}!Clear\_All\_Alert\_Bits@{Clear\_All\_Alert\_Bits}}
+\index{Clear\_All\_Alert\_Bits@{Clear\_All\_Alert\_Bits}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Clear\_All\_Alert\_Bits()}{Clear\_All\_Alert\_Bits()}}
+{\footnotesize\ttfamily void Clear\+\_\+\+All\+\_\+\+Alert\+\_\+\+Bits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear\+\_\+\+All\+\_\+\+Alert\+\_\+\+Bits. This function resets all alert bits when the alert frame is sent. 
+
+Clear\+\_\+\+All\+\_\+\+Alert\+\_\+\+Bits. \Hypertarget{_alert_8c_a1627d1a1d04e814d16b4b02e955b1909}\label{_alert_8c_a1627d1a1d04e814d16b4b02e955b1909} 
+\index{Alert.c@{Alert.c}!Hide\_Alert\_1@{Hide\_Alert\_1}}
+\index{Hide\_Alert\_1@{Hide\_Alert\_1}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Hide\_Alert\_1()}{Hide\_Alert\_1()}}
+{\footnotesize\ttfamily void Hide\+\_\+\+Alert\+\_\+1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Hide\+\_\+\+Alert\+\_\+1. This function resets the alert bits when an alert occurs due to the patient circuit being disconnected from the device. 
+
+Hide\+\_\+\+Alert\+\_\+1. \Hypertarget{_alert_8c_aec855e5db2c0da7797d934db926267a2}\label{_alert_8c_aec855e5db2c0da7797d934db926267a2} 
+\index{Alert.c@{Alert.c}!Hide\_Alert\_2@{Hide\_Alert\_2}}
+\index{Hide\_Alert\_2@{Hide\_Alert\_2}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Hide\_Alert\_2()}{Hide\_Alert\_2()}}
+{\footnotesize\ttfamily void Hide\+\_\+\+Alert\+\_\+2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Hide\+\_\+\+Alert\+\_\+2. This function resets the alert bits when an alert occurs due to the proximal flow sensor is connected in the reverse direction. 
+
+Hide\+\_\+\+Alert\+\_\+2. \Hypertarget{_alert_8c_a6e0d827c720bb58393192115ddf2c33a}\label{_alert_8c_a6e0d827c720bb58393192115ddf2c33a} 
+\index{Alert.c@{Alert.c}!Leak\_Alert@{Leak\_Alert}}
+\index{Leak\_Alert@{Leak\_Alert}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Leak\_Alert()}{Leak\_Alert()}}
+{\footnotesize\ttfamily void Leak\+\_\+\+Alert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Leak\+\_\+\+Alert. This function Checks for any leaks in the breathing circuit. 
+
+Leak\+\_\+\+Alert.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_alert_8c_ad838c7b34bfe54b36ea3c5c6e53cb969}\label{_alert_8c_ad838c7b34bfe54b36ea3c5c6e53cb969} 
+\index{Alert.c@{Alert.c}!LED\_Alert@{LED\_Alert}}
+\index{LED\_Alert@{LED\_Alert}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{LED\_Alert()}{LED\_Alert()}}
+{\footnotesize\ttfamily void LED\+\_\+\+Alert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+LED\+\_\+\+Alert. This function controls the alert indication LED. 
+
+LED\+\_\+\+Alert.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_alert_8c_a5697c77c677b5f1acb84aad219135ebf}\label{_alert_8c_a5697c77c677b5f1acb84aad219135ebf} 
+\index{Alert.c@{Alert.c}!Minite\_Volume\_Alert@{Minite\_Volume\_Alert}}
+\index{Minite\_Volume\_Alert@{Minite\_Volume\_Alert}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Minite\_Volume\_Alert()}{Minite\_Volume\_Alert()}}
+{\footnotesize\ttfamily void Minite\+\_\+\+Volume\+\_\+\+Alert (\begin{DoxyParamCaption}\item[{int}]{Achieved\+\_\+\+Minite\+\_\+\+Volume }\end{DoxyParamCaption})}
+
+
+
+Minite\+\_\+\+Volume\+\_\+\+Alert. This function checks whether the minite volume value exceeds the alert limit. 
+
+Minite\+\_\+\+Volume\+\_\+\+Alert.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Achieved\+\_\+\+Minite\+\_\+\+Volume} & achieved minite volume in the last one minute. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_alert_8c_a96e8c5a3d45e8da5983369caec718eba}\label{_alert_8c_a96e8c5a3d45e8da5983369caec718eba} 
+\index{Alert.c@{Alert.c}!Oxygen\_Blending\_Alert@{Oxygen\_Blending\_Alert}}
+\index{Oxygen\_Blending\_Alert@{Oxygen\_Blending\_Alert}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Oxygen\_Blending\_Alert()}{Oxygen\_Blending\_Alert()}}
+{\footnotesize\ttfamily void Oxygen\+\_\+\+Blending\+\_\+\+Alert (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FIO2\+\_\+\+Val,  }\item[{uint8\+\_\+t}]{Achieved\+\_\+\+Oxygen }\end{DoxyParamCaption})}
+
+
+
+Oxygen\+\_\+\+Blending\+\_\+\+Alert. his function Checks whether Achieved\+\_\+\+Oxygen value exceeds the alert limit. 
+
+Oxygen\+\_\+\+Blending\+\_\+\+Alert.
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & mode set FIO2\+\_\+\+Val. \\
+\hline
+{\em Maximum\+\_\+oxygen\+\_\+flow} & maximum oxygen flow achieved in last breath. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_alert_8c_ae55909dd98e61be2b0490d1e747d59fa}\label{_alert_8c_ae55909dd98e61be2b0490d1e747d59fa} 
+\index{Alert.c@{Alert.c}!Oxygen\_Supply\_Alert@{Oxygen\_Supply\_Alert}}
+\index{Oxygen\_Supply\_Alert@{Oxygen\_Supply\_Alert}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Oxygen\_Supply\_Alert()}{Oxygen\_Supply\_Alert()}}
+{\footnotesize\ttfamily void Oxygen\+\_\+\+Supply\+\_\+\+Alert (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FIO2\+\_\+\+Val,  }\item[{uint8\+\_\+t}]{Maximum\+\_\+oxygen\+\_\+flow }\end{DoxyParamCaption})}
+
+
+
+Oxygen\+\_\+\+Supply\+\_\+\+Alert. This function checks whether any abnormal condition has occurred in the oxygen inlet section. 
+
+Oxygen\+\_\+\+Supply\+\_\+\+Alert.
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & mode set FIO2\+\_\+\+Val. \\
+\hline
+{\em Maximum\+\_\+oxygen\+\_\+flow} & maximum oxygen flow achieved in last breath. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_alert_8c_a1ff3eee6a9b75d1741a716ad4ff8a8f0}\label{_alert_8c_a1ff3eee6a9b75d1741a716ad4ff8a8f0} 
+\index{Alert.c@{Alert.c}!Patient\_Circuit\_Disconnected\_Alert@{Patient\_Circuit\_Disconnected\_Alert}}
+\index{Patient\_Circuit\_Disconnected\_Alert@{Patient\_Circuit\_Disconnected\_Alert}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Patient\_Circuit\_Disconnected\_Alert()}{Patient\_Circuit\_Disconnected\_Alert()}}
+{\footnotesize\ttfamily void Patient\+\_\+\+Circuit\+\_\+\+Disconnected\+\_\+\+Alert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Patient\+\_\+\+Circuit\+\_\+\+Disconnected\+\_\+\+Alert. This function checks if the breathing circuit is disconnected from the device. 
+
+Patient\+\_\+\+Circuit\+\_\+\+Disconnected\+\_\+\+Alert.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_alert_8c_a501e4d3a3aa9bcf773554a5480570b49}\label{_alert_8c_a501e4d3a3aa9bcf773554a5480570b49} 
+\index{Alert.c@{Alert.c}!Peep\_Alert@{Peep\_Alert}}
+\index{Peep\_Alert@{Peep\_Alert}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Peep\_Alert()}{Peep\_Alert()}}
+{\footnotesize\ttfamily void Peep\+\_\+\+Alert (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{PEEP }\end{DoxyParamCaption})}
+
+
+
+Peep\+\_\+\+Alert. This function checks whether the PEEP value exceeds the alert limit. 
+
+Peep\+\_\+\+Alert.
+
+
+\begin{DoxyParams}{Parameters}
+{\em PEEP} & minimum PEEP value achieved in the last breath cycle from the mode \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_alert_8c_ad2f678fd2e0f294ebec325f42f3aa241}\label{_alert_8c_ad2f678fd2e0f294ebec325f42f3aa241} 
+\index{Alert.c@{Alert.c}!Pip\_Alert@{Pip\_Alert}}
+\index{Pip\_Alert@{Pip\_Alert}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Pip\_Alert()}{Pip\_Alert()}}
+{\footnotesize\ttfamily void Pip\+\_\+\+Alert (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{PIP }\end{DoxyParamCaption})}
+
+
+
+Pip\+\_\+\+Alert. This function checks whether the PIP value exceeds the alert limit. 
+
+Pip\+\_\+\+Alert.
+
+
+\begin{DoxyParams}{Parameters}
+{\em PIP} & Maximum PIP value achieved in the last breath cycle from the mode \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_alert_8c_a2507cf8e603a27f5c6bce4dbf17c610d}\label{_alert_8c_a2507cf8e603a27f5c6bce4dbf17c610d} 
+\index{Alert.c@{Alert.c}!Proximal\_Flow\_Sensor\_Reverse\_Direction@{Proximal\_Flow\_Sensor\_Reverse\_Direction}}
+\index{Proximal\_Flow\_Sensor\_Reverse\_Direction@{Proximal\_Flow\_Sensor\_Reverse\_Direction}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Proximal\_Flow\_Sensor\_Reverse\_Direction()}{Proximal\_Flow\_Sensor\_Reverse\_Direction()}}
+{\footnotesize\ttfamily void Proximal\+\_\+\+Flow\+\_\+\+Sensor\+\_\+\+Reverse\+\_\+\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Proximal\+\_\+\+Flow\+\_\+\+Sensor\+\_\+\+Reverse\+\_\+\+Direction. This function checks if the proximal flow sensor is connected in the reverse direction. 
+
+Proximal\+\_\+\+Flow\+\_\+\+Sensor\+\_\+\+Reverse\+\_\+\+Direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_alert_8c_ab4d3c2328d29a5ed1f3b2caab89e0843}\label{_alert_8c_ab4d3c2328d29a5ed1f3b2caab89e0843} 
+\index{Alert.c@{Alert.c}!Read\_Battery\_Voltage@{Read\_Battery\_Voltage}}
+\index{Read\_Battery\_Voltage@{Read\_Battery\_Voltage}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Read\_Battery\_Voltage()}{Read\_Battery\_Voltage()}}
+{\footnotesize\ttfamily void Read\+\_\+\+Battery\+\_\+\+Voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Convert\+\_\+\+Battery\+\_\+\+Percentage. This function calculate the analog value of battery percentage in device. 
+
+Read\+\_\+\+Battery\+\_\+\+Voltage. \Hypertarget{_alert_8c_af525705b1833f77021579756701f5a28}\label{_alert_8c_af525705b1833f77021579756701f5a28} 
+\index{Alert.c@{Alert.c}!Respiratory\_Rate\_Alert@{Respiratory\_Rate\_Alert}}
+\index{Respiratory\_Rate\_Alert@{Respiratory\_Rate\_Alert}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Respiratory\_Rate\_Alert()}{Respiratory\_Rate\_Alert()}}
+{\footnotesize\ttfamily void Respiratory\+\_\+\+Rate\+\_\+\+Alert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Respiratory\+\_\+\+Rate\+\_\+\+Alert. This function checks whether the Respiratory rate value exceeds the alert limit. 
+
+Respiratory\+\_\+\+Rate\+\_\+\+Alert.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_alert_8c_a9e00b6f1d48ca07ee5ca602515daedd9}\label{_alert_8c_a9e00b6f1d48ca07ee5ca602515daedd9} 
+\index{Alert.c@{Alert.c}!SEND\_ALERT\_PACKET@{SEND\_ALERT\_PACKET}}
+\index{SEND\_ALERT\_PACKET@{SEND\_ALERT\_PACKET}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{SEND\_ALERT\_PACKET()}{SEND\_ALERT\_PACKET()}}
+{\footnotesize\ttfamily void SEND\+\_\+\+ALERT\+\_\+\+PACKET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+SEND\+\_\+\+ALERT\+\_\+\+PACKET. This function send the alert frame from the \doxylink{_bluetooth___graph_8h_afcfb3e5f0ff71d47e62030fe3453dda8}{Bluetooth\+\_\+\+Data\+\_\+\+Send()} function. 
+
+SEND\+\_\+\+ALERT\+\_\+\+PACKET. \Hypertarget{_alert_8c_afb6bb69843314de657e57bff3e0a7920}\label{_alert_8c_afb6bb69843314de657e57bff3e0a7920} 
+\index{Alert.c@{Alert.c}!Split\_Alert\_Parameter\_Packets@{Split\_Alert\_Parameter\_Packets}}
+\index{Split\_Alert\_Parameter\_Packets@{Split\_Alert\_Parameter\_Packets}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Split\_Alert\_Parameter\_Packets()}{Split\_Alert\_Parameter\_Packets()}}
+{\footnotesize\ttfamily void Split\+\_\+\+Alert\+\_\+\+Parameter\+\_\+\+Packets (\begin{DoxyParamCaption}\item[{ALERT\+\_\+\+RANGE\+\_\+\+PACKET \texorpdfstring{$\ast$}{*}}]{Receive\+\_\+\+Graph\+\_\+\+Packet }\end{DoxyParamCaption})}
+
+
+
+SEND\+\_\+\+ALERT\+\_\+\+PACKET. This function store the alert range data using alert\+\_\+\+Range structure. 
+
+Split\+\_\+\+Alert\+\_\+\+Parameter\+\_\+\+Packets. \Hypertarget{_alert_8c_a2a3bdd75c673079b84aec7591b58b990}\label{_alert_8c_a2a3bdd75c673079b84aec7591b58b990} 
+\index{Alert.c@{Alert.c}!Tidal\_Volume\_Alert@{Tidal\_Volume\_Alert}}
+\index{Tidal\_Volume\_Alert@{Tidal\_Volume\_Alert}!Alert.c@{Alert.c}}
+\doxysubsubsection{\texorpdfstring{Tidal\_Volume\_Alert()}{Tidal\_Volume\_Alert()}}
+{\footnotesize\ttfamily void Tidal\+\_\+\+Volume\+\_\+\+Alert (\begin{DoxyParamCaption}\item[{int}]{Maximum\+\_\+\+Volume\+\_\+\+Achieved }\end{DoxyParamCaption})}
+
+
+
+Tidal\+\_\+\+Volume\+\_\+\+Alert. This function checks whether the Tidal volume value exceeds the alert limit. 
+
+Tidal\+\_\+\+Volume\+\_\+\+Alert.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Maximum\+\_\+\+Volume\+\_\+\+Achieved} & achieved tidal volume in the last breath cycle from the mode \\
+\hline
+\end{DoxyParams}

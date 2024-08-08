@@ -1,0 +1,8 @@
+Bluetooth_Graph.c:26:6:Bluetooth_Task	16	static
+Bluetooth_Graph.c:62:6:UART6_Init	8	static
+Bluetooth_Graph.c:84:9:chksum8	24	static
+Bluetooth_Graph.c:99:6:Bluetooth_Graph_Data_Send	8	static
+Bluetooth_Graph.c:139:6:Bluetooth_Data_Send	8	static
+Bluetooth_Graph.c:213:6:BlueTooth_Receiver_Task	16	static
+Bluetooth_Graph.c:231:6:Bluetooth_data_split_Task	16	static
+Bluetooth_Graph.c:247:6:HAL_UART_RxCpltCallback	24	static,ignoring_inline_asm

@@ -1,0 +1,233 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+OXYGEN\+\_\+\+BLENDING/\+Oxygen\+\_\+\+Blending.c File Reference}
+\hypertarget{_oxygen___blending_8c}{}\label{_oxygen___blending_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/OXYGEN\_BLENDING/Oxygen\_Blending.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/OXYGEN\_BLENDING/Oxygen\_Blending.c}}
+
+
+Implementation of Oxygen\+\_\+\+Blending Concept.  
+
+
+{\ttfamily \#include "{}Oxygen\+\_\+\+Blending.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{_oxygen___blending_8c_ab6ef80a923fd7f5bae4dd2f90630a3ab}{Tune\+\_\+\+O2}} (uint8\+\_\+t, uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Tune\+\_\+\+O2. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_oxygen___blending_8c_a64d31c6c9afc4f5ef1f9fb4e1b2bd810}{Adjust\+\_\+\+O2\+\_\+\+Flow}} (uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Adjust\+\_\+\+O2\+\_\+\+Flow. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_oxygen___blending_8c_a5573d047099302f775962d5b083a1aa5}{Oxygen\+\_\+\+Blending\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Oxygen\+\_\+\+Blending\+\_\+\+Task. This Task calls the Oxygen\+\_\+\+Blending function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_oxygen___blending_8c_a83a4040b53466d67db14c8e739f75491}{Oxygen\+\_\+\+Blending}} (uint8\+\_\+t FIO2\+\_\+\+Val)
+\begin{DoxyCompactList}\small\item\em Oxygen\+\_\+\+Blending. This function mixes the oxygen level in the air during the mode to achieve a set value of FIO2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_oxygen___blending_8c_a17aac9ed0f957ed813e567e5f742a837}{Calculate\+\_\+\+O2}} (uint8\+\_\+t FIO2\+\_\+\+Val)
+\begin{DoxyCompactList}\small\item\em Calculate\+\_\+\+O2. This function limits the minimum and maximum values of the achieved O2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_oxygen___blending_8c_a823b54f6411a7b8805bc873fc7f96f40}{O2\+\_\+\+Initial\+\_\+\+Parameter}} (uint8\+\_\+t FIO2\+\_\+\+Val, uint8\+\_\+t Flowrate)
+\begin{DoxyCompactList}\small\item\em Calculate\+\_\+\+O2. This function calculates the required flow rate of O2 based on the set flow rate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_oxygen___blending_8c_ad1077de2618f1bdab52dd24a976ab875}{Low\+\_\+\+Oxygen\+\_\+\+Achieved}} (uint8\+\_\+t FIO2\+\_\+\+Val, uint8\+\_\+t Achieved\+\_\+\+Oxygen)
+\begin{DoxyCompactList}\small\item\em Low\+\_\+\+Oxygen\+\_\+\+Achieved. This function is used to increase the proportional valve opening when low oxygen levels are detected."{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_oxygen___blending_8c_aa2cf250a46a1070cea00374d29dc0b02}{High\+\_\+\+Oxygen\+\_\+\+Achieved}} (uint8\+\_\+t FIO2\+\_\+\+Val, uint8\+\_\+t Achieved\+\_\+\+Oxygen)
+\begin{DoxyCompactList}\small\item\em High\+\_\+\+Oxygen\+\_\+\+Achieved. This function is used to decrease the proportional valve opening when high oxygen levels are detected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_oxygen___blending_8c_a6d59b02d500116ce80655580d5fb076a}{O2\+\_\+\+DAC\+\_\+\+Control}} (uint8\+\_\+t FIO2\+\_\+\+Val)
+\begin{DoxyCompactList}\small\item\em O2 DAC Control. This function is always called when the O2 set value is above 21."{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_oxygen___blending_8c_a31d6cabf2a63fe7b3250dc46204ca6f8}\label{_oxygen___blending_8c_a31d6cabf2a63fe7b3250dc46204ca6f8} 
+uint16\+\_\+t {\bfseries O2\+\_\+\+DAC\+\_\+\+VALUE} =0
+\begin{DoxyCompactList}\small\item\em control proportional valve \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8c_a1abce1fb0252670bedf11b29295e5ba2}\label{_oxygen___blending_8c_a1abce1fb0252670bedf11b29295e5ba2} 
+uint32\+\_\+t {\bfseries O2\+\_\+\+Flow\+\_\+\+Event\+\_\+\+Count}
+\begin{DoxyCompactList}\small\item\em calculate O2 flow event attempt \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8c_a385c31799736ae28c84cdac1e5250c20}\label{_oxygen___blending_8c_a385c31799736ae28c84cdac1e5250c20} 
+uint32\+\_\+t {\bfseries O2\+\_\+\+Flow\+\_\+\+Cumulative\+\_\+\+Val}
+\begin{DoxyCompactList}\small\item\em calculate O2 flow cumulative value \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8c_a92c3e913cfa0154802c475e167e84803}\label{_oxygen___blending_8c_a92c3e913cfa0154802c475e167e84803} 
+uint8\+\_\+t {\bfseries O2\+\_\+\+Flow\+\_\+\+Rate\+\_\+\+Need}
+\begin{DoxyCompactList}\small\item\em calculate O2 flow rate needed \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8c_a2df2b54c7976f7f8850a77124aadb642}\label{_oxygen___blending_8c_a2df2b54c7976f7f8850a77124aadb642} 
+uint16\+\_\+t {\bfseries Extra\+\_\+\+DAC} =0
+\begin{DoxyCompactList}\small\item\em in case need extra opening of proportional valve \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8c_a1aad2245f427e6e16ee070a69026ba3a}\label{_oxygen___blending_8c_a1aad2245f427e6e16ee070a69026ba3a} 
+uint8\+\_\+t {\bfseries O2\+\_\+\+Maximum\+\_\+\+Limit} =5
+\item 
+\Hypertarget{_oxygen___blending_8c_a599d07ca99805347b5f035013876c60e}\label{_oxygen___blending_8c_a599d07ca99805347b5f035013876c60e} 
+uint8\+\_\+t {\bfseries Last\+\_\+\+Avg\+\_\+\+Flow}
+\begin{DoxyCompactList}\small\item\em Achieved O2 flow rate of last breath. \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8c_a8efecb537350df7d4a565cc4cf5dbd7d}\label{_oxygen___blending_8c_a8efecb537350df7d4a565cc4cf5dbd7d} 
+uint8\+\_\+t {\bfseries Additional\+\_\+\+O2\+\_\+\+DAC} = 40
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of Oxygen\+\_\+\+Blending Concept. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the implementation of Oxygen\+\_\+\+Blending Concept within a mode, including the initialization 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_oxygen___blending_8c_a64d31c6c9afc4f5ef1f9fb4e1b2bd810}\label{_oxygen___blending_8c_a64d31c6c9afc4f5ef1f9fb4e1b2bd810} 
+\index{Oxygen\_Blending.c@{Oxygen\_Blending.c}!Adjust\_O2\_Flow@{Adjust\_O2\_Flow}}
+\index{Adjust\_O2\_Flow@{Adjust\_O2\_Flow}!Oxygen\_Blending.c@{Oxygen\_Blending.c}}
+\doxysubsubsection{\texorpdfstring{Adjust\_O2\_Flow()}{Adjust\_O2\_Flow()}}
+{\footnotesize\ttfamily float Adjust\+\_\+\+O2\+\_\+\+Flow (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FIO2\+\_\+\+Val }\end{DoxyParamCaption})}
+
+
+
+Adjust\+\_\+\+O2\+\_\+\+Flow. 
+
+Adjust O2 Flow. This function calculates the flow percentage required to achieve the desired O2 level.
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_oxygen___blending_8c_a17aac9ed0f957ed813e567e5f742a837}\label{_oxygen___blending_8c_a17aac9ed0f957ed813e567e5f742a837} 
+\index{Oxygen\_Blending.c@{Oxygen\_Blending.c}!Calculate\_O2@{Calculate\_O2}}
+\index{Calculate\_O2@{Calculate\_O2}!Oxygen\_Blending.c@{Oxygen\_Blending.c}}
+\doxysubsubsection{\texorpdfstring{Calculate\_O2()}{Calculate\_O2()}}
+{\footnotesize\ttfamily void Calculate\+\_\+\+O2 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FIO2\+\_\+\+Val }\end{DoxyParamCaption})}
+
+
+
+Calculate\+\_\+\+O2. This function limits the minimum and maximum values of the achieved O2. 
+
+Calculate\+\_\+\+O2.
+
+\begin{DoxyPrecond}{Precondition}
+None. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+None. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\Hypertarget{_oxygen___blending_8c_aa2cf250a46a1070cea00374d29dc0b02}\label{_oxygen___blending_8c_aa2cf250a46a1070cea00374d29dc0b02} 
+\index{Oxygen\_Blending.c@{Oxygen\_Blending.c}!High\_Oxygen\_Achieved@{High\_Oxygen\_Achieved}}
+\index{High\_Oxygen\_Achieved@{High\_Oxygen\_Achieved}!Oxygen\_Blending.c@{Oxygen\_Blending.c}}
+\doxysubsubsection{\texorpdfstring{High\_Oxygen\_Achieved()}{High\_Oxygen\_Achieved()}}
+{\footnotesize\ttfamily void High\+\_\+\+Oxygen\+\_\+\+Achieved (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FIO2\+\_\+\+Val,  }\item[{uint8\+\_\+t}]{Achieved\+\_\+\+Oxygen }\end{DoxyParamCaption})}
+
+
+
+High\+\_\+\+Oxygen\+\_\+\+Achieved. This function is used to decrease the proportional valve opening when high oxygen levels are detected. 
+
+High\+\_\+\+Oxygen\+\_\+\+Achieved.
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+{\em Achieved\+\_\+\+Oxygen} & Achieved Oxygen from previous breathe. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_oxygen___blending_8c_ad1077de2618f1bdab52dd24a976ab875}\label{_oxygen___blending_8c_ad1077de2618f1bdab52dd24a976ab875} 
+\index{Oxygen\_Blending.c@{Oxygen\_Blending.c}!Low\_Oxygen\_Achieved@{Low\_Oxygen\_Achieved}}
+\index{Low\_Oxygen\_Achieved@{Low\_Oxygen\_Achieved}!Oxygen\_Blending.c@{Oxygen\_Blending.c}}
+\doxysubsubsection{\texorpdfstring{Low\_Oxygen\_Achieved()}{Low\_Oxygen\_Achieved()}}
+{\footnotesize\ttfamily void Low\+\_\+\+Oxygen\+\_\+\+Achieved (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FIO2\+\_\+\+Val,  }\item[{uint8\+\_\+t}]{Achieved\+\_\+\+Oxygen }\end{DoxyParamCaption})}
+
+
+
+Low\+\_\+\+Oxygen\+\_\+\+Achieved. This function is used to increase the proportional valve opening when low oxygen levels are detected."{}. 
+
+Calculate\+\_\+\+O2.
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+{\em Achieved\+\_\+\+Oxygen} & Achieved Oxygen from previous breathe. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_oxygen___blending_8c_a6d59b02d500116ce80655580d5fb076a}\label{_oxygen___blending_8c_a6d59b02d500116ce80655580d5fb076a} 
+\index{Oxygen\_Blending.c@{Oxygen\_Blending.c}!O2\_DAC\_Control@{O2\_DAC\_Control}}
+\index{O2\_DAC\_Control@{O2\_DAC\_Control}!Oxygen\_Blending.c@{Oxygen\_Blending.c}}
+\doxysubsubsection{\texorpdfstring{O2\_DAC\_Control()}{O2\_DAC\_Control()}}
+{\footnotesize\ttfamily void O2\+\_\+\+DAC\+\_\+\+Control (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FIO2\+\_\+\+Val }\end{DoxyParamCaption})}
+
+
+
+O2 DAC Control. This function is always called when the O2 set value is above 21."{}. 
+
+control O2 DAC value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_oxygen___blending_8c_a823b54f6411a7b8805bc873fc7f96f40}\label{_oxygen___blending_8c_a823b54f6411a7b8805bc873fc7f96f40} 
+\index{Oxygen\_Blending.c@{Oxygen\_Blending.c}!O2\_Initial\_Parameter@{O2\_Initial\_Parameter}}
+\index{O2\_Initial\_Parameter@{O2\_Initial\_Parameter}!Oxygen\_Blending.c@{Oxygen\_Blending.c}}
+\doxysubsubsection{\texorpdfstring{O2\_Initial\_Parameter()}{O2\_Initial\_Parameter()}}
+{\footnotesize\ttfamily void O2\+\_\+\+Initial\+\_\+\+Parameter (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FIO2\+\_\+\+Val,  }\item[{uint8\+\_\+t}]{Flowrate }\end{DoxyParamCaption})}
+
+
+
+Calculate\+\_\+\+O2. This function calculates the required flow rate of O2 based on the set flow rate. 
+
+Calculate\+\_\+\+O2.
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+{\em Flowrate} & Set Flow rate to achieve a O2. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_oxygen___blending_8c_a83a4040b53466d67db14c8e739f75491}\label{_oxygen___blending_8c_a83a4040b53466d67db14c8e739f75491} 
+\index{Oxygen\_Blending.c@{Oxygen\_Blending.c}!Oxygen\_Blending@{Oxygen\_Blending}}
+\index{Oxygen\_Blending@{Oxygen\_Blending}!Oxygen\_Blending.c@{Oxygen\_Blending.c}}
+\doxysubsubsection{\texorpdfstring{Oxygen\_Blending()}{Oxygen\_Blending()}}
+{\footnotesize\ttfamily void Oxygen\+\_\+\+Blending (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FIO2\+\_\+\+Val }\end{DoxyParamCaption})}
+
+
+
+Oxygen\+\_\+\+Blending. This function mixes the oxygen level in the air during the mode to achieve a set value of FIO2. 
+
+Oxygen\+\_\+\+Blending.
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_oxygen___blending_8c_a5573d047099302f775962d5b083a1aa5}\label{_oxygen___blending_8c_a5573d047099302f775962d5b083a1aa5} 
+\index{Oxygen\_Blending.c@{Oxygen\_Blending.c}!Oxygen\_Blending\_Task@{Oxygen\_Blending\_Task}}
+\index{Oxygen\_Blending\_Task@{Oxygen\_Blending\_Task}!Oxygen\_Blending.c@{Oxygen\_Blending.c}}
+\doxysubsubsection{\texorpdfstring{Oxygen\_Blending\_Task()}{Oxygen\_Blending\_Task()}}
+{\footnotesize\ttfamily void Oxygen\+\_\+\+Blending\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Oxygen\+\_\+\+Blending\+\_\+\+Task. This Task calls the Oxygen\+\_\+\+Blending function. 
+
+Oxygen\+\_\+\+Blending\+\_\+\+Task. \Hypertarget{_oxygen___blending_8c_ab6ef80a923fd7f5bae4dd2f90630a3ab}\label{_oxygen___blending_8c_ab6ef80a923fd7f5bae4dd2f90630a3ab} 
+\index{Oxygen\_Blending.c@{Oxygen\_Blending.c}!Tune\_O2@{Tune\_O2}}
+\index{Tune\_O2@{Tune\_O2}!Oxygen\_Blending.c@{Oxygen\_Blending.c}}
+\doxysubsubsection{\texorpdfstring{Tune\_O2()}{Tune\_O2()}}
+{\footnotesize\ttfamily static void Tune\+\_\+\+O2 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FIO2\+\_\+\+Val,  }\item[{uint8\+\_\+t}]{Achieved\+\_\+\+Oxygen }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Tune\+\_\+\+O2. 
+
+Tune\+\_\+\+O2. This function checks whether the achieved O2 value is high or low."{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+{\em Achieved\+\_\+\+Oxygen} & Achieved Oxygen from previous breathe. \\
+\hline
+\end{DoxyParams}

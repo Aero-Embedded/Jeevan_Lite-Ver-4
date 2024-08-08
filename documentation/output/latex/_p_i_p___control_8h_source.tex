@@ -1,0 +1,103 @@
+\doxysection{PIP\+\_\+\+Control.\+h}
+\hypertarget{_p_i_p___control_8h_source}{}\label{_p_i_p___control_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/PIP\_CONTROL/PIP\_Control.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/PIP\_CONTROL/PIP\_Control.h}}
+\mbox{\hyperlink{_p_i_p___control_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ INC\_PIP\_CONTROL\_H\_}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ INC\_PIP\_CONTROL\_H\_}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ int16\_t\ PIP\_Control\_Task\_Delay;}
+\DoxyCodeLine{00026\ \ \ \ \ int16\_t\ PIP\_Control\_Event\_Occured;}
+\DoxyCodeLine{00027\ \ \ \ \ int16\_t\ PIP\_Acheived\_Time\_Ms;}
+\DoxyCodeLine{00028\ \ \ \ \ int16\_t\ Increase\_Each\_DAC\_SET\_CONST;}
+\DoxyCodeLine{00029\ \ \ \ \ uint8\_t\ \ Early\_Acheived\_Ramp\_Time\_Percentage;}
+\DoxyCodeLine{00030\ \ \ \ \ uint8\_t\ \ Last\_Early\_Acheived\_Ramp\_Time\_Percentage;}
+\DoxyCodeLine{00031\ \ \ \ \ uint8\_t\ \ Low\_PIP\_Count;}
+\DoxyCodeLine{00032\ \ \ \ \ uint16\_t\ \ Slowly\_Acheived\_Ramp\_Time\_Percentage;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \}\mbox{\hyperlink{structpip__control___task}{pip\_control\_Task}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ uint16\_t\ BLOWER\_DAC\_VAL;}
+\DoxyCodeLine{00042\ \ \ \ \ uint16\_t\ LAST\_BLOWER\_DAC\_VAL;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ BLOWER\_VOLTAGE\_SIGNAL;}
+\DoxyCodeLine{00044\ \ \ \ \ uint16\_t\ BLOWER\_ENDING\_DAC\_SIGNAL;}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{float}\ Blower\_Signal\_Voltage;}
+\DoxyCodeLine{00046\ \ \ \ \ uint16\_t\ PEEP\_BLOWER\_DAC\_VAL;}
+\DoxyCodeLine{00047\ \ \ \ \ uint16\_t\ LAST\_PEEP\_BLOWER\_DAC\_VAL;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \}\mbox{\hyperlink{struct_pressure__mode__blower__control}{Pressure\_mode\_blower\_control}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00056\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ PIP\_NOT\_ACHEIVED,}
+\DoxyCodeLine{00058\ \ \ \ \ PIP\_ACHEIVED}
+\DoxyCodeLine{00059\ \}\mbox{\hyperlink{_p_i_p___control_8h_a958a5e3cbf70c607e1f0e8805f17896b}{pip\_status}};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00066\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ READ\_TIME\_OPEN,}
+\DoxyCodeLine{00068\ \ \ \ \ READ\_TIME\_CLOSE}
+\DoxyCodeLine{00069\ \}\mbox{\hyperlink{_p_i_p___control_8h_ac6290127e98689012b0330b96dd9297b}{Read\_time\_vs\_pressure}};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00076\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ SET\_PIP\_VALUE\_NOT\_ACHEIVED,}
+\DoxyCodeLine{00078\ \ \ \ \ SET\_PIP\_VALUE\_ACHEIVED}
+\DoxyCodeLine{00079\ \}\mbox{\hyperlink{_p_i_p___control_8h_a5cacefa1cadde5d00255fceb74e789e0}{Set\_pip\_Status}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00085\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ NO,}
+\DoxyCodeLine{00087\ \ \ \ \ YES}
+\DoxyCodeLine{00088\ \}\mbox{\hyperlink{_p_i_p___control_8h_aeab18c5073be6d20c902d4ca7acc952d}{Need\_pid\_Task\_Delay}};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00093\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00094\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ T\_OPEN,}
+\DoxyCodeLine{00096\ \ \ \ \ T\_LOCK}
+\DoxyCodeLine{00097\ \}\mbox{\hyperlink{_p_i_p___control_8h_ae5ec6621d17f0010f8b9516f88c40075}{Tune\_pid\_Task\_Delay}};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \mbox{\hyperlink{structpip__control___task}{pip\_control\_Task}}\ \mbox{\hyperlink{_p_i_p___control_8h_a9c19a3543eed1c40c5edceb777508263}{PIP\_control\_Task}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00100\ \mbox{\hyperlink{_p_i_p___control_8h_a958a5e3cbf70c607e1f0e8805f17896b}{pip\_status}}\ \mbox{\hyperlink{_p_i_p___control_8h_a2b195ec4f20b18573632e248cb0368fa}{PIP\_Status}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00101\ \mbox{\hyperlink{_p_i_p___control_8h_ac6290127e98689012b0330b96dd9297b}{Read\_time\_vs\_pressure}}\ \mbox{\hyperlink{_p_i_p___control_8h_aae9ffda0ef3638eec001604cb75becf9}{Read\_Time\_vs\_Pressure}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00102\ \mbox{\hyperlink{_p_i_p___control_8h_a5cacefa1cadde5d00255fceb74e789e0}{Set\_pip\_Status}}\ \mbox{\hyperlink{_p_i_p___control_8h_adec42ee17f1db8d43fdc84d7541e5d46}{Set\_PIP\_Status}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00103\ \mbox{\hyperlink{_p_i_p___control_8h_aeab18c5073be6d20c902d4ca7acc952d}{Need\_pid\_Task\_Delay}}\ \mbox{\hyperlink{_p_i_p___control_8h_a69ff4b1dcc94b596e2659b83d2a18d20}{Need\_PID\_Task\_Delay}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ \mbox{\hyperlink{_p_i_p___control_8h_ae5ec6621d17f0010f8b9516f88c40075}{Tune\_pid\_Task\_Delay}}\ \mbox{\hyperlink{_p_i_p___control_8h_a1b76662d7ff92e980de6d4c6db03fbbc}{Tune\_PID\_Task\_Delay}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00105\ \mbox{\hyperlink{struct_pressure__mode__blower__control}{Pressure\_mode\_blower\_control}}\ \mbox{\hyperlink{_p_i_p___control_8h_a27372a95cd43d2a3707eb01a79b87969}{Pressure\_Mode\_blower\_control}};\ \ \ \ \ }
+\DoxyCodeLine{00106\ uint8\_t\ count1,count2;}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ xTaskHandle\ \mbox{\hyperlink{_p_i_p___control_8h_aea3b90703654c9b99e205014b8720e14}{PIP\_Control\_Task\_Handler}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00114\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_p_i_p___control_8h_ac779d397623a7d590237b78b564720e3}{PIP\_Control\_Task}}(\textcolor{keywordtype}{void}\ *argument);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00119\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_p_i_p___control_8h_a0c12f4612f68e208c261346e261ac731}{PIP\_Control}}(uint8\_t);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00124\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_p_i_p___control_8h_a8df6a3fb87938e4dca863ddef67c6629}{PIP\_ACHEIVED\_EARLY}}(uint8\_t,uint16\_t);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00129\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_p_i_p___control_8h_aece04eae98873bcfd062aa02233fca96}{PIP\_ACHEIVED\_SLOWLY}}(uint16\_t);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00134\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_p_i_p___control_8h_aeafc01f3e00bb7ccf2f10811de8f0707}{PIP\_ACHEIVED\_NORMALY}}();}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00139\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_p_i_p___control_8h_ab86b83c5e95306ba929f75a69463dc9a}{\_PIP\_NOT\_ACHEIVED}}();}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00144\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_p_i_p___control_8h_a62bce0dddf643182a5b35327c9443807}{BLOWER\_ENDING\_DAC\_SIGNAL\_TUNE}}(uint8\_t,uint32\_t,uint8\_t);}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00149\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_p_i_p___control_8h_a14ca63e279b44b5592cf1f62a9d33c37}{INCREASE\_EACH\_DAC\_SET\_CONST}}(uint8\_t,uint16\_t);}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_PIP\_CONTROL\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,192 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+PIP\+\_\+\+CONTROL/\+PIP\+\_\+\+Control.h File Reference}
+\hypertarget{_p_i_p___control_8h}{}\label{_p_i_p___control_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/PIP\_CONTROL/PIP\_Control.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/PIP\_CONTROL/PIP\_Control.h}}
+
+
+Declaration to control a PIP.  
+
+
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpip__control___task}{pip\+\_\+control\+\_\+\+Task}}
+\begin{DoxyCompactList}\small\item\em The structure contains PIP control within the core logic variables. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_pressure__mode__blower__control}{Pressure\+\_\+mode\+\_\+blower\+\_\+control}}
+\begin{DoxyCompactList}\small\item\em The structure contains blower dac signals for PIP and peep. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_p_i_p___control_8h_a958a5e3cbf70c607e1f0e8805f17896b}\label{_p_i_p___control_8h_a958a5e3cbf70c607e1f0e8805f17896b} 
+enum \mbox{\hyperlink{_p_i_p___control_8h_a958a5e3cbf70c607e1f0e8805f17896b}{pip\+\_\+status}} \{ {\bfseries PIP\+\_\+\+NOT\+\_\+\+ACHEIVED}
+, {\bfseries PIP\+\_\+\+ACHEIVED}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of the status regarding PIP achievement. \end{DoxyCompactList}\item 
+\Hypertarget{_p_i_p___control_8h_ac6290127e98689012b0330b96dd9297b}\label{_p_i_p___control_8h_ac6290127e98689012b0330b96dd9297b} 
+enum \mbox{\hyperlink{_p_i_p___control_8h_ac6290127e98689012b0330b96dd9297b}{Read\+\_\+time\+\_\+vs\+\_\+pressure}} \{ {\bfseries READ\+\_\+\+TIME\+\_\+\+OPEN}
+, {\bfseries READ\+\_\+\+TIME\+\_\+\+CLOSE}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of the status regarding the PIP achieved time. \end{DoxyCompactList}\item 
+\Hypertarget{_p_i_p___control_8h_a5cacefa1cadde5d00255fceb74e789e0}\label{_p_i_p___control_8h_a5cacefa1cadde5d00255fceb74e789e0} 
+enum \mbox{\hyperlink{_p_i_p___control_8h_a5cacefa1cadde5d00255fceb74e789e0}{Set\+\_\+pip\+\_\+\+Status}} \{ {\bfseries SET\+\_\+\+PIP\+\_\+\+VALUE\+\_\+\+NOT\+\_\+\+ACHEIVED}
+, {\bfseries SET\+\_\+\+PIP\+\_\+\+VALUE\+\_\+\+ACHEIVED}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of the status indicating whether the Set PIP value has been achieved or not. \end{DoxyCompactList}\item 
+\Hypertarget{_p_i_p___control_8h_aeab18c5073be6d20c902d4ca7acc952d}\label{_p_i_p___control_8h_aeab18c5073be6d20c902d4ca7acc952d} 
+enum \mbox{\hyperlink{_p_i_p___control_8h_aeab18c5073be6d20c902d4ca7acc952d}{Need\+\_\+pid\+\_\+\+Task\+\_\+\+Delay}} \{ {\bfseries NO}
+, {\bfseries YES}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of whether the expiratory valve needs a delay or not. \end{DoxyCompactList}\item 
+\Hypertarget{_p_i_p___control_8h_ae5ec6621d17f0010f8b9516f88c40075}\label{_p_i_p___control_8h_ae5ec6621d17f0010f8b9516f88c40075} 
+enum \mbox{\hyperlink{_p_i_p___control_8h_ae5ec6621d17f0010f8b9516f88c40075}{Tune\+\_\+pid\+\_\+\+Task\+\_\+\+Delay}} \{ {\bfseries T\+\_\+\+OPEN}
+, {\bfseries T\+\_\+\+LOCK}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of whether the expiratory valve needs a lock or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_p_i_p___control_8h_ac779d397623a7d590237b78b564720e3}{PIP\+\_\+\+Control\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em PIP\+\_\+\+Control\+\_\+\+Task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_i_p___control_8h_a0c12f4612f68e208c261346e261ac731}{PIP\+\_\+\+Control}} (uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em PIP\+\_\+\+Control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_i_p___control_8h_a8df6a3fb87938e4dca863ddef67c6629}{PIP\+\_\+\+ACHEIVED\+\_\+\+EARLY}} (uint8\+\_\+t, uint16\+\_\+t)
+\begin{DoxyCompactList}\small\item\em PIP\+\_\+\+ACHEIVED\+\_\+\+EARLY. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_i_p___control_8h_aece04eae98873bcfd062aa02233fca96}{PIP\+\_\+\+ACHEIVED\+\_\+\+SLOWLY}} (uint16\+\_\+t)
+\begin{DoxyCompactList}\small\item\em PIP\+\_\+\+ACHEIVED\+\_\+\+SLOWLY. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_i_p___control_8h_aeafc01f3e00bb7ccf2f10811de8f0707}{PIP\+\_\+\+ACHEIVED\+\_\+\+NORMALY}} ()
+\begin{DoxyCompactList}\small\item\em PIP\+\_\+\+ACHEIVED\+\_\+\+NORMALY. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_i_p___control_8h_ab86b83c5e95306ba929f75a69463dc9a}{\+\_\+\+PIP\+\_\+\+NOT\+\_\+\+ACHEIVED}} ()
+\begin{DoxyCompactList}\small\item\em \+\_\+\+PIP\+\_\+\+NOT\+\_\+\+ACHEIVED. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_i_p___control_8h_a62bce0dddf643182a5b35327c9443807}{BLOWER\+\_\+\+ENDING\+\_\+\+DAC\+\_\+\+SIGNAL\+\_\+\+TUNE}} (uint8\+\_\+t, uint32\+\_\+t, uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em BLOWER\+\_\+\+ENDING\+\_\+\+DAC\+\_\+\+SIGNAL\+\_\+\+TUNE. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_p_i_p___control_8h_a14ca63e279b44b5592cf1f62a9d33c37}{INCREASE\+\_\+\+EACH\+\_\+\+DAC\+\_\+\+SET\+\_\+\+CONST}} (uint8\+\_\+t, uint16\+\_\+t)
+\begin{DoxyCompactList}\small\item\em INCREASE\+\_\+\+EACH\+\_\+\+DAC\+\_\+\+SET\+\_\+\+CONST. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_p_i_p___control_8h_a9c19a3543eed1c40c5edceb777508263}\label{_p_i_p___control_8h_a9c19a3543eed1c40c5edceb777508263} 
+\mbox{\hyperlink{structpip__control___task}{pip\+\_\+control\+\_\+\+Task}} {\bfseries PIP\+\_\+control\+\_\+\+Task}
+\begin{DoxyCompactList}\small\item\em Structure variable. \end{DoxyCompactList}\item 
+\Hypertarget{_p_i_p___control_8h_a2b195ec4f20b18573632e248cb0368fa}\label{_p_i_p___control_8h_a2b195ec4f20b18573632e248cb0368fa} 
+\mbox{\hyperlink{_p_i_p___control_8h_a958a5e3cbf70c607e1f0e8805f17896b}{pip\+\_\+status}} {\bfseries PIP\+\_\+\+Status}
+\begin{DoxyCompactList}\small\item\em Enumeration variable. \end{DoxyCompactList}\item 
+\Hypertarget{_p_i_p___control_8h_aae9ffda0ef3638eec001604cb75becf9}\label{_p_i_p___control_8h_aae9ffda0ef3638eec001604cb75becf9} 
+\mbox{\hyperlink{_p_i_p___control_8h_ac6290127e98689012b0330b96dd9297b}{Read\+\_\+time\+\_\+vs\+\_\+pressure}} {\bfseries Read\+\_\+\+Time\+\_\+vs\+\_\+\+Pressure}
+\begin{DoxyCompactList}\small\item\em Enumeration variable. \end{DoxyCompactList}\item 
+\Hypertarget{_p_i_p___control_8h_adec42ee17f1db8d43fdc84d7541e5d46}\label{_p_i_p___control_8h_adec42ee17f1db8d43fdc84d7541e5d46} 
+\mbox{\hyperlink{_p_i_p___control_8h_a5cacefa1cadde5d00255fceb74e789e0}{Set\+\_\+pip\+\_\+\+Status}} {\bfseries Set\+\_\+\+PIP\+\_\+\+Status}
+\begin{DoxyCompactList}\small\item\em Enumeration variable. \end{DoxyCompactList}\item 
+\Hypertarget{_p_i_p___control_8h_a69ff4b1dcc94b596e2659b83d2a18d20}\label{_p_i_p___control_8h_a69ff4b1dcc94b596e2659b83d2a18d20} 
+\mbox{\hyperlink{_p_i_p___control_8h_aeab18c5073be6d20c902d4ca7acc952d}{Need\+\_\+pid\+\_\+\+Task\+\_\+\+Delay}} {\bfseries Need\+\_\+\+PID\+\_\+\+Task\+\_\+\+Delay}
+\begin{DoxyCompactList}\small\item\em Enumeration variable. \end{DoxyCompactList}\item 
+\Hypertarget{_p_i_p___control_8h_a1b76662d7ff92e980de6d4c6db03fbbc}\label{_p_i_p___control_8h_a1b76662d7ff92e980de6d4c6db03fbbc} 
+\mbox{\hyperlink{_p_i_p___control_8h_ae5ec6621d17f0010f8b9516f88c40075}{Tune\+\_\+pid\+\_\+\+Task\+\_\+\+Delay}} {\bfseries Tune\+\_\+\+PID\+\_\+\+Task\+\_\+\+Delay}
+\begin{DoxyCompactList}\small\item\em Enumeration variable. \end{DoxyCompactList}\item 
+\Hypertarget{_p_i_p___control_8h_a27372a95cd43d2a3707eb01a79b87969}\label{_p_i_p___control_8h_a27372a95cd43d2a3707eb01a79b87969} 
+\mbox{\hyperlink{struct_pressure__mode__blower__control}{Pressure\+\_\+mode\+\_\+blower\+\_\+control}} {\bfseries Pressure\+\_\+\+Mode\+\_\+blower\+\_\+control}
+\begin{DoxyCompactList}\small\item\em Structure variable. \end{DoxyCompactList}\item 
+\Hypertarget{_p_i_p___control_8h_a63a0d1f50a2995bd22c46895cfd76305}\label{_p_i_p___control_8h_a63a0d1f50a2995bd22c46895cfd76305} 
+uint8\+\_\+t {\bfseries count1}
+\item 
+\Hypertarget{_p_i_p___control_8h_a40a4c0ea00962baad3211e4dbca110b4}\label{_p_i_p___control_8h_a40a4c0ea00962baad3211e4dbca110b4} 
+uint8\+\_\+t {\bfseries count2}
+\item 
+\Hypertarget{_p_i_p___control_8h_aea3b90703654c9b99e205014b8720e14}\label{_p_i_p___control_8h_aea3b90703654c9b99e205014b8720e14} 
+x\+Task\+Handle {\bfseries PIP\+\_\+\+Control\+\_\+\+Task\+\_\+\+Handler}
+\begin{DoxyCompactList}\small\item\em Task variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration to control a PIP. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Declaration to control a PIP. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_p_i_p___control_8h_ab86b83c5e95306ba929f75a69463dc9a}\label{_p_i_p___control_8h_ab86b83c5e95306ba929f75a69463dc9a} 
+\index{PIP\_Control.h@{PIP\_Control.h}!\_PIP\_NOT\_ACHEIVED@{\_PIP\_NOT\_ACHEIVED}}
+\index{\_PIP\_NOT\_ACHEIVED@{\_PIP\_NOT\_ACHEIVED}!PIP\_Control.h@{PIP\_Control.h}}
+\doxysubsubsection{\texorpdfstring{\_PIP\_NOT\_ACHEIVED()}{\_PIP\_NOT\_ACHEIVED()}}
+{\footnotesize\ttfamily void \+\_\+\+PIP\+\_\+\+NOT\+\_\+\+ACHEIVED (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\+\_\+\+PIP\+\_\+\+NOT\+\_\+\+ACHEIVED. 
+
+\+\_\+\+PIP\+\_\+\+NOT\+\_\+\+ACHEIVED. \Hypertarget{_p_i_p___control_8h_a62bce0dddf643182a5b35327c9443807}\label{_p_i_p___control_8h_a62bce0dddf643182a5b35327c9443807} 
+\index{PIP\_Control.h@{PIP\_Control.h}!BLOWER\_ENDING\_DAC\_SIGNAL\_TUNE@{BLOWER\_ENDING\_DAC\_SIGNAL\_TUNE}}
+\index{BLOWER\_ENDING\_DAC\_SIGNAL\_TUNE@{BLOWER\_ENDING\_DAC\_SIGNAL\_TUNE}!PIP\_Control.h@{PIP\_Control.h}}
+\doxysubsubsection{\texorpdfstring{BLOWER\_ENDING\_DAC\_SIGNAL\_TUNE()}{BLOWER\_ENDING\_DAC\_SIGNAL\_TUNE()}}
+{\footnotesize\ttfamily void BLOWER\+\_\+\+ENDING\+\_\+\+DAC\+\_\+\+SIGNAL\+\_\+\+TUNE (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{PIP\+\_\+\+VAL,  }\item[{uint32\+\_\+t}]{Inspiration\+\_\+\+Time,  }\item[{uint8\+\_\+t}]{Rise\+\_\+\+Time\+\_\+\+Percent }\end{DoxyParamCaption})}
+
+
+
+BLOWER\+\_\+\+ENDING\+\_\+\+DAC\+\_\+\+SIGNAL\+\_\+\+TUNE. 
+
+BLOWER\+\_\+\+ENDING\+\_\+\+DAC\+\_\+\+SIGNAL\+\_\+\+TUNE. \Hypertarget{_p_i_p___control_8h_a14ca63e279b44b5592cf1f62a9d33c37}\label{_p_i_p___control_8h_a14ca63e279b44b5592cf1f62a9d33c37} 
+\index{PIP\_Control.h@{PIP\_Control.h}!INCREASE\_EACH\_DAC\_SET\_CONST@{INCREASE\_EACH\_DAC\_SET\_CONST}}
+\index{INCREASE\_EACH\_DAC\_SET\_CONST@{INCREASE\_EACH\_DAC\_SET\_CONST}!PIP\_Control.h@{PIP\_Control.h}}
+\doxysubsubsection{\texorpdfstring{INCREASE\_EACH\_DAC\_SET\_CONST()}{INCREASE\_EACH\_DAC\_SET\_CONST()}}
+{\footnotesize\ttfamily void INCREASE\+\_\+\+EACH\+\_\+\+DAC\+\_\+\+SET\+\_\+\+CONST (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{PIP\+\_\+\+VAL,  }\item[{uint16\+\_\+t}]{Rise\+\_\+\+Time\+\_\+\+MS }\end{DoxyParamCaption})}
+
+
+
+INCREASE\+\_\+\+EACH\+\_\+\+DAC\+\_\+\+SET\+\_\+\+CONST. 
+
+INCREASE\+\_\+\+EACH\+\_\+\+DAC\+\_\+\+SET\+\_\+\+CONST. \Hypertarget{_p_i_p___control_8h_a8df6a3fb87938e4dca863ddef67c6629}\label{_p_i_p___control_8h_a8df6a3fb87938e4dca863ddef67c6629} 
+\index{PIP\_Control.h@{PIP\_Control.h}!PIP\_ACHEIVED\_EARLY@{PIP\_ACHEIVED\_EARLY}}
+\index{PIP\_ACHEIVED\_EARLY@{PIP\_ACHEIVED\_EARLY}!PIP\_Control.h@{PIP\_Control.h}}
+\doxysubsubsection{\texorpdfstring{PIP\_ACHEIVED\_EARLY()}{PIP\_ACHEIVED\_EARLY()}}
+{\footnotesize\ttfamily void PIP\+\_\+\+ACHEIVED\+\_\+\+EARLY (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{PIP\+\_\+\+VAL,  }\item[{uint16\+\_\+t}]{Rise\+\_\+\+Time\+\_\+\+MS }\end{DoxyParamCaption})}
+
+
+
+PIP\+\_\+\+ACHEIVED\+\_\+\+EARLY. 
+
+PIP\+\_\+\+ACHEIVED\+\_\+\+EARLY. \Hypertarget{_p_i_p___control_8h_aeafc01f3e00bb7ccf2f10811de8f0707}\label{_p_i_p___control_8h_aeafc01f3e00bb7ccf2f10811de8f0707} 
+\index{PIP\_Control.h@{PIP\_Control.h}!PIP\_ACHEIVED\_NORMALY@{PIP\_ACHEIVED\_NORMALY}}
+\index{PIP\_ACHEIVED\_NORMALY@{PIP\_ACHEIVED\_NORMALY}!PIP\_Control.h@{PIP\_Control.h}}
+\doxysubsubsection{\texorpdfstring{PIP\_ACHEIVED\_NORMALY()}{PIP\_ACHEIVED\_NORMALY()}}
+{\footnotesize\ttfamily void PIP\+\_\+\+ACHEIVED\+\_\+\+NORMALY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PIP\+\_\+\+ACHEIVED\+\_\+\+NORMALY. 
+
+PIP\+\_\+\+ACHEIVED\+\_\+\+NORMALY. \Hypertarget{_p_i_p___control_8h_aece04eae98873bcfd062aa02233fca96}\label{_p_i_p___control_8h_aece04eae98873bcfd062aa02233fca96} 
+\index{PIP\_Control.h@{PIP\_Control.h}!PIP\_ACHEIVED\_SLOWLY@{PIP\_ACHEIVED\_SLOWLY}}
+\index{PIP\_ACHEIVED\_SLOWLY@{PIP\_ACHEIVED\_SLOWLY}!PIP\_Control.h@{PIP\_Control.h}}
+\doxysubsubsection{\texorpdfstring{PIP\_ACHEIVED\_SLOWLY()}{PIP\_ACHEIVED\_SLOWLY()}}
+{\footnotesize\ttfamily void PIP\+\_\+\+ACHEIVED\+\_\+\+SLOWLY (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Rise\+\_\+\+Time\+\_\+\+MS }\end{DoxyParamCaption})}
+
+
+
+PIP\+\_\+\+ACHEIVED\+\_\+\+SLOWLY. 
+
+PIP\+\_\+\+ACHEIVED\+\_\+\+SLOWLY. \Hypertarget{_p_i_p___control_8h_a0c12f4612f68e208c261346e261ac731}\label{_p_i_p___control_8h_a0c12f4612f68e208c261346e261ac731} 
+\index{PIP\_Control.h@{PIP\_Control.h}!PIP\_Control@{PIP\_Control}}
+\index{PIP\_Control@{PIP\_Control}!PIP\_Control.h@{PIP\_Control.h}}
+\doxysubsubsection{\texorpdfstring{PIP\_Control()}{PIP\_Control()}}
+{\footnotesize\ttfamily void PIP\+\_\+\+Control (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{PIP\+\_\+\+VAL }\end{DoxyParamCaption})}
+
+
+
+PIP\+\_\+\+Control. 
+
+PIP\+\_\+\+Control. \Hypertarget{_p_i_p___control_8h_ac779d397623a7d590237b78b564720e3}\label{_p_i_p___control_8h_ac779d397623a7d590237b78b564720e3} 
+\index{PIP\_Control.h@{PIP\_Control.h}!PIP\_Control\_Task@{PIP\_Control\_Task}}
+\index{PIP\_Control\_Task@{PIP\_Control\_Task}!PIP\_Control.h@{PIP\_Control.h}}
+\doxysubsubsection{\texorpdfstring{PIP\_Control\_Task()}{PIP\_Control\_Task()}}
+{\footnotesize\ttfamily void PIP\+\_\+\+Control\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+PIP\+\_\+\+Control\+\_\+\+Task. 
+
+PIP\+\_\+\+Control\+\_\+\+Task. 

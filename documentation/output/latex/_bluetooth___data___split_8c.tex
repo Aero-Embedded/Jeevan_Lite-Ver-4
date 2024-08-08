@@ -1,0 +1,41 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+Bluetooth/\+Bluetooth\+\_\+\+Data\+\_\+\+Split.c File Reference}
+\hypertarget{_bluetooth___data___split_8c}{}\label{_bluetooth___data___split_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/Bluetooth/Bluetooth\_Data\_Split.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/Bluetooth/Bluetooth\_Data\_Split.c}}
+
+
+Implementation of split Blue-\/tooth data.  
+
+
+{\ttfamily \#include "{}Bluetooth\+\_\+\+Data\+\_\+\+Split.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_bluetooth___data___split_8c_a6907226d771e8b96d0cac769970e790e}\label{_bluetooth___data___split_8c_a6907226d771e8b96d0cac769970e790e} 
+void {\bfseries Rearrange\+\_\+\+Bluetooth\+\_\+\+Data} ()
+\item 
+\Hypertarget{_bluetooth___data___split_8c_ac0fa8586536a1ed9860a2c9cf26ab633}\label{_bluetooth___data___split_8c_ac0fa8586536a1ed9860a2c9cf26ab633} 
+void {\bfseries Split\+\_\+\+Mode\+\_\+\+Parameter\+\_\+\+Packets} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\item 
+\Hypertarget{_bluetooth___data___split_8c_adc404825d32b99a395c10626eb89d457}\label{_bluetooth___data___split_8c_adc404825d32b99a395c10626eb89d457} 
+uint8\+\_\+t {\bfseries chksum8\+\_\+2} (const unsigned char \texorpdfstring{$\ast$}{*}buff, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em chksum8. This function is used to identify a data error. \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___data___split_8c_a6c154410f022fcb04bcd1b7173f3f1d4}\label{_bluetooth___data___split_8c_a6c154410f022fcb04bcd1b7173f3f1d4} 
+void {\bfseries Bluetooth\+\_\+\+Packet\+\_\+\+Data\+\_\+\+Split} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em split bluetooth received data function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_bluetooth___data___split_8c_ab76de0cfa1ab87cb999b85b11e6ed7ff}\label{_bluetooth___data___split_8c_ab76de0cfa1ab87cb999b85b11e6ed7ff} 
+\mbox{\hyperlink{struct_s_e_n_s_o_r}{SENSOR}} {\bfseries MPX7002}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of split Blue-\/tooth data. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the implementation split Blue-\/tooth data. and pause and resume a device. 

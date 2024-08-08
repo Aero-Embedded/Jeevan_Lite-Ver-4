@@ -1,0 +1,154 @@
+\doxysection{Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+OFF.\+h}
+\hypertarget{_pc___simv___assist___o_f_f_8h_source}{}\label{_pc___simv___assist___o_f_f_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/PC-\/SIMV/Pc\_Simv\_Assist\_OFF.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/PC-\/SIMV/Pc\_Simv\_Assist\_OFF.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ PC-\/SIMV\_ASSIST\_OFF.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Feb\ 14,\ 2023}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ asus}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_AERO\_INC\_PC\_SIMV\_PC\_SIMV\_ASSIST\_OFF\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_AERO\_INC\_PC\_SIMV\_PC\_SIMV\_ASSIST\_OFF\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ ONE\_TIME\_TRIGGER,}
+\DoxyCodeLine{00021\ \ \ \ \ COUNTINOUS\_TRIGGER}
+\DoxyCodeLine{00022\ \}trigger\_process;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \ Blower\_Wait\_Time\_Milli\_Second;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \ Trigger\_Check\_Wait\_Time;}
+\DoxyCodeLine{00029\ \}\mbox{\hyperlink{structpcsimv}{pcsimv}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ uint16\_t\ DAC\_VALUE\_5;}
+\DoxyCodeLine{00037\ \ \ \ \ uint16\_t\ DAC\_VALUE\_6;}
+\DoxyCodeLine{00038\ \ \ \ \ uint16\_t\ DAC\_VALUE\_7;}
+\DoxyCodeLine{00039\ \ \ \ \ uint16\_t\ DAC\_VALUE\_8;}
+\DoxyCodeLine{00040\ \ \ \ \ uint16\_t\ DAC\_VALUE\_9;}
+\DoxyCodeLine{00041\ \ \ \ \ uint16\_t\ DAC\_VALUE\_10;}
+\DoxyCodeLine{00042\ \ \ \ \ uint16\_t\ DAC\_VALUE\_11;}
+\DoxyCodeLine{00043\ \ \ \ \ uint16\_t\ DAC\_VALUE\_12;}
+\DoxyCodeLine{00044\ \ \ \ \ uint16\_t\ DAC\_VALUE\_13;}
+\DoxyCodeLine{00045\ \ \ \ \ uint16\_t\ DAC\_VALUE\_14;}
+\DoxyCodeLine{00046\ \ \ \ \ uint16\_t\ DAC\_VALUE\_15;}
+\DoxyCodeLine{00047\ \ \ \ \ uint16\_t\ DAC\_VALUE\_16;}
+\DoxyCodeLine{00048\ \ \ \ \ uint16\_t\ DAC\_VALUE\_17;}
+\DoxyCodeLine{00049\ \ \ \ \ uint16\_t\ DAC\_VALUE\_18;}
+\DoxyCodeLine{00050\ \ \ \ \ uint16\_t\ DAC\_VALUE\_19;}
+\DoxyCodeLine{00051\ \ \ \ \ uint16\_t\ DAC\_VALUE\_20;}
+\DoxyCodeLine{00052\ \ \ \ \ uint16\_t\ DAC\_VALUE\_21;}
+\DoxyCodeLine{00053\ \ \ \ \ uint16\_t\ DAC\_VALUE\_22;}
+\DoxyCodeLine{00054\ \ \ \ \ uint16\_t\ DAC\_VALUE\_23;}
+\DoxyCodeLine{00055\ \ \ \ \ uint16\_t\ DAC\_VALUE\_24;}
+\DoxyCodeLine{00056\ \ \ \ \ uint16\_t\ DAC\_VALUE\_25;}
+\DoxyCodeLine{00057\ \ \ \ \ uint16\_t\ DAC\_VALUE\_26;}
+\DoxyCodeLine{00058\ \ \ \ \ uint16\_t\ DAC\_VALUE\_27;}
+\DoxyCodeLine{00059\ \ \ \ \ uint16\_t\ DAC\_VALUE\_28;}
+\DoxyCodeLine{00060\ \ \ \ \ uint16\_t\ DAC\_VALUE\_29;}
+\DoxyCodeLine{00061\ \ \ \ \ uint16\_t\ DAC\_VALUE\_30;}
+\DoxyCodeLine{00062\ \ \ \ \ uint16\_t\ DAC\_VALUE\_31;}
+\DoxyCodeLine{00063\ \ \ \ \ uint16\_t\ DAC\_VALUE\_32;}
+\DoxyCodeLine{00064\ \ \ \ \ uint16\_t\ DAC\_VALUE\_33;}
+\DoxyCodeLine{00065\ \ \ \ \ uint16\_t\ DAC\_VALUE\_34;}
+\DoxyCodeLine{00066\ \ \ \ \ uint16\_t\ DAC\_VALUE\_35;}
+\DoxyCodeLine{00067\ \ \ \ \ uint16\_t\ DAC\_VALUE\_36;}
+\DoxyCodeLine{00068\ \ \ \ \ uint16\_t\ DAC\_VALUE\_37;}
+\DoxyCodeLine{00069\ \ \ \ \ uint16\_t\ DAC\_VALUE\_38;}
+\DoxyCodeLine{00070\ \ \ \ \ uint16\_t\ DAC\_VALUE\_39;}
+\DoxyCodeLine{00071\ \ \ \ \ uint16\_t\ DAC\_VALUE\_40;}
+\DoxyCodeLine{00072\ \ \ \ \ uint16\_t\ DAC\_VALUE\_41;}
+\DoxyCodeLine{00073\ \ \ \ \ uint16\_t\ DAC\_VALUE\_42;}
+\DoxyCodeLine{00074\ \ \ \ \ uint16\_t\ DAC\_VALUE\_43;}
+\DoxyCodeLine{00075\ \ \ \ \ uint16\_t\ DAC\_VALUE\_44;}
+\DoxyCodeLine{00076\ \ \ \ \ uint16\_t\ DAC\_VALUE\_45;}
+\DoxyCodeLine{00077\ \ \ \ \ uint16\_t\ DAC\_VALUE\_46;}
+\DoxyCodeLine{00078\ \ \ \ \ uint16\_t\ DAC\_VALUE\_47;}
+\DoxyCodeLine{00079\ \ \ \ \ uint16\_t\ DAC\_VALUE\_48;}
+\DoxyCodeLine{00080\ \ \ \ \ uint16\_t\ DAC\_VALUE\_49;}
+\DoxyCodeLine{00081\ \ \ \ \ uint16\_t\ DAC\_VALUE\_50;}
+\DoxyCodeLine{00082\ \ \ \ \ uint16\_t\ DAC\_VALUE\_51;}
+\DoxyCodeLine{00083\ \ \ \ \ uint16\_t\ DAC\_VALUE\_52;}
+\DoxyCodeLine{00084\ \ \ \ \ uint16\_t\ DAC\_VALUE\_53;}
+\DoxyCodeLine{00085\ \ \ \ \ uint16\_t\ DAC\_VALUE\_54;}
+\DoxyCodeLine{00086\ \ \ \ \ uint16\_t\ DAC\_VALUE\_55;}
+\DoxyCodeLine{00087\ \ \ \ \ uint16\_t\ DAC\_VALUE\_56;}
+\DoxyCodeLine{00088\ \ \ \ \ uint16\_t\ DAC\_VALUE\_57;}
+\DoxyCodeLine{00089\ \ \ \ \ uint16\_t\ DAC\_VALUE\_58;}
+\DoxyCodeLine{00090\ \ \ \ \ uint16\_t\ DAC\_VALUE\_59;}
+\DoxyCodeLine{00091\ \ \ \ \ uint16\_t\ DAC\_VALUE\_60;}
+\DoxyCodeLine{00092\ \}\mbox{\hyperlink{struct_o_v_e_r___a_l_l___d_a_c___s_i_g_n_a_l}{OVER\_ALL\_DAC\_SIGNAL}};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00096\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_5;}
+\DoxyCodeLine{00098\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_6;}
+\DoxyCodeLine{00099\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_7;}
+\DoxyCodeLine{00100\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_8;}
+\DoxyCodeLine{00101\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_9;}
+\DoxyCodeLine{00102\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_10;}
+\DoxyCodeLine{00103\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_11;}
+\DoxyCodeLine{00104\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_12;}
+\DoxyCodeLine{00105\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_13;}
+\DoxyCodeLine{00106\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_14;}
+\DoxyCodeLine{00107\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_15;}
+\DoxyCodeLine{00108\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_16;}
+\DoxyCodeLine{00109\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_17;}
+\DoxyCodeLine{00110\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_18;}
+\DoxyCodeLine{00111\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_19;}
+\DoxyCodeLine{00112\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_20;}
+\DoxyCodeLine{00113\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_21;}
+\DoxyCodeLine{00114\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_22;}
+\DoxyCodeLine{00115\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_23;}
+\DoxyCodeLine{00116\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_24;}
+\DoxyCodeLine{00117\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_25;}
+\DoxyCodeLine{00118\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_26;}
+\DoxyCodeLine{00119\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_27;}
+\DoxyCodeLine{00120\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_28;}
+\DoxyCodeLine{00121\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_29;}
+\DoxyCodeLine{00122\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_30;}
+\DoxyCodeLine{00123\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_31;}
+\DoxyCodeLine{00124\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_32;}
+\DoxyCodeLine{00125\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_33;}
+\DoxyCodeLine{00126\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_34;}
+\DoxyCodeLine{00127\ \ \ \ \ uint16\_t\ APNEA\_DAC\_VALUE\_35;}
+\DoxyCodeLine{00128\ \}\mbox{\hyperlink{struct_c_p_a_p___d_a_c___s_i_g_n_a_l}{CPAP\_DAC\_SIGNAL}};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \mbox{\hyperlink{structpcsimv}{pcsimv}}\ PCsimv;}
+\DoxyCodeLine{00132\ \mbox{\hyperlink{struct_o_v_e_r___a_l_l___d_a_c___s_i_g_n_a_l}{OVER\_ALL\_DAC\_SIGNAL}}\ DAC\_SIGNALS;}
+\DoxyCodeLine{00133\ \mbox{\hyperlink{struct_c_p_a_p___d_a_c___s_i_g_n_a_l}{CPAP\_DAC\_SIGNAL}}\ DAC\_SIGNAL;}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ xTaskHandle\ Pc\_Simv\_Assist\_OFF\_Handler;}
+\DoxyCodeLine{00137\ \textcolor{keywordtype}{void}\ Pc\_Simv\_Assist\_OFF\_Task(\textcolor{keywordtype}{void}\ *argument);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{keywordtype}{void}\ PC\_SIMV\_Assist\_OFF\_Inspiration\_Time\_Variables\_Reset();}
+\DoxyCodeLine{00140\ \textcolor{keywordtype}{void}\ PC\_SIMV\_Assist\_OFF\_Expiration\_Time\_Variables\_Reset();}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ uint16\_t\ TUNE\_PEEP\_BLOWER(uint16\_t\ *,uint8\_t);}
+\DoxyCodeLine{00145\ trigger\_process\ Trigger\_Process;}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_AERO\_INC\_PC\_SIMV\_PC\_SIMV\_ASSIST\_OFF\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

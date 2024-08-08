@@ -1,0 +1,119 @@
+\doxysection{Common\+\_\+\+Parameter.\+h}
+\hypertarget{_common___parameter_8h_source}{}\label{_common___parameter_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/OTHERS/Common\_Parameter.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/OTHERS/Common\_Parameter.h}}
+\mbox{\hyperlink{_common___parameter_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ INC\_COMMON\_PARAMETER\_H\_}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ INC\_COMMON\_PARAMETER\_H\_}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ uint8\_t\ \ \_PIP\_Val;}
+\DoxyCodeLine{00027\ \ \ \ \ uint8\_t\ \ \_PEEP\_Val;}
+\DoxyCodeLine{00028\ \ \ \ \ uint8\_t\ \ \_RESPIRATORY\_RATE\_Val;}
+\DoxyCodeLine{00029\ \ \ \ \ uint8\_t\ \ \_FIO2\_Val;}
+\DoxyCodeLine{00030\ \ \ \ \ uint16\_t\ \_VOLUME\_Val;}
+\DoxyCodeLine{00031\ \ \ \ \ uint8\_t\ \ \_FLOW\_RATE;}
+\DoxyCodeLine{00032\ \ \ \ \ uint16\_t\ \ TOLERANCE\_EWAVE;}
+\DoxyCodeLine{00033\ \ \ \ \ uint16\_t\ \ TRIG\_WINDOW;}
+\DoxyCodeLine{00034\ \ \ \ \ uint16\_t\ \ TRIG\_LMT;}
+\DoxyCodeLine{00035\ \ \ \ \ uint16\_t\ \ TRIG\_TIME;}
+\DoxyCodeLine{00036\ \}\mbox{\hyperlink{struct_common___mode__parameter}{Common\_Mode\_parameter}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ PEEP\_Temp;}
+\DoxyCodeLine{00045\ \ \ \ \ int16\_t\ \ Expiratory\_Valve\_Open\_Time;}
+\DoxyCodeLine{00046\ \ \ \ \ uint8\_t\ \ Maximum\_PEEP\_Acheived;}
+\DoxyCodeLine{00047\ \ \ \ \ uint32\_t\ PEEP\_Cumulative\_Val;}
+\DoxyCodeLine{00048\ \ \ \ \ uint32\_t\ PEEP\_Event\_Count;}
+\DoxyCodeLine{00049\ \ \ \ \ uint8\_t\ \ PEEP\_AVG\_VAL;}
+\DoxyCodeLine{00050\ \ \ \ \ uint32\_t\ PEEP\_Cumulative\_Val\_Trigger;}
+\DoxyCodeLine{00051\ \ \ \ \ uint32\_t\ PEEP\_Event\_Count\_Trigger;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ CHECK\_TRIGGER;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \}\mbox{\hyperlink{struct_p_e_e_p__maintain__parameter}{PEEP\_maintain\_parameter}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00060\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ uint8\_t\ \ Maximum\_PIP\_Acheived;}
+\DoxyCodeLine{00062\ \ \ \ \ uint32\_t\ PIP\_Cumulative\_Val;}
+\DoxyCodeLine{00063\ \ \ \ \ uint32\_t\ PIP\_Event\_Count;}
+\DoxyCodeLine{00064\ \ \ \ \ uint8\_t\ \ PIP\_AVG\_VAL;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \}\mbox{\hyperlink{struct_p_i_p__average__parameter}{PIP\_average\_parameter}};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00072\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ \_INSPIRATION\_TIME;}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ \_EXPIRATION\_TIME;}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ INSPIRATION\_TIME\_ACHEIVED;}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ EXPIRATION\_TIME\_ACHEIVED;}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{int}\ FLOW\_ACHIEVED\_TIMER;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \}\mbox{\hyperlink{struct_t_i_m_e__base__parameter}{TIME\_base\_parameter}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00085\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ PEEP\_NOT\_ACHEIVED,}
+\DoxyCodeLine{00087\ \ \ \ \ PEEP\_ACHEIVED}
+\DoxyCodeLine{00088\ \}\mbox{\hyperlink{_common___parameter_8h_ae8e8f7612b79ab14c563f5071e83ee63}{Peep\_status}};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00094\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00095\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ OPENED,}
+\DoxyCodeLine{00097\ \ \ \ \ CLOSED}
+\DoxyCodeLine{00098\ \}\mbox{\hyperlink{_common___parameter_8h_ab83448bd196a9a5f2ec542df6d9267a3}{Expiratory\_Valve\_Lock\_delay}};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00104\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00105\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ INSPIRATION\_CYCLE\ =\ 0,}
+\DoxyCodeLine{00107\ \ \ \ \ EXPIRATION\_CYCLE\ \ =\ 1,}
+\DoxyCodeLine{00108\ \ \ \ \ PATIENT\_TRIGGER\_INSPIRATION\ \ \ =\ 2,}
+\DoxyCodeLine{00109\ \ \ \ \ PATIENT\_TRIGGER\_EXPIRATION\ \ \ \ =\ 3,}
+\DoxyCodeLine{00110\ \ \ \ \ NO\_CYCLE}
+\DoxyCodeLine{00111\ \}\mbox{\hyperlink{_common___parameter_8h_a9b157d5bf330f36b6b285de703323567}{Breathe\_state}};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00117\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00118\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ RESUME,}
+\DoxyCodeLine{00120\ \ \ \ \ PAUSE}
+\DoxyCodeLine{00121\ \}\mbox{\hyperlink{_common___parameter_8h_a961597c618f904b6a6cc4f57d3a5afd0}{Device\_control}};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \mbox{\hyperlink{_common___parameter_8h_ae8e8f7612b79ab14c563f5071e83ee63}{Peep\_status}}\ \mbox{\hyperlink{_common___parameter_8h_ab7cfb955495e8cbdb903855b925f73ff}{Peep\_Status}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00125\ \mbox{\hyperlink{_common___parameter_8h_ab83448bd196a9a5f2ec542df6d9267a3}{Expiratory\_Valve\_Lock\_delay}}\ \mbox{\hyperlink{_common___parameter_8h_a809b6d5a812d5f0a2d1b79f51a2e5ad2}{Expiratory\_Valve\_Lock\_Delay}};\ \ \ \ }
+\DoxyCodeLine{00126\ \mbox{\hyperlink{struct_common___mode__parameter}{Common\_Mode\_parameter}}\ \mbox{\hyperlink{_common___parameter_8h_a7930a5aad9a3df863a01720b1c5044e3}{Common\_Mode\_Parameter}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00127\ \mbox{\hyperlink{struct_p_i_p__average__parameter}{PIP\_average\_parameter}}\ \mbox{\hyperlink{_common___parameter_8h_af16432386b666efd41944ccdc4995d63}{PIP\_Average\_Parameter}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00128\ \mbox{\hyperlink{struct_t_i_m_e__base__parameter}{TIME\_base\_parameter}}\ \mbox{\hyperlink{_common___parameter_8h_af9a9a7e9370da0f9f7e8380c1d9ecf1c}{TIME\_Base\_parameter}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \mbox{\hyperlink{struct_p_e_e_p__maintain__parameter}{PEEP\_maintain\_parameter}}\ PEEP\_Maintain\_Parameter;}
+\DoxyCodeLine{00131\ \mbox{\hyperlink{_common___parameter_8h_a9b157d5bf330f36b6b285de703323567}{Breathe\_state}}\ \mbox{\hyperlink{_common___parameter_8h_a58f609d656b3fb2cc705ca319d5afd4c}{BREATH\_STATE}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00137\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_common___parameter_8h_a3b310863a45a577ee03c771266f6a8f6}{Find\_Max\_PIP}}();}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00142\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_common___parameter_8h_acac114033a5959c18345a6729ee24480}{Find\_Maximum\_PEEP}}();}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00147\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_common___parameter_8h_acab24268939814d64d2b0a0b92815428}{PIP\_AVERAGE}}();}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00152\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_common___parameter_8h_a69583f9c3685294eec2e4b3cc497aa29}{PEEP\_AVERAGE}}();}
+\DoxyCodeLine{00156\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_common___parameter_8h_a1144482a06e411d8c489c834740f5427}{INITIAL\_DAC\_VALUE}}();}
+\DoxyCodeLine{00160\ uint16\_t\ \mbox{\hyperlink{_common___parameter_8h_a637a71b8f2a4a5c98eecd5d952422f48}{DAC\_VAL}}(uint8\_t);}
+\DoxyCodeLine{00164\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_common___parameter_8h_ab09b2369503d6f8a2d9fd477e843b8c8}{Change\_DAC\_Values}}(uint8\_t,uint16\_t);}
+\DoxyCodeLine{00168\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_common___parameter_8h_a1144482a06e411d8c489c834740f5427}{INITIAL\_DAC\_VALUE}}();}
+\DoxyCodeLine{00172\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_common___parameter_8h_aaabab12892d5cc288876f84cb564ac5c}{Change\_CPAP\_DAC\_Values\_INVASIVE}}(uint8\_t,uint16\_t);}
+\DoxyCodeLine{00176\ uint16\_t\ \mbox{\hyperlink{_common___parameter_8h_a801d631b7e35cf085ae64997e3607cfa}{APNEA\_DAC\_VAL}}(uint8\_t\ Set\_VAL);}
+\DoxyCodeLine{00180\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_common___parameter_8h_aa432588732d1aa99a364073c763d0d4c}{INITIAL\_CPAP\_DAC\_VALUE\_INVASIVE}}();}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_COMMON\_PARAMETER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,52 @@
+/*!
+ * \mainpage Aerobiosys Innovations jeevan Lite Project
+ *
+ * \section intro_sec Introduction
+ *
+ * Welcome to the documentation for Jeevan Lite Project. This project
+ * is designed to showcase a variety of functionalities of the STM32F407 microcontroller,
+ * focusing on peripheral initialization, system timebase management, and basic I/O 
+ * operations like controlling LEDs and reading button states.
+ *
+ * \section project_overview_sec Project Overview
+ *
+ * The project encompasses several Modes of ventilation, each dedicated to a specific aspect of 
+ * the microcontroller's capabilities:
+ * - \b BSP (Board Support Package): Manages the basic input/output functionalities, 
+ *   including motor control, Valve control,  and interfacing sensors.
+ * - \b FPU (Floating Point Unit): Handles the enabling of the microcontroller's floating point unit.
+ * - \b Timebase: Responsible for time-related operations, providing functionalities for system 
+ *   tick count and delay mechanisms.
+ *
+ * \section module_details_sec Module Details
+ *
+ * - \b BSP Module: 
+ *   - Functions: Blower control,proportional valve control,expiratory valve control.
+ *   - Features: Control the motherboard LED and read the Sensor values.
+ *
+ * - \b FPU Module:
+ *   - Function: fpu_enable.
+ *   - Feature: Enable the Floating Point Unit for floating-point operations.
+ *
+ * - \b Timebase Module:
+ *   - Functions: timebase_init, get_tick, delay.
+ *   - Features: Initialize the system tick timer, provide system tick count, and implement delay functionality.
+ *
+ * \section usage_sec Usage
+ *
+ * Each module is designed to be independent yet cohesive when combined in an application. 
+ * The main function demonstrates the use of these modules by integrating them to create a 
+ * simple application that toggles an LED based on a button's state, while also utilizing 
+ * system ticks for time management.
+ *
+ * \section author_sec Author
+ *
+ * - Developed by Sarathkumar
+ * - Date: 01/04/2024
+ *
+ * \section notes_sec Additional Notes
+ *
+ * This project is to make ventilator product in the STM32F407 microcontroller. 
+ * It aims to provide a starting point for more complex projects and to demonstrate good practices 
+ * in embedded software development, including code modularity and documentation.
+ */

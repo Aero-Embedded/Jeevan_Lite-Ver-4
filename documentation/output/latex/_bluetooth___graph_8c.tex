@@ -1,0 +1,164 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+Bluetooth/\+Bluetooth\+\_\+\+Graph.c File Reference}
+\hypertarget{_bluetooth___graph_8c}{}\label{_bluetooth___graph_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/Bluetooth/Bluetooth\_Graph.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/Bluetooth/Bluetooth\_Graph.c}}
+
+
+Implementation of Blue-\/tooth data reception and transmission.  
+
+
+{\ttfamily \#include "{}Bluetooth\+\_\+\+Graph.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_bluetooth___graph_8c_a82794c7b4a682c0c175185ba6e058a57}{Bluetooth\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Bluetooth\+\_\+\+Task. This task control whole uart control function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bluetooth___graph_8c_a0c106571e50281348413240a8e802c65}{UART6\+\_\+\+Init}} ()
+\begin{DoxyCompactList}\small\item\em UART6\+\_\+\+Init. This Function initialise the uart 6 peripheral. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_bluetooth___graph_8c_ac822e66489e715ff5279b101b0daa8f9}{chksum8}} (const unsigned char \texorpdfstring{$\ast$}{*}buff, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em chksum8. This function is used to identify a data error. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bluetooth___graph_8c_a49def77fa60e9ab8c6e0787fd941d900}{Bluetooth\+\_\+\+Graph\+\_\+\+Data\+\_\+\+Send}} ()
+\begin{DoxyCompactList}\small\item\em Bluetooth\+\_\+\+Graph\+\_\+\+Data\+\_\+\+Send. This Function send the mode graph data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bluetooth___graph_8c_afcfb3e5f0ff71d47e62030fe3453dda8}{Bluetooth\+\_\+\+Data\+\_\+\+Send}} ()
+\begin{DoxyCompactList}\small\item\em Bluetooth\+\_\+\+Data\+\_\+\+Send. This function controls the type of Bluetooth data that needs to be sent at a time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bluetooth___graph_8c_a832b73767ff1650168aaad1832ef09a4}{Blue\+Tooth\+\_\+\+Receiver\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Blue\+Tooth\+\_\+\+Receiver\+\_\+\+Task. This function controls the type of Bluetooth data that needs to be send at a time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bluetooth___graph_8c_a14b36e82e4e3166cb5ddd37813b7fcdd}{Bluetooth\+\_\+data\+\_\+split\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Bluetooth\+\_\+data\+\_\+split\+\_\+\+Task. This function calls from the Blue\+Tooth\+\_\+\+Receiver\+\_\+\+Task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bluetooth___graph_8c_ae494a9643f29b87d6d81e5264e60e57b}{HAL\+\_\+\+UART\+\_\+\+Rx\+Cplt\+Callback}} (UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}huart)
+\begin{DoxyCompactList}\small\item\em HAL\+\_\+\+UART\+\_\+\+Rx\+Cplt\+Callback. This is an interrupt function call from UART6.. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of Blue-\/tooth data reception and transmission. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the implementation Blue-\/tooth data reception and transmission using interrupts,task and function 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_bluetooth___graph_8c_afcfb3e5f0ff71d47e62030fe3453dda8}\label{_bluetooth___graph_8c_afcfb3e5f0ff71d47e62030fe3453dda8} 
+\index{Bluetooth\_Graph.c@{Bluetooth\_Graph.c}!Bluetooth\_Data\_Send@{Bluetooth\_Data\_Send}}
+\index{Bluetooth\_Data\_Send@{Bluetooth\_Data\_Send}!Bluetooth\_Graph.c@{Bluetooth\_Graph.c}}
+\doxysubsubsection{\texorpdfstring{Bluetooth\_Data\_Send()}{Bluetooth\_Data\_Send()}}
+{\footnotesize\ttfamily void Bluetooth\+\_\+\+Data\+\_\+\+Send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Bluetooth\+\_\+\+Data\+\_\+\+Send. This function controls the type of Bluetooth data that needs to be sent at a time. 
+
+whole Bluetooth\+\_\+\+Data\+\_\+\+Send.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_bluetooth___graph_8c_a14b36e82e4e3166cb5ddd37813b7fcdd}\label{_bluetooth___graph_8c_a14b36e82e4e3166cb5ddd37813b7fcdd} 
+\index{Bluetooth\_Graph.c@{Bluetooth\_Graph.c}!Bluetooth\_data\_split\_Task@{Bluetooth\_data\_split\_Task}}
+\index{Bluetooth\_data\_split\_Task@{Bluetooth\_data\_split\_Task}!Bluetooth\_Graph.c@{Bluetooth\_Graph.c}}
+\doxysubsubsection{\texorpdfstring{Bluetooth\_data\_split\_Task()}{Bluetooth\_data\_split\_Task()}}
+{\footnotesize\ttfamily void Bluetooth\+\_\+data\+\_\+split\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Bluetooth\+\_\+data\+\_\+split\+\_\+\+Task. This function calls from the Blue\+Tooth\+\_\+\+Receiver\+\_\+\+Task. 
+
+split bluetooth received data task.
+
+\begin{DoxyPostcond}{Postcondition}
+it split the data after the function call. 
+\end{DoxyPostcond}
+\Hypertarget{_bluetooth___graph_8c_a49def77fa60e9ab8c6e0787fd941d900}\label{_bluetooth___graph_8c_a49def77fa60e9ab8c6e0787fd941d900} 
+\index{Bluetooth\_Graph.c@{Bluetooth\_Graph.c}!Bluetooth\_Graph\_Data\_Send@{Bluetooth\_Graph\_Data\_Send}}
+\index{Bluetooth\_Graph\_Data\_Send@{Bluetooth\_Graph\_Data\_Send}!Bluetooth\_Graph.c@{Bluetooth\_Graph.c}}
+\doxysubsubsection{\texorpdfstring{Bluetooth\_Graph\_Data\_Send()}{Bluetooth\_Graph\_Data\_Send()}}
+{\footnotesize\ttfamily void Bluetooth\+\_\+\+Graph\+\_\+\+Data\+\_\+\+Send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Bluetooth\+\_\+\+Graph\+\_\+\+Data\+\_\+\+Send. This Function send the mode graph data. 
+
+Bluetooth\+\_\+\+Graph\+\_\+\+Data\+\_\+\+Send.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_bluetooth___graph_8c_a832b73767ff1650168aaad1832ef09a4}\label{_bluetooth___graph_8c_a832b73767ff1650168aaad1832ef09a4} 
+\index{Bluetooth\_Graph.c@{Bluetooth\_Graph.c}!BlueTooth\_Receiver\_Task@{BlueTooth\_Receiver\_Task}}
+\index{BlueTooth\_Receiver\_Task@{BlueTooth\_Receiver\_Task}!Bluetooth\_Graph.c@{Bluetooth\_Graph.c}}
+\doxysubsubsection{\texorpdfstring{BlueTooth\_Receiver\_Task()}{BlueTooth\_Receiver\_Task()}}
+{\footnotesize\ttfamily void Blue\+Tooth\+\_\+\+Receiver\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Blue\+Tooth\+\_\+\+Receiver\+\_\+\+Task. This function controls the type of Bluetooth data that needs to be send at a time. 
+
+Receive bluetooth data task.
+
+\begin{DoxyPostcond}{Postcondition}
+this function resume the Bluetooth\+\_\+data\+\_\+split\+\_\+\+Task. 
+\end{DoxyPostcond}
+\Hypertarget{_bluetooth___graph_8c_a82794c7b4a682c0c175185ba6e058a57}\label{_bluetooth___graph_8c_a82794c7b4a682c0c175185ba6e058a57} 
+\index{Bluetooth\_Graph.c@{Bluetooth\_Graph.c}!Bluetooth\_Task@{Bluetooth\_Task}}
+\index{Bluetooth\_Task@{Bluetooth\_Task}!Bluetooth\_Graph.c@{Bluetooth\_Graph.c}}
+\doxysubsubsection{\texorpdfstring{Bluetooth\_Task()}{Bluetooth\_Task()}}
+{\footnotesize\ttfamily void Bluetooth\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Bluetooth\+\_\+\+Task. This task control whole uart control function. 
+
+Bluetooth task.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_bluetooth___graph_8c_ac822e66489e715ff5279b101b0daa8f9}\label{_bluetooth___graph_8c_ac822e66489e715ff5279b101b0daa8f9} 
+\index{Bluetooth\_Graph.c@{Bluetooth\_Graph.c}!chksum8@{chksum8}}
+\index{chksum8@{chksum8}!Bluetooth\_Graph.c@{Bluetooth\_Graph.c}}
+\doxysubsubsection{\texorpdfstring{chksum8()}{chksum8()}}
+{\footnotesize\ttfamily uint8\+\_\+t chksum8 (\begin{DoxyParamCaption}\item[{const unsigned char \texorpdfstring{$\ast$}{*}}]{buff,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+chksum8. This function is used to identify a data error. 
+
+check sum function. \Hypertarget{_bluetooth___graph_8c_ae494a9643f29b87d6d81e5264e60e57b}\label{_bluetooth___graph_8c_ae494a9643f29b87d6d81e5264e60e57b} 
+\index{Bluetooth\_Graph.c@{Bluetooth\_Graph.c}!HAL\_UART\_RxCpltCallback@{HAL\_UART\_RxCpltCallback}}
+\index{HAL\_UART\_RxCpltCallback@{HAL\_UART\_RxCpltCallback}!Bluetooth\_Graph.c@{Bluetooth\_Graph.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_UART\_RxCpltCallback()}{HAL\_UART\_RxCpltCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+UART\+\_\+\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{huart }\end{DoxyParamCaption})}
+
+
+
+HAL\+\_\+\+UART\+\_\+\+Rx\+Cplt\+Callback. This is an interrupt function call from UART6.. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart6.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_bluetooth___graph_8c_a0c106571e50281348413240a8e802c65}\label{_bluetooth___graph_8c_a0c106571e50281348413240a8e802c65} 
+\index{Bluetooth\_Graph.c@{Bluetooth\_Graph.c}!UART6\_Init@{UART6\_Init}}
+\index{UART6\_Init@{UART6\_Init}!Bluetooth\_Graph.c@{Bluetooth\_Graph.c}}
+\doxysubsubsection{\texorpdfstring{UART6\_Init()}{UART6\_Init()}}
+{\footnotesize\ttfamily void UART6\+\_\+\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+UART6\+\_\+\+Init. This Function initialise the uart 6 peripheral. 
+
+UART6 initialization.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}

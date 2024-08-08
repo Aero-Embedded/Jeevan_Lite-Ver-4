@@ -1,0 +1,445 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+Bluetooth/\+Bluetooth\+\_\+\+Graph.h File Reference}
+\hypertarget{_bluetooth___graph_8h}{}\label{_bluetooth___graph_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/Bluetooth/Bluetooth\_Graph.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/Bluetooth/Bluetooth\_Graph.h}}
+
+
+Declaration of Blue-\/tooth data reception and transmission.  
+
+
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_g_r_a_p_h___p_a_c_k_e_t___s_e_n_d}{GRAPH\+\_\+\+PACKET\+\_\+\+SEND}}
+\begin{DoxyCompactList}\small\item\em Structure Representing Graph values for modes. data send to bluetooth. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}}
+\begin{DoxyCompactList}\small\item\em Structure Representing Mode parameter values for modes. data receive from tab. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_bluetooth__parameter}{Bluetooth\+\_\+parameter}}
+\begin{DoxyCompactList}\small\item\em Structure Representing uart data reception buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6}{Bluetooth\+\_\+T}} \{ \mbox{\hyperlink{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6ad32982f7cd28a43996060563a3ff96d1}{Blue\+Tooth\+\_\+\+Wait\+\_\+\+Time}} = 0
+, \mbox{\hyperlink{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6ad4e1e402f25bd2b32c03da08604c3cfd}{Bluetooth\+\_\+\+Init}}
+, \mbox{\hyperlink{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6a5daafd8bbcdf41f961c487d8c5157e6b}{Bluetooth\+\_\+\+Send\+\_\+\+Data}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for wait time for uart initialization. \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_a8d38a9390f78d8cbcc93fd41ba7aaeff}\label{_bluetooth___graph_8h_a8d38a9390f78d8cbcc93fd41ba7aaeff} 
+enum \mbox{\hyperlink{_bluetooth___graph_8h_a8d38a9390f78d8cbcc93fd41ba7aaeff}{Bluetooth\+\_\+\+Status\+\_\+T}} \{ {\bfseries Blue\+Tooth\+\_\+\+Status\+\_\+\+Wait\+\_\+\+Time} = 0
+, {\bfseries Bluetooth\+\_\+\+Status\+\_\+\+Init}
+, {\bfseries Bluetooth\+\_\+\+Status\+\_\+\+Send\+\_\+\+Data}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration didn\textquotesingle{}t used in the code. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540c}{Send\+\_\+\+Graph\+\_\+header}} \{ \newline
+\mbox{\hyperlink{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540cacb9690ee9fc4cbf57c907734a55ac5c9}{Send\+\_\+\+Blue\+Tooth\+\_\+\+Graph\+\_\+\+Header}} = 0x4\+C2A
+, \mbox{\hyperlink{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540ca104dc67f6aea4f29a01bcb48fefa5290}{Send\+\_\+\+Blue\+Tooth\+\_\+\+Alert\+\_\+\+Header}} = 0x4\+D2A
+, \mbox{\hyperlink{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540ca98701605a766928f19ac70b458f8f117}{Send\+\_\+\+Blue\+Tooth\+\_\+\+Sampled\+\_\+\+Parameter\+\_\+\+Header}} = 0x532A
+, \mbox{\hyperlink{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540ca578173d0c64c176b854a48986b337216}{Send\+\_\+\+Blue\+Tooth\+\_\+\+Calibration\+\_\+\+Header}} = 0x542B
+, \newline
+\mbox{\hyperlink{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540ca398a4ab6505f7ac8b19986c2c3c689d1}{Send\+\_\+\+Blue\+Tooth\+\_\+\+Service\+\_\+\+Header}} = 0x532C
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration Transmitting graph header. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4}{Receive\+\_\+\+Graph\+\_\+header}} \{ \newline
+\mbox{\hyperlink{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4aabbe2887aef2c6ab3478940b90cb9033}{Receive\+\_\+\+Blue\+Tooth\+\_\+\+Graph\+\_\+\+Header}} = 0x4\+D2B
+, \mbox{\hyperlink{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4a9844a0a4929ee909ba5911978021d7bc}{Receive\+\_\+\+Blue\+Tooth\+\_\+\+Alert\+\_\+\+Header}} = 0x412B
+, \mbox{\hyperlink{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4ad3febbd3b20a3b214b4c5e982ff269ff}{Receive\+\_\+\+Nebuliser\+\_\+\+Header}} = 0x462B
+, \mbox{\hyperlink{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4aa7c8a3c186228f17923c38b8f5e6fb22}{Receive\+\_\+\+Calibration\+\_\+\+Header}} = 0x542C
+, \newline
+\mbox{\hyperlink{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4aee1f64711ab49a7f7a108918d1f9a30c}{Receive\+\_\+\+Service\+\_\+\+Header}} = 0x532C
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration Reception graph header. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_bluetooth___graph_8h_a82794c7b4a682c0c175185ba6e058a57}{Bluetooth\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Bluetooth task. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_bluetooth___graph_8h_ac822e66489e715ff5279b101b0daa8f9}{chksum8}} (const unsigned char \texorpdfstring{$\ast$}{*}buff, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em check sum function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bluetooth___graph_8h_a0c106571e50281348413240a8e802c65}{UART6\+\_\+\+Init}} ()
+\begin{DoxyCompactList}\small\item\em UART6 initialization. \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_ad04d7afae1f062b83d4860d617a43894}\label{_bluetooth___graph_8h_ad04d7afae1f062b83d4860d617a43894} 
+void {\bfseries UART5\+\_\+\+Init} ()
+\begin{DoxyCompactList}\small\item\em UART5 initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bluetooth___graph_8h_a49def77fa60e9ab8c6e0787fd941d900}{Bluetooth\+\_\+\+Graph\+\_\+\+Data\+\_\+\+Send}} ()
+\begin{DoxyCompactList}\small\item\em Bluetooth\+\_\+\+Graph\+\_\+\+Data\+\_\+\+Send. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bluetooth___graph_8h_afcfb3e5f0ff71d47e62030fe3453dda8}{Bluetooth\+\_\+\+Data\+\_\+\+Send}} ()
+\begin{DoxyCompactList}\small\item\em whole Bluetooth\+\_\+\+Data\+\_\+\+Send. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bluetooth___graph_8h_a832b73767ff1650168aaad1832ef09a4}{Blue\+Tooth\+\_\+\+Receiver\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Receive bluetooth data task. \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_a6c154410f022fcb04bcd1b7173f3f1d4}\label{_bluetooth___graph_8h_a6c154410f022fcb04bcd1b7173f3f1d4} 
+void {\bfseries Bluetooth\+\_\+\+Packet\+\_\+\+Data\+\_\+\+Split} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em split bluetooth received data function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bluetooth___graph_8h_a14b36e82e4e3166cb5ddd37813b7fcdd}{Bluetooth\+\_\+data\+\_\+split\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em split bluetooth received data task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bluetooth___graph_8h_ac4d300761c895062d3f4f8ba65712151}{Pc\+\_\+\+Cmv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data}} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em split PC-\/\+CMV buffer from bluetooth received data . \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bluetooth___graph_8h_acc7c537216cb65805be1a07b2bfb3c48}{Vc\+\_\+\+Cmv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data}} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em split VC-\/\+CMV buffer from bluetooth received data . \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bluetooth___graph_8h_a19dbaddc3b59b6281fdb93d970b27615}{Pc\+\_\+\+Simv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data}} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em split PC-\/\+SIMV buffer from bluetooth received data . \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bluetooth___graph_8h_aec91ebb32c6386f1266da711704172ab}{Vc\+\_\+\+Simv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data}} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em split VC-\/\+SIMV buffer from bluetooth received data . \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_aaadf22f84022f5e5588023ab3929d76a}\label{_bluetooth___graph_8h_aaadf22f84022f5e5588023ab3929d76a} 
+void {\bfseries PSV\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em split psv buffer from bluetooth received data . \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_af52d75d573eae33c72ba02447613252c}\label{_bluetooth___graph_8h_af52d75d573eae33c72ba02447613252c} 
+void {\bfseries CPAP\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em split CPAP buffer from bluetooth received data . \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_a80e4907044bc8ec6b7d8741700b7318d}\label{_bluetooth___graph_8h_a80e4907044bc8ec6b7d8741700b7318d} 
+void {\bfseries BIPAP\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em split BIPAP buffer from bluetooth received data . \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_a3e3f2f9612fd91817bd4631453d7eac9}\label{_bluetooth___graph_8h_a3e3f2f9612fd91817bd4631453d7eac9} 
+void {\bfseries APRV\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em split APRV buffer from bluetooth received data . \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_a9ed28fe2aa113b9951f187da3565c5b2}\label{_bluetooth___graph_8h_a9ed28fe2aa113b9951f187da3565c5b2} 
+void {\bfseries Backup\+\_\+\+Pc\+\_\+\+Cmv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em split BACKUP PC-\/\+CMV buffer from bluetooth received data . \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_a4d6a38b29d6ad920c50e650dd3b6c7dc}\label{_bluetooth___graph_8h_a4d6a38b29d6ad920c50e650dd3b6c7dc} 
+void {\bfseries Backup\+\_\+\+Vc\+\_\+\+Cmv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em DIDN\textquotesingle{}T USED . \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_bluetooth___graph_8h_a15d6960ce445e60610f40ff3b6a015f5}{HFNC\+\_\+\+Packet\+\_\+\+Data}} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em split HFNC buffer from bluetooth received data . \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_a41d5a088c56de7d0b06c811f3328d714}\label{_bluetooth___graph_8h_a41d5a088c56de7d0b06c811f3328d714} 
+void {\bfseries SUCTION\+\_\+\+Packet\+\_\+\+Data} ()
+\begin{DoxyCompactList}\small\item\em split SUCTION buffer from bluetooth received data . \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_a03c118035f61d53ce9e830bc4a908404}\label{_bluetooth___graph_8h_a03c118035f61d53ce9e830bc4a908404} 
+void {\bfseries UART5\+\_\+\+GRAPH\+\_\+\+DATA\+\_\+\+DEBUG} ()
+\begin{DoxyCompactList}\small\item\em used for debugging purpose . \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_a1135b3d9e47328483d6ef48820fd4c1c}\label{_bluetooth___graph_8h_a1135b3d9e47328483d6ef48820fd4c1c} 
+void {\bfseries USB\+\_\+\+GRAPH\+\_\+\+DATA\+\_\+\+DEBUG} ()
+\begin{DoxyCompactList}\small\item\em used for debugging purpose . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_bluetooth___graph_8h_a263a30de76152dd3d8f8f302ad896e45}\label{_bluetooth___graph_8h_a263a30de76152dd3d8f8f302ad896e45} 
+x\+Queue\+Handle {\bfseries Bluetooth\+\_\+\+Receive}
+\begin{DoxyCompactList}\small\item\em reception of Bluetooth in queue. \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_a0c68fa33328b46ac17f4a4b453333e4c}\label{_bluetooth___graph_8h_a0c68fa33328b46ac17f4a4b453333e4c} 
+\mbox{\hyperlink{struct_g_r_a_p_h___p_a_c_k_e_t___s_e_n_d}{GRAPH\+\_\+\+PACKET\+\_\+\+SEND}} {\bfseries Graph\+\_\+\+Data}
+\begin{DoxyCompactList}\small\item\em structure variable for send graph data. \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_a7cebcdc40e46c87f9c118655857a2ee1}\label{_bluetooth___graph_8h_a7cebcdc40e46c87f9c118655857a2ee1} 
+\mbox{\hyperlink{struct_bluetooth__parameter}{Bluetooth\+\_\+parameter}} {\bfseries Bluetooth\+\_\+\+Parameter}
+\begin{DoxyCompactList}\small\item\em structure variable for \doxylink{struct_bluetooth__parameter}{Bluetooth\+\_\+parameter}. \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_a841e075320f6fb3114f420741dfe66f2}\label{_bluetooth___graph_8h_a841e075320f6fb3114f420741dfe66f2} 
+\mbox{\hyperlink{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6}{Bluetooth\+\_\+T}} {\bfseries Bluetooth}
+\begin{DoxyCompactList}\small\item\em enumeration variable. \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_a6e2b2b5c8a7ec34c3dc1f891cf81f9ef}\label{_bluetooth___graph_8h_a6e2b2b5c8a7ec34c3dc1f891cf81f9ef} 
+\mbox{\hyperlink{_bluetooth___graph_8h_a8d38a9390f78d8cbcc93fd41ba7aaeff}{Bluetooth\+\_\+\+Status\+\_\+T}} {\bfseries Bluetooth\+\_\+\+Status}
+\begin{DoxyCompactList}\small\item\em enumeration variable. \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_ac300317731a9839e94cc6ed23c9e7b13}\label{_bluetooth___graph_8h_ac300317731a9839e94cc6ed23c9e7b13} 
+\mbox{\hyperlink{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540c}{Send\+\_\+\+Graph\+\_\+header}} {\bfseries Send\+\_\+\+Graph\+\_\+\+Header}
+\begin{DoxyCompactList}\small\item\em enumeration variable. \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_ace42c4297622885e3aee1c169ccd5450}\label{_bluetooth___graph_8h_ace42c4297622885e3aee1c169ccd5450} 
+\mbox{\hyperlink{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4}{Receive\+\_\+\+Graph\+\_\+header}} {\bfseries Receive\+\_\+\+Graph\+\_\+\+Header}
+\begin{DoxyCompactList}\small\item\em enumeration variable. \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_a29c43fafd88821d8b83de7f00044d5ed}\label{_bluetooth___graph_8h_a29c43fafd88821d8b83de7f00044d5ed} 
+x\+Task\+Handle {\bfseries Bluetooth\+\_\+data\+\_\+\+Split\+\_\+\+Handler}
+\begin{DoxyCompactList}\small\item\em Task handle variable. \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_a164c4fab6e7dad9abbef7db6fb1e2ffc}\label{_bluetooth___graph_8h_a164c4fab6e7dad9abbef7db6fb1e2ffc} 
+x\+Task\+Handle {\bfseries Bluetooth\+\_\+\+Handler}
+\begin{DoxyCompactList}\small\item\em Task handle variable. \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___graph_8h_aec396ec9030f082440539a29cef6bbde}\label{_bluetooth___graph_8h_aec396ec9030f082440539a29cef6bbde} 
+x\+Task\+Handle {\bfseries Bluetooth\+\_\+\+Receiver\+\_\+\+Handler}
+\begin{DoxyCompactList}\small\item\em Task handle variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of Blue-\/tooth data reception and transmission. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Declaration of Blue-\/tooth data reception and transmission. including the initialization 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6}\label{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6} 
+\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Bluetooth\_T@{Bluetooth\_T}}
+\index{Bluetooth\_T@{Bluetooth\_T}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}
+\doxysubsubsection{\texorpdfstring{Bluetooth\_T}{Bluetooth\_T}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6}{Bluetooth\+\_\+T}}}
+
+
+
+Enumeration for wait time for uart initialization. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BlueTooth\_Wait\_Time@{BlueTooth\_Wait\_Time}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!BlueTooth\_Wait\_Time@{BlueTooth\_Wait\_Time}}}\Hypertarget{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6ad32982f7cd28a43996060563a3ff96d1}\label{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6ad32982f7cd28a43996060563a3ff96d1} 
+Blue\+Tooth\+\_\+\+Wait\+\_\+\+Time&step1. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bluetooth\_Init@{Bluetooth\_Init}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Bluetooth\_Init@{Bluetooth\_Init}}}\Hypertarget{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6ad4e1e402f25bd2b32c03da08604c3cfd}\label{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6ad4e1e402f25bd2b32c03da08604c3cfd} 
+Bluetooth\+\_\+\+Init&step2. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bluetooth\_Send\_Data@{Bluetooth\_Send\_Data}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Bluetooth\_Send\_Data@{Bluetooth\_Send\_Data}}}\Hypertarget{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6a5daafd8bbcdf41f961c487d8c5157e6b}\label{_bluetooth___graph_8h_a79845fa99e25ea1ddecf7e1abe3e0ff6a5daafd8bbcdf41f961c487d8c5157e6b} 
+Bluetooth\+\_\+\+Send\+\_\+\+Data&step3. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4}\label{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4} 
+\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Receive\_Graph\_header@{Receive\_Graph\_header}}
+\index{Receive\_Graph\_header@{Receive\_Graph\_header}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}
+\doxysubsubsection{\texorpdfstring{Receive\_Graph\_header}{Receive\_Graph\_header}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4}{Receive\+\_\+\+Graph\+\_\+header}}}
+
+
+
+Enumeration Reception graph header. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Receive\_BlueTooth\_Graph\_Header@{Receive\_BlueTooth\_Graph\_Header}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Receive\_BlueTooth\_Graph\_Header@{Receive\_BlueTooth\_Graph\_Header}}}\Hypertarget{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4aabbe2887aef2c6ab3478940b90cb9033}\label{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4aabbe2887aef2c6ab3478940b90cb9033} 
+Receive\+\_\+\+Blue\+Tooth\+\_\+\+Graph\+\_\+\+Header&for mode graph header. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Receive\_BlueTooth\_Alert\_Header@{Receive\_BlueTooth\_Alert\_Header}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Receive\_BlueTooth\_Alert\_Header@{Receive\_BlueTooth\_Alert\_Header}}}\Hypertarget{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4a9844a0a4929ee909ba5911978021d7bc}\label{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4a9844a0a4929ee909ba5911978021d7bc} 
+Receive\+\_\+\+Blue\+Tooth\+\_\+\+Alert\+\_\+\+Header&for alert header. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Receive\_Nebuliser\_Header@{Receive\_Nebuliser\_Header}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Receive\_Nebuliser\_Header@{Receive\_Nebuliser\_Header}}}\Hypertarget{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4ad3febbd3b20a3b214b4c5e982ff269ff}\label{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4ad3febbd3b20a3b214b4c5e982ff269ff} 
+Receive\+\_\+\+Nebuliser\+\_\+\+Header&nebuliser header. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Receive\_Calibration\_Header@{Receive\_Calibration\_Header}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Receive\_Calibration\_Header@{Receive\_Calibration\_Header}}}\Hypertarget{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4aa7c8a3c186228f17923c38b8f5e6fb22}\label{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4aa7c8a3c186228f17923c38b8f5e6fb22} 
+Receive\+\_\+\+Calibration\+\_\+\+Header&calibration frame header. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Receive\_Service\_Header@{Receive\_Service\_Header}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Receive\_Service\_Header@{Receive\_Service\_Header}}}\Hypertarget{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4aee1f64711ab49a7f7a108918d1f9a30c}\label{_bluetooth___graph_8h_a5ad84e76b5b36eb956312c0ada74aab4aee1f64711ab49a7f7a108918d1f9a30c} 
+Receive\+\_\+\+Service\+\_\+\+Header&service frame header. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540c}\label{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540c} 
+\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Send\_Graph\_header@{Send\_Graph\_header}}
+\index{Send\_Graph\_header@{Send\_Graph\_header}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}
+\doxysubsubsection{\texorpdfstring{Send\_Graph\_header}{Send\_Graph\_header}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540c}{Send\+\_\+\+Graph\+\_\+header}}}
+
+
+
+Enumeration Transmitting graph header. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Send\_BlueTooth\_Graph\_Header@{Send\_BlueTooth\_Graph\_Header}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Send\_BlueTooth\_Graph\_Header@{Send\_BlueTooth\_Graph\_Header}}}\Hypertarget{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540cacb9690ee9fc4cbf57c907734a55ac5c9}\label{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540cacb9690ee9fc4cbf57c907734a55ac5c9} 
+Send\+\_\+\+Blue\+Tooth\+\_\+\+Graph\+\_\+\+Header&for mode graph header. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Send\_BlueTooth\_Alert\_Header@{Send\_BlueTooth\_Alert\_Header}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Send\_BlueTooth\_Alert\_Header@{Send\_BlueTooth\_Alert\_Header}}}\Hypertarget{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540ca104dc67f6aea4f29a01bcb48fefa5290}\label{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540ca104dc67f6aea4f29a01bcb48fefa5290} 
+Send\+\_\+\+Blue\+Tooth\+\_\+\+Alert\+\_\+\+Header&for alert header. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Send\_BlueTooth\_Sampled\_Parameter\_Header@{Send\_BlueTooth\_Sampled\_Parameter\_Header}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Send\_BlueTooth\_Sampled\_Parameter\_Header@{Send\_BlueTooth\_Sampled\_Parameter\_Header}}}\Hypertarget{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540ca98701605a766928f19ac70b458f8f117}\label{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540ca98701605a766928f19ac70b458f8f117} 
+Send\+\_\+\+Blue\+Tooth\+\_\+\+Sampled\+\_\+\+Parameter\+\_\+\+Header&sampled parameter header. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Send\_BlueTooth\_Calibration\_Header@{Send\_BlueTooth\_Calibration\_Header}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Send\_BlueTooth\_Calibration\_Header@{Send\_BlueTooth\_Calibration\_Header}}}\Hypertarget{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540ca578173d0c64c176b854a48986b337216}\label{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540ca578173d0c64c176b854a48986b337216} 
+Send\+\_\+\+Blue\+Tooth\+\_\+\+Calibration\+\_\+\+Header&calibration frame header. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Send\_BlueTooth\_Service\_Header@{Send\_BlueTooth\_Service\_Header}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Send\_BlueTooth\_Service\_Header@{Send\_BlueTooth\_Service\_Header}}}\Hypertarget{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540ca398a4ab6505f7ac8b19986c2c3c689d1}\label{_bluetooth___graph_8h_aa67757a7282d72ca63875accadb9540ca398a4ab6505f7ac8b19986c2c3c689d1} 
+Send\+\_\+\+Blue\+Tooth\+\_\+\+Service\+\_\+\+Header&service frame header. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_bluetooth___graph_8h_afcfb3e5f0ff71d47e62030fe3453dda8}\label{_bluetooth___graph_8h_afcfb3e5f0ff71d47e62030fe3453dda8} 
+\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Bluetooth\_Data\_Send@{Bluetooth\_Data\_Send}}
+\index{Bluetooth\_Data\_Send@{Bluetooth\_Data\_Send}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}
+\doxysubsubsection{\texorpdfstring{Bluetooth\_Data\_Send()}{Bluetooth\_Data\_Send()}}
+{\footnotesize\ttfamily void Bluetooth\+\_\+\+Data\+\_\+\+Send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+whole Bluetooth\+\_\+\+Data\+\_\+\+Send. 
+
+whole Bluetooth\+\_\+\+Data\+\_\+\+Send.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_bluetooth___graph_8h_a14b36e82e4e3166cb5ddd37813b7fcdd}\label{_bluetooth___graph_8h_a14b36e82e4e3166cb5ddd37813b7fcdd} 
+\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Bluetooth\_data\_split\_Task@{Bluetooth\_data\_split\_Task}}
+\index{Bluetooth\_data\_split\_Task@{Bluetooth\_data\_split\_Task}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}
+\doxysubsubsection{\texorpdfstring{Bluetooth\_data\_split\_Task()}{Bluetooth\_data\_split\_Task()}}
+{\footnotesize\ttfamily void Bluetooth\+\_\+data\+\_\+split\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+split bluetooth received data task. 
+
+split bluetooth received data task.
+
+\begin{DoxyPostcond}{Postcondition}
+it split the data after the function call. 
+\end{DoxyPostcond}
+\Hypertarget{_bluetooth___graph_8h_a49def77fa60e9ab8c6e0787fd941d900}\label{_bluetooth___graph_8h_a49def77fa60e9ab8c6e0787fd941d900} 
+\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Bluetooth\_Graph\_Data\_Send@{Bluetooth\_Graph\_Data\_Send}}
+\index{Bluetooth\_Graph\_Data\_Send@{Bluetooth\_Graph\_Data\_Send}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}
+\doxysubsubsection{\texorpdfstring{Bluetooth\_Graph\_Data\_Send()}{Bluetooth\_Graph\_Data\_Send()}}
+{\footnotesize\ttfamily void Bluetooth\+\_\+\+Graph\+\_\+\+Data\+\_\+\+Send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Bluetooth\+\_\+\+Graph\+\_\+\+Data\+\_\+\+Send. 
+
+Bluetooth\+\_\+\+Graph\+\_\+\+Data\+\_\+\+Send.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_bluetooth___graph_8h_a832b73767ff1650168aaad1832ef09a4}\label{_bluetooth___graph_8h_a832b73767ff1650168aaad1832ef09a4} 
+\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!BlueTooth\_Receiver\_Task@{BlueTooth\_Receiver\_Task}}
+\index{BlueTooth\_Receiver\_Task@{BlueTooth\_Receiver\_Task}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}
+\doxysubsubsection{\texorpdfstring{BlueTooth\_Receiver\_Task()}{BlueTooth\_Receiver\_Task()}}
+{\footnotesize\ttfamily void Blue\+Tooth\+\_\+\+Receiver\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Receive bluetooth data task. 
+
+Receive bluetooth data task.
+
+\begin{DoxyPostcond}{Postcondition}
+this function resume the Bluetooth\+\_\+data\+\_\+split\+\_\+\+Task. 
+\end{DoxyPostcond}
+\Hypertarget{_bluetooth___graph_8h_a82794c7b4a682c0c175185ba6e058a57}\label{_bluetooth___graph_8h_a82794c7b4a682c0c175185ba6e058a57} 
+\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Bluetooth\_Task@{Bluetooth\_Task}}
+\index{Bluetooth\_Task@{Bluetooth\_Task}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}
+\doxysubsubsection{\texorpdfstring{Bluetooth\_Task()}{Bluetooth\_Task()}}
+{\footnotesize\ttfamily void Bluetooth\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Bluetooth task. 
+
+Bluetooth task.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_bluetooth___graph_8h_ac822e66489e715ff5279b101b0daa8f9}\label{_bluetooth___graph_8h_ac822e66489e715ff5279b101b0daa8f9} 
+\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!chksum8@{chksum8}}
+\index{chksum8@{chksum8}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}
+\doxysubsubsection{\texorpdfstring{chksum8()}{chksum8()}}
+{\footnotesize\ttfamily uint8\+\_\+t chksum8 (\begin{DoxyParamCaption}\item[{const unsigned char \texorpdfstring{$\ast$}{*}}]{buff,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+check sum function. 
+
+check sum function. \Hypertarget{_bluetooth___graph_8h_a15d6960ce445e60610f40ff3b6a015f5}\label{_bluetooth___graph_8h_a15d6960ce445e60610f40ff3b6a015f5} 
+\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!HFNC\_Packet\_Data@{HFNC\_Packet\_Data}}
+\index{HFNC\_Packet\_Data@{HFNC\_Packet\_Data}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}
+\doxysubsubsection{\texorpdfstring{HFNC\_Packet\_Data()}{HFNC\_Packet\_Data()}}
+{\footnotesize\ttfamily void HFNC\+\_\+\+Packet\+\_\+\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}}]{Receive\+\_\+\+Graph\+\_\+\+Packet }\end{DoxyParamCaption})}
+
+
+
+split HFNC buffer from bluetooth received data . 
+
+split HFNC buffer from bluetooth received data .
+
+This function Split HFNC MODE Data from Blue-\/tooth. 
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} & data from blue-\/tooth. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+HFNC mode data is Separated. 
+\end{DoxyPostcond}
+\Hypertarget{_bluetooth___graph_8h_ac4d300761c895062d3f4f8ba65712151}\label{_bluetooth___graph_8h_ac4d300761c895062d3f4f8ba65712151} 
+\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Pc\_Cmv\_Mode\_Packet\_Data@{Pc\_Cmv\_Mode\_Packet\_Data}}
+\index{Pc\_Cmv\_Mode\_Packet\_Data@{Pc\_Cmv\_Mode\_Packet\_Data}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}
+\doxysubsubsection{\texorpdfstring{Pc\_Cmv\_Mode\_Packet\_Data()}{Pc\_Cmv\_Mode\_Packet\_Data()}}
+{\footnotesize\ttfamily void Pc\+\_\+\+Cmv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}}]{Receive\+\_\+\+Graph\+\_\+\+Packet }\end{DoxyParamCaption})}
+
+
+
+split PC-\/\+CMV buffer from bluetooth received data . 
+
+split PC-\/\+CMV buffer from bluetooth received data .
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} & structure pointer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_bluetooth___graph_8h_a19dbaddc3b59b6281fdb93d970b27615}\label{_bluetooth___graph_8h_a19dbaddc3b59b6281fdb93d970b27615} 
+\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Pc\_Simv\_Mode\_Packet\_Data@{Pc\_Simv\_Mode\_Packet\_Data}}
+\index{Pc\_Simv\_Mode\_Packet\_Data@{Pc\_Simv\_Mode\_Packet\_Data}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}
+\doxysubsubsection{\texorpdfstring{Pc\_Simv\_Mode\_Packet\_Data()}{Pc\_Simv\_Mode\_Packet\_Data()}}
+{\footnotesize\ttfamily void Pc\+\_\+\+Simv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}}]{Receive\+\_\+\+Graph\+\_\+\+Packet }\end{DoxyParamCaption})}
+
+
+
+split PC-\/\+SIMV buffer from bluetooth received data . 
+
+split PC-\/\+SIMV buffer from bluetooth received data .
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} & structure pointer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_bluetooth___graph_8h_a0c106571e50281348413240a8e802c65}\label{_bluetooth___graph_8h_a0c106571e50281348413240a8e802c65} 
+\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!UART6\_Init@{UART6\_Init}}
+\index{UART6\_Init@{UART6\_Init}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}
+\doxysubsubsection{\texorpdfstring{UART6\_Init()}{UART6\_Init()}}
+{\footnotesize\ttfamily void UART6\+\_\+\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+UART6 initialization. 
+
+UART6 initialization.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_bluetooth___graph_8h_acc7c537216cb65805be1a07b2bfb3c48}\label{_bluetooth___graph_8h_acc7c537216cb65805be1a07b2bfb3c48} 
+\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Vc\_Cmv\_Mode\_Packet\_Data@{Vc\_Cmv\_Mode\_Packet\_Data}}
+\index{Vc\_Cmv\_Mode\_Packet\_Data@{Vc\_Cmv\_Mode\_Packet\_Data}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}
+\doxysubsubsection{\texorpdfstring{Vc\_Cmv\_Mode\_Packet\_Data()}{Vc\_Cmv\_Mode\_Packet\_Data()}}
+{\footnotesize\ttfamily void Vc\+\_\+\+Cmv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}}]{Receive\+\_\+\+Graph\+\_\+\+Packet }\end{DoxyParamCaption})}
+
+
+
+split VC-\/\+CMV buffer from bluetooth received data . 
+
+split VC-\/\+CMV buffer from bluetooth received data .
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} & structure pointer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_bluetooth___graph_8h_aec91ebb32c6386f1266da711704172ab}\label{_bluetooth___graph_8h_aec91ebb32c6386f1266da711704172ab} 
+\index{Bluetooth\_Graph.h@{Bluetooth\_Graph.h}!Vc\_Simv\_Mode\_Packet\_Data@{Vc\_Simv\_Mode\_Packet\_Data}}
+\index{Vc\_Simv\_Mode\_Packet\_Data@{Vc\_Simv\_Mode\_Packet\_Data}!Bluetooth\_Graph.h@{Bluetooth\_Graph.h}}
+\doxysubsubsection{\texorpdfstring{Vc\_Simv\_Mode\_Packet\_Data()}{Vc\_Simv\_Mode\_Packet\_Data()}}
+{\footnotesize\ttfamily void Vc\+\_\+\+Simv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}}]{Receive\+\_\+\+Graph\+\_\+\+Packet }\end{DoxyParamCaption})}
+
+
+
+split VC-\/\+SIMV buffer from bluetooth received data . 
+
+split VC-\/\+SIMV buffer from bluetooth received data .
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} & structure pointer. \\
+\hline
+\end{DoxyParams}

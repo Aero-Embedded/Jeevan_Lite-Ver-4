@@ -1,0 +1,212 @@
+\doxysection{Sampled\+\_\+\+Parameter.\+h}
+\hypertarget{_sampled___parameter_8h_source}{}\label{_sampled___parameter_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/Sampled\_Parameter/Sampled\_Parameter.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/Sampled\_Parameter/Sampled\_Parameter.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Sampled\_Parameter.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ May\ 23,\ 2023}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ asus}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_AERO\_INC\_SAMPLED\_PARAMETER\_SAMPLED\_PARAMETER\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_AERO\_INC\_SAMPLED\_PARAMETER\_SAMPLED\_PARAMETER\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{int}\ Max\_Flow,Min\_Flow;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ uint8\_t\ Average\_PIP;}
+\DoxyCodeLine{00022\ \ \ \ \ uint8\_t\ Average\_PEEP;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ Volume\_Max\_Insp;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ Volume\_Max\_Exp;}
+\DoxyCodeLine{00025\ \ \ \ \ uint8\_t\ \ \ \ \ MAX\_Flow;}
+\DoxyCodeLine{00026\ \ \ \ \ uint8\_t\ \ \ \ \ MIN\_Flow;}
+\DoxyCodeLine{00027\ \}\mbox{\hyperlink{structsampled___parameter__1}{sampled\_Parameter\_1}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \ \ \textcolor{keywordtype}{float}\ \ \ Minite\_Volume;}
+\DoxyCodeLine{00033\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ Total\_Tidal\_Volume\_Int;}
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordtype}{float}\ \ \ Total\_Tidal\_Volume\_Decimal\_1;}
+\DoxyCodeLine{00035\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ Total\_Tidal\_Volume\_Decimal;}
+\DoxyCodeLine{00036\ \ \ \textcolor{keywordtype}{float}\ \ \ Total\_Tidal\_Volume\_float;}
+\DoxyCodeLine{00037\ \ \ uint8\_t\ Acheived\_RR;}
+\DoxyCodeLine{00038\ \ \ uint16\_t\ Acheived\_I\_Time;}
+\DoxyCodeLine{00039\ \ \ uint16\_t\ Acheived\_E\_Time;}
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{float}\ \ \ Acheived\_I\_Time\_float;}
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{float}\ \ \ Acheived\_E\_Time\_float;}
+\DoxyCodeLine{00042\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ Acheived\_I\_Time\_int;}
+\DoxyCodeLine{00043\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ Acheived\_E\_Time\_int;}
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordtype}{float}\ \ \ Acheived\_E\_Time\_Decimal\_1;}
+\DoxyCodeLine{00045\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ Acheived\_E\_Time\_Decimal;}
+\DoxyCodeLine{00046\ \ \ \textcolor{keywordtype}{float}\ \ \ Acheived\_I\_Time\_Decimal\_1;}
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ Acheived\_I\_Time\_Decimal;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \}\mbox{\hyperlink{structsampled___parameter__2}{sampled\_Parameter\_2}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00054\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ uint8\_t\ Compliance;}
+\DoxyCodeLine{00056\ \ \ \ \ uint8\_t\ Plateau\_Pressure;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{double}\ Staic\_Compliance;}
+\DoxyCodeLine{00058\ \ \ \ \ uint8\_t\ Staic\_Compliance\_int;}
+\DoxyCodeLine{00059\ \ \ \ \ uint8\_t\ Staic\_Compliance\_float;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{double}\ Dynamic\_Compliance;}
+\DoxyCodeLine{00061\ \ \ \ \ uint8\_t\ Dynamic\_Compliance\_int;}
+\DoxyCodeLine{00062\ \ \ \ \ uint8\_t\ Dynamic\_Compliance\_float;}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{double}\ Rinsp;}
+\DoxyCodeLine{00064\ \ \ \ \ uint8\_t\ Rinsp\_int;}
+\DoxyCodeLine{00065\ \ \ \ \ uint8\_t\ Rinsp\_float\_1;}
+\DoxyCodeLine{00066\ \ \ \ \ uint8\_t\ Rinsp\_float\_2;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \}\mbox{\hyperlink{structsampled___parameter__3}{sampled\_Parameter\_3}};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ \ }\mbox{\hyperlink{_alert_8h_ab898071398b359603a35c202e9c65f3b}{\_\_attribute\_\_}}((packed))}
+\DoxyCodeLine{00071\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ uint16\_t\ \_header\ ;}
+\DoxyCodeLine{00073\ \ \ \ \ uint8\_t\ \ \_length\ ;}
+\DoxyCodeLine{00074\ \ \ \ \ uint8\_t\ \ \_PIP\_Val;}
+\DoxyCodeLine{00075\ \ \ \ \ uint8\_t\ \ \_PEEP\_Val;}
+\DoxyCodeLine{00076\ \ \ \ \ uint8\_t\ \ \_VTI\_Val\_1;}
+\DoxyCodeLine{00077\ \ \ \ \ uint8\_t\ \ \_VTI\_Val\_2;}
+\DoxyCodeLine{00078\ \ \ \ \ uint8\_t\ \ \ \_FIO2;}
+\DoxyCodeLine{00079\ \ \ \ \ uint8\_t\ \ \ \_RR;}
+\DoxyCodeLine{00080\ \ \ \ \ uint8\_t\ \ \_CRC8;}
+\DoxyCodeLine{00081\ \}\ SAMPLED\_PARAMETER\_PACKET\_1\ ;}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ \ }\mbox{\hyperlink{_alert_8h_ab898071398b359603a35c202e9c65f3b}{\_\_attribute\_\_}}((packed))}
+\DoxyCodeLine{00084\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ uint16\_t\ \_header\ ;}
+\DoxyCodeLine{00086\ \ \ \ \ uint8\_t\ \ \_length\ ;}
+\DoxyCodeLine{00087\ \ \ \ \ uint8\_t\ \ \_Minite\_Volume\_int;}
+\DoxyCodeLine{00088\ \ \ \ \ uint8\_t\ \ \_Minite\_Volume\_float;}
+\DoxyCodeLine{00089\ \ \ \ \ uint8\_t\ \_Static\_Compliance\_Int;}
+\DoxyCodeLine{00090\ \ \ \ \ uint8\_t\ \_Static\_Compliance\_Float;}
+\DoxyCodeLine{00091\ \ \ \ \ uint8\_t\ \_Dynamic\_Compliance\_Int;}
+\DoxyCodeLine{00092\ \ \ \ \ uint8\_t\ \_Dynamic\_Compliance\_Float;}
+\DoxyCodeLine{00093\ \ \ \ \ uint8\_t\ \ \_CRC8;}
+\DoxyCodeLine{00094\ \}\ SAMPLED\_PARAMETER\_PACKET\_2\ ;}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ \ }\mbox{\hyperlink{_alert_8h_ab898071398b359603a35c202e9c65f3b}{\_\_attribute\_\_}}((packed))}
+\DoxyCodeLine{00098\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ uint16\_t\ \_header\ ;}
+\DoxyCodeLine{00100\ \ \ \ \ uint8\_t\ \ \_length\ ;}
+\DoxyCodeLine{00101\ \ \ \ \ uint8\_t\ \ \_RInsp\_Int;}
+\DoxyCodeLine{00102\ \ \ \ \ uint8\_t\ \ \_RInsp\_Float1;}
+\DoxyCodeLine{00103\ \ \ \ \ uint8\_t\ \_MAP\_int;}
+\DoxyCodeLine{00104\ \ \ \ \ uint8\_t\ \_MAP\_float;}
+\DoxyCodeLine{00105\ \ \ \ \ int16\_t\ \ \_VTE\_Val;}
+\DoxyCodeLine{00106\ \ \ \ \ uint8\_t\ \ \_CRC8;}
+\DoxyCodeLine{00107\ \}\ SAMPLED\_PARAMETER\_PACKET\_3\ ;}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ \ }\mbox{\hyperlink{_alert_8h_ab898071398b359603a35c202e9c65f3b}{\_\_attribute\_\_}}((packed))}
+\DoxyCodeLine{00112\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ uint16\_t\ \_header\ ;}
+\DoxyCodeLine{00114\ \ \ \ \ uint8\_t\ \ \_length\ ;}
+\DoxyCodeLine{00115\ \ \ \ \ uint8\_t\ \ \_PIF\_Val;}
+\DoxyCodeLine{00116\ \ \ \ \ uint8\_t\ \ \_PEF\_Val;}
+\DoxyCodeLine{00117\ \ \ \ \ uint16\_t\ \_I\_time\_Achieved;}
+\DoxyCodeLine{00118\ \ \ \ \ uint16\_t\ \_E\_time\_Achieved;}
+\DoxyCodeLine{00119\ \ \ \ \ uint8\_t\ \_CRC8;}
+\DoxyCodeLine{00120\ \}\ SAMPLED\_PARAMETER\_PACKET\_4;}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ \ }\mbox{\hyperlink{_alert_8h_ab898071398b359603a35c202e9c65f3b}{\_\_attribute\_\_}}((packed))}
+\DoxyCodeLine{00125\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ uint16\_t\ \_header\ ;}
+\DoxyCodeLine{00127\ \ \ \ \ uint8\_t\ \ \_length\ ;}
+\DoxyCodeLine{00128\ \ \ \ \ uint8\_t\ \ \_Plauteu\_Pressure;}
+\DoxyCodeLine{00129\ \ \ \ \ uint8\_t\ \_I\_Ratio\_int;}
+\DoxyCodeLine{00130\ \ \ \ \ uint8\_t\ \_I\_Ratio\_float;}
+\DoxyCodeLine{00131\ \ \ \ \ uint8\_t\ \_E\_Ratio\_int;}
+\DoxyCodeLine{00132\ \ \ \ \ uint8\_t\ \_E\_Ratio\_float;}
+\DoxyCodeLine{00133\ \ \ \ \ uint8\_t\ \ NC;}
+\DoxyCodeLine{00134\ \ \ \ \ uint8\_t\ \_CRC8;}
+\DoxyCodeLine{00135\ \}\ SAMPLED\_PARAMETER\_PACKET\_5;}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00140\ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{double}\ MAP;}
+\DoxyCodeLine{00142\ \ \ \ \ uint8\_t\ MAP\_int;}
+\DoxyCodeLine{00143\ \ \ \ \ uint8\_t\ MAP\_float;}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{double}\ I\_Ratio;}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{double}\ E\_Ratio;}
+\DoxyCodeLine{00146\ \ \ \ \ uint8\_t\ I\_Ratio\_int;}
+\DoxyCodeLine{00147\ \ \ \ \ uint8\_t\ E\_Ratio\_int;}
+\DoxyCodeLine{00148\ \ \ \ \ uint8\_t\ I\_Ratio\_float;}
+\DoxyCodeLine{00149\ \ \ \ \ uint8\_t\ E\_Ratio\_float;}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \}\mbox{\hyperlink{structsampled___parameter__4}{sampled\_Parameter\_4}};}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00154\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ First\_Frame\ =\ 1,}
+\DoxyCodeLine{00156\ \ \ \ \ Second\_Frame\ =2,}
+\DoxyCodeLine{00157\ \ \ \ \ Third\_Frame\ \ =3,}
+\DoxyCodeLine{00158\ \ \ \ \ Fourth\_Frame\ =4,}
+\DoxyCodeLine{00159\ \ \ \ \ Fifth\_Frame\ \ =5}
+\DoxyCodeLine{00160\ \}sampled\_parameter\_packet;}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ uint8\_t\ Send\_Frame;}
+\DoxyCodeLine{00164\ \mbox{\hyperlink{structsampled___parameter__1}{sampled\_Parameter\_1}}\ Sampled\_Parameter\_1;}
+\DoxyCodeLine{00165\ \mbox{\hyperlink{structsampled___parameter__2}{sampled\_Parameter\_2}}\ Sampled\_Parameter\_2;}
+\DoxyCodeLine{00166\ \mbox{\hyperlink{structsampled___parameter__3}{sampled\_Parameter\_3}}\ Sampled\_Parameter\_3;}
+\DoxyCodeLine{00167\ \mbox{\hyperlink{structsampled___parameter__4}{sampled\_Parameter\_4}}\ Sampled\_Parameter\_4;}
+\DoxyCodeLine{00168\ SAMPLED\_PARAMETER\_PACKET\_1\ Sampled\_Parameter\_1\_Packet;}
+\DoxyCodeLine{00169\ SAMPLED\_PARAMETER\_PACKET\_2\ Sampled\_Parameter\_2\_Packet;}
+\DoxyCodeLine{00170\ SAMPLED\_PARAMETER\_PACKET\_3\ Sampled\_Parameter\_3\_Packet;}
+\DoxyCodeLine{00171\ SAMPLED\_PARAMETER\_PACKET\_4\ Sampled\_Parameter\_4\_Packet;}
+\DoxyCodeLine{00172\ SAMPLED\_PARAMETER\_PACKET\_5\ Sampled\_Parameter\_5\_Packet;}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \textcolor{keywordtype}{void}\ Average\_PIP\_Func();}
+\DoxyCodeLine{00176\ \textcolor{keywordtype}{void}\ Average\_PEEP\_Func();}
+\DoxyCodeLine{00177\ \textcolor{keywordtype}{void}\ Volume\_Max\_Inspiration\_Func();}
+\DoxyCodeLine{00178\ \textcolor{keywordtype}{void}\ Volume\_Max\_Expiration\_Func();}
+\DoxyCodeLine{00179\ \textcolor{keywordtype}{void}\ Reset\_Flag\_Func();}
+\DoxyCodeLine{00180\ \textcolor{keywordtype}{void}\ Peak\_Flow\_Inspiration\_Func();}
+\DoxyCodeLine{00181\ \textcolor{keywordtype}{void}\ Peak\_Flow\_Expiration\_Func();}
+\DoxyCodeLine{00182\ \textcolor{keywordtype}{void}\ Sampled\_Parameter\_Func\_1();}
+\DoxyCodeLine{00183\ \textcolor{keywordtype}{void}\ Sampled\_Parameter\_Func\_2();}
+\DoxyCodeLine{00184\ \textcolor{keywordtype}{void}\ Sampled\_Parameter\_Func\_3();}
+\DoxyCodeLine{00185\ \textcolor{keywordtype}{void}\ Minite\_Volume\_Func();}
+\DoxyCodeLine{00186\ \textcolor{keywordtype}{void}\ Inspiration\_Time\_Func();}
+\DoxyCodeLine{00187\ \textcolor{keywordtype}{void}\ Expiration\_Time\_Func();}
+\DoxyCodeLine{00188\ \textcolor{keywordtype}{void}\ Sampled\_Parameter\_List\_1\_Transmit();}
+\DoxyCodeLine{00189\ \textcolor{keywordtype}{void}\ Sampled\_Parameter\_List\_2\_Transmit();}
+\DoxyCodeLine{00190\ \textcolor{keywordtype}{void}\ Sampled\_Parameter\_List\_3\_Transmit();}
+\DoxyCodeLine{00191\ \textcolor{keywordtype}{void}\ Sampled\_Parameter\_List\_4\_Transmit();}
+\DoxyCodeLine{00192\ \textcolor{keywordtype}{void}\ Sampled\_Parameter\_List\_5\_Transmit();}
+\DoxyCodeLine{00193\ \textcolor{keywordtype}{void}\ Acheived\_RR\_Func();}
+\DoxyCodeLine{00194\ \textcolor{keywordtype}{void}\ Platau\_Pressure();}
+\DoxyCodeLine{00195\ \textcolor{keywordtype}{void}\ Sampled\_Parameter\_Flags\_Func();}
+\DoxyCodeLine{00196\ \textcolor{keywordtype}{void}\ Static\_and\_Dynamic\_Compliance();}
+\DoxyCodeLine{00197\ \textcolor{keywordtype}{void}\ Inspiratory\_Resistance();}
+\DoxyCodeLine{00198\ \textcolor{keywordtype}{void}\ Mean\_Airway\_Pressure();}
+\DoxyCodeLine{00199\ \textcolor{keywordtype}{void}\ Sampled\_Parameter\_Func\_4();}
+\DoxyCodeLine{00200\ \textcolor{keywordtype}{void}\ I\_and\_E\_Ratio\_Func();}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \textcolor{keywordtype}{void}\ Sampled\_Parameter\_Inspiration\_time();}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_AERO\_INC\_SAMPLED\_PARAMETER\_SAMPLED\_PARAMETER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

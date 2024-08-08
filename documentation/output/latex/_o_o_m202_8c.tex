@@ -1,0 +1,107 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+SENSORS/\+SENSORS\+\_\+\+INTERFACE/\+OOM202.c File Reference}
+\hypertarget{_o_o_m202_8c}{}\label{_o_o_m202_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/SENSORS\_INTERFACE/OOM202.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/SENSORS\_INTERFACE/OOM202.c}}
+
+
+Implementation of Envitec O2 sensor integration.  
+
+
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/ads1115.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/constants.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/database.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/oom202.\+h$>$}\newline
+{\ttfamily \#include "{}math.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_o_o_m202_8c_ae7f21025ac74727397fcf931c4fd4fb7}\label{_o_o_m202_8c_ae7f21025ac74727397fcf931c4fd4fb7} 
+float {\bfseries compute\+\_\+fio} (uint16\+\_\+t voltage)
+\begin{DoxyCompactList}\small\item\em Compute Fi\+O2 Percentage Function maps Sensor voltage and Fi\+O2 percentage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_o_m202_8c_aa3eccd528a7b25048997a5402006451e}{OOM202\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the OOM202 sensor. This function sets initial values for the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_o_m202_8c_a357bf6f201b50c0041a7ea55a648ac0f}{OOM202\+\_\+calibrate}} (uint8\+\_\+t level)
+\begin{DoxyCompactList}\small\item\em Calibrate the OOM202 sensor. This function takes multiple readings to determine the sensor offset. It checks if the offset is within the allowable range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_o_m202_8c_acf2b3a0ca08a5251ce5e4780e079a0c5}{OOM202\+\_\+calculate\+\_\+efficiency}} ()
+\begin{DoxyCompactList}\small\item\em Calculate Efficiency of the OOM202 sensor.. The function uses the minimum and maximum offset to calculate the Efficiency of the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_o_m202_8c_a0314e98f454e2192d19df8b2c392dc2b}{OOM202\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em Read data from the OOM202 sensor. This function uses Exponentially Weighted Moving Average filter and calculates the sensor value. References\+: \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_o_o_m202_8c_a23793418a895983f090318ac26a4c14f}{OOM202\+\_\+read\+\_\+adc}} ()
+\begin{DoxyCompactList}\small\item\em Perform analog-\/to-\/digital value to voltage conversion for the OOM202 sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of Envitec O2 sensor integration. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Implementation of Oxygen\+\_\+\+Blending Concept within a mode, including the initialization 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_o_o_m202_8c_acf2b3a0ca08a5251ce5e4780e079a0c5}\label{_o_o_m202_8c_acf2b3a0ca08a5251ce5e4780e079a0c5} 
+\index{OOM202.c@{OOM202.c}!OOM202\_calculate\_efficiency@{OOM202\_calculate\_efficiency}}
+\index{OOM202\_calculate\_efficiency@{OOM202\_calculate\_efficiency}!OOM202.c@{OOM202.c}}
+\doxysubsubsection{\texorpdfstring{OOM202\_calculate\_efficiency()}{OOM202\_calculate\_efficiency()}}
+{\footnotesize\ttfamily void OOM202\+\_\+calculate\+\_\+efficiency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculate Efficiency of the OOM202 sensor.. The function uses the minimum and maximum offset to calculate the Efficiency of the sensor. 
+
+Calculate the efficiency of the OOM202 sensor. \Hypertarget{_o_o_m202_8c_a357bf6f201b50c0041a7ea55a648ac0f}\label{_o_o_m202_8c_a357bf6f201b50c0041a7ea55a648ac0f} 
+\index{OOM202.c@{OOM202.c}!OOM202\_calibrate@{OOM202\_calibrate}}
+\index{OOM202\_calibrate@{OOM202\_calibrate}!OOM202.c@{OOM202.c}}
+\doxysubsubsection{\texorpdfstring{OOM202\_calibrate()}{OOM202\_calibrate()}}
+{\footnotesize\ttfamily void OOM202\+\_\+calibrate (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{level }\end{DoxyParamCaption})}
+
+
+
+Calibrate the OOM202 sensor. This function takes multiple readings to determine the sensor offset. It checks if the offset is within the allowable range. 
+
+Calibrate the OOM202 sensor. \Hypertarget{_o_o_m202_8c_aa3eccd528a7b25048997a5402006451e}\label{_o_o_m202_8c_aa3eccd528a7b25048997a5402006451e} 
+\index{OOM202.c@{OOM202.c}!OOM202\_init@{OOM202\_init}}
+\index{OOM202\_init@{OOM202\_init}!OOM202.c@{OOM202.c}}
+\doxysubsubsection{\texorpdfstring{OOM202\_init()}{OOM202\_init()}}
+{\footnotesize\ttfamily void OOM202\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the OOM202 sensor. This function sets initial values for the sensor. 
+
+Initialize the OOM202 sensor. \Hypertarget{_o_o_m202_8c_a0314e98f454e2192d19df8b2c392dc2b}\label{_o_o_m202_8c_a0314e98f454e2192d19df8b2c392dc2b} 
+\index{OOM202.c@{OOM202.c}!OOM202\_read@{OOM202\_read}}
+\index{OOM202\_read@{OOM202\_read}!OOM202.c@{OOM202.c}}
+\doxysubsubsection{\texorpdfstring{OOM202\_read()}{OOM202\_read()}}
+{\footnotesize\ttfamily void OOM202\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read data from the OOM202 sensor. This function uses Exponentially Weighted Moving Average filter and calculates the sensor value. References\+: 
+
+Read data from the OOM202 sensor.
+
+
+\begin{DoxyEnumerate}
+\item \href{https://hackaday.com/2019/09/06/sensor-filters-for-coders/}{\texttt{ https\+://hackaday.\+com/2019/09/06/sensor-\/filters-\/for-\/coders/}}
+\item \href{https://electronics.stackexchange.com/questions/30370/fast-and-memory-efficient-moving-average-calculation}{\texttt{ https\+://electronics.\+stackexchange.\+com/questions/30370/fast-\/and-\/memory-\/efficient-\/moving-\/average-\/calculation}}
+\item \href{https://stackoverflow.com/questions/12636613/how-to-calculate-moving-average-without-keeping-the-count-and-data-total}{\texttt{ https\+://stackoverflow.\+com/questions/12636613/how-\/to-\/calculate-\/moving-\/average-\/without-\/keeping-\/the-\/count-\/and-\/data-\/total}} 
+\end{DoxyEnumerate}\Hypertarget{_o_o_m202_8c_a23793418a895983f090318ac26a4c14f}\label{_o_o_m202_8c_a23793418a895983f090318ac26a4c14f} 
+\index{OOM202.c@{OOM202.c}!OOM202\_read\_adc@{OOM202\_read\_adc}}
+\index{OOM202\_read\_adc@{OOM202\_read\_adc}!OOM202.c@{OOM202.c}}
+\doxysubsubsection{\texorpdfstring{OOM202\_read\_adc()}{OOM202\_read\_adc()}}
+{\footnotesize\ttfamily float OOM202\+\_\+read\+\_\+adc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Perform analog-\/to-\/digital value to voltage conversion for the OOM202 sensor. 
+
+Perform analog-\/to-\/digital conversion for the OOM202 sensor.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Vout} & (in mV) \\
+\hline
+\end{DoxyRetVals}

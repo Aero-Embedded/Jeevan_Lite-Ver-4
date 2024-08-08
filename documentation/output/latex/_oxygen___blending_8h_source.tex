@@ -1,0 +1,110 @@
+\doxysection{Oxygen\+\_\+\+Blending.\+h}
+\hypertarget{_oxygen___blending_8h_source}{}\label{_oxygen___blending_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/OXYGEN\_BLENDING/Oxygen\_Blending.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/OXYGEN\_BLENDING/Oxygen\_Blending.h}}
+\mbox{\hyperlink{_oxygen___blending_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ INC\_OXYGEN\_BLENDING\_H\_}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ INC\_OXYGEN\_BLENDING\_H\_}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{00017\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INCLUDE\ FILES\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00018\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{00025\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FUNCTION\ BODY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00026\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ O2\_Sensor\_Pin\_Voltage\ Adc.AdcData[1]\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ Parkar\_valve\_Signal(Y)\ \ DAC1-\/>DHR12R2=Y;\ \ \ \ \ \ }}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \mbox{\hyperlink{struct_oxygen__parameter_aaa7878a06f5ac718becbbebf0c9d19ce}{OXYGEN\_OFFSET\_VAL}};\ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \mbox{\hyperlink{struct_oxygen__parameter_a18bde931e54ede7216b70cdb80ed8c1f}{OXYGEN\_MAXIMUM\_VAL}};\ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ uint8\_t\ \ \mbox{\hyperlink{struct_oxygen__parameter_a6d66827d38daca16bbc4084ca4abaad6}{Achieved\_Oxygen}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{struct_oxygen__parameter_a3bdc5e586c1979b3cbdb7711c82de78a}{O2\_DAC}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{struct_oxygen__parameter_af338426b60b9c74a2d9241d3be8eeba5}{CPAP\_O2\_DAC}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{struct_oxygen__parameter_abb03ecf6a81f4e4ea171c1f928eb69e3}{PSV\_O2\_DAC}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{struct_oxygen__parameter_a36e7d45b534cf0c2df67cdd1d92d724f}{BIPAP\_O2\_DAC}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \}\mbox{\hyperlink{struct_oxygen__parameter}{Oxygen\_parameter}};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00057\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{_oxygen___blending_8h_a09bb60c691eb30732590c73fa6236dfba06bd5115d502d6b97f438b012f14eb2a}{PRESSURE\_CONTROLLED}},\ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{_oxygen___blending_8h_a09bb60c691eb30732590c73fa6236dfba8b1581e8a920ce1e9da02dd4560191a7}{VOLUME\_CONTROLLED}}\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \}\mbox{\hyperlink{_oxygen___blending_8h_a09bb60c691eb30732590c73fa6236dfb}{fio2\_blending\_method}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00069\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{_oxygen___blending_8h_a259bcc54ddcb279b7361283d91bf69eaa8efd38ee3688214d4bc16086bbd31df9}{OXYGEN\_ACHIEVED}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{_oxygen___blending_8h_a259bcc54ddcb279b7361283d91bf69eaa5ea790315c3bcd291fe5aee8dc2f4b03}{OXYGEN\_NOT\_ACHIEVED}}\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00072\ \}\mbox{\hyperlink{_oxygen___blending_8h_a259bcc54ddcb279b7361283d91bf69ea}{oxygen\_blending\_status}};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ uint8\_t\ \mbox{\hyperlink{_oxygen___blending_8h_a095a4184368c8c1073197f95e18394fb}{Check\_Oxygen\_Count}};\ \ \ \ \ }
+\DoxyCodeLine{00076\ uint8\_t\ \mbox{\hyperlink{_oxygen___blending_8h_ae7acd7adb9f8ff65d9bfab46955b5514}{O2\_Check}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ uint16\_t\ Temp\_Dac,\mbox{\hyperlink{_oxygen___blending_8h_aaf39390004b91306c2d0c241d6d3a00a}{inc\_dac}};\ \ \ \ \ \ }
+\DoxyCodeLine{00078\ int8\_t\ \mbox{\hyperlink{_oxygen___blending_8h_a72cbdeab2da46ea8da5e54844c1ad4b9}{O2\_Flow\_Rate}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \mbox{\hyperlink{struct_oxygen__parameter}{Oxygen\_parameter}}\ \mbox{\hyperlink{_oxygen___blending_8h_a25f3f73edd8e5abedc8ec4623f5db2de}{Oxygen\_Parameter}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \mbox{\hyperlink{_oxygen___blending_8h_a09bb60c691eb30732590c73fa6236dfb}{fio2\_blending\_method}}\ \mbox{\hyperlink{_oxygen___blending_8h_aa7230e3b78a56c9003ebb705da4d158c}{Fio2\_Blending\_Method}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ \mbox{\hyperlink{_oxygen___blending_8h_a259bcc54ddcb279b7361283d91bf69ea}{oxygen\_blending\_status}}\ \mbox{\hyperlink{_oxygen___blending_8h_a7c7ed46d6b299bdee5cab10b868f1b0a}{Oxygen\_Blending\_Status}};\ \ \ }
+\DoxyCodeLine{00083\ uint8\_t\ \mbox{\hyperlink{_oxygen___blending_8h_af630fe6cef5b8e2500d93f55e7385513}{O2\_DAC\_AS\_PER\_FLOW\_RATE\_Count}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ uint8\_t\ \mbox{\hyperlink{_oxygen___blending_8h_a946107b831047d47108c99d174df82a0}{O2\_Low\_Count}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00085\ uint8\_t\ \mbox{\hyperlink{_oxygen___blending_8h_a5fe6ec90ebb162b8355e41527562f3a9}{O2\_High\_Count}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00086\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_oxygen___blending_8h_ad23e75ba0fb408ff09c3ae6f31236724}{O2\_Sensor\_Voltage}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00087\ uint8\_t\ Maximum\_Limit;}
+\DoxyCodeLine{00088\ uint16\_t\ \mbox{\hyperlink{_oxygen___blending_8h_a6c1be890dc11ec17ebf59b6cb7116767}{Last\_O2\_Dac\_Val}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_oxygen___blending_8h_ad45b0f6b569079f725d4bcd5937a511f}{Achieved\_Oxygen\_float}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ xTaskHandle\ \mbox{\hyperlink{_oxygen___blending_8h_a71310ccc9fc310086a53e80c546dc693}{Oxygen\_Blending\_Handler}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_oxygen___blending_8h_a5573d047099302f775962d5b083a1aa5}{Oxygen\_Blending\_Task}}(\textcolor{keywordtype}{void}\ *argument);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00108\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_oxygen___blending_8h_a1c8aca9f0d3ecbdada49951cb2e065a0}{Oxygen\_Blending}}(uint8\_t);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00119\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_oxygen___blending_8h_a6fb258e76714e0f3f7bb1a9ced328200}{Calculate\_O2}}(uint8\_t);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00127\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_oxygen___blending_8h_a706d90ff4f2f1880e4720c56d3fbf4ba}{O2\_Initial\_Parameter}}(uint8\_t,uint8\_t);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00135\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_oxygen___blending_8h_a3fdfe6a9437a19db0326320ec5aec159}{Low\_Oxygen\_Achieved}}(uint8\_t,uint8\_t);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00142\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_oxygen___blending_8h_a0a49895c1607a9a6f5fb7cb1253e94c1}{High\_Oxygen\_Achieved}}(uint8\_t,uint8\_t);}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00148\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_oxygen___blending_8h_a8bb1c34ff4465a156eb71c8a99875caf}{O2\_DAC\_Control}}(uint8\_t);}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \textcolor{keywordtype}{void}\ Get\_Oxygen\_Value(uint8\_t);}
+\DoxyCodeLine{00155\ uint16\_t\ Set\_Initial\_O2\_DAC\_VAL\_Pressure\_Modes(uint8\_t);}
+\DoxyCodeLine{00156\ uint16\_t\ Set\_Initial\_O2\_DAC\_VAL\_Volume\_Modes(uint8\_t);}
+\DoxyCodeLine{00157\ uint16\_t\ Set\_Initial\_CPAP\_O2\_DAC\_VAL\_Pressure\_Modes(uint8\_t);}
+\DoxyCodeLine{00158\ \textcolor{keywordtype}{void}\ Servo\_Position\_Volume\_Controlled\_Mode(uint8\_t);}
+\DoxyCodeLine{00159\ \textcolor{keywordtype}{void}\ Servo\_Position\_Pressure\_Controlled\_Mode(uint8\_t);}
+\DoxyCodeLine{00160\ \textcolor{keywordtype}{void}\ CPAP\_Servo\_Position\_Volume\_Controlled\_Mode(uint8\_t);}
+\DoxyCodeLine{00161\ \textcolor{keywordtype}{void}\ Servo\_Info(uint8\_t);}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_OXYGEN\_BLENDING\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,123 @@
+\doxysection{SENSOR Struct Reference}
+\hypertarget{struct_s_e_n_s_o_r}{}\label{struct_s_e_n_s_o_r}\index{SENSOR@{SENSOR}}
+
+
+Sensor -\/ Structure.  
+
+
+
+
+{\ttfamily \#include $<$sensor.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_s_e_n_s_o_r_a85907ed4c7087b6d99ea8e582084ce33}{offset}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_s_e_n_s_o_r_a5f9d49e8ceb4cf0371b270894f49e394}{offset\+\_\+minimum}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_s_e_n_s_o_r_ae37bf717ad1b718d22698673f0535aa7}{offset\+\_\+maximum}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_s_e_n_s_o_r_a4e86867d3ab6eea3b1984c9c6bf690e4}{supply\+\_\+voltage}}
+\item 
+float \mbox{\hyperlink{struct_s_e_n_s_o_r_a13579ecb736910f0cf842f1786c0618b}{value}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_s_e_n_s_o_r_ab5c0b39aef247737ac0651cd523e9bc7}{current\+\_\+reading}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_s_e_n_s_o_r_a4c76fe9aa88598a4d02cc6d50c76bb51}{previous\+\_\+reading}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_s_e_n_s_o_r_a78086a67ea6872cc803fbbb22d5fae47}{operational\+\_\+status}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_s_e_n_s_o_r_a396b134ff778eab737de125b1d0c09bd}{sensor\+\_\+ready}}
+\item 
+float \mbox{\hyperlink{struct_s_e_n_s_o_r_a7bb46a40cee01722897d9a694d110666}{sensitivity}}
+\item 
+float \mbox{\hyperlink{struct_s_e_n_s_o_r_a189e434d4959c1f7c2b241477dfb5018}{smoothing\+\_\+factor}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_s_e_n_s_o_r_a337880e3613fbada6e92a03dd0bc845e}{efficiency}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sensor -\/ Structure. 
+
+This structure represents a generic sensor. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{struct_s_e_n_s_o_r_ab5c0b39aef247737ac0651cd523e9bc7}\label{struct_s_e_n_s_o_r_ab5c0b39aef247737ac0651cd523e9bc7} 
+\index{SENSOR@{SENSOR}!current\_reading@{current\_reading}}
+\index{current\_reading@{current\_reading}!SENSOR@{SENSOR}}
+\doxysubsubsection{\texorpdfstring{current\_reading}{current\_reading}}
+{\footnotesize\ttfamily uint16\+\_\+t SENSOR\+::current\+\_\+reading}
+
+Current ADC reading from the sensor \Hypertarget{struct_s_e_n_s_o_r_a337880e3613fbada6e92a03dd0bc845e}\label{struct_s_e_n_s_o_r_a337880e3613fbada6e92a03dd0bc845e} 
+\index{SENSOR@{SENSOR}!efficiency@{efficiency}}
+\index{efficiency@{efficiency}!SENSOR@{SENSOR}}
+\doxysubsubsection{\texorpdfstring{efficiency}{efficiency}}
+{\footnotesize\ttfamily uint8\+\_\+t SENSOR\+::efficiency}
+
+Sensor Efficiency \Hypertarget{struct_s_e_n_s_o_r_a85907ed4c7087b6d99ea8e582084ce33}\label{struct_s_e_n_s_o_r_a85907ed4c7087b6d99ea8e582084ce33} 
+\index{SENSOR@{SENSOR}!offset@{offset}}
+\index{offset@{offset}!SENSOR@{SENSOR}}
+\doxysubsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily uint16\+\_\+t SENSOR\+::offset}
+
+Sensor offset value \Hypertarget{struct_s_e_n_s_o_r_ae37bf717ad1b718d22698673f0535aa7}\label{struct_s_e_n_s_o_r_ae37bf717ad1b718d22698673f0535aa7} 
+\index{SENSOR@{SENSOR}!offset\_maximum@{offset\_maximum}}
+\index{offset\_maximum@{offset\_maximum}!SENSOR@{SENSOR}}
+\doxysubsubsection{\texorpdfstring{offset\_maximum}{offset\_maximum}}
+{\footnotesize\ttfamily uint16\+\_\+t SENSOR\+::offset\+\_\+maximum}
+
+Maximum allowable offset \Hypertarget{struct_s_e_n_s_o_r_a5f9d49e8ceb4cf0371b270894f49e394}\label{struct_s_e_n_s_o_r_a5f9d49e8ceb4cf0371b270894f49e394} 
+\index{SENSOR@{SENSOR}!offset\_minimum@{offset\_minimum}}
+\index{offset\_minimum@{offset\_minimum}!SENSOR@{SENSOR}}
+\doxysubsubsection{\texorpdfstring{offset\_minimum}{offset\_minimum}}
+{\footnotesize\ttfamily uint16\+\_\+t SENSOR\+::offset\+\_\+minimum}
+
+Minimum allowable offset \Hypertarget{struct_s_e_n_s_o_r_a78086a67ea6872cc803fbbb22d5fae47}\label{struct_s_e_n_s_o_r_a78086a67ea6872cc803fbbb22d5fae47} 
+\index{SENSOR@{SENSOR}!operational\_status@{operational\_status}}
+\index{operational\_status@{operational\_status}!SENSOR@{SENSOR}}
+\doxysubsubsection{\texorpdfstring{operational\_status}{operational\_status}}
+{\footnotesize\ttfamily uint8\+\_\+t SENSOR\+::operational\+\_\+status}
+
+Operational status of the sensor \Hypertarget{struct_s_e_n_s_o_r_a4c76fe9aa88598a4d02cc6d50c76bb51}\label{struct_s_e_n_s_o_r_a4c76fe9aa88598a4d02cc6d50c76bb51} 
+\index{SENSOR@{SENSOR}!previous\_reading@{previous\_reading}}
+\index{previous\_reading@{previous\_reading}!SENSOR@{SENSOR}}
+\doxysubsubsection{\texorpdfstring{previous\_reading}{previous\_reading}}
+{\footnotesize\ttfamily uint16\+\_\+t SENSOR\+::previous\+\_\+reading}
+
+Previous ADC reading from the sensor \Hypertarget{struct_s_e_n_s_o_r_a7bb46a40cee01722897d9a694d110666}\label{struct_s_e_n_s_o_r_a7bb46a40cee01722897d9a694d110666} 
+\index{SENSOR@{SENSOR}!sensitivity@{sensitivity}}
+\index{sensitivity@{sensitivity}!SENSOR@{SENSOR}}
+\doxysubsubsection{\texorpdfstring{sensitivity}{sensitivity}}
+{\footnotesize\ttfamily float SENSOR\+::sensitivity}
+
+Sensitivity of the sensor \Hypertarget{struct_s_e_n_s_o_r_a396b134ff778eab737de125b1d0c09bd}\label{struct_s_e_n_s_o_r_a396b134ff778eab737de125b1d0c09bd} 
+\index{SENSOR@{SENSOR}!sensor\_ready@{sensor\_ready}}
+\index{sensor\_ready@{sensor\_ready}!SENSOR@{SENSOR}}
+\doxysubsubsection{\texorpdfstring{sensor\_ready}{sensor\_ready}}
+{\footnotesize\ttfamily uint8\+\_\+t SENSOR\+::sensor\+\_\+ready}
+
+Flag indicating if the sensor is ready \Hypertarget{struct_s_e_n_s_o_r_a189e434d4959c1f7c2b241477dfb5018}\label{struct_s_e_n_s_o_r_a189e434d4959c1f7c2b241477dfb5018} 
+\index{SENSOR@{SENSOR}!smoothing\_factor@{smoothing\_factor}}
+\index{smoothing\_factor@{smoothing\_factor}!SENSOR@{SENSOR}}
+\doxysubsubsection{\texorpdfstring{smoothing\_factor}{smoothing\_factor}}
+{\footnotesize\ttfamily float SENSOR\+::smoothing\+\_\+factor}
+
+Smoothing factor for sensor readings \Hypertarget{struct_s_e_n_s_o_r_a4e86867d3ab6eea3b1984c9c6bf690e4}\label{struct_s_e_n_s_o_r_a4e86867d3ab6eea3b1984c9c6bf690e4} 
+\index{SENSOR@{SENSOR}!supply\_voltage@{supply\_voltage}}
+\index{supply\_voltage@{supply\_voltage}!SENSOR@{SENSOR}}
+\doxysubsubsection{\texorpdfstring{supply\_voltage}{supply\_voltage}}
+{\footnotesize\ttfamily uint16\+\_\+t SENSOR\+::supply\+\_\+voltage}
+
+Supply voltage for the sensor \Hypertarget{struct_s_e_n_s_o_r_a13579ecb736910f0cf842f1786c0618b}\label{struct_s_e_n_s_o_r_a13579ecb736910f0cf842f1786c0618b} 
+\index{SENSOR@{SENSOR}!value@{value}}
+\index{value@{value}!SENSOR@{SENSOR}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily float SENSOR\+::value}
+
+Current sensor reading value 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+SENSORS/\+SENSORS\+\_\+\+INTERFACE/sensor.\+h\end{DoxyCompactItemize}

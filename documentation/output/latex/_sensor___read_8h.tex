@@ -1,0 +1,152 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+SENSORS/\+READ\+\_\+\+SENSORS\+\_\+\+VALUES/\+Sensor\+\_\+\+Read.h File Reference}
+\hypertarget{_sensor___read_8h}{}\label{_sensor___read_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/READ\_SENSORS\_VALUES/Sensor\_Read.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/READ\_SENSORS\_VALUES/Sensor\_Read.h}}
+
+
+Declaration of All sensor data\textquotesingle{}s reading area.  
+
+
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_sensor___read_8h_a51a640d72b177abf1651cbce34def239}\label{_sensor___read_8h_a51a640d72b177abf1651cbce34def239} 
+void {\bfseries READ\+\_\+\+SENSOR\+\_\+\+TASK} ()
+\begin{DoxyCompactList}\small\item\em READ\+\_\+\+SENSOR\+\_\+\+TASK. This Function calls all sensor Reading functions for every 2 milli-\/seconds. \end{DoxyCompactList}\item 
+\Hypertarget{_sensor___read_8h_a2416daed667eeb6333e4e46a52d8f3e8}\label{_sensor___read_8h_a2416daed667eeb6333e4e46a52d8f3e8} 
+void {\bfseries CALIBRATE\+\_\+\+SENSOR\+\_\+\+TASK} ()
+\begin{DoxyCompactList}\small\item\em CALIBRATE\+\_\+\+SENSOR\+\_\+\+TASK. This function is called from sensor offset task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_sensor___read_8h_ac9159b4b9ba282e99e21f1e483eeb806}{MPX5010\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em MPX5010\+\_\+read. This function is Calculate the runtime pressure value in cmh20. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_sensor___read_8h_a2e499a4486178d4bdcf437c454c956a7}{MPX7002\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em MPX7002\+\_\+read. This function is Calculate the runtime Flow value in L/min. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_sensor___read_8h_aede272b3aa4fbf696ea0bcc2ae462749}{MPX5010\+DP\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em MPX5010\+DP\+\_\+read. This function is Calculate the runtime O2 Flow value in L/min. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_sensor___read_8h_ad0a9d5b026f442787b6cbcbddaee0872}{MPX5010\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em MPX5010\+\_\+init. This function is initialize pressure sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_sensor___read_8h_aa12978c524d9b8ace2bcd3e70edca527}{MPX7002\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em MPX7002\+\_\+init. This function is initialize flow sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_sensor___read_8h_a38ee346f87dc663ff741bda572207f53}{MPX5010\+DP\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em MPX5010\+DP\+\_\+init. This function is initialize O2 flow sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_sensor___read_8h_a48eb79ef4ed49153e341e22d5da8db5e}{Sensor\+\_\+\+Read\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Sensor read handler Task \end{quote}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_sensor___read_8h_af911677521c4dace67a3f4cf059e2dc4}\label{_sensor___read_8h_af911677521c4dace67a3f4cf059e2dc4} 
+x\+Task\+Handle {\bfseries Sensor\+\_\+\+Read\+\_\+\+Handler}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of All sensor data\textquotesingle{}s reading area. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Declaration of All sensor data\textquotesingle{}s reading area. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_sensor___read_8h_ad0a9d5b026f442787b6cbcbddaee0872}\label{_sensor___read_8h_ad0a9d5b026f442787b6cbcbddaee0872} 
+\index{Sensor\_Read.h@{Sensor\_Read.h}!MPX5010\_init@{MPX5010\_init}}
+\index{MPX5010\_init@{MPX5010\_init}!Sensor\_Read.h@{Sensor\_Read.h}}
+\doxysubsubsection{\texorpdfstring{MPX5010\_init()}{MPX5010\_init()}}
+{\footnotesize\ttfamily void MPX5010\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+MPX5010\+\_\+init. This function is initialize pressure sensor. 
+
+MPX5010\+\_\+init. This function is initialize pressure sensor. \Hypertarget{_sensor___read_8h_ac9159b4b9ba282e99e21f1e483eeb806}\label{_sensor___read_8h_ac9159b4b9ba282e99e21f1e483eeb806} 
+\index{Sensor\_Read.h@{Sensor\_Read.h}!MPX5010\_read@{MPX5010\_read}}
+\index{MPX5010\_read@{MPX5010\_read}!Sensor\_Read.h@{Sensor\_Read.h}}
+\doxysubsubsection{\texorpdfstring{MPX5010\_read()}{MPX5010\_read()}}
+{\footnotesize\ttfamily void MPX5010\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+MPX5010\+\_\+read. This function is Calculate the runtime pressure value in cmh20. 
+
+MPX5010\+\_\+read. This function is Calculate the runtime pressure value in cmh20.
+
+
+\begin{DoxyEnumerate}
+\item \href{https://hackaday.com/2019/09/06/sensor-filters-for-coders/}{\texttt{ https\+://hackaday.\+com/2019/09/06/sensor-\/filters-\/for-\/coders/}}
+\item \href{https://electronics.stackexchange.com/questions/30370/fast-and-memory-efficient-moving-average-calculation}{\texttt{ https\+://electronics.\+stackexchange.\+com/questions/30370/fast-\/and-\/memory-\/efficient-\/moving-\/average-\/calculation}}
+\item \href{https://stackoverflow.com/questions/12636613/how-to-calculate-moving-average-without-keeping-the-count-and-data-total}{\texttt{ https\+://stackoverflow.\+com/questions/12636613/how-\/to-\/calculate-\/moving-\/average-\/without-\/keeping-\/the-\/count-\/and-\/data-\/total}} 
+\end{DoxyEnumerate}\Hypertarget{_sensor___read_8h_a38ee346f87dc663ff741bda572207f53}\label{_sensor___read_8h_a38ee346f87dc663ff741bda572207f53} 
+\index{Sensor\_Read.h@{Sensor\_Read.h}!MPX5010DP\_init@{MPX5010DP\_init}}
+\index{MPX5010DP\_init@{MPX5010DP\_init}!Sensor\_Read.h@{Sensor\_Read.h}}
+\doxysubsubsection{\texorpdfstring{MPX5010DP\_init()}{MPX5010DP\_init()}}
+{\footnotesize\ttfamily void MPX5010\+DP\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+MPX5010\+DP\+\_\+init. This function is initialize O2 flow sensor. 
+
+MPX5010\+DP\+\_\+init. This function is initialize O2 flow sensor. \Hypertarget{_sensor___read_8h_aede272b3aa4fbf696ea0bcc2ae462749}\label{_sensor___read_8h_aede272b3aa4fbf696ea0bcc2ae462749} 
+\index{Sensor\_Read.h@{Sensor\_Read.h}!MPX5010DP\_read@{MPX5010DP\_read}}
+\index{MPX5010DP\_read@{MPX5010DP\_read}!Sensor\_Read.h@{Sensor\_Read.h}}
+\doxysubsubsection{\texorpdfstring{MPX5010DP\_read()}{MPX5010DP\_read()}}
+{\footnotesize\ttfamily void MPX5010\+DP\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+MPX5010\+DP\+\_\+read. This function is Calculate the runtime O2 Flow value in L/min. 
+
+MPX5010\+DP\+\_\+read. This function is Calculate the runtime O2 Flow value in L/min.
+
+
+\begin{DoxyEnumerate}
+\item \href{https://hackaday.com/2019/09/06/sensor-filters-for-coders/}{\texttt{ https\+://hackaday.\+com/2019/09/06/sensor-\/filters-\/for-\/coders/}}
+\item \href{https://electronics.stackexchange.com/questions/30370/fast-and-memory-efficient-moving-average-calculation}{\texttt{ https\+://electronics.\+stackexchange.\+com/questions/30370/fast-\/and-\/memory-\/efficient-\/moving-\/average-\/calculation}}
+\item \href{https://stackoverflow.com/questions/12636613/how-to-calculate-moving-average-without-keeping-the-count-and-data-total}{\texttt{ https\+://stackoverflow.\+com/questions/12636613/how-\/to-\/calculate-\/moving-\/average-\/without-\/keeping-\/the-\/count-\/and-\/data-\/total}} 
+\end{DoxyEnumerate}\Hypertarget{_sensor___read_8h_aa12978c524d9b8ace2bcd3e70edca527}\label{_sensor___read_8h_aa12978c524d9b8ace2bcd3e70edca527} 
+\index{Sensor\_Read.h@{Sensor\_Read.h}!MPX7002\_init@{MPX7002\_init}}
+\index{MPX7002\_init@{MPX7002\_init}!Sensor\_Read.h@{Sensor\_Read.h}}
+\doxysubsubsection{\texorpdfstring{MPX7002\_init()}{MPX7002\_init()}}
+{\footnotesize\ttfamily void MPX7002\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+MPX7002\+\_\+init. This function is initialize flow sensor. 
+
+MPX7002\+\_\+init. This function is initialize flow sensor. \Hypertarget{_sensor___read_8h_a2e499a4486178d4bdcf437c454c956a7}\label{_sensor___read_8h_a2e499a4486178d4bdcf437c454c956a7} 
+\index{Sensor\_Read.h@{Sensor\_Read.h}!MPX7002\_read@{MPX7002\_read}}
+\index{MPX7002\_read@{MPX7002\_read}!Sensor\_Read.h@{Sensor\_Read.h}}
+\doxysubsubsection{\texorpdfstring{MPX7002\_read()}{MPX7002\_read()}}
+{\footnotesize\ttfamily void MPX7002\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+MPX7002\+\_\+read. This function is Calculate the runtime Flow value in L/min. 
+
+MPX7002\+\_\+read. This function is Calculate the runtime Flow value in L/min.
+
+
+\begin{DoxyEnumerate}
+\item \href{https://hackaday.com/2019/09/06/sensor-filters-for-coders/}{\texttt{ https\+://hackaday.\+com/2019/09/06/sensor-\/filters-\/for-\/coders/}}
+\item \href{https://electronics.stackexchange.com/questions/30370/fast-and-memory-efficient-moving-average-calculation}{\texttt{ https\+://electronics.\+stackexchange.\+com/questions/30370/fast-\/and-\/memory-\/efficient-\/moving-\/average-\/calculation}}
+\item \href{https://stackoverflow.com/questions/12636613/how-to-calculate-moving-average-without-keeping-the-count-and-data-total}{\texttt{ https\+://stackoverflow.\+com/questions/12636613/how-\/to-\/calculate-\/moving-\/average-\/without-\/keeping-\/the-\/count-\/and-\/data-\/total}} 
+\end{DoxyEnumerate}\Hypertarget{_sensor___read_8h_a48eb79ef4ed49153e341e22d5da8db5e}\label{_sensor___read_8h_a48eb79ef4ed49153e341e22d5da8db5e} 
+\index{Sensor\_Read.h@{Sensor\_Read.h}!Sensor\_Read\_Task@{Sensor\_Read\_Task}}
+\index{Sensor\_Read\_Task@{Sensor\_Read\_Task}!Sensor\_Read.h@{Sensor\_Read.h}}
+\doxysubsubsection{\texorpdfstring{Sensor\_Read\_Task()}{Sensor\_Read\_Task()}}
+{\footnotesize\ttfamily void Sensor\+\_\+\+Read\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+\begin{quote}
+Sensor read handler Task \end{quote}
+
+
+Sensor\+\_\+\+Read\+\_\+\+Task. This task call READ\+\_\+\+SENSOR\+\_\+\+TASK function.
+
+\begin{quote}
+Sensor read handler Task \end{quote}

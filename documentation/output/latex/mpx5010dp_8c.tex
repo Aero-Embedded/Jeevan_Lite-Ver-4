@@ -1,0 +1,116 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+SENSORS/\+SENSORS\+\_\+\+INTERFACE/mpx5010dp.c File Reference}
+\hypertarget{mpx5010dp_8c}{}\label{mpx5010dp_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/SENSORS\_INTERFACE/mpx5010dp.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/SENSORS\_INTERFACE/mpx5010dp.c}}
+
+
+implementation of mpx5010dp O2 pressure sensor integration.  
+
+
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/ads1115.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/constants.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/database.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/mpx5010dp.\+h$>$}\newline
+{\ttfamily \#include "{}math.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{mpx5010dp_8c_ac8186376d664baa63118dc68f7e30bed}{dp\+\_\+to\+\_\+oxygen\+\_\+flow}} (float dp)
+\begin{DoxyCompactList}\small\item\em dp\+\_\+to\+\_\+oxygen\+\_\+flow. This function Converting differential pressure to O2 flow from mpx5010 milli volt. \end{DoxyCompactList}\item 
+\Hypertarget{mpx5010dp_8c_af4048f257f9347e5dce688693b4b0d04}\label{mpx5010dp_8c_af4048f257f9347e5dce688693b4b0d04} 
+void {\bfseries compute\+\_\+oxygen\+\_\+flow} ()
+\begin{DoxyCompactList}\small\item\em compute\+\_\+oxygen\+\_\+flow. This function Calculate flow crossing in O2 manifold. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mpx5010dp_8c_a38ee346f87dc663ff741bda572207f53}{MPX5010\+DP\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the MPX5010\+DP sensor. This function sets initial values for the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mpx5010dp_8c_ac2b78eb4c5e6c2cf6d38a09e947d667b}{MPX5010\+DP\+\_\+calibrate}} ()
+\begin{DoxyCompactList}\small\item\em Calibrate the MPX5010\+DP sensor. This function takes multiple readings to determine the sensor offset. It checks if the offset is within the allowable range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mpx5010dp_8c_aede272b3aa4fbf696ea0bcc2ae462749}{MPX5010\+DP\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em Read data from the MPX5010\+DP sensor. This function uses Exponentially Weighted Moving Average filter and calculates the sensor value. References\+: \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{mpx5010dp_8c_aa8f7d53c7576d323812a1f29f0e45cce}{MPX5010\+DP\+\_\+read\+\_\+adc}} ()
+\begin{DoxyCompactList}\small\item\em Perform analog-\/to-\/digital value to voltage conversion for the MPX5010\+DP sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+implementation of mpx5010dp O2 pressure sensor integration. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the implementation of mpx5010dp O2 pressure sensor integration, including the initialization. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mpx5010dp_8c_ac8186376d664baa63118dc68f7e30bed}\label{mpx5010dp_8c_ac8186376d664baa63118dc68f7e30bed} 
+\index{mpx5010dp.c@{mpx5010dp.c}!dp\_to\_oxygen\_flow@{dp\_to\_oxygen\_flow}}
+\index{dp\_to\_oxygen\_flow@{dp\_to\_oxygen\_flow}!mpx5010dp.c@{mpx5010dp.c}}
+\doxysubsubsection{\texorpdfstring{dp\_to\_oxygen\_flow()}{dp\_to\_oxygen\_flow()}}
+{\footnotesize\ttfamily double dp\+\_\+to\+\_\+oxygen\+\_\+flow (\begin{DoxyParamCaption}\item[{float}]{dp }\end{DoxyParamCaption})}
+
+
+
+dp\+\_\+to\+\_\+oxygen\+\_\+flow. This function Converting differential pressure to O2 flow from mpx5010 milli volt. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em double} & O2 flow value. \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{mpx5010dp_8c_ac2b78eb4c5e6c2cf6d38a09e947d667b}\label{mpx5010dp_8c_ac2b78eb4c5e6c2cf6d38a09e947d667b} 
+\index{mpx5010dp.c@{mpx5010dp.c}!MPX5010DP\_calibrate@{MPX5010DP\_calibrate}}
+\index{MPX5010DP\_calibrate@{MPX5010DP\_calibrate}!mpx5010dp.c@{mpx5010dp.c}}
+\doxysubsubsection{\texorpdfstring{MPX5010DP\_calibrate()}{MPX5010DP\_calibrate()}}
+{\footnotesize\ttfamily void MPX5010\+DP\+\_\+calibrate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calibrate the MPX5010\+DP sensor. This function takes multiple readings to determine the sensor offset. It checks if the offset is within the allowable range. 
+
+Calibrate the MPX5010\+DP sensor. \Hypertarget{mpx5010dp_8c_a38ee346f87dc663ff741bda572207f53}\label{mpx5010dp_8c_a38ee346f87dc663ff741bda572207f53} 
+\index{mpx5010dp.c@{mpx5010dp.c}!MPX5010DP\_init@{MPX5010DP\_init}}
+\index{MPX5010DP\_init@{MPX5010DP\_init}!mpx5010dp.c@{mpx5010dp.c}}
+\doxysubsubsection{\texorpdfstring{MPX5010DP\_init()}{MPX5010DP\_init()}}
+{\footnotesize\ttfamily void MPX5010\+DP\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the MPX5010\+DP sensor. This function sets initial values for the sensor. 
+
+Initialize the MPX5010\+DP sensor.
+
+MPX5010\+DP\+\_\+init. This function is initialize O2 flow sensor. \Hypertarget{mpx5010dp_8c_aede272b3aa4fbf696ea0bcc2ae462749}\label{mpx5010dp_8c_aede272b3aa4fbf696ea0bcc2ae462749} 
+\index{mpx5010dp.c@{mpx5010dp.c}!MPX5010DP\_read@{MPX5010DP\_read}}
+\index{MPX5010DP\_read@{MPX5010DP\_read}!mpx5010dp.c@{mpx5010dp.c}}
+\doxysubsubsection{\texorpdfstring{MPX5010DP\_read()}{MPX5010DP\_read()}}
+{\footnotesize\ttfamily void MPX5010\+DP\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read data from the MPX5010\+DP sensor. This function uses Exponentially Weighted Moving Average filter and calculates the sensor value. References\+: 
+
+Read data from the MPX5010\+DP sensor.
+
+MPX5010\+DP\+\_\+read. This function is Calculate the runtime O2 Flow value in L/min.
+
+
+\begin{DoxyEnumerate}
+\item \href{https://hackaday.com/2019/09/06/sensor-filters-for-coders/}{\texttt{ https\+://hackaday.\+com/2019/09/06/sensor-\/filters-\/for-\/coders/}}
+\item \href{https://electronics.stackexchange.com/questions/30370/fast-and-memory-efficient-moving-average-calculation}{\texttt{ https\+://electronics.\+stackexchange.\+com/questions/30370/fast-\/and-\/memory-\/efficient-\/moving-\/average-\/calculation}}
+\item \href{https://stackoverflow.com/questions/12636613/how-to-calculate-moving-average-without-keeping-the-count-and-data-total}{\texttt{ https\+://stackoverflow.\+com/questions/12636613/how-\/to-\/calculate-\/moving-\/average-\/without-\/keeping-\/the-\/count-\/and-\/data-\/total}} 
+\end{DoxyEnumerate}\Hypertarget{mpx5010dp_8c_aa8f7d53c7576d323812a1f29f0e45cce}\label{mpx5010dp_8c_aa8f7d53c7576d323812a1f29f0e45cce} 
+\index{mpx5010dp.c@{mpx5010dp.c}!MPX5010DP\_read\_adc@{MPX5010DP\_read\_adc}}
+\index{MPX5010DP\_read\_adc@{MPX5010DP\_read\_adc}!mpx5010dp.c@{mpx5010dp.c}}
+\doxysubsubsection{\texorpdfstring{MPX5010DP\_read\_adc()}{MPX5010DP\_read\_adc()}}
+{\footnotesize\ttfamily float MPX5010\+DP\+\_\+read\+\_\+adc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Perform analog-\/to-\/digital value to voltage conversion for the MPX5010\+DP sensor. 
+
+Perform analog-\/to-\/digital conversion for the MPX5010\+DP sensor.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Vout} & (in mV) \\
+\hline
+\end{DoxyRetVals}

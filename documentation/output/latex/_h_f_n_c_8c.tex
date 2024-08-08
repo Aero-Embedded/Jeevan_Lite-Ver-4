@@ -1,0 +1,144 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+HFNC/\+HFNC.c File Reference}
+\hypertarget{_h_f_n_c_8c}{}\label{_h_f_n_c_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/HFNC/HFNC.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/HFNC/HFNC.c}}
+
+
+Implementation of HFNC Feature.  
+
+
+{\ttfamily \#include "{}HFNC.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{_h_f_n_c_8c_a39edd283e4326c080e8cc65398b31570}{Check\+\_\+\+O2\+\_\+\+Supply}} ()
+\begin{DoxyCompactList}\small\item\em O2 Supply Alert. \end{DoxyCompactList}\item 
+static uint16\+\_\+t \mbox{\hyperlink{_h_f_n_c_8c_a313a11f2b51ef1083374a2ababf9bc11}{HFNC\+\_\+\+TUNE\+\_\+\+DAC\+\_\+\+VALUE}} (uint16\+\_\+t \texorpdfstring{$\ast$}{*}, uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Tune a blower dac value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_f_n_c_8c_a3f446d58ffe3b7cde6012d0b4f29fb6b}{HFNC\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em HFNC\+\_\+\+Task. This Task Control blower value to reach a Required Flow rate with maintain a Required Oxygen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_h_f_n_c_8c_a15d6960ce445e60610f40ff3b6a015f5}{HFNC\+\_\+\+Packet\+\_\+\+Data}} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em HFNC data Split. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_h_f_n_c_8c_a79f30dcfe4a856e82d28a5f2532c0b96}\label{_h_f_n_c_8c_a79f30dcfe4a856e82d28a5f2532c0b96} 
+int {\bfseries O2\+\_\+supply\+\_\+error\+\_\+count}
+\item 
+\Hypertarget{_h_f_n_c_8c_a668d8a4ed2f53a31adbf13b396c363ce}\label{_h_f_n_c_8c_a668d8a4ed2f53a31adbf13b396c363ce} 
+uint16\+\_\+t {\bfseries HFNC\+\_\+\+DAC\+\_\+\+VALUE\+\_\+\+TEMP}
+\item 
+\Hypertarget{_h_f_n_c_8c_a690f1de30a73ed61ac9420518193b2c9}\label{_h_f_n_c_8c_a690f1de30a73ed61ac9420518193b2c9} 
+float {\bfseries Cummulative\+\_\+\+Flow\+\_\+\+Value}
+\begin{DoxyCompactList}\small\item\em Cummulative\+\_\+\+Flow\+\_\+\+Value. \end{DoxyCompactList}\item 
+\Hypertarget{_h_f_n_c_8c_aa8431fcff41891ab7669a07faf14ebfe}\label{_h_f_n_c_8c_aa8431fcff41891ab7669a07faf14ebfe} 
+int {\bfseries Flow\+\_\+count}
+\begin{DoxyCompactList}\small\item\em Flow\+\_\+count. \end{DoxyCompactList}\item 
+\Hypertarget{_h_f_n_c_8c_a142999c8c071978cbd2b5c2ee90bed51}\label{_h_f_n_c_8c_a142999c8c071978cbd2b5c2ee90bed51} 
+uint16\+\_\+t {\bfseries LAST\+\_\+\+HFNC\+\_\+\+BLOWER\+\_\+\+DAC\+\_\+\+VALUE} = 400
+\begin{DoxyCompactList}\small\item\em last hfnc blower dac value. \end{DoxyCompactList}\item 
+\Hypertarget{_h_f_n_c_8c_a8934694d40c6b4b8c9a1fcf764b20bbf}\label{_h_f_n_c_8c_a8934694d40c6b4b8c9a1fcf764b20bbf} 
+uint16\+\_\+t {\bfseries HFNC\+\_\+\+BLOWER\+\_\+\+DAC\+\_\+\+VALUE}
+\begin{DoxyCompactList}\small\item\em current blower dac value. \end{DoxyCompactList}\item 
+\Hypertarget{_h_f_n_c_8c_a2c954b728e35b0ace1e6784a72de44f7}\label{_h_f_n_c_8c_a2c954b728e35b0ace1e6784a72de44f7} 
+int {\bfseries Check\+\_\+\+O2} = 3000
+\begin{DoxyCompactList}\small\item\em check O2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of HFNC Feature. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the implementation of HFNC control Function, Including HFNC Data Split and Alert Control. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_h_f_n_c_8c_a39edd283e4326c080e8cc65398b31570}\label{_h_f_n_c_8c_a39edd283e4326c080e8cc65398b31570} 
+\index{HFNC.c@{HFNC.c}!Check\_O2\_Supply@{Check\_O2\_Supply}}
+\index{Check\_O2\_Supply@{Check\_O2\_Supply}!HFNC.c@{HFNC.c}}
+\doxysubsubsection{\texorpdfstring{Check\_O2\_Supply()}{Check\_O2\_Supply()}}
+{\footnotesize\ttfamily void Check\+\_\+\+O2\+\_\+\+Supply (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+O2 Supply Alert. 
+
+Check\+\_\+\+O2\+\_\+\+Supply This function checks for disconnection of the O2 supply.
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_h_f_n_c_8c_a15d6960ce445e60610f40ff3b6a015f5}\label{_h_f_n_c_8c_a15d6960ce445e60610f40ff3b6a015f5} 
+\index{HFNC.c@{HFNC.c}!HFNC\_Packet\_Data@{HFNC\_Packet\_Data}}
+\index{HFNC\_Packet\_Data@{HFNC\_Packet\_Data}!HFNC.c@{HFNC.c}}
+\doxysubsubsection{\texorpdfstring{HFNC\_Packet\_Data()}{HFNC\_Packet\_Data()}}
+{\footnotesize\ttfamily void HFNC\+\_\+\+Packet\+\_\+\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}}]{Receive\+\_\+\+Graph\+\_\+\+Packet }\end{DoxyParamCaption})}
+
+
+
+HFNC data Split. 
+
+split HFNC buffer from bluetooth received data .
+
+This function Split HFNC MODE Data from Blue-\/tooth. 
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} & data from blue-\/tooth. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+HFNC mode data is Separated. 
+\end{DoxyPostcond}
+\Hypertarget{_h_f_n_c_8c_a3f446d58ffe3b7cde6012d0b4f29fb6b}\label{_h_f_n_c_8c_a3f446d58ffe3b7cde6012d0b4f29fb6b} 
+\index{HFNC.c@{HFNC.c}!HFNC\_Task@{HFNC\_Task}}
+\index{HFNC\_Task@{HFNC\_Task}!HFNC.c@{HFNC.c}}
+\doxysubsubsection{\texorpdfstring{HFNC\_Task()}{HFNC\_Task()}}
+{\footnotesize\ttfamily void HFNC\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+HFNC\+\_\+\+Task. This Task Control blower value to reach a Required Flow rate with maintain a Required Oxygen. 
+
+HFNC\+\_\+\+Task.
+
+
+\begin{DoxyParams}{Parameters}
+{\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+none. 
+\end{DoxyPostcond}
+\Hypertarget{_h_f_n_c_8c_a313a11f2b51ef1083374a2ababf9bc11}\label{_h_f_n_c_8c_a313a11f2b51ef1083374a2ababf9bc11} 
+\index{HFNC.c@{HFNC.c}!HFNC\_TUNE\_DAC\_VALUE@{HFNC\_TUNE\_DAC\_VALUE}}
+\index{HFNC\_TUNE\_DAC\_VALUE@{HFNC\_TUNE\_DAC\_VALUE}!HFNC.c@{HFNC.c}}
+\doxysubsubsection{\texorpdfstring{HFNC\_TUNE\_DAC\_VALUE()}{HFNC\_TUNE\_DAC\_VALUE()}}
+{\footnotesize\ttfamily static uint16\+\_\+t HFNC\+\_\+\+TUNE\+\_\+\+DAC\+\_\+\+VALUE (\begin{DoxyParamCaption}\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{Last\+\_\+\+Blower\+\_\+\+DAC\+\_\+\+Val,  }\item[{uint8\+\_\+t}]{Set\+\_\+\+Flow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Tune a blower dac value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}\+Last\+\_\+\+Blower\+\_\+\+DAC\+\_\+\+Val} & last used blower value. \\
+\hline
+{\em Set\+\_\+\+Flow} & set flow. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t Blower dac value is passed.
+\end{DoxyReturn}
+This function alters the blower value to achieve the required flow rate. 
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}\+Last\+\_\+\+Blower\+\_\+\+DAC\+\_\+\+Val} & last used blower value. \\
+\hline
+{\em Set\+\_\+\+Flow} & set flow. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t Blower dac value is passed. 
+\end{DoxyReturn}

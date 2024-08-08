@@ -1,0 +1,73 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+HFNC/\+HFNC.h File Reference}
+\hypertarget{_h_f_n_c_8h}{}\label{_h_f_n_c_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/HFNC/HFNC.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/HFNC/HFNC.h}}
+
+
+Implementation of HFNC Feature.  
+
+
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_h_f_n_c___mode___parameter}{HFNC\+\_\+\+Mode\+\_\+\+Parameter}}
+\begin{DoxyCompactList}\small\item\em Structure Representing \doxylink{struct_h_f_n_c___mode___parameter}{HFNC\+\_\+\+Mode\+\_\+\+Parameter} variables. it includes OXYGEN Flow rate and oxygen level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_h_f_n_c_8h_a3f446d58ffe3b7cde6012d0b4f29fb6b}{HFNC\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em HFNC\+\_\+\+Task. \end{DoxyCompactList}\item 
+\Hypertarget{_h_f_n_c_8h_a98286c59a4eed20825d0fda7aec279cc}\label{_h_f_n_c_8h_a98286c59a4eed20825d0fda7aec279cc} 
+uint16\+\_\+t {\bfseries HFNC\+\_\+\+DAC\+\_\+\+Value} (uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em HFNC\+\_\+\+DAC\+\_\+\+Value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_h_f_n_c_8h_a00a3fd6fd7f9a342d71ef05d48bdefd7}\label{_h_f_n_c_8h_a00a3fd6fd7f9a342d71ef05d48bdefd7} 
+x\+Task\+Handle {\bfseries HFNC\+\_\+\+Handler}
+\begin{DoxyCompactList}\small\item\em HFNC Task handler. \end{DoxyCompactList}\item 
+\Hypertarget{_h_f_n_c_8h_afe01055f55ec3a986fa11302c9febf14}\label{_h_f_n_c_8h_afe01055f55ec3a986fa11302c9febf14} 
+\mbox{\hyperlink{struct_h_f_n_c___mode___parameter}{HFNC\+\_\+\+Mode\+\_\+\+Parameter}} {\bfseries HFNC}
+\begin{DoxyCompactList}\small\item\em HFNC mode variables. \end{DoxyCompactList}\item 
+\Hypertarget{_h_f_n_c_8h_adb951f27fd0d7fe110ec1740dc6daf48}\label{_h_f_n_c_8h_adb951f27fd0d7fe110ec1740dc6daf48} 
+uint8\+\_\+t {\bfseries FLOW\+\_\+\+AVG}
+\begin{DoxyCompactList}\small\item\em FLOW AVERAGE variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of HFNC Feature. 
+
+\DoxyHorRuler{0}
+
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Declaration of HFNC control Function, Including HFNC Data Split and Alert Control. \DoxyHorRuler{0}
+ 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_h_f_n_c_8h_a3f446d58ffe3b7cde6012d0b4f29fb6b}\label{_h_f_n_c_8h_a3f446d58ffe3b7cde6012d0b4f29fb6b} 
+\index{HFNC.h@{HFNC.h}!HFNC\_Task@{HFNC\_Task}}
+\index{HFNC\_Task@{HFNC\_Task}!HFNC.h@{HFNC.h}}
+\doxysubsubsection{\texorpdfstring{HFNC\_Task()}{HFNC\_Task()}}
+{\footnotesize\ttfamily void HFNC\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+HFNC\+\_\+\+Task. 
+
+HFNC\+\_\+\+Task.
+
+
+\begin{DoxyParams}{Parameters}
+{\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+none. 
+\end{DoxyPostcond}

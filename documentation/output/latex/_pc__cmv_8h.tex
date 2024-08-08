@@ -1,0 +1,212 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+PC\+\_\+\+CMV/\+Pc\+\_\+cmv.h File Reference}
+\hypertarget{_pc__cmv_8h}{}\label{_pc__cmv_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/PC\_CMV/Pc\_cmv.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/PC\_CMV/Pc\_cmv.h}}
+
+
+Declaration of PCCMV mode.  
+
+
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_p_c___c_m_v__mode__parameter}{PC\+\_\+\+CMV\+\_\+mode\+\_\+parameter}}
+\begin{DoxyCompactList}\small\item\em Structure Representing PCCMV Mode parameter variables. it includes expiration time ,rise time percentage variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_pc__cmv_8h_ad7103779397d9914a9bb6d8107ba1fee}\label{_pc__cmv_8h_ad7103779397d9914a9bb6d8107ba1fee} 
+\#define {\bfseries One\+\_\+\+Minite\+\_\+\+In\+\_\+\+MS}~60000
+\begin{DoxyCompactList}\small\item\em one minute for breath update \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fd}{Vent\+\_\+type}} \{ \mbox{\hyperlink{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fdaafec59f68d838ce58ab11785c87e35eb}{ET\+\_\+\+TUBE\+\_\+\+MODE}}
+, \mbox{\hyperlink{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fdaeb71f320083bdea028268f17c1c40d22}{MASK\+\_\+\+MODE}}
+, \mbox{\hyperlink{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fda3e51fb946570e643ba0a3ffd95c70537}{NO\+\_\+\+MODE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for Ventilation type. To identify the mode type as ET tube or mask mode. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_pc__cmv_8h_a92eab25e65ef4f9b241023e59d3d421e}{smooth\+\_\+ramp\+\_\+time}} \{ \mbox{\hyperlink{_pc__cmv_8h_a92eab25e65ef4f9b241023e59d3d421ea1c51ae788d7036ca40f30f050b0badb1}{Smooth\+\_\+\+Ramp\+\_\+\+Time\+\_\+\+Val\+\_\+\+Pending}}
+, \mbox{\hyperlink{_pc__cmv_8h_a92eab25e65ef4f9b241023e59d3d421ea08984d00f742b889a383fce0c3bfc585}{Smooth\+\_\+\+Ramp\+\_\+\+Time\+\_\+\+Val\+\_\+\+Finished}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for Ramp time status. To check whether the set PIP value is achieved during ramp time. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_pc__cmv_8h_a70da912b62aae900690d98a1d29b8b5b}{breath}} \{ \mbox{\hyperlink{_pc__cmv_8h_a70da912b62aae900690d98a1d29b8b5ba6f9b367b18dbc20c26c5834aa4278062}{Leave\+\_\+\+Count\+\_\+\+The\+\_\+\+Breath}}
+, \mbox{\hyperlink{_pc__cmv_8h_a70da912b62aae900690d98a1d29b8b5baf92416091659b797f4fefebf97d14b63}{Count\+\_\+\+The\+\_\+\+Breath}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for Breath count. To count the number of breaths delivered by the machine or taken by the patient. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_pc__cmv_8h_ac4c770b608b0a1167de01ede5c00b11c}{Pc\+\_\+\+Cmv\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Pc\+\_\+\+Cmv\+\_\+\+Task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc__cmv_8h_a56306f8ae6fdadb1c596fbcd8be5f1ba}{PC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em PC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc__cmv_8h_a442a96b1a414a08651d3df90d24c5eb2}{PC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em PC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc__cmv_8h_a46c20af750ea5de1169422886079afa6}{PIP\+\_\+\+Not\+\_\+\+Acheieved}} ()
+\begin{DoxyCompactList}\small\item\em PIP\+\_\+\+Not\+\_\+\+Acheieved. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc__cmv_8h_abc8f0b524603ddc5aa464384db3c0ded}{PIP\+\_\+\+Acheieved}} ()
+\begin{DoxyCompactList}\small\item\em PIP\+\_\+\+Acheieved. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc__cmv_8h_a4a09fe0d88290929dc288cdd00dc45b8}{Find\+\_\+\+Average\+\_\+\+Flow}} ()
+\begin{DoxyCompactList}\small\item\em Find\+\_\+\+Average\+\_\+\+Flow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_pc__cmv_8h_ada422cbe965d4273ceceef6243b6cdc4}\label{_pc__cmv_8h_ada422cbe965d4273ceceef6243b6cdc4} 
+\mbox{\hyperlink{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fd}{Vent\+\_\+type}} {\bfseries Vent\+\_\+\+Type}
+\begin{DoxyCompactList}\small\item\em type of ventilation. \end{DoxyCompactList}\item 
+\Hypertarget{_pc__cmv_8h_a05ef45788b9b37bfcc33d27861a4cf4a}\label{_pc__cmv_8h_a05ef45788b9b37bfcc33d27861a4cf4a} 
+\mbox{\hyperlink{_pc__cmv_8h_a70da912b62aae900690d98a1d29b8b5b}{breath}} {\bfseries Breath\+\_\+\+Count}
+\begin{DoxyCompactList}\small\item\em enumeration variable \end{DoxyCompactList}\item 
+\Hypertarget{_pc__cmv_8h_a27eaf22b1f2850bac1f0cc449eed9394}\label{_pc__cmv_8h_a27eaf22b1f2850bac1f0cc449eed9394} 
+\mbox{\hyperlink{_pc__cmv_8h_a92eab25e65ef4f9b241023e59d3d421e}{smooth\+\_\+ramp\+\_\+time}} {\bfseries Smooth\+\_\+\+Ramp\+\_\+\+Time}
+\begin{DoxyCompactList}\small\item\em Ramptime structure variable. \end{DoxyCompactList}\item 
+\Hypertarget{_pc__cmv_8h_a765e3e78648f79c1bb6d5963b256d616}\label{_pc__cmv_8h_a765e3e78648f79c1bb6d5963b256d616} 
+\mbox{\hyperlink{struct_p_c___c_m_v__mode__parameter}{PC\+\_\+\+CMV\+\_\+mode\+\_\+parameter}} {\bfseries PC\+\_\+\+CMV}
+\begin{DoxyCompactList}\small\item\em pccmv mode parameter variable \end{DoxyCompactList}\item 
+\Hypertarget{_pc__cmv_8h_ad1803c6dabfaa1c8cb23eac3612ab6ce}\label{_pc__cmv_8h_ad1803c6dabfaa1c8cb23eac3612ab6ce} 
+x\+Task\+Handle {\bfseries Pc\+\_\+\+Cmv\+\_\+\+Handler}
+\begin{DoxyCompactList}\small\item\em pccmv mode handler \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of PCCMV mode. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Declaration PCCMV mode variables 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_pc__cmv_8h_a70da912b62aae900690d98a1d29b8b5b}\label{_pc__cmv_8h_a70da912b62aae900690d98a1d29b8b5b} 
+\index{Pc\_cmv.h@{Pc\_cmv.h}!breath@{breath}}
+\index{breath@{breath}!Pc\_cmv.h@{Pc\_cmv.h}}
+\doxysubsubsection{\texorpdfstring{breath}{breath}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_pc__cmv_8h_a70da912b62aae900690d98a1d29b8b5b}{breath}}}
+
+
+
+Enumeration for Breath count. To count the number of breaths delivered by the machine or taken by the patient. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Leave\_Count\_The\_Breath@{Leave\_Count\_The\_Breath}!Pc\_cmv.h@{Pc\_cmv.h}}\index{Pc\_cmv.h@{Pc\_cmv.h}!Leave\_Count\_The\_Breath@{Leave\_Count\_The\_Breath}}}\Hypertarget{_pc__cmv_8h_a70da912b62aae900690d98a1d29b8b5ba6f9b367b18dbc20c26c5834aa4278062}\label{_pc__cmv_8h_a70da912b62aae900690d98a1d29b8b5ba6f9b367b18dbc20c26c5834aa4278062} 
+Leave\+\_\+\+Count\+\_\+\+The\+\_\+\+Breath&Don\textquotesingle{}t count the breath. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Count\_The\_Breath@{Count\_The\_Breath}!Pc\_cmv.h@{Pc\_cmv.h}}\index{Pc\_cmv.h@{Pc\_cmv.h}!Count\_The\_Breath@{Count\_The\_Breath}}}\Hypertarget{_pc__cmv_8h_a70da912b62aae900690d98a1d29b8b5baf92416091659b797f4fefebf97d14b63}\label{_pc__cmv_8h_a70da912b62aae900690d98a1d29b8b5baf92416091659b797f4fefebf97d14b63} 
+Count\+\_\+\+The\+\_\+\+Breath&Count the breath. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_pc__cmv_8h_a92eab25e65ef4f9b241023e59d3d421e}\label{_pc__cmv_8h_a92eab25e65ef4f9b241023e59d3d421e} 
+\index{Pc\_cmv.h@{Pc\_cmv.h}!smooth\_ramp\_time@{smooth\_ramp\_time}}
+\index{smooth\_ramp\_time@{smooth\_ramp\_time}!Pc\_cmv.h@{Pc\_cmv.h}}
+\doxysubsubsection{\texorpdfstring{smooth\_ramp\_time}{smooth\_ramp\_time}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_pc__cmv_8h_a92eab25e65ef4f9b241023e59d3d421e}{smooth\+\_\+ramp\+\_\+time}}}
+
+
+
+Enumeration for Ramp time status. To check whether the set PIP value is achieved during ramp time. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Smooth\_Ramp\_Time\_Val\_Pending@{Smooth\_Ramp\_Time\_Val\_Pending}!Pc\_cmv.h@{Pc\_cmv.h}}\index{Pc\_cmv.h@{Pc\_cmv.h}!Smooth\_Ramp\_Time\_Val\_Pending@{Smooth\_Ramp\_Time\_Val\_Pending}}}\Hypertarget{_pc__cmv_8h_a92eab25e65ef4f9b241023e59d3d421ea1c51ae788d7036ca40f30f050b0badb1}\label{_pc__cmv_8h_a92eab25e65ef4f9b241023e59d3d421ea1c51ae788d7036ca40f30f050b0badb1} 
+Smooth\+\_\+\+Ramp\+\_\+\+Time\+\_\+\+Val\+\_\+\+Pending&Ramptime not in set time. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Smooth\_Ramp\_Time\_Val\_Finished@{Smooth\_Ramp\_Time\_Val\_Finished}!Pc\_cmv.h@{Pc\_cmv.h}}\index{Pc\_cmv.h@{Pc\_cmv.h}!Smooth\_Ramp\_Time\_Val\_Finished@{Smooth\_Ramp\_Time\_Val\_Finished}}}\Hypertarget{_pc__cmv_8h_a92eab25e65ef4f9b241023e59d3d421ea08984d00f742b889a383fce0c3bfc585}\label{_pc__cmv_8h_a92eab25e65ef4f9b241023e59d3d421ea08984d00f742b889a383fce0c3bfc585} 
+Smooth\+\_\+\+Ramp\+\_\+\+Time\+\_\+\+Val\+\_\+\+Finished&Ramptime in set time. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fd}\label{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fd} 
+\index{Pc\_cmv.h@{Pc\_cmv.h}!Vent\_type@{Vent\_type}}
+\index{Vent\_type@{Vent\_type}!Pc\_cmv.h@{Pc\_cmv.h}}
+\doxysubsubsection{\texorpdfstring{Vent\_type}{Vent\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fd}{Vent\+\_\+type}}}
+
+
+
+Enumeration for Ventilation type. To identify the mode type as ET tube or mask mode. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_TUBE\_MODE@{ET\_TUBE\_MODE}!Pc\_cmv.h@{Pc\_cmv.h}}\index{Pc\_cmv.h@{Pc\_cmv.h}!ET\_TUBE\_MODE@{ET\_TUBE\_MODE}}}\Hypertarget{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fdaafec59f68d838ce58ab11785c87e35eb}\label{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fdaafec59f68d838ce58ab11785c87e35eb} 
+ET\+\_\+\+TUBE\+\_\+\+MODE&Et tube mode Ventilation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MASK\_MODE@{MASK\_MODE}!Pc\_cmv.h@{Pc\_cmv.h}}\index{Pc\_cmv.h@{Pc\_cmv.h}!MASK\_MODE@{MASK\_MODE}}}\Hypertarget{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fdaeb71f320083bdea028268f17c1c40d22}\label{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fdaeb71f320083bdea028268f17c1c40d22} 
+MASK\+\_\+\+MODE&mask mode Ventilation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NO\_MODE@{NO\_MODE}!Pc\_cmv.h@{Pc\_cmv.h}}\index{Pc\_cmv.h@{Pc\_cmv.h}!NO\_MODE@{NO\_MODE}}}\Hypertarget{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fda3e51fb946570e643ba0a3ffd95c70537}\label{_pc__cmv_8h_a54bd710668cb32aeacbf00f0485f92fda3e51fb946570e643ba0a3ffd95c70537} 
+NO\+\_\+\+MODE&idle. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_pc__cmv_8h_a4a09fe0d88290929dc288cdd00dc45b8}\label{_pc__cmv_8h_a4a09fe0d88290929dc288cdd00dc45b8} 
+\index{Pc\_cmv.h@{Pc\_cmv.h}!Find\_Average\_Flow@{Find\_Average\_Flow}}
+\index{Find\_Average\_Flow@{Find\_Average\_Flow}!Pc\_cmv.h@{Pc\_cmv.h}}
+\doxysubsubsection{\texorpdfstring{Find\_Average\_Flow()}{Find\_Average\_Flow()}}
+{\footnotesize\ttfamily void Find\+\_\+\+Average\+\_\+\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Find\+\_\+\+Average\+\_\+\+Flow. 
+
+Find\+\_\+\+Average\+\_\+\+Flow. \Hypertarget{_pc__cmv_8h_a442a96b1a414a08651d3df90d24c5eb2}\label{_pc__cmv_8h_a442a96b1a414a08651d3df90d24c5eb2} 
+\index{Pc\_cmv.h@{Pc\_cmv.h}!PC\_CMV\_Expiration\_Time\_Variables\_Reset@{PC\_CMV\_Expiration\_Time\_Variables\_Reset}}
+\index{PC\_CMV\_Expiration\_Time\_Variables\_Reset@{PC\_CMV\_Expiration\_Time\_Variables\_Reset}!Pc\_cmv.h@{Pc\_cmv.h}}
+\doxysubsubsection{\texorpdfstring{PC\_CMV\_Expiration\_Time\_Variables\_Reset()}{PC\_CMV\_Expiration\_Time\_Variables\_Reset()}}
+{\footnotesize\ttfamily void PC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. 
+
+PC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \Hypertarget{_pc__cmv_8h_a56306f8ae6fdadb1c596fbcd8be5f1ba}\label{_pc__cmv_8h_a56306f8ae6fdadb1c596fbcd8be5f1ba} 
+\index{Pc\_cmv.h@{Pc\_cmv.h}!PC\_CMV\_Inspiration\_Time\_Variables\_Reset@{PC\_CMV\_Inspiration\_Time\_Variables\_Reset}}
+\index{PC\_CMV\_Inspiration\_Time\_Variables\_Reset@{PC\_CMV\_Inspiration\_Time\_Variables\_Reset}!Pc\_cmv.h@{Pc\_cmv.h}}
+\doxysubsubsection{\texorpdfstring{PC\_CMV\_Inspiration\_Time\_Variables\_Reset()}{PC\_CMV\_Inspiration\_Time\_Variables\_Reset()}}
+{\footnotesize\ttfamily void PC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. 
+
+PC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \Hypertarget{_pc__cmv_8h_ac4c770b608b0a1167de01ede5c00b11c}\label{_pc__cmv_8h_ac4c770b608b0a1167de01ede5c00b11c} 
+\index{Pc\_cmv.h@{Pc\_cmv.h}!Pc\_Cmv\_Task@{Pc\_Cmv\_Task}}
+\index{Pc\_Cmv\_Task@{Pc\_Cmv\_Task}!Pc\_cmv.h@{Pc\_cmv.h}}
+\doxysubsubsection{\texorpdfstring{Pc\_Cmv\_Task()}{Pc\_Cmv\_Task()}}
+{\footnotesize\ttfamily void Pc\+\_\+\+Cmv\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Pc\+\_\+\+Cmv\+\_\+\+Task. 
+
+Pc\+\_\+\+Cmv\+\_\+\+Task. \Hypertarget{_pc__cmv_8h_abc8f0b524603ddc5aa464384db3c0ded}\label{_pc__cmv_8h_abc8f0b524603ddc5aa464384db3c0ded} 
+\index{Pc\_cmv.h@{Pc\_cmv.h}!PIP\_Acheieved@{PIP\_Acheieved}}
+\index{PIP\_Acheieved@{PIP\_Acheieved}!Pc\_cmv.h@{Pc\_cmv.h}}
+\doxysubsubsection{\texorpdfstring{PIP\_Acheieved()}{PIP\_Acheieved()}}
+{\footnotesize\ttfamily void PIP\+\_\+\+Acheieved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PIP\+\_\+\+Acheieved. 
+
+PIP\+\_\+\+Acheieved. \Hypertarget{_pc__cmv_8h_a46c20af750ea5de1169422886079afa6}\label{_pc__cmv_8h_a46c20af750ea5de1169422886079afa6} 
+\index{Pc\_cmv.h@{Pc\_cmv.h}!PIP\_Not\_Acheieved@{PIP\_Not\_Acheieved}}
+\index{PIP\_Not\_Acheieved@{PIP\_Not\_Acheieved}!Pc\_cmv.h@{Pc\_cmv.h}}
+\doxysubsubsection{\texorpdfstring{PIP\_Not\_Acheieved()}{PIP\_Not\_Acheieved()}}
+{\footnotesize\ttfamily void PIP\+\_\+\+Not\+\_\+\+Acheieved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PIP\+\_\+\+Not\+\_\+\+Acheieved. 
+
+PIP\+\_\+\+Not\+\_\+\+Acheieved. 

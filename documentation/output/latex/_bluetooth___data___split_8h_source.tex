@@ -1,0 +1,66 @@
+\doxysection{Bluetooth\+\_\+\+Data\+\_\+\+Split.\+h}
+\hypertarget{_bluetooth___data___split_8h_source}{}\label{_bluetooth___data___split_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/Bluetooth/Bluetooth\_Data\_Split.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/Bluetooth/Bluetooth\_Data\_Split.h}}
+\mbox{\hyperlink{_bluetooth___data___split_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ INC\_BLUETOOTH\_DATA\_SPLIT\_H\_}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ INC\_BLUETOOTH\_DATA\_SPLIT\_H\_}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09ad3fa9ae9431d6cb1772f9d9df48cab19}{Idle}}=0,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a4970797c1b1079dc1bfb1996eb51520b}{Pccmv}}=1,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a29f55524aad4bb0c8fb3c7a4a23fbb46}{Vccmv}}=2,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09ab5c55c0d1e833e4a7fd1e1d64353b278}{Aprv}}=4,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a3a261f69bf666a2f1b30ce5c6ee857da}{Pcsimv}}=5,\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09aba2b819b938d4cd0bcbfb5c807a7c0d5}{Vcsimv}}=6,\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a09bd14858c08dd345c322b272e111e13}{Psv}}=7,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a65f902c9f8d742833070ed927158953d}{Spont}}=10,\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09abe37e2efde643abfb0caadaf8c7ccebe}{Cpap}}=11,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09acd17a70ff6c29ec21e39f342a2e75210}{BiPap}}=12,\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09ac7c8b2f95e3dfccb6fa9386af5bafeee}{Hfnc}}=13,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a262485d9bcb3f42c5229f129fdc8b53c}{Suction}}=15,\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a711caa1b6d75460f9aa07ecdc66942d1}{Backup\_Pccmv}}=21,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \}\mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09}{Modes}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_adf70f5c34e0b9e905bc1e6f5441b7bf5a5f506612ea2b7cd608016f74cef0e48b}{No\_Backup\_Mode}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_adf70f5c34e0b9e905bc1e6f5441b7bf5a96c0c741948cfbdf0b3daeade773ae16}{Backup\_PCCMV\_Mode}},\ \ \ \ }
+\DoxyCodeLine{00049\ \}\mbox{\hyperlink{_bluetooth___data___split_8h_adf70f5c34e0b9e905bc1e6f5441b7bf5}{Backup\_Modes}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00056\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440aa6caee782ea2e79f9b81aa55d421e72d9}{Generate\_Inspiration\_Cycle}}\ =\ 0,\ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440aae5f8cee983d903e35e5f388c984bf3cf}{Generate\_Expiration\_Cycle}},\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440aadad14e67e12daa4c7c5b7c09ba6657c2}{NoWaveFormState}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \}\mbox{\hyperlink{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440a}{Next\_half\_Breath\_Cycle}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00067\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673a592164e334b3cca6981602ea96ebed75}{No\_Run\_State}}=0,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673acbb102fe1307803e5904c6874dbdb705}{Run\_Inspiration\_Cycle}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673ad2f792fd32cd6eed9f722adfebc874f3}{Run\_Expiration\_Cycle}}\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00071\ \}\mbox{\hyperlink{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673}{Run\_current\_Breathe\_State}};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09}{Modes}}\ Mode,\mbox{\hyperlink{_bluetooth___data___split_8h_a83b7c872aba4344b184895d570a1f89f}{Running\_Mode}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00075\ \mbox{\hyperlink{_bluetooth___data___split_8h_adf70f5c34e0b9e905bc1e6f5441b7bf5}{Backup\_Modes}}\ \mbox{\hyperlink{_bluetooth___data___split_8h_ac2e55115384b9ed6d8612db1e43786b6}{Current\_Backup\_Mode}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00076\ \mbox{\hyperlink{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440a}{Next\_half\_Breath\_Cycle}}\ \mbox{\hyperlink{_bluetooth___data___split_8h_ab5bcb54abbbba2bb662347047ae30574}{Next\_Half\_Breath\_Cycle}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \mbox{\hyperlink{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673}{Run\_current\_Breathe\_State}}\ \mbox{\hyperlink{_bluetooth___data___split_8h_af0b4f7423471d54fabe81d626345450e}{Run\_Current\_Breathe\_State}};\ \ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ uint8\_t\ \mbox{\hyperlink{_bluetooth___data___split_8h_adc404825d32b99a395c10626eb89d457}{chksum8\_2}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *buff,\ \textcolor{keywordtype}{size\_t}\ len);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_BLUETOOTH\_DATA\_SPLIT\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

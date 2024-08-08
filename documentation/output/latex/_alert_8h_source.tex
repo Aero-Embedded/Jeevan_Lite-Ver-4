@@ -1,0 +1,286 @@
+\doxysection{Alert.\+h}
+\hypertarget{_alert_8h_source}{}\label{_alert_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/ALERT/Alert.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/ALERT/Alert.h}}
+\mbox{\hyperlink{_alert_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ INC\_ALERT\_H\_}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ INC\_ALERT\_H\_}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ Red\_Led\_ON()\ \ \ \ \ GPIOD-\/>ODR|=(1<<4)\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ Red\_Led\_OFF()\ \ \ \ GPIOD-\/>ODR\&=(\string~(1<<4))\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ Blue\_Led\_ON()\ \ \ \ GPIOD-\/>ODR|=(1<<3)\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ Blue\_Led\_OFF()\ \ \ GPIOD-\/>ODR\&=(\string~(1<<3))\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ Green\_Led\_ON()\ \ \ GPIOD-\/>ODR|=(1<<5)\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ Green\_Led\_OFF()\ \ GPIOD-\/>ODR\&=(\string~(1<<5))\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ SET\_ALERT\_BIT(frame,bitname)\ \ \ \ (DEVICE\_ALERT\_DATA\_SEND.frame.FRAMEBits.bitname\ =\ 1\ )\ \ \ }}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ CLEAR\_ALERT\_BIT(frame,bitname)\ \ (DEVICE\_ALERT\_DATA\_SEND.frame.FRAMEBits.bitname\ =\ 0\ )\ \ \ }}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ DEVICE\_ALERT\_DATA\_SEND\_LENGTH\ 6\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{_alert_8h_ab898071398b359603a35c202e9c65f3b}{\_\_attribute\_\_}}((packed))\ \{}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_PLUGGED\_IN:1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_BATTERY\_MODE:1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_20\_PER\_BATTERY\_DRAIN:1;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_OXYGEN\_SUPPLY\_FAILED:1;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_PATIENT\_CIRCUIT\_DISCONNECTED:1;\ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_FLOW\_SENSOR\_WRONG\_DIRECTION:1;\ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_NEBULISER\_ON:1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_NEBULISER\_OFF:1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \}\ FIRST\_FRAME\ ;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{_alert_8h_ab898071398b359603a35c202e9c65f3b}{\_\_attribute\_\_}}((packed))\ \{}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_APNEA:1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_LOW\_SPO2:1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_PRESSURE\_LIMITATION:1;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_LEAK:1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_NC1:1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_NC2:1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_NC3:1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_NC4:1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \}\ SECOND\_FRAME\ ;}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{_alert_8h_ab898071398b359603a35c202e9c65f3b}{\_\_attribute\_\_}}((packed))\ \{}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_HIGH\_PIP:1;}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_LOW\_PIP:1;}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_HIGH\_PEEP:1;}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_LOW\_PEEP:1;}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_HIGH\_TIDAL\_VOLUME:1;}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_LOW\_TIDAL\_VOLUME:1;}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_HIGH\_MINUTE\_VOLUME:1;}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_LOW\_MINUTE\_VOLUME:1;}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \}\ THIRD\_FRAME\ ;}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00103\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{_alert_8h_ab898071398b359603a35c202e9c65f3b}{\_\_attribute\_\_}}((packed))\ \{}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_HIGH\_FIO2:1;}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_LOW\_FIO2:1;}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_HIGH\_FLOW:1;}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_LOW\_FLOW:1;}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_HIGH\_PULSE:1;}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_LOW\_PULSE:1;}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_HIGH\_RR:1;}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_ALERT\_LOW\_RR:1;}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \}\ FOURTH\_FRAME\ ;}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00124\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{_alert_8h_ab898071398b359603a35c202e9c65f3b}{\_\_attribute\_\_}}((packed))\ \{}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ \_ALERT\_NC:1;}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \}\ FIFTH\_FRAME\ ;}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00134\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{_alert_8h_ab898071398b359603a35c202e9c65f3b}{\_\_attribute\_\_}}((packed))\ \{}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ \_ALERT\_NC:1;}
+\DoxyCodeLine{00137\ \}\ SIXTH\_FRAME\ ;}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00145\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{_alert_8h_ab898071398b359603a35c202e9c65f3b}{\_\_attribute\_\_}}((packed))\ \{}
+\DoxyCodeLine{00146\ \ \ \ \ uint16\_t\ \_header;\ \textcolor{comment}{//\ 2}}
+\DoxyCodeLine{00147\ \ \ \ \ uint8\_t\ \ \_length;\ \textcolor{comment}{//\ 1}}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ FIRST\_BYTES;}
+\DoxyCodeLine{00150\ \ \ \ \ \ FIRST\_FRAME\ FRAMEBits\ ;}
+\DoxyCodeLine{00151\ \ \ \ \ \}FIRST\_FRAME\_UN;}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ SECOND\_BYTES;}
+\DoxyCodeLine{00155\ \ \ \ \ \ SECOND\_FRAME\ FRAMEBits\ ;}
+\DoxyCodeLine{00156\ \ \ \ \ \}SECOND\_FRAME\_UN;}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ THIRD\_BYTES;}
+\DoxyCodeLine{00160\ \ \ \ \ \ THIRD\_FRAME\ FRAMEBits\ ;}
+\DoxyCodeLine{00161\ \ \ \ \ \}THIRD\_FRAME\_UN;}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ FOURTH\_BYTES;}
+\DoxyCodeLine{00165\ \ \ \ \ \ FOURTH\_FRAME\ FRAMEBits\ ;}
+\DoxyCodeLine{00166\ \ \ \ \ \}FOURTH\_FRAME\_UN;}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ FIFTH\_BYTES;}
+\DoxyCodeLine{00170\ \ \ \ \ \ FIFTH\_FRAME\ FRAMEBits\ ;}
+\DoxyCodeLine{00171\ \ \ \ \ \}FIFTH\_FRAME\_UN;}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ SIXTH\_BYTES;}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ SIXTH\_FRAME\ FRAMEBits\ ;}
+\DoxyCodeLine{00176\ \ \ \ \ \ \}SIXTH\_FRAME\_UN;}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \_CRC8;}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \}Device\_Alert\_Data\_Send;}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00188\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ \ }\mbox{\hyperlink{_alert_8h_ab898071398b359603a35c202e9c65f3b}{\_\_attribute\_\_}}((packed))}
+\DoxyCodeLine{00189\ \{}
+\DoxyCodeLine{00190\ \ \ \ \ uint16\_t\ \ \_header\ ;}
+\DoxyCodeLine{00191\ \ \ \ \ uint8\_t\ \ \ \_length\ ;}
+\DoxyCodeLine{00192\ \ \ \ \ uint8\_t\ \_RANGE\_PIP\_MIN;}
+\DoxyCodeLine{00193\ \ \ \ \ uint8\_t\ \_RANGE\_PIP\_MAX;}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ uint16\_t\ \_RANGE\_VT\_MIN;}
+\DoxyCodeLine{00196\ \ \ \ \ uint16\_t\ \_RANGE\_VT\_MAX;}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ uint8\_t\ \_RANGE\_RR\_MIN;}
+\DoxyCodeLine{00199\ \ \ \ \ uint8\_t\ \_RANGE\_RR\_MAX;}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ uint8\_t\ \_RANGE\_MINT\_VOL\_MIN;}
+\DoxyCodeLine{00202\ \ \ \ \ uint8\_t\ \_RANGE\_MINT\_VOL\_MAX;}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \ \ \ \ uint8\_t\ \_RANGE\_SPO2\_MIN;}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ uint8\_t\ \_RANGE\_PULSE\_MIN;}
+\DoxyCodeLine{00208\ \ \ \ \ uint8\_t\ \_RANGE\_PULSE\_MAX;}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \ \ \ \ uint8\_t\ \_RANGE\_LEAK;}
+\DoxyCodeLine{00211\ \ \ \ \ uint8\_t\ \_RANGE\_NC1;}
+\DoxyCodeLine{00212\ \ \ \ \ uint8\_t\ \_CRC8;}
+\DoxyCodeLine{00213\ \}\ ALERT\_RANGE\_PACKET;}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00218\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00219\ \{}
+\DoxyCodeLine{00220\ \ \ \ \ uint8\_t\ \ \_RANGE\_PIP\_MIN\_Val;}
+\DoxyCodeLine{00221\ \ \ \ \ uint8\_t\ \ \_RANGE\_PIP\_MAX\_Val;}
+\DoxyCodeLine{00222\ \ \ \ \ uint16\_t\ \_RANGE\_VT\_MIN\_Val;}
+\DoxyCodeLine{00223\ \ \ \ \ uint16\_t\ \_RANGE\_VT\_MAX\_Val;}
+\DoxyCodeLine{00224\ \ \ \ \ uint8\_t\ \ \_RANGE\_RR\_MIN\_Val;}
+\DoxyCodeLine{00225\ \ \ \ \ uint8\_t\ \ \_RANGE\_RR\_MAX\_Val;}
+\DoxyCodeLine{00226\ \ \ \ \ uint8\_t\ \_RANGE\_MINT\_VOL\_MIN\_Val;}
+\DoxyCodeLine{00227\ \ \ \ \ uint8\_t\ \_RANGE\_MINT\_VOL\_MAX\_Val;}
+\DoxyCodeLine{00228\ \ \ \ \ uint8\_t\ \ \_RANGE\_SPO2\_MIN\_Val;}
+\DoxyCodeLine{00229\ \ \ \ \ uint8\_t\ \ \_RANGE\_PULSE\_MIN\_Val;}
+\DoxyCodeLine{00230\ \ \ \ \ uint8\_t\ \ \_RANGE\_PULSE\_MAX\_Val;}
+\DoxyCodeLine{00231\ \ \ \ \ uint16\_t\ \ \_RANGE\_Leak;}
+\DoxyCodeLine{00232\ \ \ \ \ uint8\_t\ \ \_RANGE\_NC1;}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \}\mbox{\hyperlink{struct_a_l_e_r_t___r_a_n_g_e}{ALERT\_RANGE}};}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00239\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00240\ \{}
+\DoxyCodeLine{00241\ \ \ \ \ uint8\_t\ PIP\_Alert\_Count;}
+\DoxyCodeLine{00242\ \ \ \ \ uint8\_t\ PEEP\_Alert\_Count;}
+\DoxyCodeLine{00243\ \ \ \ \ uint8\_t\ Tidal\_Volume\_Alert\_Count;}
+\DoxyCodeLine{00244\ \ \ \ \ uint8\_t\ FIO2\_Supply\_Alert\_Count;}
+\DoxyCodeLine{00245\ \ \ \ \ uint8\_t\ FIO2\_Alert\_Count;}
+\DoxyCodeLine{00246\ \ \ \ \ uint8\_t\ Leak\_Alert\_Count;}
+\DoxyCodeLine{00247\ \ \ \ \ uint16\_t\ Patient\_Circuit\_disconnected\_Alert\_Count;}
+\DoxyCodeLine{00248\ \ \ \ \ uint16\_t\ Proximal\_Flow\_Sensor\_reversed\_Alert\_Count;}
+\DoxyCodeLine{00249\ \}\mbox{\hyperlink{struct_alert__count}{Alert\_count}};}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00255\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00256\ \{}
+\DoxyCodeLine{00257\ \ \ \ \ NO\_ALERT,}
+\DoxyCodeLine{00258\ \ \ \ \ ALERT\_HAPPEN}
+\DoxyCodeLine{00259\ \}\mbox{\hyperlink{_alert_8h_afe7302c8140b7f64bb5dea68424e4afe}{alert\_status}};}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00264\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00265\ \{}
+\DoxyCodeLine{00266\ \ \ \ \ NO\_APNEA\_ALERT\_HAPPEN,}
+\DoxyCodeLine{00267\ \ \ \ \ APNEA\_ALERT\_HAPPEN}
+\DoxyCodeLine{00268\ \}\mbox{\hyperlink{_alert_8h_aac0e34f6a36ca296c7adfba8404b0d6a}{apnea\_alert}};}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00274\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00275\ \{}
+\DoxyCodeLine{00276\ \ \ \ \ SEND\_GRAPH\_FRAME,}
+\DoxyCodeLine{00277\ \ \ \ \ SEND\_ALERT\_FRAME,}
+\DoxyCodeLine{00278\ \ \ \ \ SEND\_CALIBRATION\_FRAME,}
+\DoxyCodeLine{00279\ \ \ \ \ SEND\_SAMPLED\_PARAMETER\_FRAME,}
+\DoxyCodeLine{00280\ \ \ \ \ SEND\_SERVICE\_FRAME}
+\DoxyCodeLine{00281\ \}\mbox{\hyperlink{_alert_8h_a4557d31fa5f967219fa2dcf29accf0e4}{send\_bluetooth\_data\_farme}};}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00286\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00287\ \{}
+\DoxyCodeLine{00288\ \ \ \ \ CHECK,}
+\DoxyCodeLine{00289\ \ \ \ \ DO\_NOT\_CHECK}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00291\ \}\mbox{\hyperlink{_alert_8h_a97a79f5771bbe77d6d78dfd284a25935}{PATIENT\_CIRCUIT\_DISCONNECTED\_ALERT\_check}};}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ }
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \mbox{\hyperlink{_alert_8h_a97a79f5771bbe77d6d78dfd284a25935}{PATIENT\_CIRCUIT\_DISCONNECTED\_ALERT\_check}}\ PATIENT\_CIRCUIT\_DISCONNECTED\_ALERT\_CHECK,\mbox{\hyperlink{_alert_8h_af8b8dd7537243b2dddadb27b573b8138}{PROXIMAL\_SENSOR\_REVERSE\_ALERT\_CHECK}};\ \ \ \ }
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ Device\_Alert\_Data\_Send\ \mbox{\hyperlink{_alert_8h_a4fc2addc2452376f668eb8ad4e49aeb5}{DEVICE\_ALERT\_DATA\_SEND}}\ ;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00302\ \mbox{\hyperlink{struct_a_l_e_r_t___r_a_n_g_e}{ALERT\_RANGE}}\ \mbox{\hyperlink{_alert_8h_aa12b70e7b0656c166f252de3a88d0db9}{Alert\_Range}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00303\ \mbox{\hyperlink{struct_alert__count}{Alert\_count}}\ \mbox{\hyperlink{_alert_8h_a21286e62b72c0739203b9b507994002e}{Alert\_Count}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00304\ \mbox{\hyperlink{_alert_8h_afe7302c8140b7f64bb5dea68424e4afe}{alert\_status}}\ \mbox{\hyperlink{_alert_8h_acdc13a7d271708baf94e071c9b82c764}{Alert\_Status}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00305\ \mbox{\hyperlink{_alert_8h_aac0e34f6a36ca296c7adfba8404b0d6a}{apnea\_alert}}\ \mbox{\hyperlink{_alert_8h_a77bc3be08886343fb4e6e95c4c25fa25}{Apnea\_Alert}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00306\ \mbox{\hyperlink{_alert_8h_a4557d31fa5f967219fa2dcf29accf0e4}{send\_bluetooth\_data\_farme}}\ \mbox{\hyperlink{_alert_8h_a93adb2304de2afa12f7d4468422b093a}{Send\_Bluetooth\_Data\_Farme}};\ \ \ \ }
+\DoxyCodeLine{00307\ uint8\_t\ Alert\_Check;}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00309\ }
+\DoxyCodeLine{00310\ xTaskHandle\ \mbox{\hyperlink{_alert_8h_ade13d669ef546548c564fcfee3246961}{Alert\_Handler}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00315\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_a065d25e4822c883f4ee13c6fdabcb4fe}{Alert\_Task}}\ (\textcolor{keywordtype}{void}\ *argument);}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00320\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_afb6bb69843314de657e57bff3e0a7920}{Split\_Alert\_Parameter\_Packets}}(ALERT\_RANGE\_PACKET\ *Receive\_Graph\_Packet);}
+\DoxyCodeLine{00324\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_af8c175c1a42e8ce35b6602c33a90310d}{Check\_Alert}}();}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00329\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_a9e00b6f1d48ca07ee5ca602515daedd9}{SEND\_ALERT\_PACKET}}();}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00334\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_ae21773daf56f7e8df83f250c6a60e7dc}{Pip\_Alert}}(uint8\_t);}
+\DoxyCodeLine{00335\ }
+\DoxyCodeLine{00339\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_a160f470400517ea3a7b35b16d88b3433}{Alert\_Inspiration\_Time\_Parameter}}();}
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00344\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_a2253dd564c36712be59695c76dcc73d7}{Clear\_All\_Alert\_Bits}}();}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00349\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_a30a393cb98ccf36c124cfd807a2a3648}{UART5\_Alert\_data\_Debug}}();}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00354\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_a2b05c710a7ad80c498a308094c943480}{Peep\_Alert}}(uint8\_t);}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00359\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_a49f7980eb5e24c2783ea5fd08f97d47c}{Tidal\_Volume\_Alert}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00364\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_ac41b2248c22d4afa62098fa10bdadf72}{Minite\_Volume\_Alert}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00369\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_ac5beb1a7b53dd0b1fa0b8b259c5e8e42}{Alert\_Flags\_Reset}}();}
+\DoxyCodeLine{00373\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_af525705b1833f77021579756701f5a28}{Respiratory\_Rate\_Alert}}();}
+\DoxyCodeLine{00377\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_a888d1a9bcc1bbaa8c9c7513ee14bdfa8}{Alert\_Expiration\_Time\_Parameter}}();}
+\DoxyCodeLine{00381\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_a998896d114e817b8202564855b1f1ff3}{Oxygen\_Supply\_Alert}}(uint8\_t,uint8\_t);}
+\DoxyCodeLine{00385\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_af6b6708aa112ff6e156337c083eb0b49}{Oxygen\_Blending\_Alert}}(uint8\_t,uint8\_t);}
+\DoxyCodeLine{00389\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_a1ff3eee6a9b75d1741a716ad4ff8a8f0}{Patient\_Circuit\_Disconnected\_Alert}}();}
+\DoxyCodeLine{00393\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_a6e0d827c720bb58393192115ddf2c33a}{Leak\_Alert}}();}
+\DoxyCodeLine{00397\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_a2507cf8e603a27f5c6bce4dbf17c610d}{Proximal\_Flow\_Sensor\_Reverse\_Direction}}();}
+\DoxyCodeLine{00401\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_ad838c7b34bfe54b36ea3c5c6e53cb969}{LED\_Alert}}();}
+\DoxyCodeLine{00405\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_a71c98585ba7c8c1006bf155cf059df61}{AC\_Supply\_or\_Battery\_Supply\_Indication}}();}
+\DoxyCodeLine{00409\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_a1627d1a1d04e814d16b4b02e955b1909}{Hide\_Alert\_1}}();}
+\DoxyCodeLine{00413\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_aec855e5db2c0da7797d934db926267a2}{Hide\_Alert\_2}}();}
+\DoxyCodeLine{00417\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_alert_8h_ab4d3c2328d29a5ed1f3b2caab89e0843}{Read\_Battery\_Voltage}}();}
+\DoxyCodeLine{00418\ }
+\DoxyCodeLine{00419\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_ALERT\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

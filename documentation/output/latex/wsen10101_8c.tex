@@ -1,0 +1,100 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+SENSORS/\+SENSORS\+\_\+\+INTERFACE/wsen10101.c File Reference}
+\hypertarget{wsen10101_8c}{}\label{wsen10101_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/SENSORS\_INTERFACE/wsen10101.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/SENSORS\_INTERFACE/wsen10101.c}}
+
+
+Declaration of Worth sensor integration.  
+
+
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/ads1115.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/constants.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/database.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/wsen10101.\+h$>$}\newline
+{\ttfamily \#include "{}math.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{wsen10101_8c_ab88e654e3a742d99fd09b8464ebdb46d}\label{wsen10101_8c_ab88e654e3a742d99fd09b8464ebdb46d} 
+double {\bfseries dp\+\_\+to\+\_\+flow\+\_\+wsen} (float dp)
+\item 
+\Hypertarget{wsen10101_8c_a1fa3407eb4aa8b267b7ef0c916ded1b9}\label{wsen10101_8c_a1fa3407eb4aa8b267b7ef0c916ded1b9} 
+double {\bfseries dp\+\_\+to\+\_\+flow\+\_\+wsen\+\_\+1} (float dp)
+\begin{DoxyCompactList}\small\item\em dp\+\_\+to\+\_\+flow\+\_\+wsen\+\_\+1 WSEN10101 sensor. This function calculates the differential pressure value. \end{DoxyCompactList}\item 
+\Hypertarget{wsen10101_8c_a7d782af3de3352564743e8c3a2c28c21}\label{wsen10101_8c_a7d782af3de3352564743e8c3a2c28c21} 
+void {\bfseries compute\+\_\+flow\+\_\+wsen} ()
+\begin{DoxyCompactList}\small\item\em compute\+\_\+flow\+\_\+wsen WSEN10101 sensor. This function converts the differential pressure (dp) value into flow rate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wsen10101_8c_ace13a6154ffddacc40e46c1bf6d4e2b2}{WSEN10101\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the WSEN10101 sensor. This function sets initial values for the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wsen10101_8c_a8bff7bb89f390bc664d553fd72e86d7d}{WSEN10101\+\_\+calibrate}} ()
+\begin{DoxyCompactList}\small\item\em Calibrate the WSEN10101 sensor. This function takes multiple readings to determine the sensor offset. It checks if the offset is within the allowable range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wsen10101_8c_a7d5b0bd49d94d3e8c3b5287971dd9748}{WSEN10101\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em Read data from the WSEN10101 sensor. This function uses Exponentially Weighted Moving Average filter and calculates the sensor value. References\+: \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{wsen10101_8c_a8e55de10586e80d2fb735ebf55bf7182}{WSEN10101\+\_\+read\+\_\+adc}} ()
+\begin{DoxyCompactList}\small\item\em Perform analog-\/to-\/digital value to voltage conversion for the WSEN10101 sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of Worth sensor integration. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Declaration of Worth sensor integration, including the initialization 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{wsen10101_8c_a8bff7bb89f390bc664d553fd72e86d7d}\label{wsen10101_8c_a8bff7bb89f390bc664d553fd72e86d7d} 
+\index{wsen10101.c@{wsen10101.c}!WSEN10101\_calibrate@{WSEN10101\_calibrate}}
+\index{WSEN10101\_calibrate@{WSEN10101\_calibrate}!wsen10101.c@{wsen10101.c}}
+\doxysubsubsection{\texorpdfstring{WSEN10101\_calibrate()}{WSEN10101\_calibrate()}}
+{\footnotesize\ttfamily void WSEN10101\+\_\+calibrate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calibrate the WSEN10101 sensor. This function takes multiple readings to determine the sensor offset. It checks if the offset is within the allowable range. 
+
+Calibrate the WSEN10101 sensor. \Hypertarget{wsen10101_8c_ace13a6154ffddacc40e46c1bf6d4e2b2}\label{wsen10101_8c_ace13a6154ffddacc40e46c1bf6d4e2b2} 
+\index{wsen10101.c@{wsen10101.c}!WSEN10101\_init@{WSEN10101\_init}}
+\index{WSEN10101\_init@{WSEN10101\_init}!wsen10101.c@{wsen10101.c}}
+\doxysubsubsection{\texorpdfstring{WSEN10101\_init()}{WSEN10101\_init()}}
+{\footnotesize\ttfamily void WSEN10101\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the WSEN10101 sensor. This function sets initial values for the sensor. 
+
+Initialize the WSEN10101 sensor. \Hypertarget{wsen10101_8c_a7d5b0bd49d94d3e8c3b5287971dd9748}\label{wsen10101_8c_a7d5b0bd49d94d3e8c3b5287971dd9748} 
+\index{wsen10101.c@{wsen10101.c}!WSEN10101\_read@{WSEN10101\_read}}
+\index{WSEN10101\_read@{WSEN10101\_read}!wsen10101.c@{wsen10101.c}}
+\doxysubsubsection{\texorpdfstring{WSEN10101\_read()}{WSEN10101\_read()}}
+{\footnotesize\ttfamily void WSEN10101\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read data from the WSEN10101 sensor. This function uses Exponentially Weighted Moving Average filter and calculates the sensor value. References\+: 
+
+Read data from the WSEN10101 sensor.
+
+
+\begin{DoxyEnumerate}
+\item \href{https://hackaday.com/2019/09/06/sensor-filters-for-coders/}{\texttt{ https\+://hackaday.\+com/2019/09/06/sensor-\/filters-\/for-\/coders/}}
+\item \href{https://electronics.stackexchange.com/questions/30370/fast-and-memory-efficient-moving-average-calculation}{\texttt{ https\+://electronics.\+stackexchange.\+com/questions/30370/fast-\/and-\/memory-\/efficient-\/moving-\/average-\/calculation}}
+\item \href{https://stackoverflow.com/questions/12636613/how-to-calculate-moving-average-without-keeping-the-count-and-data-total}{\texttt{ https\+://stackoverflow.\+com/questions/12636613/how-\/to-\/calculate-\/moving-\/average-\/without-\/keeping-\/the-\/count-\/and-\/data-\/total}} 
+\end{DoxyEnumerate}\Hypertarget{wsen10101_8c_a8e55de10586e80d2fb735ebf55bf7182}\label{wsen10101_8c_a8e55de10586e80d2fb735ebf55bf7182} 
+\index{wsen10101.c@{wsen10101.c}!WSEN10101\_read\_adc@{WSEN10101\_read\_adc}}
+\index{WSEN10101\_read\_adc@{WSEN10101\_read\_adc}!wsen10101.c@{wsen10101.c}}
+\doxysubsubsection{\texorpdfstring{WSEN10101\_read\_adc()}{WSEN10101\_read\_adc()}}
+{\footnotesize\ttfamily float WSEN10101\+\_\+read\+\_\+adc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Perform analog-\/to-\/digital value to voltage conversion for the WSEN10101 sensor. 
+
+Perform analog-\/to-\/digital conversion for the WSEN10101 sensor.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Vout} & (in mV) \\
+\hline
+\end{DoxyRetVals}

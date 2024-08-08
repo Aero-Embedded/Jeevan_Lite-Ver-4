@@ -1,0 +1,50 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+SENSORS/\+SENSORS\+\_\+\+INTERFACE/controlsys.c File Reference}
+\hypertarget{controlsys_8c}{}\label{controlsys_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/SENSORS\_INTERFACE/controlsys.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/SENSORS\_INTERFACE/controlsys.c}}
+
+
+PID control is used to regulate the oxygen blending process effectively..  
+
+
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/controlsys.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{controlsys_8c_a5eabca2ba2cfd3897bf7b86863b78944}{controlsys\+\_\+\+Init}} (\mbox{\hyperlink{structcontrolsys}{controlsys}} \texorpdfstring{$\ast$}{*}cs)
+\begin{DoxyCompactList}\small\item\em Initialize the control system. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{controlsys_8c_a24e5ae784b0d68e8c9e386ad933c80cd}{controlsys\+\_\+\+Update}} (\mbox{\hyperlink{structcontrolsys}{controlsys}} \texorpdfstring{$\ast$}{*}cs, float set, float mea)
+\begin{DoxyCompactList}\small\item\em controlsys\+\_\+\+Update. This function controls the oxygen flow rate as needed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+PID control is used to regulate the oxygen blending process effectively.. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24  
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{controlsys_8c_a5eabca2ba2cfd3897bf7b86863b78944}\label{controlsys_8c_a5eabca2ba2cfd3897bf7b86863b78944} 
+\index{controlsys.c@{controlsys.c}!controlsys\_Init@{controlsys\_Init}}
+\index{controlsys\_Init@{controlsys\_Init}!controlsys.c@{controlsys.c}}
+\doxysubsubsection{\texorpdfstring{controlsys\_Init()}{controlsys\_Init()}}
+{\footnotesize\ttfamily void controlsys\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcontrolsys}{controlsys}} \texorpdfstring{$\ast$}{*}}]{cs }\end{DoxyParamCaption})}
+
+
+
+Initialize the control system. 
+
+controlsys\+\_\+\+Init. \Hypertarget{controlsys_8c_a24e5ae784b0d68e8c9e386ad933c80cd}\label{controlsys_8c_a24e5ae784b0d68e8c9e386ad933c80cd} 
+\index{controlsys.c@{controlsys.c}!controlsys\_Update@{controlsys\_Update}}
+\index{controlsys\_Update@{controlsys\_Update}!controlsys.c@{controlsys.c}}
+\doxysubsubsection{\texorpdfstring{controlsys\_Update()}{controlsys\_Update()}}
+{\footnotesize\ttfamily float controlsys\+\_\+\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcontrolsys}{controlsys}} \texorpdfstring{$\ast$}{*}}]{cs,  }\item[{float}]{set,  }\item[{float}]{mea }\end{DoxyParamCaption})}
+
+
+
+controlsys\+\_\+\+Update. This function controls the oxygen flow rate as needed. 
+
+controlsys\+\_\+\+Update. 

@@ -1,0 +1,57 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+SENSORS/\+READ\+\_\+\+SENSORS\+\_\+\+VALUES/\+Sensor\+\_\+\+Read.c File Reference}
+\hypertarget{_sensor___read_8c}{}\label{_sensor___read_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/READ\_SENSORS\_VALUES/Sensor\_Read.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/READ\_SENSORS\_VALUES/Sensor\_Read.c}}
+
+
+Implementation of All sensor data\textquotesingle{}s reading area.  
+
+
+{\ttfamily \#include "{}Sensor\+\_\+\+Read.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_sensor___read_8c_a48eb79ef4ed49153e341e22d5da8db5e}{Sensor\+\_\+\+Read\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Sensor\+\_\+\+Read\+\_\+\+Task. This task call READ\+\_\+\+SENSOR\+\_\+\+TASK function. \end{DoxyCompactList}\item 
+\Hypertarget{_sensor___read_8c_a51a640d72b177abf1651cbce34def239}\label{_sensor___read_8c_a51a640d72b177abf1651cbce34def239} 
+void {\bfseries READ\+\_\+\+SENSOR\+\_\+\+TASK} ()
+\begin{DoxyCompactList}\small\item\em READ\+\_\+\+SENSOR\+\_\+\+TASK. This Function calls all sensor Reading functions for every 2 milli-\/seconds. \end{DoxyCompactList}\item 
+\Hypertarget{_sensor___read_8c_a2416daed667eeb6333e4e46a52d8f3e8}\label{_sensor___read_8c_a2416daed667eeb6333e4e46a52d8f3e8} 
+void {\bfseries CALIBRATE\+\_\+\+SENSOR\+\_\+\+TASK} ()
+\begin{DoxyCompactList}\small\item\em CALIBRATE\+\_\+\+SENSOR\+\_\+\+TASK. This function is called from sensor offset task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_sensor___read_8c_a551282b0d878c3cb1e73ac12faeb1e21}\label{_sensor___read_8c_a551282b0d878c3cb1e73ac12faeb1e21} 
+uint32\+\_\+t {\bfseries Blower\+\_\+\+Wait\+\_\+\+Time\+\_\+\+Calib} =0
+\begin{DoxyCompactList}\small\item\em never used \end{DoxyCompactList}\item 
+\Hypertarget{_sensor___read_8c_a908a53a3ea49e165bffbe1fef4320e05}\label{_sensor___read_8c_a908a53a3ea49e165bffbe1fef4320e05} 
+uint8\+\_\+t {\bfseries Calibration\+\_\+\+Start} =0
+\begin{DoxyCompactList}\small\item\em never used \end{DoxyCompactList}\item 
+\Hypertarget{_sensor___read_8c_acb0df9f8de7ef164c729d9786766a44a}\label{_sensor___read_8c_acb0df9f8de7ef164c729d9786766a44a} 
+\mbox{\hyperlink{structcontrolsys}{controlsys}} {\bfseries Parker\+\_\+valve\+\_\+tune} = \{ 10,30, 0, 0.\+02, 1500, 3000, 1500, 3000, 0.\+002 \}
+\begin{DoxyCompactList}\small\item\em initialization for pid concept \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of All sensor data\textquotesingle{}s reading area. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Implementation of All sensor data\textquotesingle{}s reading area. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_sensor___read_8c_a48eb79ef4ed49153e341e22d5da8db5e}\label{_sensor___read_8c_a48eb79ef4ed49153e341e22d5da8db5e} 
+\index{Sensor\_Read.c@{Sensor\_Read.c}!Sensor\_Read\_Task@{Sensor\_Read\_Task}}
+\index{Sensor\_Read\_Task@{Sensor\_Read\_Task}!Sensor\_Read.c@{Sensor\_Read.c}}
+\doxysubsubsection{\texorpdfstring{Sensor\_Read\_Task()}{Sensor\_Read\_Task()}}
+{\footnotesize\ttfamily void Sensor\+\_\+\+Read\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Sensor\+\_\+\+Read\+\_\+\+Task. This task call READ\+\_\+\+SENSOR\+\_\+\+TASK function. 
+
+\begin{quote}
+Sensor read handler Task \end{quote}

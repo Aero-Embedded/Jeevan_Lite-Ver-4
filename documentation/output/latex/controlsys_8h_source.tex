@@ -1,0 +1,43 @@
+\doxysection{controlsys.\+h}
+\hypertarget{controlsys_8h_source}{}\label{controlsys_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_INTERFACE/controlsys.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_INTERFACE/controlsys.h}}
+\mbox{\hyperlink{controlsys_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ CONTROLSYS\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ CONTROLSYS\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ Kp;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{float}\ Ki;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ Kd;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{float}\ tau;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{float}\ a1;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{float}\ a2;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ b1;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{float}\ b2;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{float}\ T;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{float}\ area;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ prevdif;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{float}\ rate;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{float}\ prevmea;\ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ out;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \}\ \mbox{\hyperlink{structcontrolsys}{controlsys}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \ \mbox{\hyperlink{controlsys_8h_a5eabca2ba2cfd3897bf7b86863b78944}{controlsys\_Init}}(\mbox{\hyperlink{structcontrolsys}{controlsys}}\ *cs);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{controlsys_8h_a24e5ae784b0d68e8c9e386ad933c80cd}{controlsys\_Update}}(\mbox{\hyperlink{structcontrolsys}{controlsys}}\ *cs,\ \textcolor{keywordtype}{float}\ set,\ \textcolor{keywordtype}{float}\ mea);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \mbox{\hyperlink{structcontrolsys}{controlsys}}\ Parker\_valve\_tune;}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

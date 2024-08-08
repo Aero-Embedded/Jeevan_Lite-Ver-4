@@ -1,0 +1,237 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+VOLUME\+\_\+\+CONTROL/\+Volume\+\_\+control.h File Reference}
+\hypertarget{_volume__control_8h}{}\label{_volume__control_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/VOLUME\_CONTROL/Volume\_control.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/VOLUME\_CONTROL/Volume\_control.h}}
+
+
+Declaration of inspiration time Volume control mode.  
+
+
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structvolume__control___task}{volume\+\_\+control\+\_\+\+Task}}
+\begin{DoxyCompactList}\small\item\em Structure Controls volume and flow achieved status. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_volume__mode__blower__control}{Volume\+\_\+mode\+\_\+blower\+\_\+control}}
+\begin{DoxyCompactList}\small\item\em Structure control Blower Character.. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_volume__control_8h_abfc384a16810500832a26bfe4ded31d0}{volume\+\_\+achieved\+\_\+status}} \{ \mbox{\hyperlink{_volume__control_8h_abfc384a16810500832a26bfe4ded31d0ae591070c98ec7b30b51d074b5c9eab4d}{VOLUME\+\_\+\+NOT\+\_\+\+ACHIEVED}}
+, \mbox{\hyperlink{_volume__control_8h_abfc384a16810500832a26bfe4ded31d0aee4a3cb72730a0e40db571e8a127b948}{VOLUME\+\_\+\+ACHIEVED}}
+ \}
+\begin{DoxyCompactList}\small\item\em enumeration for volume achieved status. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_volume__control_8h_a775a7a9ae5d6680514d88b4205f39127}{flow\+\_\+achieved\+\_\+status}} \{ \mbox{\hyperlink{_volume__control_8h_a775a7a9ae5d6680514d88b4205f39127ae5a00d80ffda4ce87f100eee1df9c6b7}{FLOW\+\_\+\+NOT\+\_\+\+ACHIEVED}}
+, \mbox{\hyperlink{_volume__control_8h_a775a7a9ae5d6680514d88b4205f39127a2369cac2a405f7c306e1b61e9e8f63c2}{FLOW\+\_\+\+ACHIEVED}}
+ \}
+\begin{DoxyCompactList}\small\item\em enumeration for Flow achieved status. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0e}{Task\+\_\+\+Wait\+\_\+time}} \{ \newline
+\mbox{\hyperlink{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0eabb257f3da8440a4735526af50eada2ec}{One\+\_\+\+Millisecond\+\_\+\+Delay}} =1
+, \mbox{\hyperlink{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0ea6a72c0494ed709b39eceabe97e4179f5}{Two\+\_\+\+Millisecond\+\_\+\+Delay}} =2
+, \mbox{\hyperlink{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0eafbe0eac3978a2d448330ee12f23d9367}{Ten\+\_\+\+Millisecond\+\_\+\+Delay}} =10
+, \mbox{\hyperlink{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0eab15e3cb1a07733339d4e55a6e68f5252}{Twenty\+\_\+\+Milli\+Second\+\_\+\+Delay}} =20
+, \newline
+\mbox{\hyperlink{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0ea519cdc4506146e5064cbb106ce92e3d7}{Hundred\+\_\+\+Millisecond\+\_\+\+Delay}} =100
+, \mbox{\hyperlink{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0ea6c903600558613c6ad10cd270dda9985}{Four\+\_\+\+Second\+\_\+\+Delay}} =4000
+ \}
+\begin{DoxyCompactList}\small\item\em enumeration for task delay \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_volume__control_8h_abcfb340a8b757e67ff458923c78a5e3f}{Volume\+\_\+\+Control\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em volume control task \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_volume__control_8h_a7d46f79cda2fb61e9e6fd265d4eac96a}{Volume\+\_\+\+Control}} (uint16\+\_\+t, uint8\+\_\+t, uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Volume\+\_\+\+Control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_volume__control_8h_aa0b464503c4b05535241ba0c42c302ad}{Flow\+\_\+\+Restriction\+\_\+\+Control}} (uint16\+\_\+t, uint8\+\_\+t, uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Flow\+\_\+\+Restriction\+\_\+\+Control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_volume__control_8h_a5afbe72173c1e5b3dc66257650ab5199}{VOLUME\+\_\+\+STOP\+\_\+\+POINT}} (uint16\+\_\+t, uint16\+\_\+t)
+\begin{DoxyCompactList}\small\item\em VOLUME\+\_\+\+STOP\+\_\+\+POINT. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{_volume__control_8h_a89d9c14712fe8036278fba53d79108d7}{TUNE\+\_\+\+INITIAL\+\_\+\+DAC\+\_\+\+VAL}} (uint16\+\_\+t, uint8\+\_\+t, uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em TUNE\+\_\+\+INITIAL\+\_\+\+DAC\+\_\+\+VAL. \end{DoxyCompactList}\item 
+\Hypertarget{_volume__control_8h_a4c4451ef6af7a9d2fb5deb15eebbf796}\label{_volume__control_8h_a4c4451ef6af7a9d2fb5deb15eebbf796} 
+void {\bfseries flow\+\_\+\+Rate\+\_\+control} (uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em flow\+\_\+\+Rate\+\_\+control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_volume__control_8h_aa5b18cd1c21d74ef6d65025b7b2288d6}{Cut\+\_\+\+Off\+\_\+\+Region}} (uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Cut\+\_\+\+Off\+\_\+\+Region. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_volume__control_8h_afb622637895a3126be3a359c70332802}\label{_volume__control_8h_afb622637895a3126be3a359c70332802} 
+float {\bfseries Flow\+\_\+\+Cummulative\+\_\+\+Val}
+\begin{DoxyCompactList}\small\item\em calculate flow average \end{DoxyCompactList}\item 
+\Hypertarget{_volume__control_8h_ac0212f7402cf9fa667a7f2d78b645ad0}\label{_volume__control_8h_ac0212f7402cf9fa667a7f2d78b645ad0} 
+float {\bfseries Flow\+\_\+\+Count}
+\begin{DoxyCompactList}\small\item\em calculate flow average \end{DoxyCompactList}\item 
+\Hypertarget{_volume__control_8h_ac416353145223d8d0a8742b451319620}\label{_volume__control_8h_ac416353145223d8d0a8742b451319620} 
+int16\+\_\+t {\bfseries Avg\+\_\+\+Flow}
+\begin{DoxyCompactList}\small\item\em calculate flow average \end{DoxyCompactList}\item 
+\Hypertarget{_volume__control_8h_a229e4fe0b3620fb2dc4c56ed25e15b23}\label{_volume__control_8h_a229e4fe0b3620fb2dc4c56ed25e15b23} 
+\mbox{\hyperlink{structvolume__control___task}{volume\+\_\+control\+\_\+\+Task}} {\bfseries Volume\+\_\+control\+\_\+\+Task}
+\begin{DoxyCompactList}\small\item\em Structure variable. \end{DoxyCompactList}\item 
+\Hypertarget{_volume__control_8h_aec6c7c234a2283f96f54b8bff9b216ef}\label{_volume__control_8h_aec6c7c234a2283f96f54b8bff9b216ef} 
+\mbox{\hyperlink{struct_volume__mode__blower__control}{Volume\+\_\+mode\+\_\+blower\+\_\+control}} {\bfseries Volume\+\_\+\+Mode\+\_\+\+Blower\+\_\+control}
+\begin{DoxyCompactList}\small\item\em Structure variable. \end{DoxyCompactList}\item 
+\Hypertarget{_volume__control_8h_ab23d47de4dc18ae443085b2e33841254}\label{_volume__control_8h_ab23d47de4dc18ae443085b2e33841254} 
+\mbox{\hyperlink{_volume__control_8h_abfc384a16810500832a26bfe4ded31d0}{volume\+\_\+achieved\+\_\+status}} {\bfseries Volume\+\_\+\+Achieved\+\_\+\+Status}
+\begin{DoxyCompactList}\small\item\em Enumeration variable. \end{DoxyCompactList}\item 
+\Hypertarget{_volume__control_8h_a30b776d763232c97e01ae7f15fc734bc}\label{_volume__control_8h_a30b776d763232c97e01ae7f15fc734bc} 
+\mbox{\hyperlink{_volume__control_8h_a775a7a9ae5d6680514d88b4205f39127}{flow\+\_\+achieved\+\_\+status}} {\bfseries Maximum\+\_\+\+Flow\+\_\+\+Achieved}
+\begin{DoxyCompactList}\small\item\em Enumeration variable. \end{DoxyCompactList}\item 
+\Hypertarget{_volume__control_8h_af93fe50c23788d7aa534babe8d412673}\label{_volume__control_8h_af93fe50c23788d7aa534babe8d412673} 
+x\+Task\+Handle {\bfseries Volume\+\_\+\+Control\+\_\+\+Task\+\_\+\+Handler}
+\begin{DoxyCompactList}\small\item\em Task handler variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of inspiration time Volume control mode. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Declaration inspiration time Volume control mode variables 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_volume__control_8h_a775a7a9ae5d6680514d88b4205f39127}\label{_volume__control_8h_a775a7a9ae5d6680514d88b4205f39127} 
+\index{Volume\_control.h@{Volume\_control.h}!flow\_achieved\_status@{flow\_achieved\_status}}
+\index{flow\_achieved\_status@{flow\_achieved\_status}!Volume\_control.h@{Volume\_control.h}}
+\doxysubsubsection{\texorpdfstring{flow\_achieved\_status}{flow\_achieved\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_volume__control_8h_a775a7a9ae5d6680514d88b4205f39127}{flow\+\_\+achieved\+\_\+status}}}
+
+
+
+enumeration for Flow achieved status. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLOW\_NOT\_ACHIEVED@{FLOW\_NOT\_ACHIEVED}!Volume\_control.h@{Volume\_control.h}}\index{Volume\_control.h@{Volume\_control.h}!FLOW\_NOT\_ACHIEVED@{FLOW\_NOT\_ACHIEVED}}}\Hypertarget{_volume__control_8h_a775a7a9ae5d6680514d88b4205f39127ae5a00d80ffda4ce87f100eee1df9c6b7}\label{_volume__control_8h_a775a7a9ae5d6680514d88b4205f39127ae5a00d80ffda4ce87f100eee1df9c6b7} 
+FLOW\+\_\+\+NOT\+\_\+\+ACHIEVED&when Flow not achieved time. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLOW\_ACHIEVED@{FLOW\_ACHIEVED}!Volume\_control.h@{Volume\_control.h}}\index{Volume\_control.h@{Volume\_control.h}!FLOW\_ACHIEVED@{FLOW\_ACHIEVED}}}\Hypertarget{_volume__control_8h_a775a7a9ae5d6680514d88b4205f39127a2369cac2a405f7c306e1b61e9e8f63c2}\label{_volume__control_8h_a775a7a9ae5d6680514d88b4205f39127a2369cac2a405f7c306e1b61e9e8f63c2} 
+FLOW\+\_\+\+ACHIEVED&when Flow not achieved time. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0e}\label{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0e} 
+\index{Volume\_control.h@{Volume\_control.h}!Task\_Wait\_time@{Task\_Wait\_time}}
+\index{Task\_Wait\_time@{Task\_Wait\_time}!Volume\_control.h@{Volume\_control.h}}
+\doxysubsubsection{\texorpdfstring{Task\_Wait\_time}{Task\_Wait\_time}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0e}{Task\+\_\+\+Wait\+\_\+time}}}
+
+
+
+enumeration for task delay 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{One\_Millisecond\_Delay@{One\_Millisecond\_Delay}!Volume\_control.h@{Volume\_control.h}}\index{Volume\_control.h@{Volume\_control.h}!One\_Millisecond\_Delay@{One\_Millisecond\_Delay}}}\Hypertarget{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0eabb257f3da8440a4735526af50eada2ec}\label{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0eabb257f3da8440a4735526af50eada2ec} 
+One\+\_\+\+Millisecond\+\_\+\+Delay&one milli second delay \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Two\_Millisecond\_Delay@{Two\_Millisecond\_Delay}!Volume\_control.h@{Volume\_control.h}}\index{Volume\_control.h@{Volume\_control.h}!Two\_Millisecond\_Delay@{Two\_Millisecond\_Delay}}}\Hypertarget{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0ea6a72c0494ed709b39eceabe97e4179f5}\label{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0ea6a72c0494ed709b39eceabe97e4179f5} 
+Two\+\_\+\+Millisecond\+\_\+\+Delay&Two milli second delay. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ten\_Millisecond\_Delay@{Ten\_Millisecond\_Delay}!Volume\_control.h@{Volume\_control.h}}\index{Volume\_control.h@{Volume\_control.h}!Ten\_Millisecond\_Delay@{Ten\_Millisecond\_Delay}}}\Hypertarget{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0eafbe0eac3978a2d448330ee12f23d9367}\label{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0eafbe0eac3978a2d448330ee12f23d9367} 
+Ten\+\_\+\+Millisecond\+\_\+\+Delay&Ten milli second delay. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Twenty\_MilliSecond\_Delay@{Twenty\_MilliSecond\_Delay}!Volume\_control.h@{Volume\_control.h}}\index{Volume\_control.h@{Volume\_control.h}!Twenty\_MilliSecond\_Delay@{Twenty\_MilliSecond\_Delay}}}\Hypertarget{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0eab15e3cb1a07733339d4e55a6e68f5252}\label{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0eab15e3cb1a07733339d4e55a6e68f5252} 
+Twenty\+\_\+\+Milli\+Second\+\_\+\+Delay&Twenty milli second delay. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hundred\_Millisecond\_Delay@{Hundred\_Millisecond\_Delay}!Volume\_control.h@{Volume\_control.h}}\index{Volume\_control.h@{Volume\_control.h}!Hundred\_Millisecond\_Delay@{Hundred\_Millisecond\_Delay}}}\Hypertarget{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0ea519cdc4506146e5064cbb106ce92e3d7}\label{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0ea519cdc4506146e5064cbb106ce92e3d7} 
+Hundred\+\_\+\+Millisecond\+\_\+\+Delay&hundred milli second delay \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Four\_Second\_Delay@{Four\_Second\_Delay}!Volume\_control.h@{Volume\_control.h}}\index{Volume\_control.h@{Volume\_control.h}!Four\_Second\_Delay@{Four\_Second\_Delay}}}\Hypertarget{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0ea6c903600558613c6ad10cd270dda9985}\label{_volume__control_8h_aaf2b36aeab3bb806a8b81efa3ce6fb0ea6c903600558613c6ad10cd270dda9985} 
+Four\+\_\+\+Second\+\_\+\+Delay&four thousand milli second delay \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_volume__control_8h_abfc384a16810500832a26bfe4ded31d0}\label{_volume__control_8h_abfc384a16810500832a26bfe4ded31d0} 
+\index{Volume\_control.h@{Volume\_control.h}!volume\_achieved\_status@{volume\_achieved\_status}}
+\index{volume\_achieved\_status@{volume\_achieved\_status}!Volume\_control.h@{Volume\_control.h}}
+\doxysubsubsection{\texorpdfstring{volume\_achieved\_status}{volume\_achieved\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_volume__control_8h_abfc384a16810500832a26bfe4ded31d0}{volume\+\_\+achieved\+\_\+status}}}
+
+
+
+enumeration for volume achieved status. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VOLUME\_NOT\_ACHIEVED@{VOLUME\_NOT\_ACHIEVED}!Volume\_control.h@{Volume\_control.h}}\index{Volume\_control.h@{Volume\_control.h}!VOLUME\_NOT\_ACHIEVED@{VOLUME\_NOT\_ACHIEVED}}}\Hypertarget{_volume__control_8h_abfc384a16810500832a26bfe4ded31d0ae591070c98ec7b30b51d074b5c9eab4d}\label{_volume__control_8h_abfc384a16810500832a26bfe4ded31d0ae591070c98ec7b30b51d074b5c9eab4d} 
+VOLUME\+\_\+\+NOT\+\_\+\+ACHIEVED&when volume not achieved time. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VOLUME\_ACHIEVED@{VOLUME\_ACHIEVED}!Volume\_control.h@{Volume\_control.h}}\index{Volume\_control.h@{Volume\_control.h}!VOLUME\_ACHIEVED@{VOLUME\_ACHIEVED}}}\Hypertarget{_volume__control_8h_abfc384a16810500832a26bfe4ded31d0aee4a3cb72730a0e40db571e8a127b948}\label{_volume__control_8h_abfc384a16810500832a26bfe4ded31d0aee4a3cb72730a0e40db571e8a127b948} 
+VOLUME\+\_\+\+ACHIEVED&when volume achieved time. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_volume__control_8h_aa5b18cd1c21d74ef6d65025b7b2288d6}\label{_volume__control_8h_aa5b18cd1c21d74ef6d65025b7b2288d6} 
+\index{Volume\_control.h@{Volume\_control.h}!Cut\_Off\_Region@{Cut\_Off\_Region}}
+\index{Cut\_Off\_Region@{Cut\_Off\_Region}!Volume\_control.h@{Volume\_control.h}}
+\doxysubsubsection{\texorpdfstring{Cut\_Off\_Region()}{Cut\_Off\_Region()}}
+{\footnotesize\ttfamily void Cut\+\_\+\+Off\+\_\+\+Region (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Set\+\_\+\+Flow\+\_\+\+Rate }\end{DoxyParamCaption})}
+
+
+
+Cut\+\_\+\+Off\+\_\+\+Region. 
+
+Cut\+\_\+\+Off\+\_\+\+Region. \Hypertarget{_volume__control_8h_aa0b464503c4b05535241ba0c42c302ad}\label{_volume__control_8h_aa0b464503c4b05535241ba0c42c302ad} 
+\index{Volume\_control.h@{Volume\_control.h}!Flow\_Restriction\_Control@{Flow\_Restriction\_Control}}
+\index{Flow\_Restriction\_Control@{Flow\_Restriction\_Control}!Volume\_control.h@{Volume\_control.h}}
+\doxysubsubsection{\texorpdfstring{Flow\_Restriction\_Control()}{Flow\_Restriction\_Control()}}
+{\footnotesize\ttfamily void Flow\+\_\+\+Restriction\+\_\+\+Control (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Set\+\_\+\+Volume\+\_\+\+Val,  }\item[{uint8\+\_\+t}]{Set\+\_\+\+Flow\+\_\+\+Rate,  }\item[{uint8\+\_\+t}]{Volume\+\_\+\+Stop\+\_\+\+Value }\end{DoxyParamCaption})}
+
+
+
+Flow\+\_\+\+Restriction\+\_\+\+Control. 
+
+Flow\+\_\+\+Restriction\+\_\+\+Control. \Hypertarget{_volume__control_8h_a89d9c14712fe8036278fba53d79108d7}\label{_volume__control_8h_a89d9c14712fe8036278fba53d79108d7} 
+\index{Volume\_control.h@{Volume\_control.h}!TUNE\_INITIAL\_DAC\_VAL@{TUNE\_INITIAL\_DAC\_VAL}}
+\index{TUNE\_INITIAL\_DAC\_VAL@{TUNE\_INITIAL\_DAC\_VAL}!Volume\_control.h@{Volume\_control.h}}
+\doxysubsubsection{\texorpdfstring{TUNE\_INITIAL\_DAC\_VAL()}{TUNE\_INITIAL\_DAC\_VAL()}}
+{\footnotesize\ttfamily uint16\+\_\+t TUNE\+\_\+\+INITIAL\+\_\+\+DAC\+\_\+\+VAL (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Previous\+\_\+\+Dac\+\_\+\+Val,  }\item[{uint8\+\_\+t}]{Flow\+\_\+\+Rate,  }\item[{uint8\+\_\+t}]{Flow\+\_\+\+Max }\end{DoxyParamCaption})}
+
+
+
+TUNE\+\_\+\+INITIAL\+\_\+\+DAC\+\_\+\+VAL. 
+
+TUNE\+\_\+\+INITIAL\+\_\+\+DAC\+\_\+\+VAL. \Hypertarget{_volume__control_8h_a7d46f79cda2fb61e9e6fd265d4eac96a}\label{_volume__control_8h_a7d46f79cda2fb61e9e6fd265d4eac96a} 
+\index{Volume\_control.h@{Volume\_control.h}!Volume\_Control@{Volume\_Control}}
+\index{Volume\_Control@{Volume\_Control}!Volume\_control.h@{Volume\_control.h}}
+\doxysubsubsection{\texorpdfstring{Volume\_Control()}{Volume\_Control()}}
+{\footnotesize\ttfamily void Volume\+\_\+\+Control (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Set\+\_\+\+Volume\+\_\+\+Val,  }\item[{uint8\+\_\+t}]{Set\+\_\+\+Flow\+\_\+\+Rate,  }\item[{uint8\+\_\+t}]{Volume\+\_\+\+Stop\+\_\+\+Value }\end{DoxyParamCaption})}
+
+
+
+Volume\+\_\+\+Control. 
+
+Volume\+\_\+\+Control. \Hypertarget{_volume__control_8h_abcfb340a8b757e67ff458923c78a5e3f}\label{_volume__control_8h_abcfb340a8b757e67ff458923c78a5e3f} 
+\index{Volume\_control.h@{Volume\_control.h}!Volume\_Control\_Task@{Volume\_Control\_Task}}
+\index{Volume\_Control\_Task@{Volume\_Control\_Task}!Volume\_control.h@{Volume\_control.h}}
+\doxysubsubsection{\texorpdfstring{Volume\_Control\_Task()}{Volume\_Control\_Task()}}
+{\footnotesize\ttfamily void Volume\+\_\+\+Control\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+volume control task 
+
+volume control task \Hypertarget{_volume__control_8h_a5afbe72173c1e5b3dc66257650ab5199}\label{_volume__control_8h_a5afbe72173c1e5b3dc66257650ab5199} 
+\index{Volume\_control.h@{Volume\_control.h}!VOLUME\_STOP\_POINT@{VOLUME\_STOP\_POINT}}
+\index{VOLUME\_STOP\_POINT@{VOLUME\_STOP\_POINT}!Volume\_control.h@{Volume\_control.h}}
+\doxysubsubsection{\texorpdfstring{VOLUME\_STOP\_POINT()}{VOLUME\_STOP\_POINT()}}
+{\footnotesize\ttfamily void VOLUME\+\_\+\+STOP\+\_\+\+POINT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Set\+\_\+\+Volume,  }\item[{uint16\+\_\+t}]{Achieved\+\_\+\+Volume }\end{DoxyParamCaption})}
+
+
+
+VOLUME\+\_\+\+STOP\+\_\+\+POINT. 
+
+VOLUME\+\_\+\+STOP\+\_\+\+POINT. 

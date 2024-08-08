@@ -1,0 +1,95 @@
+\doxysection{Cpap.\+h}
+\hypertarget{_cpap_8h_source}{}\label{_cpap_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/CPAP/Cpap.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/CPAP/Cpap.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Cpap.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Feb\ 27,\ 2023}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ asus}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_AERO\_INC\_CPAP\_CPAP\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_AERO\_INC\_CPAP\_CPAP\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ uint8\_t\ \ \ CPAP\_Val;}
+\DoxyCodeLine{00020\ \ \ \ \ uint16\_t\ \ TRIG\_TYPE;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{float}\ \ TRIG\_LMT;}
+\DoxyCodeLine{00022\ \ \ \ \ uint16\_t\ \ TRIG\_TIME;}
+\DoxyCodeLine{00023\ \ \ \ \ uint16\_t\ \ CALC\_TRIG\_VAL;}
+\DoxyCodeLine{00024\ \ \ \ \ uint16\_t\ \ TOLERANCE\_EWAVE;}
+\DoxyCodeLine{00025\ \ \ \ \ uint16\_t\ \ TRIG\_WINDOW;}
+\DoxyCodeLine{00026\ \ \ \ \ uint16\_t\ \ APNEA\_TIME;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ APNEA\_COUNTER;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ CPAP\_O2\_Val;}
+\DoxyCodeLine{00029\ \ \ \ \ uint8\_t\ \ \ VENT\_TYPE;}
+\DoxyCodeLine{00030\ \}\mbox{\hyperlink{structcpap__mode___parameter}{cpap\_mode\_Parameter}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ uint16\_t\ BLOWER\_DAC\_VAL;}
+\DoxyCodeLine{00038\ \ \ \ \ uint16\_t\ CPAP\_BLOWER\_DAC\_VAL;}
+\DoxyCodeLine{00039\ \ \ \ \ uint16\_t\ LAST\_CPAP\_BLOWER\_DAC\_VAL;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ Blower\_Signal\_Voltage;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ BLOWER\_VOLTAGE\_SIGNAL;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \}\mbox{\hyperlink{struct_cpap__mode__blower__control}{Cpap\_mode\_blower\_control}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ CPAP\_Settle\_Time;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ Blower\_Wait\_Time\_Milli\_Second;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ Trigger\_Check\_Wait\_Time;}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ \_INSPIRATION\_TIME;}
+\DoxyCodeLine{00051\ \}\mbox{\hyperlink{struct_cpap___flags}{Cpap\_Flags}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00055\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ uint32\_t\ CPAP\_Cumulative\_Val;}
+\DoxyCodeLine{00057\ \ \ \ \ uint32\_t\ CPAP\_Event\_Count;}
+\DoxyCodeLine{00058\ \ \ \ \ uint32\_t\ CPAP\_O2\_Event\_Count;}
+\DoxyCodeLine{00059\ \ \ \ \ uint8\_t\ \ CPAP\_AVG\_VAL;}
+\DoxyCodeLine{00060\ \}\mbox{\hyperlink{structcpap__average}{cpap\_average}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ ON,}
+\DoxyCodeLine{00065\ \ \ \ \ OFF}
+\DoxyCodeLine{00066\ \}APNEA\_TYPE;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ xTaskHandle\ CPAP\_Handler;}
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ CPAP\_Task(\textcolor{keywordtype}{void}\ *argument);}
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{double}\ Cpap\_Flow,Cpap\_Flow\_Cummulative\_val;}
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{int}\ Flow\_Sensor\_Count;}
+\DoxyCodeLine{00072\ uint16\_t\ O2\_Flow\_Rate\_Required;}
+\DoxyCodeLine{00073\ uint8\_t\ Adjust\_O2\_DAC\_AS\_PER\_FLOW\_RATE\_Count;}
+\DoxyCodeLine{00074\ uint16\_t\ Check\_O2\_Supply\_Alert\_Count\_in\_Apnea;}
+\DoxyCodeLine{00075\ \textcolor{keyword}{extern}\ uint8\_t\ Oxygen\_Supply\_Failed;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \mbox{\hyperlink{structcpap__mode___parameter}{cpap\_mode\_Parameter}}\ CPAP;}
+\DoxyCodeLine{00081\ \mbox{\hyperlink{struct_cpap___flags}{Cpap\_Flags}}\ CPAP\_Control;}
+\DoxyCodeLine{00082\ \mbox{\hyperlink{struct_cpap__mode__blower__control}{Cpap\_mode\_blower\_control}}\ CPAP\_Mode\_Blower\_control;}
+\DoxyCodeLine{00083\ \mbox{\hyperlink{structcpap__average}{cpap\_average}}\ CPAP\_Average;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keywordtype}{void}\ Check\_O2\_Supply\_Alert\_in\_Apnea(\textcolor{keywordtype}{int},uint32\_t);}
+\DoxyCodeLine{00087\ \textcolor{keywordtype}{void}\ Check\_O2\_Supply\_Alert\_in\_Apnea\_Once(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_AERO\_INC\_CPAP\_CPAP\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

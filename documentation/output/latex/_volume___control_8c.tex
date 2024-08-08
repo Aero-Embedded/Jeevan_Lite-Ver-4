@@ -1,0 +1,137 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+VOLUME\+\_\+\+CONTROL/\+Volume\+\_\+\+Control.c File Reference}
+\hypertarget{_volume___control_8c}{}\label{_volume___control_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/VOLUME\_CONTROL/Volume\_Control.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/VOLUME\_CONTROL/Volume\_Control.c}}
+
+
+implementation of inspiration time Volume control mode.  
+
+
+{\ttfamily \#include "{}Volume\+\_\+control.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_volume___control_8c_abcfb340a8b757e67ff458923c78a5e3f}{Volume\+\_\+\+Control\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Volume\+\_\+\+Control\+\_\+\+Task. This Task control the inspiration and expiration blower dac control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_volume___control_8c_a766c4440acd998de748be67facd086a6}{Volume\+\_\+\+Control}} (uint16\+\_\+t Set\+\_\+\+Volume\+\_\+\+Val, uint8\+\_\+t Set\+\_\+\+Flow\+\_\+\+Rate, uint8\+\_\+t Volume\+\_\+\+Stop\+\_\+\+Value)
+\begin{DoxyCompactList}\small\item\em Volume\+\_\+\+Control\+\_\+\+Task. This function control flow upto to set tidal volume to be achieved. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_volume___control_8c_aa3954312ce17058fe13aa2885dcbb165}{VOLUME\+\_\+\+STOP\+\_\+\+POINT}} (uint16\+\_\+t Set\+\_\+\+Volume, uint16\+\_\+t Achieved\+\_\+\+Volume)
+\begin{DoxyCompactList}\small\item\em VOLUME\+\_\+\+STOP\+\_\+\+POINT. This function control stop the blower before volume reach. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{_volume___control_8c_ad05795c8530b6f794445f4a3e4e93bc8}{TUNE\+\_\+\+INITIAL\+\_\+\+DAC\+\_\+\+VAL}} (uint16\+\_\+t Previous\+\_\+\+Dac\+\_\+\+Val, uint8\+\_\+t Flow\+\_\+\+Rate, uint8\+\_\+t Flow\+\_\+\+Max)
+\begin{DoxyCompactList}\small\item\em TUNE\+\_\+\+INITIAL\+\_\+\+DAC\+\_\+\+VAL. function selects the initial DAC value based on the last breath achieved flow rate. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{_volume___control_8c_aa7659e84aac77a379c4ed253353707ba}{LOW\+\_\+\+Compliance\+\_\+\+DAC\+\_\+value}} (uint8\+\_\+t Flow\+\_\+\+Rate)
+\begin{DoxyCompactList}\small\item\em LOW\+\_\+\+Compliance\+\_\+\+DAC\+\_\+value. This function selects the initial DAC value based on the flow rate when the mode start condition is met. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_volume___control_8c_a195da05382c66fcf7e630093b5f10cd1}{Cut\+\_\+\+Off\+\_\+\+Region}} (uint8\+\_\+t Set\+\_\+\+Flow\+\_\+\+Rate)
+\begin{DoxyCompactList}\small\item\em Cut\+\_\+\+Off\+\_\+\+Region. This function checks if any abnormal flow occurs during the inspiration time and stops the blower if detected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_volume___control_8c_ac280b299a908477dd41a10984e771845}{Flow\+\_\+\+Restriction\+\_\+\+Control}} (uint16\+\_\+t Set\+\_\+\+Volume\+\_\+\+Val, uint8\+\_\+t Set\+\_\+\+Flow\+\_\+\+Rate, uint8\+\_\+t Volume\+\_\+\+Stop\+\_\+\+Value)
+\begin{DoxyCompactList}\small\item\em Flow\+\_\+\+Restriction\+\_\+\+Control. This function didnt have above function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_volume___control_8c_a0723d1f433738982617724d35f1f8754}\label{_volume___control_8c_a0723d1f433738982617724d35f1f8754} 
+uint16\+\_\+t {\bfseries Blower\+\_\+\+Cut\+\_\+\+Off\+\_\+\+Time} =300
+\item 
+\Hypertarget{_volume___control_8c_a5ce1f3ff8a9b1b492269835e400b606c}\label{_volume___control_8c_a5ce1f3ff8a9b1b492269835e400b606c} 
+int8\+\_\+t {\bfseries Cut\+\_\+\+Off\+\_\+flow\+\_\+\+Rate\+\_\+\+Level} =20
+\item 
+\Hypertarget{_volume___control_8c_ae4131747386b785860d27fa52232c9c9}\label{_volume___control_8c_ae4131747386b785860d27fa52232c9c9} 
+int8\+\_\+t {\bfseries Cut\+\_\+\+Off\+\_\+flow\+\_\+\+Rate\+\_\+\+Val}
+\item 
+\Hypertarget{_volume___control_8c_ad37b979b77a1633b29298f190db5b583}\label{_volume___control_8c_ad37b979b77a1633b29298f190db5b583} 
+int8\+\_\+t {\bfseries Cut\+\_\+\+Off\+\_\+flow\+\_\+\+Rate\+\_\+\+Val\+\_\+high}
+\item 
+\Hypertarget{_volume___control_8c_a436984eb9e8b930db86b8e0b354dba8a}\label{_volume___control_8c_a436984eb9e8b930db86b8e0b354dba8a} 
+int8\+\_\+t {\bfseries Cut\+\_\+\+Off\+\_\+flow\+\_\+\+Rate\+\_\+\+Val\+\_\+high\+\_\+limit} = 15
+\item 
+\Hypertarget{_volume___control_8c_a94fb867dbfe51d24851f711850723c2a}\label{_volume___control_8c_a94fb867dbfe51d24851f711850723c2a} 
+uint16\+\_\+t {\bfseries Time\+\_\+\+Limit} =400
+\item 
+\Hypertarget{_volume___control_8c_a919234c6f2aef9a1a2be1f88e99a0518}\label{_volume___control_8c_a919234c6f2aef9a1a2be1f88e99a0518} 
+uint8\+\_\+t {\bfseries Stop\+\_\+\+Value} = 8
+\item 
+\Hypertarget{_volume___control_8c_ab984ed27f573b851b56be2e703c18ffb}\label{_volume___control_8c_ab984ed27f573b851b56be2e703c18ffb} 
+uint16\+\_\+t {\bfseries Flow\+\_\+\+Detect\+\_\+\+Time} =800
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+implementation of inspiration time Volume control mode. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the implementation inspiration time Volume control mode. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_volume___control_8c_a195da05382c66fcf7e630093b5f10cd1}\label{_volume___control_8c_a195da05382c66fcf7e630093b5f10cd1} 
+\index{Volume\_Control.c@{Volume\_Control.c}!Cut\_Off\_Region@{Cut\_Off\_Region}}
+\index{Cut\_Off\_Region@{Cut\_Off\_Region}!Volume\_Control.c@{Volume\_Control.c}}
+\doxysubsubsection{\texorpdfstring{Cut\_Off\_Region()}{Cut\_Off\_Region()}}
+{\footnotesize\ttfamily void Cut\+\_\+\+Off\+\_\+\+Region (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Set\+\_\+\+Flow\+\_\+\+Rate }\end{DoxyParamCaption})}
+
+
+
+Cut\+\_\+\+Off\+\_\+\+Region. This function checks if any abnormal flow occurs during the inspiration time and stops the blower if detected. 
+
+Cut\+\_\+\+Off\+\_\+\+Region. \Hypertarget{_volume___control_8c_ac280b299a908477dd41a10984e771845}\label{_volume___control_8c_ac280b299a908477dd41a10984e771845} 
+\index{Volume\_Control.c@{Volume\_Control.c}!Flow\_Restriction\_Control@{Flow\_Restriction\_Control}}
+\index{Flow\_Restriction\_Control@{Flow\_Restriction\_Control}!Volume\_Control.c@{Volume\_Control.c}}
+\doxysubsubsection{\texorpdfstring{Flow\_Restriction\_Control()}{Flow\_Restriction\_Control()}}
+{\footnotesize\ttfamily void Flow\+\_\+\+Restriction\+\_\+\+Control (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Set\+\_\+\+Volume\+\_\+\+Val,  }\item[{uint8\+\_\+t}]{Set\+\_\+\+Flow\+\_\+\+Rate,  }\item[{uint8\+\_\+t}]{Volume\+\_\+\+Stop\+\_\+\+Value }\end{DoxyParamCaption})}
+
+
+
+Flow\+\_\+\+Restriction\+\_\+\+Control. This function didnt have above function. 
+
+Flow\+\_\+\+Restriction\+\_\+\+Control. \Hypertarget{_volume___control_8c_aa7659e84aac77a379c4ed253353707ba}\label{_volume___control_8c_aa7659e84aac77a379c4ed253353707ba} 
+\index{Volume\_Control.c@{Volume\_Control.c}!LOW\_Compliance\_DAC\_value@{LOW\_Compliance\_DAC\_value}}
+\index{LOW\_Compliance\_DAC\_value@{LOW\_Compliance\_DAC\_value}!Volume\_Control.c@{Volume\_Control.c}}
+\doxysubsubsection{\texorpdfstring{LOW\_Compliance\_DAC\_value()}{LOW\_Compliance\_DAC\_value()}}
+{\footnotesize\ttfamily uint16\+\_\+t LOW\+\_\+\+Compliance\+\_\+\+DAC\+\_\+value (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Flow\+\_\+\+Rate }\end{DoxyParamCaption})}
+
+
+
+LOW\+\_\+\+Compliance\+\_\+\+DAC\+\_\+value. This function selects the initial DAC value based on the flow rate when the mode start condition is met. 
+
+LOW\+\_\+\+Compliance\+\_\+\+DAC\+\_\+value. \Hypertarget{_volume___control_8c_ad05795c8530b6f794445f4a3e4e93bc8}\label{_volume___control_8c_ad05795c8530b6f794445f4a3e4e93bc8} 
+\index{Volume\_Control.c@{Volume\_Control.c}!TUNE\_INITIAL\_DAC\_VAL@{TUNE\_INITIAL\_DAC\_VAL}}
+\index{TUNE\_INITIAL\_DAC\_VAL@{TUNE\_INITIAL\_DAC\_VAL}!Volume\_Control.c@{Volume\_Control.c}}
+\doxysubsubsection{\texorpdfstring{TUNE\_INITIAL\_DAC\_VAL()}{TUNE\_INITIAL\_DAC\_VAL()}}
+{\footnotesize\ttfamily uint16\+\_\+t TUNE\+\_\+\+INITIAL\+\_\+\+DAC\+\_\+\+VAL (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Previous\+\_\+\+Dac\+\_\+\+Val,  }\item[{uint8\+\_\+t}]{Flow\+\_\+\+Rate,  }\item[{uint8\+\_\+t}]{Flow\+\_\+\+Max }\end{DoxyParamCaption})}
+
+
+
+TUNE\+\_\+\+INITIAL\+\_\+\+DAC\+\_\+\+VAL. function selects the initial DAC value based on the last breath achieved flow rate. 
+
+TUNE\+\_\+\+INITIAL\+\_\+\+DAC\+\_\+\+VAL. \Hypertarget{_volume___control_8c_a766c4440acd998de748be67facd086a6}\label{_volume___control_8c_a766c4440acd998de748be67facd086a6} 
+\index{Volume\_Control.c@{Volume\_Control.c}!Volume\_Control@{Volume\_Control}}
+\index{Volume\_Control@{Volume\_Control}!Volume\_Control.c@{Volume\_Control.c}}
+\doxysubsubsection{\texorpdfstring{Volume\_Control()}{Volume\_Control()}}
+{\footnotesize\ttfamily void Volume\+\_\+\+Control (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Set\+\_\+\+Volume\+\_\+\+Val,  }\item[{uint8\+\_\+t}]{Set\+\_\+\+Flow\+\_\+\+Rate,  }\item[{uint8\+\_\+t}]{Volume\+\_\+\+Stop\+\_\+\+Value }\end{DoxyParamCaption})}
+
+
+
+Volume\+\_\+\+Control\+\_\+\+Task. This function control flow upto to set tidal volume to be achieved. 
+
+Volume\+\_\+\+Control. \Hypertarget{_volume___control_8c_abcfb340a8b757e67ff458923c78a5e3f}\label{_volume___control_8c_abcfb340a8b757e67ff458923c78a5e3f} 
+\index{Volume\_Control.c@{Volume\_Control.c}!Volume\_Control\_Task@{Volume\_Control\_Task}}
+\index{Volume\_Control\_Task@{Volume\_Control\_Task}!Volume\_Control.c@{Volume\_Control.c}}
+\doxysubsubsection{\texorpdfstring{Volume\_Control\_Task()}{Volume\_Control\_Task()}}
+{\footnotesize\ttfamily void Volume\+\_\+\+Control\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Volume\+\_\+\+Control\+\_\+\+Task. This Task control the inspiration and expiration blower dac control. 
+
+volume control task \Hypertarget{_volume___control_8c_aa3954312ce17058fe13aa2885dcbb165}\label{_volume___control_8c_aa3954312ce17058fe13aa2885dcbb165} 
+\index{Volume\_Control.c@{Volume\_Control.c}!VOLUME\_STOP\_POINT@{VOLUME\_STOP\_POINT}}
+\index{VOLUME\_STOP\_POINT@{VOLUME\_STOP\_POINT}!Volume\_Control.c@{Volume\_Control.c}}
+\doxysubsubsection{\texorpdfstring{VOLUME\_STOP\_POINT()}{VOLUME\_STOP\_POINT()}}
+{\footnotesize\ttfamily void VOLUME\+\_\+\+STOP\+\_\+\+POINT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Set\+\_\+\+Volume,  }\item[{uint16\+\_\+t}]{Achieved\+\_\+\+Volume }\end{DoxyParamCaption})}
+
+
+
+VOLUME\+\_\+\+STOP\+\_\+\+POINT. This function control stop the blower before volume reach. 
+
+VOLUME\+\_\+\+STOP\+\_\+\+POINT. 

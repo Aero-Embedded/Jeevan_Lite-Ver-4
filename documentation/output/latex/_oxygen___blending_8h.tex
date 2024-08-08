@@ -1,0 +1,352 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+OXYGEN\+\_\+\+BLENDING/\+Oxygen\+\_\+\+Blending.h File Reference}
+\hypertarget{_oxygen___blending_8h}{}\label{_oxygen___blending_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/OXYGEN\_BLENDING/Oxygen\_Blending.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/OXYGEN\_BLENDING/Oxygen\_Blending.h}}
+
+
+Declaration of Oxygen\+\_\+\+Blending Concept.  
+
+
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_oxygen__parameter}{Oxygen\+\_\+parameter}}
+\begin{DoxyCompactList}\small\item\em Structure Representing O2 DAC values for modes. it includes OXYGEN sensor offset values,maximum values and also Oxygen dac values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_oxygen___blending_8h_a158a2ef55f97775f175a420f2718864f}\label{_oxygen___blending_8h_a158a2ef55f97775f175a420f2718864f} 
+\#define {\bfseries O2\+\_\+\+Sensor\+\_\+\+Pin\+\_\+\+Voltage}~Adc.\+Adc\+Data\mbox{[}1\mbox{]}
+\begin{DoxyCompactList}\small\item\em ADC pin for O2 manifold flow. \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8h_abb9ca27622cbe0e5c01eb887af1468ca}\label{_oxygen___blending_8h_abb9ca27622cbe0e5c01eb887af1468ca} 
+\#define {\bfseries Parkar\+\_\+valve\+\_\+\+Signal}(Y)~DAC1-\/$>$DHR12\+R2=Y;
+\begin{DoxyCompactList}\small\item\em DAC2 Proportional Valve Control. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_oxygen___blending_8h_a09bb60c691eb30732590c73fa6236dfb}{fio2\+\_\+blending\+\_\+method}} \{ \mbox{\hyperlink{_oxygen___blending_8h_a09bb60c691eb30732590c73fa6236dfba06bd5115d502d6b97f438b012f14eb2a}{PRESSURE\+\_\+\+CONTROLLED}}
+, \mbox{\hyperlink{_oxygen___blending_8h_a09bb60c691eb30732590c73fa6236dfba8b1581e8a920ce1e9da02dd4560191a7}{VOLUME\+\_\+\+CONTROLLED}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for fio2\+\_\+blending\+\_\+methods. To Check weather the mode is pressure controlled or volume controlled. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_oxygen___blending_8h_a259bcc54ddcb279b7361283d91bf69ea}{oxygen\+\_\+blending\+\_\+status}} \{ \mbox{\hyperlink{_oxygen___blending_8h_a259bcc54ddcb279b7361283d91bf69eaa8efd38ee3688214d4bc16086bbd31df9}{OXYGEN\+\_\+\+ACHIEVED}}
+, \mbox{\hyperlink{_oxygen___blending_8h_a259bcc54ddcb279b7361283d91bf69eaa5ea790315c3bcd291fe5aee8dc2f4b03}{OXYGEN\+\_\+\+NOT\+\_\+\+ACHIEVED}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for oxygen\+\_\+blending\+\_\+status. To Check weather the Oxygen value Reached or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_oxygen___blending_8h_a5573d047099302f775962d5b083a1aa5}{Oxygen\+\_\+\+Blending\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Oxygen\+\_\+\+Blending\+\_\+\+Task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_oxygen___blending_8h_a1c8aca9f0d3ecbdada49951cb2e065a0}{Oxygen\+\_\+\+Blending}} (uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Oxygen\+\_\+\+Blending. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_oxygen___blending_8h_a6fb258e76714e0f3f7bb1a9ced328200}{Calculate\+\_\+\+O2}} (uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Calculate\+\_\+\+O2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_oxygen___blending_8h_a706d90ff4f2f1880e4720c56d3fbf4ba}{O2\+\_\+\+Initial\+\_\+\+Parameter}} (uint8\+\_\+t, uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Calculate\+\_\+\+O2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_oxygen___blending_8h_a3fdfe6a9437a19db0326320ec5aec159}{Low\+\_\+\+Oxygen\+\_\+\+Achieved}} (uint8\+\_\+t, uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Calculate\+\_\+\+O2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_oxygen___blending_8h_a0a49895c1607a9a6f5fb7cb1253e94c1}{High\+\_\+\+Oxygen\+\_\+\+Achieved}} (uint8\+\_\+t, uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em High\+\_\+\+Oxygen\+\_\+\+Achieved. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_oxygen___blending_8h_a8bb1c34ff4465a156eb71c8a99875caf}{O2\+\_\+\+DAC\+\_\+\+Control}} (uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em control O2 DAC value. \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8h_a8c86972c64d3ecaef8c5fe7d21f6147f}\label{_oxygen___blending_8h_a8c86972c64d3ecaef8c5fe7d21f6147f} 
+void {\bfseries Get\+\_\+\+Oxygen\+\_\+\+Value} (uint8\+\_\+t)
+\item 
+\Hypertarget{_oxygen___blending_8h_aa43ef19c61cb431824f7639a0043b7c9}\label{_oxygen___blending_8h_aa43ef19c61cb431824f7639a0043b7c9} 
+uint16\+\_\+t {\bfseries Set\+\_\+\+Initial\+\_\+\+O2\+\_\+\+DAC\+\_\+\+VAL\+\_\+\+Pressure\+\_\+\+Modes} (uint8\+\_\+t)
+\item 
+\Hypertarget{_oxygen___blending_8h_afac3d793bba593818ed2df80b3efae4c}\label{_oxygen___blending_8h_afac3d793bba593818ed2df80b3efae4c} 
+uint16\+\_\+t {\bfseries Set\+\_\+\+Initial\+\_\+\+O2\+\_\+\+DAC\+\_\+\+VAL\+\_\+\+Volume\+\_\+\+Modes} (uint8\+\_\+t)
+\item 
+\Hypertarget{_oxygen___blending_8h_abd6760e4ea7211a97ff1704689467532}\label{_oxygen___blending_8h_abd6760e4ea7211a97ff1704689467532} 
+uint16\+\_\+t {\bfseries Set\+\_\+\+Initial\+\_\+\+CPAP\+\_\+\+O2\+\_\+\+DAC\+\_\+\+VAL\+\_\+\+Pressure\+\_\+\+Modes} (uint8\+\_\+t)
+\item 
+\Hypertarget{_oxygen___blending_8h_a631bd39fa9707cf6ea25b3a0c87e6d0a}\label{_oxygen___blending_8h_a631bd39fa9707cf6ea25b3a0c87e6d0a} 
+void {\bfseries Servo\+\_\+\+Position\+\_\+\+Volume\+\_\+\+Controlled\+\_\+\+Mode} (uint8\+\_\+t)
+\item 
+\Hypertarget{_oxygen___blending_8h_a61d6489b4dbf9efb552f1182d439cc8c}\label{_oxygen___blending_8h_a61d6489b4dbf9efb552f1182d439cc8c} 
+void {\bfseries Servo\+\_\+\+Position\+\_\+\+Pressure\+\_\+\+Controlled\+\_\+\+Mode} (uint8\+\_\+t)
+\item 
+\Hypertarget{_oxygen___blending_8h_aa1172ccae33c3d2d331759be25b053fa}\label{_oxygen___blending_8h_aa1172ccae33c3d2d331759be25b053fa} 
+void {\bfseries CPAP\+\_\+\+Servo\+\_\+\+Position\+\_\+\+Volume\+\_\+\+Controlled\+\_\+\+Mode} (uint8\+\_\+t)
+\item 
+\Hypertarget{_oxygen___blending_8h_a8403203ed67f94969d0d4fd3eef96f2e}\label{_oxygen___blending_8h_a8403203ed67f94969d0d4fd3eef96f2e} 
+void {\bfseries Servo\+\_\+\+Info} (uint8\+\_\+t)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_oxygen___blending_8h_a095a4184368c8c1073197f95e18394fb}\label{_oxygen___blending_8h_a095a4184368c8c1073197f95e18394fb} 
+uint8\+\_\+t {\bfseries Check\+\_\+\+Oxygen\+\_\+\+Count}
+\begin{DoxyCompactList}\small\item\em Count the oxygen Delivered breath for flow based approach. \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8h_ae7acd7adb9f8ff65d9bfab46955b5514}\label{_oxygen___blending_8h_ae7acd7adb9f8ff65d9bfab46955b5514} 
+uint8\+\_\+t {\bfseries O2\+\_\+\+Check}
+\begin{DoxyCompactList}\small\item\em wait for 5 breath to check the alert \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8h_a5c5d719fe68798a942e2de8af3f71060}\label{_oxygen___blending_8h_a5c5d719fe68798a942e2de8af3f71060} 
+uint16\+\_\+t {\bfseries Temp\+\_\+\+Dac}
+\item 
+\Hypertarget{_oxygen___blending_8h_aaf39390004b91306c2d0c241d6d3a00a}\label{_oxygen___blending_8h_aaf39390004b91306c2d0c241d6d3a00a} 
+uint16\+\_\+t {\bfseries inc\+\_\+dac}
+\begin{DoxyCompactList}\small\item\em used to start O2 value from minimum value \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8h_a72cbdeab2da46ea8da5e54844c1ad4b9}\label{_oxygen___blending_8h_a72cbdeab2da46ea8da5e54844c1ad4b9} 
+int8\+\_\+t {\bfseries O2\+\_\+\+Flow\+\_\+\+Rate}
+\begin{DoxyCompactList}\small\item\em store O2 flow rate value. \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8h_a25f3f73edd8e5abedc8ec4623f5db2de}\label{_oxygen___blending_8h_a25f3f73edd8e5abedc8ec4623f5db2de} 
+\mbox{\hyperlink{struct_oxygen__parameter}{Oxygen\+\_\+parameter}} {\bfseries Oxygen\+\_\+\+Parameter}
+\begin{DoxyCompactList}\small\item\em Oxygen Parameter for mode control. \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8h_aa7230e3b78a56c9003ebb705da4d158c}\label{_oxygen___blending_8h_aa7230e3b78a56c9003ebb705da4d158c} 
+\mbox{\hyperlink{_oxygen___blending_8h_a09bb60c691eb30732590c73fa6236dfb}{fio2\+\_\+blending\+\_\+method}} {\bfseries Fio2\+\_\+\+Blending\+\_\+\+Method}
+\begin{DoxyCompactList}\small\item\em Fio2\+\_\+\+Blending\+\_\+\+Method. \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8h_a7c7ed46d6b299bdee5cab10b868f1b0a}\label{_oxygen___blending_8h_a7c7ed46d6b299bdee5cab10b868f1b0a} 
+\mbox{\hyperlink{_oxygen___blending_8h_a259bcc54ddcb279b7361283d91bf69ea}{oxygen\+\_\+blending\+\_\+status}} {\bfseries Oxygen\+\_\+\+Blending\+\_\+\+Status}
+\begin{DoxyCompactList}\small\item\em Oxygen\+\_\+\+Blending\+\_\+\+Status. \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8h_af630fe6cef5b8e2500d93f55e7385513}\label{_oxygen___blending_8h_af630fe6cef5b8e2500d93f55e7385513} 
+uint8\+\_\+t {\bfseries O2\+\_\+\+DAC\+\_\+\+AS\+\_\+\+PER\+\_\+\+FLOW\+\_\+\+RATE\+\_\+\+Count}
+\begin{DoxyCompactList}\small\item\em O2\+\_\+\+DAC\+\_\+\+AS\+\_\+\+PER\+\_\+\+FLOW\+\_\+\+RATE\+\_\+\+Count. \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8h_a946107b831047d47108c99d174df82a0}\label{_oxygen___blending_8h_a946107b831047d47108c99d174df82a0} 
+uint8\+\_\+t {\bfseries O2\+\_\+\+Low\+\_\+\+Count}
+\begin{DoxyCompactList}\small\item\em Check O2\+\_\+\+Low\+\_\+\+Count. \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8h_a5fe6ec90ebb162b8355e41527562f3a9}\label{_oxygen___blending_8h_a5fe6ec90ebb162b8355e41527562f3a9} 
+uint8\+\_\+t {\bfseries O2\+\_\+\+High\+\_\+\+Count}
+\begin{DoxyCompactList}\small\item\em Check O2\+\_\+\+High\+\_\+\+Count. \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8h_ad23e75ba0fb408ff09c3ae6f31236724}\label{_oxygen___blending_8h_ad23e75ba0fb408ff09c3ae6f31236724} 
+float {\bfseries O2\+\_\+\+Sensor\+\_\+\+Voltage}
+\begin{DoxyCompactList}\small\item\em Check O2 Sensor Voltage. \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8h_a7684311db8514d65dfcead6ab7a5448e}\label{_oxygen___blending_8h_a7684311db8514d65dfcead6ab7a5448e} 
+uint8\+\_\+t {\bfseries Maximum\+\_\+\+Limit}
+\item 
+\Hypertarget{_oxygen___blending_8h_a6c1be890dc11ec17ebf59b6cb7116767}\label{_oxygen___blending_8h_a6c1be890dc11ec17ebf59b6cb7116767} 
+uint16\+\_\+t {\bfseries Last\+\_\+\+O2\+\_\+\+Dac\+\_\+\+Val}
+\begin{DoxyCompactList}\small\item\em Store Last O2 Dac value. \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8h_ad45b0f6b569079f725d4bcd5937a511f}\label{_oxygen___blending_8h_ad45b0f6b569079f725d4bcd5937a511f} 
+float {\bfseries Achieved\+\_\+\+Oxygen\+\_\+float}
+\begin{DoxyCompactList}\small\item\em Achieved Oxygen value as float. \end{DoxyCompactList}\item 
+\Hypertarget{_oxygen___blending_8h_a71310ccc9fc310086a53e80c546dc693}\label{_oxygen___blending_8h_a71310ccc9fc310086a53e80c546dc693} 
+x\+Task\+Handle {\bfseries Oxygen\+\_\+\+Blending\+\_\+\+Handler}
+\begin{DoxyCompactList}\small\item\em Oxygen Blending task Handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of Oxygen\+\_\+\+Blending Concept. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Declaration of Oxygen\+\_\+\+Blending Concept within a mode, including the initialization 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_oxygen___blending_8h_a09bb60c691eb30732590c73fa6236dfb}\label{_oxygen___blending_8h_a09bb60c691eb30732590c73fa6236dfb} 
+\index{Oxygen\_Blending.h@{Oxygen\_Blending.h}!fio2\_blending\_method@{fio2\_blending\_method}}
+\index{fio2\_blending\_method@{fio2\_blending\_method}!Oxygen\_Blending.h@{Oxygen\_Blending.h}}
+\doxysubsubsection{\texorpdfstring{fio2\_blending\_method}{fio2\_blending\_method}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_oxygen___blending_8h_a09bb60c691eb30732590c73fa6236dfb}{fio2\+\_\+blending\+\_\+method}}}
+
+
+
+Enumeration for fio2\+\_\+blending\+\_\+methods. To Check weather the mode is pressure controlled or volume controlled. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PRESSURE\_CONTROLLED@{PRESSURE\_CONTROLLED}!Oxygen\_Blending.h@{Oxygen\_Blending.h}}\index{Oxygen\_Blending.h@{Oxygen\_Blending.h}!PRESSURE\_CONTROLLED@{PRESSURE\_CONTROLLED}}}\Hypertarget{_oxygen___blending_8h_a09bb60c691eb30732590c73fa6236dfba06bd5115d502d6b97f438b012f14eb2a}\label{_oxygen___blending_8h_a09bb60c691eb30732590c73fa6236dfba06bd5115d502d6b97f438b012f14eb2a} 
+PRESSURE\+\_\+\+CONTROLLED&used for Pccmv,pcsimv,backup pccmv. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VOLUME\_CONTROLLED@{VOLUME\_CONTROLLED}!Oxygen\_Blending.h@{Oxygen\_Blending.h}}\index{Oxygen\_Blending.h@{Oxygen\_Blending.h}!VOLUME\_CONTROLLED@{VOLUME\_CONTROLLED}}}\Hypertarget{_oxygen___blending_8h_a09bb60c691eb30732590c73fa6236dfba8b1581e8a920ce1e9da02dd4560191a7}\label{_oxygen___blending_8h_a09bb60c691eb30732590c73fa6236dfba8b1581e8a920ce1e9da02dd4560191a7} 
+VOLUME\+\_\+\+CONTROLLED&used for Vccmv,Vcsimv \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_oxygen___blending_8h_a259bcc54ddcb279b7361283d91bf69ea}\label{_oxygen___blending_8h_a259bcc54ddcb279b7361283d91bf69ea} 
+\index{Oxygen\_Blending.h@{Oxygen\_Blending.h}!oxygen\_blending\_status@{oxygen\_blending\_status}}
+\index{oxygen\_blending\_status@{oxygen\_blending\_status}!Oxygen\_Blending.h@{Oxygen\_Blending.h}}
+\doxysubsubsection{\texorpdfstring{oxygen\_blending\_status}{oxygen\_blending\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_oxygen___blending_8h_a259bcc54ddcb279b7361283d91bf69ea}{oxygen\+\_\+blending\+\_\+status}}}
+
+
+
+Enumeration for oxygen\+\_\+blending\+\_\+status. To Check weather the Oxygen value Reached or not. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OXYGEN\_ACHIEVED@{OXYGEN\_ACHIEVED}!Oxygen\_Blending.h@{Oxygen\_Blending.h}}\index{Oxygen\_Blending.h@{Oxygen\_Blending.h}!OXYGEN\_ACHIEVED@{OXYGEN\_ACHIEVED}}}\Hypertarget{_oxygen___blending_8h_a259bcc54ddcb279b7361283d91bf69eaa8efd38ee3688214d4bc16086bbd31df9}\label{_oxygen___blending_8h_a259bcc54ddcb279b7361283d91bf69eaa8efd38ee3688214d4bc16086bbd31df9} 
+OXYGEN\+\_\+\+ACHIEVED&when oxygen Achieved \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OXYGEN\_NOT\_ACHIEVED@{OXYGEN\_NOT\_ACHIEVED}!Oxygen\_Blending.h@{Oxygen\_Blending.h}}\index{Oxygen\_Blending.h@{Oxygen\_Blending.h}!OXYGEN\_NOT\_ACHIEVED@{OXYGEN\_NOT\_ACHIEVED}}}\Hypertarget{_oxygen___blending_8h_a259bcc54ddcb279b7361283d91bf69eaa5ea790315c3bcd291fe5aee8dc2f4b03}\label{_oxygen___blending_8h_a259bcc54ddcb279b7361283d91bf69eaa5ea790315c3bcd291fe5aee8dc2f4b03} 
+OXYGEN\+\_\+\+NOT\+\_\+\+ACHIEVED&when oxygen not Achieved \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_oxygen___blending_8h_a6fb258e76714e0f3f7bb1a9ced328200}\label{_oxygen___blending_8h_a6fb258e76714e0f3f7bb1a9ced328200} 
+\index{Oxygen\_Blending.h@{Oxygen\_Blending.h}!Calculate\_O2@{Calculate\_O2}}
+\index{Calculate\_O2@{Calculate\_O2}!Oxygen\_Blending.h@{Oxygen\_Blending.h}}
+\doxysubsubsection{\texorpdfstring{Calculate\_O2()}{Calculate\_O2()}}
+{\footnotesize\ttfamily void Calculate\+\_\+\+O2 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FIO2\+\_\+\+Val }\end{DoxyParamCaption})}
+
+
+
+Calculate\+\_\+\+O2. 
+
+\begin{DoxyPrecond}{Precondition}
+None. 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+None. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+None.
+\end{DoxyReturn}
+Calculate\+\_\+\+O2.
+
+\begin{DoxyPrecond}{Precondition}
+None. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+None. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\Hypertarget{_oxygen___blending_8h_a0a49895c1607a9a6f5fb7cb1253e94c1}\label{_oxygen___blending_8h_a0a49895c1607a9a6f5fb7cb1253e94c1} 
+\index{Oxygen\_Blending.h@{Oxygen\_Blending.h}!High\_Oxygen\_Achieved@{High\_Oxygen\_Achieved}}
+\index{High\_Oxygen\_Achieved@{High\_Oxygen\_Achieved}!Oxygen\_Blending.h@{Oxygen\_Blending.h}}
+\doxysubsubsection{\texorpdfstring{High\_Oxygen\_Achieved()}{High\_Oxygen\_Achieved()}}
+{\footnotesize\ttfamily void High\+\_\+\+Oxygen\+\_\+\+Achieved (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FIO2\+\_\+\+Val,  }\item[{uint8\+\_\+t}]{Achieved\+\_\+\+Oxygen }\end{DoxyParamCaption})}
+
+
+
+High\+\_\+\+Oxygen\+\_\+\+Achieved. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+{\em Achieved\+\_\+\+Oxygen} & Achieved Oxygen from previous breathe.\\
+\hline
+\end{DoxyParams}
+High\+\_\+\+Oxygen\+\_\+\+Achieved.
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+{\em Achieved\+\_\+\+Oxygen} & Achieved Oxygen from previous breathe. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_oxygen___blending_8h_a3fdfe6a9437a19db0326320ec5aec159}\label{_oxygen___blending_8h_a3fdfe6a9437a19db0326320ec5aec159} 
+\index{Oxygen\_Blending.h@{Oxygen\_Blending.h}!Low\_Oxygen\_Achieved@{Low\_Oxygen\_Achieved}}
+\index{Low\_Oxygen\_Achieved@{Low\_Oxygen\_Achieved}!Oxygen\_Blending.h@{Oxygen\_Blending.h}}
+\doxysubsubsection{\texorpdfstring{Low\_Oxygen\_Achieved()}{Low\_Oxygen\_Achieved()}}
+{\footnotesize\ttfamily void Low\+\_\+\+Oxygen\+\_\+\+Achieved (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FIO2\+\_\+\+Val,  }\item[{uint8\+\_\+t}]{Achieved\+\_\+\+Oxygen }\end{DoxyParamCaption})}
+
+
+
+Calculate\+\_\+\+O2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+{\em Achieved\+\_\+\+Oxygen} & Achieved Oxygen from previous breathe.\\
+\hline
+\end{DoxyParams}
+Calculate\+\_\+\+O2.
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+{\em Achieved\+\_\+\+Oxygen} & Achieved Oxygen from previous breathe. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_oxygen___blending_8h_a8bb1c34ff4465a156eb71c8a99875caf}\label{_oxygen___blending_8h_a8bb1c34ff4465a156eb71c8a99875caf} 
+\index{Oxygen\_Blending.h@{Oxygen\_Blending.h}!O2\_DAC\_Control@{O2\_DAC\_Control}}
+\index{O2\_DAC\_Control@{O2\_DAC\_Control}!Oxygen\_Blending.h@{Oxygen\_Blending.h}}
+\doxysubsubsection{\texorpdfstring{O2\_DAC\_Control()}{O2\_DAC\_Control()}}
+{\footnotesize\ttfamily void O2\+\_\+\+DAC\+\_\+\+Control (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FIO2\+\_\+\+Val }\end{DoxyParamCaption})}
+
+
+
+control O2 DAC value. 
+
+control O2 DAC value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_oxygen___blending_8h_a706d90ff4f2f1880e4720c56d3fbf4ba}\label{_oxygen___blending_8h_a706d90ff4f2f1880e4720c56d3fbf4ba} 
+\index{Oxygen\_Blending.h@{Oxygen\_Blending.h}!O2\_Initial\_Parameter@{O2\_Initial\_Parameter}}
+\index{O2\_Initial\_Parameter@{O2\_Initial\_Parameter}!Oxygen\_Blending.h@{Oxygen\_Blending.h}}
+\doxysubsubsection{\texorpdfstring{O2\_Initial\_Parameter()}{O2\_Initial\_Parameter()}}
+{\footnotesize\ttfamily void O2\+\_\+\+Initial\+\_\+\+Parameter (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FIO2\+\_\+\+Val,  }\item[{uint8\+\_\+t}]{Flowrate }\end{DoxyParamCaption})}
+
+
+
+Calculate\+\_\+\+O2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+{\em Flowrate} & Set Flow rate to achieve a O2.\\
+\hline
+\end{DoxyParams}
+Calculate\+\_\+\+O2.
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+{\em Flowrate} & Set Flow rate to achieve a O2. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_oxygen___blending_8h_a1c8aca9f0d3ecbdada49951cb2e065a0}\label{_oxygen___blending_8h_a1c8aca9f0d3ecbdada49951cb2e065a0} 
+\index{Oxygen\_Blending.h@{Oxygen\_Blending.h}!Oxygen\_Blending@{Oxygen\_Blending}}
+\index{Oxygen\_Blending@{Oxygen\_Blending}!Oxygen\_Blending.h@{Oxygen\_Blending.h}}
+\doxysubsubsection{\texorpdfstring{Oxygen\_Blending()}{Oxygen\_Blending()}}
+{\footnotesize\ttfamily void Oxygen\+\_\+\+Blending (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FIO2\+\_\+\+Val }\end{DoxyParamCaption})}
+
+
+
+Oxygen\+\_\+\+Blending. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode.\\
+\hline
+\end{DoxyParams}
+Oxygen\+\_\+\+Blending.
+
+
+\begin{DoxyParams}{Parameters}
+{\em FIO2\+\_\+\+Val} & Set fio2 value from mode. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_oxygen___blending_8h_a5573d047099302f775962d5b083a1aa5}\label{_oxygen___blending_8h_a5573d047099302f775962d5b083a1aa5} 
+\index{Oxygen\_Blending.h@{Oxygen\_Blending.h}!Oxygen\_Blending\_Task@{Oxygen\_Blending\_Task}}
+\index{Oxygen\_Blending\_Task@{Oxygen\_Blending\_Task}!Oxygen\_Blending.h@{Oxygen\_Blending.h}}
+\doxysubsubsection{\texorpdfstring{Oxygen\_Blending\_Task()}{Oxygen\_Blending\_Task()}}
+{\footnotesize\ttfamily void Oxygen\+\_\+\+Blending\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Oxygen\+\_\+\+Blending\+\_\+\+Task. 
+
+Oxygen\+\_\+\+Blending\+\_\+\+Task. 

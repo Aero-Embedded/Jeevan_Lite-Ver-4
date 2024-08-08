@@ -1,0 +1,105 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+SENSORS/\+SENSORS\+\_\+\+INTERFACE/oom202.h File Reference}
+\hypertarget{oom202_8h}{}\label{oom202_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_INTERFACE/oom202.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_INTERFACE/oom202.h}}
+
+
+Declaration of Oxygen\+\_\+\+Sensor\+\_\+\+Integeration.  
+
+
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/sensor.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{oom202_8h_aa3eccd528a7b25048997a5402006451e}{OOM202\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the OOM202 sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{oom202_8h_a5f653bf084fa115cede355ace9d305fb}{OOM202\+\_\+calibrate}} (uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Calibrate the OOM202 sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{oom202_8h_acf2b3a0ca08a5251ce5e4780e079a0c5}{OOM202\+\_\+calculate\+\_\+efficiency}} ()
+\begin{DoxyCompactList}\small\item\em Calculate the efficiency of the OOM202 sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{oom202_8h_a0314e98f454e2192d19df8b2c392dc2b}{OOM202\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em Read data from the OOM202 sensor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{oom202_8h_a23793418a895983f090318ac26a4c14f}{OOM202\+\_\+read\+\_\+adc}} ()
+\begin{DoxyCompactList}\small\item\em Perform analog-\/to-\/digital conversion for the OOM202 sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{oom202_8h_ac7771236bd0422693abc2563b86120fb}\label{oom202_8h_ac7771236bd0422693abc2563b86120fb} 
+\mbox{\hyperlink{struct_s_e_n_s_o_r}{SENSOR}} {\bfseries OOM202}
+\begin{DoxyCompactList}\small\item\em OOM202 Sensor -\/ Defined as a generic sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of Oxygen\+\_\+\+Sensor\+\_\+\+Integeration. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Declaration of Oxygen\+\_\+\+Sensor\+\_\+\+Integeration., including the initialization 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{oom202_8h_acf2b3a0ca08a5251ce5e4780e079a0c5}\label{oom202_8h_acf2b3a0ca08a5251ce5e4780e079a0c5} 
+\index{oom202.h@{oom202.h}!OOM202\_calculate\_efficiency@{OOM202\_calculate\_efficiency}}
+\index{OOM202\_calculate\_efficiency@{OOM202\_calculate\_efficiency}!oom202.h@{oom202.h}}
+\doxysubsubsection{\texorpdfstring{OOM202\_calculate\_efficiency()}{OOM202\_calculate\_efficiency()}}
+{\footnotesize\ttfamily void OOM202\+\_\+calculate\+\_\+efficiency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculate the efficiency of the OOM202 sensor. 
+
+Calculate the efficiency of the OOM202 sensor. \Hypertarget{oom202_8h_a5f653bf084fa115cede355ace9d305fb}\label{oom202_8h_a5f653bf084fa115cede355ace9d305fb} 
+\index{oom202.h@{oom202.h}!OOM202\_calibrate@{OOM202\_calibrate}}
+\index{OOM202\_calibrate@{OOM202\_calibrate}!oom202.h@{oom202.h}}
+\doxysubsubsection{\texorpdfstring{OOM202\_calibrate()}{OOM202\_calibrate()}}
+{\footnotesize\ttfamily void OOM202\+\_\+calibrate (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{level }\end{DoxyParamCaption})}
+
+
+
+Calibrate the OOM202 sensor. 
+
+Calibrate the OOM202 sensor. \Hypertarget{oom202_8h_aa3eccd528a7b25048997a5402006451e}\label{oom202_8h_aa3eccd528a7b25048997a5402006451e} 
+\index{oom202.h@{oom202.h}!OOM202\_init@{OOM202\_init}}
+\index{OOM202\_init@{OOM202\_init}!oom202.h@{oom202.h}}
+\doxysubsubsection{\texorpdfstring{OOM202\_init()}{OOM202\_init()}}
+{\footnotesize\ttfamily void OOM202\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the OOM202 sensor. 
+
+Initialize the OOM202 sensor. \Hypertarget{oom202_8h_a0314e98f454e2192d19df8b2c392dc2b}\label{oom202_8h_a0314e98f454e2192d19df8b2c392dc2b} 
+\index{oom202.h@{oom202.h}!OOM202\_read@{OOM202\_read}}
+\index{OOM202\_read@{OOM202\_read}!oom202.h@{oom202.h}}
+\doxysubsubsection{\texorpdfstring{OOM202\_read()}{OOM202\_read()}}
+{\footnotesize\ttfamily void OOM202\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read data from the OOM202 sensor. 
+
+Read data from the OOM202 sensor.
+
+
+\begin{DoxyEnumerate}
+\item \href{https://hackaday.com/2019/09/06/sensor-filters-for-coders/}{\texttt{ https\+://hackaday.\+com/2019/09/06/sensor-\/filters-\/for-\/coders/}}
+\item \href{https://electronics.stackexchange.com/questions/30370/fast-and-memory-efficient-moving-average-calculation}{\texttt{ https\+://electronics.\+stackexchange.\+com/questions/30370/fast-\/and-\/memory-\/efficient-\/moving-\/average-\/calculation}}
+\item \href{https://stackoverflow.com/questions/12636613/how-to-calculate-moving-average-without-keeping-the-count-and-data-total}{\texttt{ https\+://stackoverflow.\+com/questions/12636613/how-\/to-\/calculate-\/moving-\/average-\/without-\/keeping-\/the-\/count-\/and-\/data-\/total}} 
+\end{DoxyEnumerate}\Hypertarget{oom202_8h_a23793418a895983f090318ac26a4c14f}\label{oom202_8h_a23793418a895983f090318ac26a4c14f} 
+\index{oom202.h@{oom202.h}!OOM202\_read\_adc@{OOM202\_read\_adc}}
+\index{OOM202\_read\_adc@{OOM202\_read\_adc}!oom202.h@{oom202.h}}
+\doxysubsubsection{\texorpdfstring{OOM202\_read\_adc()}{OOM202\_read\_adc()}}
+{\footnotesize\ttfamily float OOM202\+\_\+read\+\_\+adc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Perform analog-\/to-\/digital conversion for the OOM202 sensor. 
+
+Perform analog-\/to-\/digital conversion for the OOM202 sensor.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Vout} & (in mV) \\
+\hline
+\end{DoxyRetVals}

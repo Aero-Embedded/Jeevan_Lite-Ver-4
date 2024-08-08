@@ -1,0 +1,108 @@
+\doxysection{Mode\+\_\+\+Initial\+\_\+\+Flag\+\_\+\+Set.\+h}
+\hypertarget{_mode___initial___flag___set_8h_source}{}\label{_mode___initial___flag___set_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/OTHERS/Mode\_Initial\_Flag\_Set.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/OTHERS/Mode\_Initial\_Flag\_Set.h}}
+\mbox{\hyperlink{_mode___initial___flag___set_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ INC\_MODE\_INITIAL\_FLAG\_SET\_H\_}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ INC\_MODE\_INITIAL\_FLAG\_SET\_H\_}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ CLOSE,}
+\DoxyCodeLine{00028\ \ \ \ \ OPEN}
+\DoxyCodeLine{00029\ \}\mbox{\hyperlink{_mode___initial___flag___set_8h_ae99af956ad12f080766481f27db72451}{Mode\_initial\_flag\_set}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ NO\_CHANGES,}
+\DoxyCodeLine{00038\ \ \ \ \ CHANGE\_HAPPEN}
+\DoxyCodeLine{00039\ \}\mbox{\hyperlink{_mode___initial___flag___set_8h_a346918906961efabaafce0407a2cc1b3}{set\_value\_Change}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ uint8\_t\ Last\_PEEP\_Val\_PC\_CMV\_BACKUP;}
+\DoxyCodeLine{00050\ \ \ \ \ uint8\_t\ Last\_PIP\_Val\_PC\_CMV\_BACKUP;}
+\DoxyCodeLine{00051\ \ \ \ \ uint8\_t\ Last\_Rise\_Time\_PC\_CMV\_BACKUP;}
+\DoxyCodeLine{00052\ \ \ \ \ uint8\_t\ Last\_O2\_Val\_PC\_CMV\_BACKUP;}
+\DoxyCodeLine{00053\ \ \ \ \ uint8\_t\ Last\_RR\_Val\_PC\_CMV\_BACKUP;}
+\DoxyCodeLine{00054\ \ \ \ \ uint8\_t\ Last\_I\_Val\_PC\_CMV\_BACKUP;}
+\DoxyCodeLine{00055\ \ \ \ \ uint8\_t\ Last\_E\_Val\_PC\_CMV\_BACKUP;}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ Last\_Ramp\_Time\_PC\_CMV\_BACKUP;}
+\DoxyCodeLine{00057\ \ \ \ \ uint16\_t\ Last\_Volume\_Val\_VC\_CMV\_BACKUP;}
+\DoxyCodeLine{00058\ \ \ \ \ uint8\_t\ Last\_PEEP\_Val\_VC\_CMV\_BACKUP;}
+\DoxyCodeLine{00059\ \ \ \ \ uint8\_t\ Last\_FLOW\_Val\_VC\_CMV\_BACKUP;}
+\DoxyCodeLine{00060\ \ \ \ \ uint8\_t\ Last\_O2\_Val\_VC\_CMV\_BACKUP;}
+\DoxyCodeLine{00061\ \ \ \ \ uint8\_t\ Last\_RR\_Val\_VC\_CMV\_BACKUP;}
+\DoxyCodeLine{00062\ \ \ \ \ uint8\_t\ Last\_I\_Val\_VC\_CMV\_BACKUP;}
+\DoxyCodeLine{00063\ \ \ \ \ uint8\_t\ Last\_E\_Val\_VC\_CMV\_BACKUP;}
+\DoxyCodeLine{00064\ \ \ \ \ uint16\_t\ LAST\_BLOWER\_ENDING\_DAC\_SIGNAL;}
+\DoxyCodeLine{00065\ \ \ \ \ uint16\_t\ LAST\_PIP\_Control\_Task\_Delay;}
+\DoxyCodeLine{00066\ \ \ \ \ uint16\_t\ LAST\_Increase\_Each\_DAC\_SET\_CONST;}
+\DoxyCodeLine{00067\ \ \ \ \ uint8\_t\ LAST\_Need\_PID\_Task\_Delay;}
+\DoxyCodeLine{00068\ \ \ \ \ uint8\_t\ LAST\_Tune\_PID\_Task\_Delay;}
+\DoxyCodeLine{00069\ \ \ \ \ uint8\_t\ LAST\_Low\_PIP\_Count;}
+\DoxyCodeLine{00070\ \ \ \ \ uint8\_t\ LAST\_Early\_Acheived\_Ramp\_Time\_Percentage;}
+\DoxyCodeLine{00071\ \ \ \ \ uint8\_t\ last\_vent\_type;}
+\DoxyCodeLine{00072\ \}\mbox{\hyperlink{structold__flags}{old\_flags}};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \mbox{\hyperlink{_mode___initial___flag___set_8h_a346918906961efabaafce0407a2cc1b3}{set\_value\_Change}}\ Backup\_PC\_CMV\_SET\_VALUE,\mbox{\hyperlink{_mode___initial___flag___set_8h_ad4d18f98eab4fa2c36d66924c355c015}{Backup\_VC\_CMV\_SET\_VALUE}};\ \ \ \ \ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \mbox{\hyperlink{_mode___initial___flag___set_8h_ae99af956ad12f080766481f27db72451}{Mode\_initial\_flag\_set}}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_a133ba0c8fdbad9cdce5ae9295bc0b97b}{Mode\_Initial\_Flag\_Set}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \mbox{\hyperlink{_mode___initial___flag___set_8h_ae99af956ad12f080766481f27db72451}{Mode\_initial\_flag\_set}}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_a1e26aa4ae5ea75ef8dae233601104afc}{Back\_Up\_Mode\_Initial\_Flag\_Set}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00078\ \mbox{\hyperlink{structold__flags}{old\_flags}}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_aaeb9bf3cb05f5e3e5d525ceb6f70ab04}{OLD}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{keywordtype}{int}\ Wait\_Time,\mbox{\hyperlink{_mode___initial___flag___set_8h_a6d94cf82ebf5229301eb07c8558efb4d}{Last\_Wait\_Time}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ uint8\_t\ \mbox{\hyperlink{_mode___initial___flag___set_8h_a31cf0aed1ba3fbcecf167cb23661946b}{Apnea\_Mode}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ xTaskHandle\ \mbox{\hyperlink{_mode___initial___flag___set_8h_ace087af25da1f6f3265c03f12dabcdc5}{Mode\_initial\_Flag\_Set\_Handler}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_a09acb86ad90ca5d3af39760e5103d6be}{Mode\_Initial\_Flag\_Set\_Task}}\ (\textcolor{keywordtype}{void}\ *argument);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_ad742626a1326ad4eb811673885387ea3}{PC\_CMV\_Initial\_Flags\_SET}}();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_a8b57366785795594dbeadf05ffcf18ca}{VC\_CMV\_Initial\_Flags\_SET}}();}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_a702a669a19b1494a0e94f285d5a575cd}{PC\_SIMV\_Initial\_Flags\_SET}}();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00110\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_ad0100576c7a9ae8f894041e950a18064}{VC\_SIMV\_Initial\_Flags\_SET}}();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00115\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_a933b5de1e2c5dce325f57561e75edd04}{PSV\_Initial\_Flags\_SET}}();}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00120\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_a0a3d44959a6a663c849491456c06e2e2}{CPAP\_Initial\_Flags\_SET}}();}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00125\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_a5615a4e302f8d0dd220511813b9ab8c6}{BIBAP\_Initial\_Flags\_SET}}();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00130\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_ab5572b6ad05e5c1958e7475fd6694f3f}{APRV\_Initial\_Flags\_SET}}();}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00135\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_a3a531dfcc72962c1e24e74da22cc8503}{Backup\_PC\_CMV\_Initial\_Flags\_SET}}();}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00140\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_a8782acd112ef2818804253d2ecb5ae55}{Backup\_VC\_CMV\_Initial\_Flags\_SET}}();}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00145\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_a370b6aaca34e06514663c358bcda641a}{Reset\_PC\_CMV\_Old\_Flags\_Reset}}();}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00150\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_aff0fe1e0fbd040a48538d40217ad2c65}{Reset\_VC\_CMV\_Old\_Flags\_Reset}}();}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00155\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_a420fda4e0a67f8c11448a18f9e6c4ced}{Reset\_PC\_SIMV\_Old\_Flags\_Reset}}();}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00160\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_a47ff907c2b6e6a6e2c95ed194e583428}{Reset\_VC\_SIMV\_Old\_Flags\_Reset}}();}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00165\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_a8aa51c02ce5acc4a96b75d830624fe0f}{Reset\_PC\_CMV\_BACKUP\_Old\_Flags\_Reset}}();}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00170\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_aedc25e069b30989525e83d68fa482cce}{Reset\_VC\_CMV\_BACKUP\_Old\_Flags\_Reset}}();}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00175\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_ad7e83751bdc617d0db21e7f4d28efce6}{Reset\_Patient\_Circuit\_Diconnceted\_Alert\_Flags}}();}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00180\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mode___initial___flag___set_8h_a5f495ad24293e8cac1829347f4f81b9f}{Reset\_Flow\_Offset}}();}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_MODE\_INITIAL\_FLAG\_SET\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

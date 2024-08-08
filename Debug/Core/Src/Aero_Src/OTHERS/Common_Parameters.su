@@ -1,0 +1,10 @@
+Common_Parameters.c:19:6:Find_Max_PIP	4	static
+Common_Parameters.c:31:6:Find_Maximum_PEEP	4	static
+Common_Parameters.c:43:6:PIP_AVERAGE	4	static
+Common_Parameters.c:61:6:PEEP_AVERAGE	4	static
+Common_Parameters.c:96:6:INITIAL_DAC_VALUE	4	static
+Common_Parameters.c:162:10:DAC_VAL	16	static
+Common_Parameters.c:347:6:Change_DAC_Values	16	static
+Common_Parameters.c:528:6:INITIAL_CPAP_DAC_VALUE_INVASIVE	4	static
+Common_Parameters.c:569:10:APNEA_DAC_VAL	16	static
+Common_Parameters.c:678:6:Change_CPAP_DAC_Values_INVASIVE	16	static

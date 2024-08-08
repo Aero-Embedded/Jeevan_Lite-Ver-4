@@ -1,0 +1,260 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+SENSORS/\+SENSORS\+\_\+\+INTERFACE/ads1115.h File Reference}
+\hypertarget{ads1115_8h}{}\label{ads1115_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_INTERFACE/ads1115.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_INTERFACE/ads1115.h}}
+
+
+Declaration of ADS1115 Module Configuration.  
+
+
+{\ttfamily \#include "{}stdint.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{Indent}\textbf{ ADS1115 Device Address}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{ads1115_8h_af5e311c48b7a1778d4ce4b13ea0be68d}\label{ads1115_8h_af5e311c48b7a1778d4ce4b13ea0be68d} 
+\#define {\bfseries ADS1115\+\_\+\+ADDRESS}~(0\+X48$<$$<$1)
+\begin{DoxyCompactList}\small\item\em Default Address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ ADS1115 Operational Status (OS) Configuration}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{ads1115_8h_a186f86d413bfc9a0b10a263563ae36c9}\label{ads1115_8h_a186f86d413bfc9a0b10a263563ae36c9} 
+\#define {\bfseries ADS1115\+\_\+\+OS}~(0b0 $<$$<$ 7)
+\begin{DoxyCompactList}\small\item\em Default Operational Status value. \texorpdfstring{$\ast$}{*}/. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ ADS1115 Multiplexer Configuration}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{ads1115_8h_ad76dbdc476c07b26c8c1d7ecb157adaf}\label{ads1115_8h_ad76dbdc476c07b26c8c1d7ecb157adaf} 
+\#define {\bfseries ADS1115\+\_\+\+MUX\+\_\+\+AIN0}~(0b100 $<$$<$ 4)
+\begin{DoxyCompactList}\small\item\em Analog input 0 configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_a084841df97af4a166cb4e431b29bd7a9}\label{ads1115_8h_a084841df97af4a166cb4e431b29bd7a9} 
+\#define {\bfseries ADS1115\+\_\+\+MUX\+\_\+\+AIN1}~(0b101 $<$$<$ 4)
+\begin{DoxyCompactList}\small\item\em Analog input 1 configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_a069ff0c9cbfbc8e0509253ba75418ce8}\label{ads1115_8h_a069ff0c9cbfbc8e0509253ba75418ce8} 
+\#define {\bfseries ADS1115\+\_\+\+MUX\+\_\+\+AIN2}~(0b110 $<$$<$ 4)
+\begin{DoxyCompactList}\small\item\em Analog input 2 configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_a900c8e7e834d55e7b8fb6548c81883f3}\label{ads1115_8h_a900c8e7e834d55e7b8fb6548c81883f3} 
+\#define {\bfseries ADS1115\+\_\+\+MUX\+\_\+\+AIN3}~(0b111 $<$$<$ 4)
+\begin{DoxyCompactList}\small\item\em Analog input 3 configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ ADS1115 Programmable Gain Amplifier (PGA) Configuration}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{ads1115_8h_af2cf337f8fcc9f063a4b794bfa951eaa}\label{ads1115_8h_af2cf337f8fcc9f063a4b794bfa951eaa} 
+\#define {\bfseries ADS1115\+\_\+\+PGA\+\_\+\+TWOTHIRDS}~(0b000 $<$$<$ 1)
+\begin{DoxyCompactList}\small\item\em 2/3x Gain configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_a0523e77f04717febf51975090749d2c0}\label{ads1115_8h_a0523e77f04717febf51975090749d2c0} 
+\#define {\bfseries ADS1115\+\_\+\+PGA\+\_\+\+ONE}~(0b001 $<$$<$ 1)
+\begin{DoxyCompactList}\small\item\em 1x Gain configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_a7bd6fbb85c8ee9989056e2eadc435fd6}\label{ads1115_8h_a7bd6fbb85c8ee9989056e2eadc435fd6} 
+\#define {\bfseries ADS1115\+\_\+\+PGA\+\_\+\+TWO}~(0b010 $<$$<$ 1)
+\begin{DoxyCompactList}\small\item\em 2x Gain configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_a7b4abbfeb11693f37c8c81c22d10dbf9}\label{ads1115_8h_a7b4abbfeb11693f37c8c81c22d10dbf9} 
+\#define {\bfseries ADS1115\+\_\+\+PGA\+\_\+\+FOUR}~(0b011 $<$$<$ 1)
+\begin{DoxyCompactList}\small\item\em 4x Gain configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_a863636259462cc4368b9ac5f69d2b896}\label{ads1115_8h_a863636259462cc4368b9ac5f69d2b896} 
+\#define {\bfseries ADS1115\+\_\+\+PGA\+\_\+\+EIGHT}~(0b100 $<$$<$ 1)
+\begin{DoxyCompactList}\small\item\em 8x Gain configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_a10fdd5ebb8a6be0ea3926894f28e13c8}\label{ads1115_8h_a10fdd5ebb8a6be0ea3926894f28e13c8} 
+\#define {\bfseries ADS1115\+\_\+\+PGA\+\_\+\+SIXTEEN}~(0b111 $<$$<$ 1)
+\begin{DoxyCompactList}\small\item\em 16x Gain configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ ADS1115 Mode Configuration}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ads1115_8h_aa783c061de6cbe80dfba84e9daab2a27}{ADS1115\+\_\+\+MODE}}~(0b0)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ ADS1115 Data Rate Configuration}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{ads1115_8h_ae5e8036cd50dc61b4ec0f4ebd6c73193}\label{ads1115_8h_ae5e8036cd50dc61b4ec0f4ebd6c73193} 
+\#define {\bfseries ADS1115\+\_\+\+DATA\+\_\+\+RATE\+\_\+8}~(0b000 $<$$<$ 5)
+\begin{DoxyCompactList}\small\item\em Data Rate\+: 8 SPS configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_a44bdcefd1465f710d10e94e75becfd30}\label{ads1115_8h_a44bdcefd1465f710d10e94e75becfd30} 
+\#define {\bfseries ADS1115\+\_\+\+DATA\+\_\+\+RATE\+\_\+16}~(0b001 $<$$<$ 5)
+\begin{DoxyCompactList}\small\item\em Data Rate\+: 16 SPS configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_ab0753d6657a301233c282e2f539d1c33}\label{ads1115_8h_ab0753d6657a301233c282e2f539d1c33} 
+\#define {\bfseries ADS1115\+\_\+\+DATA\+\_\+\+RATE\+\_\+32}~(0b010 $<$$<$ 5)
+\begin{DoxyCompactList}\small\item\em Data Rate\+: 32 SPS configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_a1fd02a71e98bc7d769324677f5f56128}\label{ads1115_8h_a1fd02a71e98bc7d769324677f5f56128} 
+\#define {\bfseries ADS1115\+\_\+\+DATA\+\_\+\+RATE\+\_\+64}~(0b011 $<$$<$ 5)
+\begin{DoxyCompactList}\small\item\em Data Rate\+: 64 SPS configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_a5f04733fd41167c9e31232a21b0d6c25}\label{ads1115_8h_a5f04733fd41167c9e31232a21b0d6c25} 
+\#define {\bfseries ADS1115\+\_\+\+DATA\+\_\+\+RATE\+\_\+128}~(0b100 $<$$<$ 5)
+\begin{DoxyCompactList}\small\item\em Data Rate\+: 128 SPS configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_a52a49544b67d9dabbb08d326b93dab88}\label{ads1115_8h_a52a49544b67d9dabbb08d326b93dab88} 
+\#define {\bfseries ADS1115\+\_\+\+DATA\+\_\+\+RATE\+\_\+250}~(0b101 $<$$<$ 5)
+\begin{DoxyCompactList}\small\item\em Data Rate\+: 250 SPS configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_a5cd52198e74b0473b739505a1ecd2535}\label{ads1115_8h_a5cd52198e74b0473b739505a1ecd2535} 
+\#define {\bfseries ADS1115\+\_\+\+DATA\+\_\+\+RATE\+\_\+475}~(0b110 $<$$<$ 5)
+\begin{DoxyCompactList}\small\item\em Data Rate\+: 475 SPS configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_acc521e91cb85e43a3432cc5aa70043fa}\label{ads1115_8h_acc521e91cb85e43a3432cc5aa70043fa} 
+\#define {\bfseries ADS1115\+\_\+\+DATA\+\_\+\+RATE\+\_\+860}~(0b111 $<$$<$ 5)
+\begin{DoxyCompactList}\small\item\em Data Rate\+: 860 SPS configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ ADS1115 Comparator Configuration}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{ads1115_8h_ad722e16431305ce92a4efc7c061ddc7b}\label{ads1115_8h_ad722e16431305ce92a4efc7c061ddc7b} 
+\#define {\bfseries ADS1115\+\_\+\+COMP\+\_\+\+MODE}~(0b0 $<$$<$ 4)
+\begin{DoxyCompactList}\small\item\em Comparator Mode configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_ad2232b30ece1a1f5bfbf8a55217e3e2c}\label{ads1115_8h_ad2232b30ece1a1f5bfbf8a55217e3e2c} 
+\#define {\bfseries ADS1115\+\_\+\+COMP\+\_\+\+POL}~(0b0 $<$$<$ 3)
+\begin{DoxyCompactList}\small\item\em Comparator Polarity configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_ad6439a5f36449ef355a3a1220b726946}\label{ads1115_8h_ad6439a5f36449ef355a3a1220b726946} 
+\#define {\bfseries ADS1115\+\_\+\+COMP\+\_\+\+LAT}~(0b0 $<$$<$ 2)
+\begin{DoxyCompactList}\small\item\em Latching Comparator configuration. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_a4f20b25599f011f334267ec0be2e2e63}\label{ads1115_8h_a4f20b25599f011f334267ec0be2e2e63} 
+\#define {\bfseries ADS1115\+\_\+\+COMP\+\_\+\+QUE}~(0b11)
+\begin{DoxyCompactList}\small\item\em Comparator Queue configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ ADS1115 Register Addresses}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{ads1115_8h_a69f3aa661f3475281903eb75d44a61f0}\label{ads1115_8h_a69f3aa661f3475281903eb75d44a61f0} 
+\#define {\bfseries ADS1115\+\_\+\+CONVER\+\_\+\+REG}~0x0
+\begin{DoxyCompactList}\small\item\em Conversion Register address. \end{DoxyCompactList}\item 
+\Hypertarget{ads1115_8h_a7d549b6f88906327d3b990dba78dd71e}\label{ads1115_8h_a7d549b6f88906327d3b990dba78dd71e} 
+\#define {\bfseries ADS1115\+\_\+\+CONFIG\+\_\+\+REG}~0x1
+\begin{DoxyCompactList}\small\item\em Configuration Register address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ ADS1115 Timeout Configuration}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{ads1115_8h_a2a051bea5e3398ca2bc9c8b869875051}\label{ads1115_8h_a2a051bea5e3398ca2bc9c8b869875051} 
+\#define {\bfseries ADS1115\+\_\+\+TIMEOUT}~1
+\begin{DoxyCompactList}\small\item\em Timeout value in milliseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+HAL\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{ads1115_8h_ad670b75ca76244d5040f4117f2b77973}{ADS1115\+\_\+\+Init}} (uint8\+\_\+t ads\+\_\+reference, I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}handler)
+\begin{DoxyCompactList}\small\item\em Initialize the ADS1115 ADC. \end{DoxyCompactList}\item 
+HAL\+\_\+\+Status\+Type\+Def \mbox{\hyperlink{ads1115_8h_af88f963a71dbef4c121c3796e75eac72}{ADS1115\+\_\+\+Read}} (uint16\+\_\+t mux\+Port, float \texorpdfstring{$\ast$}{*}voltage, I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}handler)
+\begin{DoxyCompactList}\small\item\em Read analog voltage from the ADS1115. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{ads1115_8h_a5572e59c3d1b3f7bd2d8eab07ae14772}\label{ads1115_8h_a5572e59c3d1b3f7bd2d8eab07ae14772} 
+uint16\+\_\+t {\bfseries Trigger\+\_\+\+Ads1115\+\_\+\+Raw\+\_\+\+Adc}
+\item 
+\Hypertarget{ads1115_8h_a69c314291895cca0799a4de71967dcc7}\label{ads1115_8h_a69c314291895cca0799a4de71967dcc7} 
+uint8\+\_\+t {\bfseries Proximal\+\_\+\+Sensor\+\_\+\+ADS1115}
+\item 
+\Hypertarget{ads1115_8h_aed047e8652167eadd271d4f8e17634c8}\label{ads1115_8h_aed047e8652167eadd271d4f8e17634c8} 
+uint8\+\_\+t {\bfseries \+\_\+5010\+DP\+\_\+\+Sensor\+\_\+\+ADS1115}
+\item 
+\Hypertarget{ads1115_8h_ac68a4342f0cb87fdb61c2b96f1fa0068}\label{ads1115_8h_ac68a4342f0cb87fdb61c2b96f1fa0068} 
+uint8\+\_\+t {\bfseries ENVITEC\+\_\+\+Sensor\+\_\+\+ADS1115}
+\item 
+I2\+C\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{ads1115_8h_ad153b060bcc4e1e979f3a5b56f24f15e}{ADS1115\+\_\+1\+\_\+\+I2\+C\+\_\+\+Handler}}
+\item 
+\Hypertarget{ads1115_8h_af608bc89844e278c89a9a63bee4bb968}\label{ads1115_8h_af608bc89844e278c89a9a63bee4bb968} 
+I2\+C\+\_\+\+Handle\+Type\+Def {\bfseries ADS1115\+\_\+2\+\_\+\+I2\+C\+\_\+\+Handler}
+\item 
+\Hypertarget{ads1115_8h_a9ed08771bcbd595361b424bf488eb08f}\label{ads1115_8h_a9ed08771bcbd595361b424bf488eb08f} 
+I2\+C\+\_\+\+Handle\+Type\+Def {\bfseries ADS1115\+\_\+3\+\_\+\+I2\+C\+\_\+\+Handler}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of ADS1115 Module Configuration. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Declaration of ADS1115 Module Configuration, including the initialization 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{ads1115_8h_aa783c061de6cbe80dfba84e9daab2a27}\label{ads1115_8h_aa783c061de6cbe80dfba84e9daab2a27} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_MODE@{ADS1115\_MODE}}
+\index{ADS1115\_MODE@{ADS1115\_MODE}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_MODE}{ADS1115\_MODE}}
+{\footnotesize\ttfamily \#define ADS1115\+\_\+\+MODE~(0b0)}
+
+Default Mode value. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ads1115_8h_ad670b75ca76244d5040f4117f2b77973}\label{ads1115_8h_ad670b75ca76244d5040f4117f2b77973} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_Init@{ADS1115\_Init}}
+\index{ADS1115\_Init@{ADS1115\_Init}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_Init()}{ADS1115\_Init()}}
+{\footnotesize\ttfamily HAL\+\_\+\+Status\+Type\+Def ADS1115\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{ads\+\_\+reference,  }\item[{I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{handler }\end{DoxyParamCaption})}
+
+
+
+Initialize the ADS1115 ADC. 
+
+This function initializes the ADS1115 ADC with the specified I2C handler.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & Pointer to the I2C handler structure.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+HAL\+\_\+\+Status\+Type\+Def indicating success or failure.
+\end{DoxyReturn}
+Initialize the ADS1115 ADC.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & Pointer to the I2C handler structure. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em HAL} & status. \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{ads1115_8h_af88f963a71dbef4c121c3796e75eac72}\label{ads1115_8h_af88f963a71dbef4c121c3796e75eac72} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_Read@{ADS1115\_Read}}
+\index{ADS1115\_Read@{ADS1115\_Read}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_Read()}{ADS1115\_Read()}}
+{\footnotesize\ttfamily HAL\+\_\+\+Status\+Type\+Def ADS1115\+\_\+\+Read (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mux\+Port,  }\item[{float \texorpdfstring{$\ast$}{*}}]{voltage,  }\item[{I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{handler }\end{DoxyParamCaption})}
+
+
+
+Read analog voltage from the ADS1115. 
+
+This function reads the analog voltage from the specified multiplexer (mux) port of the ADS1115 ADC and returns the result as a floating-\/point voltage value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mux\+Port} & The multiplexer (mux) port to read from. \\
+\hline
+{\em voltage} & Pointer to store the read voltage value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+HAL\+\_\+\+Status\+Type\+Def indicating success or failure.
+\end{DoxyReturn}
+Read analog voltage from the ADS1115.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mux\+Port} & Multiplexer configuration for the ADC. \\
+\hline
+{\em voltage} & Pointer to store the converted voltage. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em HAL} & status. \\
+\hline
+\end{DoxyRetVals}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{ads1115_8h_ad153b060bcc4e1e979f3a5b56f24f15e}\label{ads1115_8h_ad153b060bcc4e1e979f3a5b56f24f15e} 
+\index{ads1115.h@{ads1115.h}!ADS1115\_1\_I2C\_Handler@{ADS1115\_1\_I2C\_Handler}}
+\index{ADS1115\_1\_I2C\_Handler@{ADS1115\_1\_I2C\_Handler}!ads1115.h@{ads1115.h}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_1\_I2C\_Handler}{ADS1115\_1\_I2C\_Handler}}
+{\footnotesize\ttfamily I2\+C\+\_\+\+Handle\+Type\+Def ADS1115\+\_\+1\+\_\+\+I2\+C\+\_\+\+Handler}
+
+I2C Handlers for ADS1115 

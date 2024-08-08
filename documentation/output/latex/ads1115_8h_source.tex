@@ -1,0 +1,58 @@
+\doxysection{ads1115.\+h}
+\hypertarget{ads1115_8h_source}{}\label{ads1115_8h_source}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_INTERFACE/ads1115.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_INTERFACE/ads1115.h}}
+\mbox{\hyperlink{ads1115_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ INC\_JEEVANLITE\_PERIPHERALS\_ANALOG\_ADS1115\_H\_}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ INC\_JEEVANLITE\_PERIPHERALS\_ANALOG\_ADS1115\_H\_}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{00017\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INCLUDE\ FILES\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00018\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}stdint.h"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{00024\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FUNCTION\ BODY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00025\ \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{00026\ uint16\_t\ Trigger\_Ads1115\_Raw\_Adc;}
+\DoxyCodeLine{00027\ uint8\_t\ Proximal\_Sensor\_ADS1115,\_5010DP\_Sensor\_ADS1115,ENVITEC\_Sensor\_ADS1115;}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ ADS1115\_ADDRESS\ (0X48<<1)\ }}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ ADS1115\_OS\ (0b0\ <<\ 7)\ }}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ ADS1115\_MUX\_AIN0\ (0b100\ <<\ 4)\ }}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ ADS1115\_MUX\_AIN1\ (0b101\ <<\ 4)\ }}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ ADS1115\_MUX\_AIN2\ (0b110\ <<\ 4)\ }}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ ADS1115\_MUX\_AIN3\ (0b111\ <<\ 4)\ }}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ ADS1115\_PGA\_TWOTHIRDS\ \ \ (0b000\ <<\ 1)\ }}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ ADS1115\_PGA\_ONE\ \ \ \ \ \ \ \ \ (0b001\ <<\ 1)\ }}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ ADS1115\_PGA\_TWO\ \ \ \ \ \ \ \ \ (0b010\ <<\ 1)\ }}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ ADS1115\_PGA\_FOUR\ \ \ \ \ \ \ \ (0b011\ <<\ 1)\ }}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ ADS1115\_PGA\_EIGHT\ \ \ \ \ \ \ (0b100\ <<\ 1)\ }}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ ADS1115\_PGA\_SIXTEEN\ \ \ \ \ (0b111\ <<\ 1)\ }}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ ADS1115\_MODE\ (0b0)\ }}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ ADS1115\_DATA\_RATE\_8\ \ \ \ \ (0b000\ <<\ 5)\ \ \ \ }}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ ADS1115\_DATA\_RATE\_16\ \ \ \ (0b001\ <<\ 5)\ \ \ \ }}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ ADS1115\_DATA\_RATE\_32\ \ \ \ (0b010\ <<\ 5)\ \ \ \ }}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ ADS1115\_DATA\_RATE\_64\ \ \ \ (0b011\ <<\ 5)\ \ \ \ }}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ ADS1115\_DATA\_RATE\_128\ \ \ (0b100\ <<\ 5)\ \ \ \ }}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ ADS1115\_DATA\_RATE\_250\ \ \ (0b101\ <<\ 5)\ \ \ \ }}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ ADS1115\_DATA\_RATE\_475\ \ \ (0b110\ <<\ 5)\ \ \ \ }}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ ADS1115\_DATA\_RATE\_860\ \ \ (0b111\ <<\ 5)\ \ \ \ }}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ ADS1115\_COMP\_MODE\ \ \ (0b0\ <<\ 4)\ }}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ ADS1115\_COMP\_POL\ \ \ \ (0b0\ <<\ 3)\ }}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ ADS1115\_COMP\_LAT\ \ \ \ (0b0\ <<\ 2)\ }}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ ADS1115\_COMP\_QUE\ \ \ \ (0b11)\ \ \ \ \ }}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ ADS1115\_CONVER\_REG\ 0x0\ }}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ ADS1115\_CONFIG\_REG\ 0x1\ }}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ ADS1115\_TIMEOUT\ 1\ }}
+\DoxyCodeLine{00113\ I2C\_HandleTypeDef\ \mbox{\hyperlink{ads1115_8h_ad153b060bcc4e1e979f3a5b56f24f15e}{ADS1115\_1\_I2C\_Handler}},\ ADS1115\_2\_I2C\_Handler,ADS1115\_3\_I2C\_Handler;}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00124\ HAL\_StatusTypeDef\ \mbox{\hyperlink{ads1115_8h_ad670b75ca76244d5040f4117f2b77973}{ADS1115\_Init}}(uint8\_t\ ads\_reference,\ I2C\_HandleTypeDef\ *handler);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00138\ HAL\_StatusTypeDef\ \mbox{\hyperlink{ads1115_8h_af88f963a71dbef4c121c3796e75eac72}{ADS1115\_Read}}(uint16\_t\ muxPort,\ \textcolor{keywordtype}{float}\ *voltage,\ I2C\_HandleTypeDef\ *handler);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_JEEVANLITE\_PERIPHERALS\_ANALOG\_ADS1115\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

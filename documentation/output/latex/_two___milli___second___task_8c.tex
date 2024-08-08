@@ -1,0 +1,235 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+OTHERS/\+Two\+\_\+\+Milli\+\_\+\+Second\+\_\+\+Task.c File Reference}
+\hypertarget{_two___milli___second___task_8c}{}\label{_two___milli___second___task_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/OTHERS/Two\_Milli\_Second\_Task.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/OTHERS/Two\_Milli\_Second\_Task.c}}
+
+
+Implementation of time based concept.  
+
+
+{\ttfamily \#include "{}Two\+\_\+\+Milli\+\_\+\+Second\+\_\+\+Task.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_two___milli___second___task_8c_acdb4ea67a9fb410e26092cf2fddc2972}\label{_two___milli___second___task_8c_acdb4ea67a9fb410e26092cf2fddc2972} 
+void {\bfseries Time\+\_\+\+Trace\+\_\+\+Task} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Time\+\_\+\+Trace\+\_\+\+Task. This task controls all time-\/based functions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_two___milli___second___task_8c_a440b0676dda39700bb12ceabfb912b82}{INSPIRATION\+\_\+\+TIME\+\_\+\+TRACE}} ()
+\begin{DoxyCompactList}\small\item\em INSPIRATION\+\_\+\+TIME\+\_\+\+TRACE. This function tracks the time achieved during the inspiration phase. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_two___milli___second___task_8c_a29cce33333fc517091782fb92478f627}{EXPIRATION\+\_\+\+TIME\+\_\+\+TRACE}} ()
+\begin{DoxyCompactList}\small\item\em EXPIRATION\+\_\+\+TIME\+\_\+\+TRACE. This function tracks the time achieved during the expiration phase. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_two___milli___second___task_8c_ab0c3e8b849cac730fe6716ab9d5f7079}{PC\+\_\+\+SIMV\+\_\+\+BLOWER\+\_\+\+WAIT\+\_\+\+TIME\+\_\+\+TRACE}} ()
+\begin{DoxyCompactList}\small\item\em PC\+\_\+\+SIMV\+\_\+\+BLOWER\+\_\+\+WAIT\+\_\+\+TIME\+\_\+\+TRACE. This function controls the blower to hold for a few milliseconds to pause operations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_two___milli___second___task_8c_ac335ee2dad32e50de68d9c7a15a784af}{VC\+\_\+\+SIMV\+\_\+\+BLOWER\+\_\+\+WAIT\+\_\+\+TIME\+\_\+\+TRACE}} ()
+\begin{DoxyCompactList}\small\item\em VC\+\_\+\+SIMV\+\_\+\+BLOWER\+\_\+\+WAIT\+\_\+\+TIME\+\_\+\+TRACE. This function controls the blower to hold for a few milliseconds to pause operations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_two___milli___second___task_8c_ae49b6bc493a0c38b999532b7ee381bac}{PSV\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE}} ()
+\begin{DoxyCompactList}\small\item\em PSV\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE. This function tracks the time elapsed during the apnea period in PSV mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_two___milli___second___task_8c_aaebe80f32166b6bec3ef9b00a02dcffc}{BIPAP\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE}} ()
+\begin{DoxyCompactList}\small\item\em BIPAP\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE. This function tracks the time elapsed during the apnea period in bipap mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_two___milli___second___task_8c_adaec3fdf7364ca54c1c755c03f0a3d8b}{CPAP\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE}} ()
+\begin{DoxyCompactList}\small\item\em CPAP\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE. This function tracks the time elapsed during the apnea period in cpap mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_two___milli___second___task_8c_a7aea7c8b86e5cd94c41c5dcae47b15ab}{APRV\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE}} ()
+\begin{DoxyCompactList}\small\item\em APRV\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE. This function tracks the time achieved during the aprv inspiration and expiration phase. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_two___milli___second___task_8c_a537da665e97c6f2f010d8ebdb58b5bbf}{BREATH\+\_\+\+COUNT}} ()
+\begin{DoxyCompactList}\small\item\em BREATH\+\_\+\+COUNT. This function calculates the number of breaths delivered by the machine and the number of patient breaths per minute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_two___milli___second___task_8c_ac2084235395a11e6074b05201c8580b3}{Nebuliser\+\_\+\+Timing}} ()
+\begin{DoxyCompactList}\small\item\em Nebuliser\+\_\+\+Timing. This function tracks the running time of the nebulizer."{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_two___milli___second___task_8c_a1a8e69ec3d47e4f5774e4a1e7049aff1}{INITIAL\+\_\+\+WAIT\+\_\+\+TIME}} ()
+\begin{DoxyCompactList}\small\item\em INITIAL\+\_\+\+WAIT\+\_\+\+TIME. This function control initial wait time of PSV and BIPAP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of time based concept. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the implementation of time based concept. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_two___milli___second___task_8c_a7aea7c8b86e5cd94c41c5dcae47b15ab}\label{_two___milli___second___task_8c_a7aea7c8b86e5cd94c41c5dcae47b15ab} 
+\index{Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}!APRV\_APNEA\_COUNTER\_TRACE@{APRV\_APNEA\_COUNTER\_TRACE}}
+\index{APRV\_APNEA\_COUNTER\_TRACE@{APRV\_APNEA\_COUNTER\_TRACE}!Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}}
+\doxysubsubsection{\texorpdfstring{APRV\_APNEA\_COUNTER\_TRACE()}{APRV\_APNEA\_COUNTER\_TRACE()}}
+{\footnotesize\ttfamily void APRV\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+APRV\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE. This function tracks the time achieved during the aprv inspiration and expiration phase. 
+
+APRV\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_two___milli___second___task_8c_aaebe80f32166b6bec3ef9b00a02dcffc}\label{_two___milli___second___task_8c_aaebe80f32166b6bec3ef9b00a02dcffc} 
+\index{Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}!BIPAP\_APNEA\_COUNTER\_TRACE@{BIPAP\_APNEA\_COUNTER\_TRACE}}
+\index{BIPAP\_APNEA\_COUNTER\_TRACE@{BIPAP\_APNEA\_COUNTER\_TRACE}!Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}}
+\doxysubsubsection{\texorpdfstring{BIPAP\_APNEA\_COUNTER\_TRACE()}{BIPAP\_APNEA\_COUNTER\_TRACE()}}
+{\footnotesize\ttfamily void BIPAP\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+BIPAP\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE. This function tracks the time elapsed during the apnea period in bipap mode. 
+
+BIPAP\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_two___milli___second___task_8c_a537da665e97c6f2f010d8ebdb58b5bbf}\label{_two___milli___second___task_8c_a537da665e97c6f2f010d8ebdb58b5bbf} 
+\index{Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}!BREATH\_COUNT@{BREATH\_COUNT}}
+\index{BREATH\_COUNT@{BREATH\_COUNT}!Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}}
+\doxysubsubsection{\texorpdfstring{BREATH\_COUNT()}{BREATH\_COUNT()}}
+{\footnotesize\ttfamily void BREATH\+\_\+\+COUNT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+BREATH\+\_\+\+COUNT. This function calculates the number of breaths delivered by the machine and the number of patient breaths per minute. 
+
+BREATH\+\_\+\+COUNT.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_two___milli___second___task_8c_adaec3fdf7364ca54c1c755c03f0a3d8b}\label{_two___milli___second___task_8c_adaec3fdf7364ca54c1c755c03f0a3d8b} 
+\index{Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}!CPAP\_APNEA\_COUNTER\_TRACE@{CPAP\_APNEA\_COUNTER\_TRACE}}
+\index{CPAP\_APNEA\_COUNTER\_TRACE@{CPAP\_APNEA\_COUNTER\_TRACE}!Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}}
+\doxysubsubsection{\texorpdfstring{CPAP\_APNEA\_COUNTER\_TRACE()}{CPAP\_APNEA\_COUNTER\_TRACE()}}
+{\footnotesize\ttfamily void CPAP\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+CPAP\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE. This function tracks the time elapsed during the apnea period in cpap mode. 
+
+CPAP\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_two___milli___second___task_8c_a29cce33333fc517091782fb92478f627}\label{_two___milli___second___task_8c_a29cce33333fc517091782fb92478f627} 
+\index{Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}!EXPIRATION\_TIME\_TRACE@{EXPIRATION\_TIME\_TRACE}}
+\index{EXPIRATION\_TIME\_TRACE@{EXPIRATION\_TIME\_TRACE}!Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}}
+\doxysubsubsection{\texorpdfstring{EXPIRATION\_TIME\_TRACE()}{EXPIRATION\_TIME\_TRACE()}}
+{\footnotesize\ttfamily void EXPIRATION\+\_\+\+TIME\+\_\+\+TRACE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+EXPIRATION\+\_\+\+TIME\+\_\+\+TRACE. This function tracks the time achieved during the expiration phase. 
+
+EXPIRATION\+\_\+\+TIME\+\_\+\+TRACE.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_two___milli___second___task_8c_a1a8e69ec3d47e4f5774e4a1e7049aff1}\label{_two___milli___second___task_8c_a1a8e69ec3d47e4f5774e4a1e7049aff1} 
+\index{Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}!INITIAL\_WAIT\_TIME@{INITIAL\_WAIT\_TIME}}
+\index{INITIAL\_WAIT\_TIME@{INITIAL\_WAIT\_TIME}!Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}}
+\doxysubsubsection{\texorpdfstring{INITIAL\_WAIT\_TIME()}{INITIAL\_WAIT\_TIME()}}
+{\footnotesize\ttfamily void INITIAL\+\_\+\+WAIT\+\_\+\+TIME (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+INITIAL\+\_\+\+WAIT\+\_\+\+TIME. This function control initial wait time of PSV and BIPAP. 
+
+INITIAL\+\_\+\+WAIT\+\_\+\+TIME.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_two___milli___second___task_8c_a440b0676dda39700bb12ceabfb912b82}\label{_two___milli___second___task_8c_a440b0676dda39700bb12ceabfb912b82} 
+\index{Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}!INSPIRATION\_TIME\_TRACE@{INSPIRATION\_TIME\_TRACE}}
+\index{INSPIRATION\_TIME\_TRACE@{INSPIRATION\_TIME\_TRACE}!Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}}
+\doxysubsubsection{\texorpdfstring{INSPIRATION\_TIME\_TRACE()}{INSPIRATION\_TIME\_TRACE()}}
+{\footnotesize\ttfamily void INSPIRATION\+\_\+\+TIME\+\_\+\+TRACE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+INSPIRATION\+\_\+\+TIME\+\_\+\+TRACE. This function tracks the time achieved during the inspiration phase. 
+
+INSPIRATION\+\_\+\+TIME\+\_\+\+TRACE.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_two___milli___second___task_8c_ac2084235395a11e6074b05201c8580b3}\label{_two___milli___second___task_8c_ac2084235395a11e6074b05201c8580b3} 
+\index{Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}!Nebuliser\_Timing@{Nebuliser\_Timing}}
+\index{Nebuliser\_Timing@{Nebuliser\_Timing}!Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}}
+\doxysubsubsection{\texorpdfstring{Nebuliser\_Timing()}{Nebuliser\_Timing()}}
+{\footnotesize\ttfamily void Nebuliser\+\_\+\+Timing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Nebuliser\+\_\+\+Timing. This function tracks the running time of the nebulizer."{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_two___milli___second___task_8c_ab0c3e8b849cac730fe6716ab9d5f7079}\label{_two___milli___second___task_8c_ab0c3e8b849cac730fe6716ab9d5f7079} 
+\index{Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}!PC\_SIMV\_BLOWER\_WAIT\_TIME\_TRACE@{PC\_SIMV\_BLOWER\_WAIT\_TIME\_TRACE}}
+\index{PC\_SIMV\_BLOWER\_WAIT\_TIME\_TRACE@{PC\_SIMV\_BLOWER\_WAIT\_TIME\_TRACE}!Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}}
+\doxysubsubsection{\texorpdfstring{PC\_SIMV\_BLOWER\_WAIT\_TIME\_TRACE()}{PC\_SIMV\_BLOWER\_WAIT\_TIME\_TRACE()}}
+{\footnotesize\ttfamily void PC\+\_\+\+SIMV\+\_\+\+BLOWER\+\_\+\+WAIT\+\_\+\+TIME\+\_\+\+TRACE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PC\+\_\+\+SIMV\+\_\+\+BLOWER\+\_\+\+WAIT\+\_\+\+TIME\+\_\+\+TRACE. This function controls the blower to hold for a few milliseconds to pause operations. 
+
+PC\+\_\+\+SIMV\+\_\+\+BLOWER\+\_\+\+WAIT\+\_\+\+TIME\+\_\+\+TRACE.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_two___milli___second___task_8c_ae49b6bc493a0c38b999532b7ee381bac}\label{_two___milli___second___task_8c_ae49b6bc493a0c38b999532b7ee381bac} 
+\index{Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}!PSV\_APNEA\_COUNTER\_TRACE@{PSV\_APNEA\_COUNTER\_TRACE}}
+\index{PSV\_APNEA\_COUNTER\_TRACE@{PSV\_APNEA\_COUNTER\_TRACE}!Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}}
+\doxysubsubsection{\texorpdfstring{PSV\_APNEA\_COUNTER\_TRACE()}{PSV\_APNEA\_COUNTER\_TRACE()}}
+{\footnotesize\ttfamily void PSV\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PSV\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE. This function tracks the time elapsed during the apnea period in PSV mode. 
+
+PSV\+\_\+\+APNEA\+\_\+\+COUNTER\+\_\+\+TRACE.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_two___milli___second___task_8c_ac335ee2dad32e50de68d9c7a15a784af}\label{_two___milli___second___task_8c_ac335ee2dad32e50de68d9c7a15a784af} 
+\index{Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}!VC\_SIMV\_BLOWER\_WAIT\_TIME\_TRACE@{VC\_SIMV\_BLOWER\_WAIT\_TIME\_TRACE}}
+\index{VC\_SIMV\_BLOWER\_WAIT\_TIME\_TRACE@{VC\_SIMV\_BLOWER\_WAIT\_TIME\_TRACE}!Two\_Milli\_Second\_Task.c@{Two\_Milli\_Second\_Task.c}}
+\doxysubsubsection{\texorpdfstring{VC\_SIMV\_BLOWER\_WAIT\_TIME\_TRACE()}{VC\_SIMV\_BLOWER\_WAIT\_TIME\_TRACE()}}
+{\footnotesize\ttfamily void VC\+\_\+\+SIMV\+\_\+\+BLOWER\+\_\+\+WAIT\+\_\+\+TIME\+\_\+\+TRACE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+VC\+\_\+\+SIMV\+\_\+\+BLOWER\+\_\+\+WAIT\+\_\+\+TIME\+\_\+\+TRACE. This function controls the blower to hold for a few milliseconds to pause operations. 
+
+VC\+\_\+\+SIMV\+\_\+\+BLOWER\+\_\+\+WAIT\+\_\+\+TIME\+\_\+\+TRACE.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}

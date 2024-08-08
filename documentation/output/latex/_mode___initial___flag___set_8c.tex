@@ -1,0 +1,239 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+OTHERS/\+Mode\+\_\+\+Initial\+\_\+\+Flag\+\_\+\+Set.c File Reference}
+\hypertarget{_mode___initial___flag___set_8c}{}\label{_mode___initial___flag___set_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/OTHERS/Mode\_Initial\_Flag\_Set.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/OTHERS/Mode\_Initial\_Flag\_Set.c}}
+
+
+Implementation of Initial setup before starting the mode.  
+
+
+{\ttfamily \#include "{}Mode\+\_\+\+Initial\+\_\+\+Flag\+\_\+\+Set.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_mode___initial___flag___set_8c_ae36abc7da905e9974c5850a454445098}\label{_mode___initial___flag___set_8c_ae36abc7da905e9974c5850a454445098} 
+void {\bfseries PSV\+\_\+\+Mask\+\_\+\+Mode\+\_\+initial\+\_\+flags\+\_\+sets} ()
+\begin{DoxyCompactList}\small\item\em PSV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for PSV MASK mode and also starts PSV MASK mode. \end{DoxyCompactList}\item 
+\Hypertarget{_mode___initial___flag___set_8c_af64e063c51a5b580867aafd367269ed1}\label{_mode___initial___flag___set_8c_af64e063c51a5b580867aafd367269ed1} 
+void {\bfseries PSV\+\_\+\+ET\+\_\+\+TUBE\+\_\+\+Mode\+\_\+initial\+\_\+flags\+\_\+sets} ()
+\begin{DoxyCompactList}\small\item\em PSV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for PSV ET TUBE mode and also starts PSV ET TUBE mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8c_a09acb86ad90ca5d3af39760e5103d6be}{Mode\+\_\+\+Initial\+\_\+\+Flag\+\_\+\+Set\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Mode\+\_\+\+Initial\+\_\+\+Flag\+\_\+\+Set\+\_\+\+Task. This task determines the initialization of flags in the specified mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8c_ad742626a1326ad4eb811673885387ea3}{PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for PCCMV mode and also starts PCCMV mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8c_a8b57366785795594dbeadf05ffcf18ca}{VC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em VC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for VCCMV mode and also starts VCCMV mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8c_a702a669a19b1494a0e94f285d5a575cd}{PC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em PC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for PC SIMV mode and also starts PC SIMV mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8c_ad0100576c7a9ae8f894041e950a18064}{VC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em VC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for VC SIMV mode and also starts VC SIMV mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8c_a933b5de1e2c5dce325f57561e75edd04}{PSV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em PSV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for PSV mode and also starts PSV mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8c_a0a3d44959a6a663c849491456c06e2e2}{CPAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em CPAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for CPAP mode and also starts CPAP mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8c_a5615a4e302f8d0dd220511813b9ab8c6}{BIBAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em BIBAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for BIPAP mode and also starts BIPAP mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8c_ab5572b6ad05e5c1958e7475fd6694f3f}{APRV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em APRV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for APRV mode and also starts APRV mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8c_a3a531dfcc72962c1e24e74da22cc8503}{Backup\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET}} ()
+\begin{DoxyCompactList}\small\item\em Backup\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for Backup PCCMV mode and also starts Backup PC CMV mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8c_a370b6aaca34e06514663c358bcda641a}{Reset\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. This function Reset old reset flags for PC CMV.. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8c_aff0fe1e0fbd040a48538d40217ad2c65}{Reset\+\_\+\+VC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset\+\_\+\+VC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. This function Reset old reset flags for VCCMV. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8c_a420fda4e0a67f8c11448a18f9e6c4ced}{Reset\+\_\+\+PC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset\+\_\+\+PC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. This function resets old flags for PC SIMV. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8c_a47ff907c2b6e6a6e2c95ed194e583428}{Reset\+\_\+\+VC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. This function Reset old reset flags for VC SIMV.. \end{DoxyCompactList}\item 
+\Hypertarget{_mode___initial___flag___set_8c_a8aa51c02ce5acc4a96b75d830624fe0f}\label{_mode___initial___flag___set_8c_a8aa51c02ce5acc4a96b75d830624fe0f} 
+void {\bfseries Reset\+\_\+\+PC\+\_\+\+CMV\+\_\+\+BACKUP\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset} ()
+\begin{DoxyCompactList}\small\item\em Reset\+\_\+\+PC\+\_\+\+CMV\+\_\+\+BACKUP\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. \end{DoxyCompactList}\item 
+\Hypertarget{_mode___initial___flag___set_8c_ad7e83751bdc617d0db21e7f4d28efce6}\label{_mode___initial___flag___set_8c_ad7e83751bdc617d0db21e7f4d28efce6} 
+void {\bfseries Reset\+\_\+\+Patient\+\_\+\+Circuit\+\_\+\+Diconnceted\+\_\+\+Alert\+\_\+\+Flags} ()
+\begin{DoxyCompactList}\small\item\em Reset\+\_\+\+Patient\+\_\+\+Circuit\+\_\+\+Diconnceted\+\_\+\+Alert\+\_\+\+Flags. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mode___initial___flag___set_8c_a5f495ad24293e8cac1829347f4f81b9f}{Reset\+\_\+\+Flow\+\_\+\+Offset}} ()
+\begin{DoxyCompactList}\small\item\em PSV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function get offset values of sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_mode___initial___flag___set_8c_a228ea63a27343a1913e2336093ec24d8}\label{_mode___initial___flag___set_8c_a228ea63a27343a1913e2336093ec24d8} 
+uint16\+\_\+t {\bfseries DEC\+\_\+\+DAC} =200
+\item 
+\Hypertarget{_mode___initial___flag___set_8c_a47ca70bd3d084f2e740098bd3f3e5af9}\label{_mode___initial___flag___set_8c_a47ca70bd3d084f2e740098bd3f3e5af9} 
+uint8\+\_\+t {\bfseries Valve\+\_\+\+Condition}
+\item 
+\Hypertarget{_mode___initial___flag___set_8c_a2d601a8961fcc45206514c3c1306a24e}\label{_mode___initial___flag___set_8c_a2d601a8961fcc45206514c3c1306a24e} 
+uint16\+\_\+t {\bfseries O2\+\_\+max\+\_\+\+Control}
+\item 
+\Hypertarget{_mode___initial___flag___set_8c_a763e48e059d99b10646ca16a7e177df8}\label{_mode___initial___flag___set_8c_a763e48e059d99b10646ca16a7e177df8} 
+uint8\+\_\+t {\bfseries Dummy}
+\item 
+\Hypertarget{_mode___initial___flag___set_8c_ab76de0cfa1ab87cb999b85b11e6ed7ff}\label{_mode___initial___flag___set_8c_ab76de0cfa1ab87cb999b85b11e6ed7ff} 
+\mbox{\hyperlink{struct_s_e_n_s_o_r}{SENSOR}} {\bfseries MPX7002}
+\item 
+\Hypertarget{_mode___initial___flag___set_8c_a165d9f67214c9b3b2cb5e40f3efd12e9}\label{_mode___initial___flag___set_8c_a165d9f67214c9b3b2cb5e40f3efd12e9} 
+\mbox{\hyperlink{struct_s_e_n_s_o_r}{SENSOR}} {\bfseries MPX5010}
+\begin{DoxyCompactList}\small\item\em MPX5010 Sensor -\/ Defined as a generic sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of Initial setup before starting the mode. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the implementation of Initial setup before starting the mode. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_mode___initial___flag___set_8c_ab5572b6ad05e5c1958e7475fd6694f3f}\label{_mode___initial___flag___set_8c_ab5572b6ad05e5c1958e7475fd6694f3f} 
+\index{Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}!APRV\_Initial\_Flags\_SET@{APRV\_Initial\_Flags\_SET}}
+\index{APRV\_Initial\_Flags\_SET@{APRV\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}}
+\doxysubsubsection{\texorpdfstring{APRV\_Initial\_Flags\_SET()}{APRV\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void APRV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+APRV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for APRV mode and also starts APRV mode. 
+
+APRV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \Hypertarget{_mode___initial___flag___set_8c_a3a531dfcc72962c1e24e74da22cc8503}\label{_mode___initial___flag___set_8c_a3a531dfcc72962c1e24e74da22cc8503} 
+\index{Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}!Backup\_PC\_CMV\_Initial\_Flags\_SET@{Backup\_PC\_CMV\_Initial\_Flags\_SET}}
+\index{Backup\_PC\_CMV\_Initial\_Flags\_SET@{Backup\_PC\_CMV\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}}
+\doxysubsubsection{\texorpdfstring{Backup\_PC\_CMV\_Initial\_Flags\_SET()}{Backup\_PC\_CMV\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void Backup\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Backup\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for Backup PCCMV mode and also starts Backup PC CMV mode. 
+
+Backup\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \Hypertarget{_mode___initial___flag___set_8c_a5615a4e302f8d0dd220511813b9ab8c6}\label{_mode___initial___flag___set_8c_a5615a4e302f8d0dd220511813b9ab8c6} 
+\index{Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}!BIBAP\_Initial\_Flags\_SET@{BIBAP\_Initial\_Flags\_SET}}
+\index{BIBAP\_Initial\_Flags\_SET@{BIBAP\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}}
+\doxysubsubsection{\texorpdfstring{BIBAP\_Initial\_Flags\_SET()}{BIBAP\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void BIBAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+BIBAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for BIPAP mode and also starts BIPAP mode. 
+
+BIBAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \Hypertarget{_mode___initial___flag___set_8c_a0a3d44959a6a663c849491456c06e2e2}\label{_mode___initial___flag___set_8c_a0a3d44959a6a663c849491456c06e2e2} 
+\index{Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}!CPAP\_Initial\_Flags\_SET@{CPAP\_Initial\_Flags\_SET}}
+\index{CPAP\_Initial\_Flags\_SET@{CPAP\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}}
+\doxysubsubsection{\texorpdfstring{CPAP\_Initial\_Flags\_SET()}{CPAP\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void CPAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+CPAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for CPAP mode and also starts CPAP mode. 
+
+CPAP\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \Hypertarget{_mode___initial___flag___set_8c_a09acb86ad90ca5d3af39760e5103d6be}\label{_mode___initial___flag___set_8c_a09acb86ad90ca5d3af39760e5103d6be} 
+\index{Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}!Mode\_Initial\_Flag\_Set\_Task@{Mode\_Initial\_Flag\_Set\_Task}}
+\index{Mode\_Initial\_Flag\_Set\_Task@{Mode\_Initial\_Flag\_Set\_Task}!Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}}
+\doxysubsubsection{\texorpdfstring{Mode\_Initial\_Flag\_Set\_Task()}{Mode\_Initial\_Flag\_Set\_Task()}}
+{\footnotesize\ttfamily void Mode\+\_\+\+Initial\+\_\+\+Flag\+\_\+\+Set\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Mode\+\_\+\+Initial\+\_\+\+Flag\+\_\+\+Set\+\_\+\+Task. This task determines the initialization of flags in the specified mode. 
+
+Mode\+\_\+\+Initial\+\_\+\+Flag\+\_\+\+Set\+\_\+\+Task. \Hypertarget{_mode___initial___flag___set_8c_ad742626a1326ad4eb811673885387ea3}\label{_mode___initial___flag___set_8c_ad742626a1326ad4eb811673885387ea3} 
+\index{Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}!PC\_CMV\_Initial\_Flags\_SET@{PC\_CMV\_Initial\_Flags\_SET}}
+\index{PC\_CMV\_Initial\_Flags\_SET@{PC\_CMV\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}}
+\doxysubsubsection{\texorpdfstring{PC\_CMV\_Initial\_Flags\_SET()}{PC\_CMV\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for PCCMV mode and also starts PCCMV mode. 
+
+PC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \Hypertarget{_mode___initial___flag___set_8c_a702a669a19b1494a0e94f285d5a575cd}\label{_mode___initial___flag___set_8c_a702a669a19b1494a0e94f285d5a575cd} 
+\index{Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}!PC\_SIMV\_Initial\_Flags\_SET@{PC\_SIMV\_Initial\_Flags\_SET}}
+\index{PC\_SIMV\_Initial\_Flags\_SET@{PC\_SIMV\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}}
+\doxysubsubsection{\texorpdfstring{PC\_SIMV\_Initial\_Flags\_SET()}{PC\_SIMV\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void PC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for PC SIMV mode and also starts PC SIMV mode. 
+
+PC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \Hypertarget{_mode___initial___flag___set_8c_a933b5de1e2c5dce325f57561e75edd04}\label{_mode___initial___flag___set_8c_a933b5de1e2c5dce325f57561e75edd04} 
+\index{Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}!PSV\_Initial\_Flags\_SET@{PSV\_Initial\_Flags\_SET}}
+\index{PSV\_Initial\_Flags\_SET@{PSV\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}}
+\doxysubsubsection{\texorpdfstring{PSV\_Initial\_Flags\_SET()}{PSV\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void PSV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PSV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for PSV mode and also starts PSV mode. 
+
+PSV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \Hypertarget{_mode___initial___flag___set_8c_a5f495ad24293e8cac1829347f4f81b9f}\label{_mode___initial___flag___set_8c_a5f495ad24293e8cac1829347f4f81b9f} 
+\index{Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}!Reset\_Flow\_Offset@{Reset\_Flow\_Offset}}
+\index{Reset\_Flow\_Offset@{Reset\_Flow\_Offset}!Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}}
+\doxysubsubsection{\texorpdfstring{Reset\_Flow\_Offset()}{Reset\_Flow\_Offset()}}
+{\footnotesize\ttfamily void Reset\+\_\+\+Flow\+\_\+\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PSV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function get offset values of sensor. 
+
+Reset\+\_\+\+Flow\+\_\+\+Offset. \Hypertarget{_mode___initial___flag___set_8c_a370b6aaca34e06514663c358bcda641a}\label{_mode___initial___flag___set_8c_a370b6aaca34e06514663c358bcda641a} 
+\index{Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}!Reset\_PC\_CMV\_Old\_Flags\_Reset@{Reset\_PC\_CMV\_Old\_Flags\_Reset}}
+\index{Reset\_PC\_CMV\_Old\_Flags\_Reset@{Reset\_PC\_CMV\_Old\_Flags\_Reset}!Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}}
+\doxysubsubsection{\texorpdfstring{Reset\_PC\_CMV\_Old\_Flags\_Reset()}{Reset\_PC\_CMV\_Old\_Flags\_Reset()}}
+{\footnotesize\ttfamily void Reset\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. This function Reset old reset flags for PC CMV.. 
+
+Reset\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. \Hypertarget{_mode___initial___flag___set_8c_a420fda4e0a67f8c11448a18f9e6c4ced}\label{_mode___initial___flag___set_8c_a420fda4e0a67f8c11448a18f9e6c4ced} 
+\index{Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}!Reset\_PC\_SIMV\_Old\_Flags\_Reset@{Reset\_PC\_SIMV\_Old\_Flags\_Reset}}
+\index{Reset\_PC\_SIMV\_Old\_Flags\_Reset@{Reset\_PC\_SIMV\_Old\_Flags\_Reset}!Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}}
+\doxysubsubsection{\texorpdfstring{Reset\_PC\_SIMV\_Old\_Flags\_Reset()}{Reset\_PC\_SIMV\_Old\_Flags\_Reset()}}
+{\footnotesize\ttfamily void Reset\+\_\+\+PC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset\+\_\+\+PC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. This function resets old flags for PC SIMV. 
+
+Reset\+\_\+\+PC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. \Hypertarget{_mode___initial___flag___set_8c_aff0fe1e0fbd040a48538d40217ad2c65}\label{_mode___initial___flag___set_8c_aff0fe1e0fbd040a48538d40217ad2c65} 
+\index{Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}!Reset\_VC\_CMV\_Old\_Flags\_Reset@{Reset\_VC\_CMV\_Old\_Flags\_Reset}}
+\index{Reset\_VC\_CMV\_Old\_Flags\_Reset@{Reset\_VC\_CMV\_Old\_Flags\_Reset}!Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}}
+\doxysubsubsection{\texorpdfstring{Reset\_VC\_CMV\_Old\_Flags\_Reset()}{Reset\_VC\_CMV\_Old\_Flags\_Reset()}}
+{\footnotesize\ttfamily void Reset\+\_\+\+VC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset\+\_\+\+VC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. This function Reset old reset flags for VCCMV. 
+
+Reset\+\_\+\+VC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. \Hypertarget{_mode___initial___flag___set_8c_a47ff907c2b6e6a6e2c95ed194e583428}\label{_mode___initial___flag___set_8c_a47ff907c2b6e6a6e2c95ed194e583428} 
+\index{Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}!Reset\_VC\_SIMV\_Old\_Flags\_Reset@{Reset\_VC\_SIMV\_Old\_Flags\_Reset}}
+\index{Reset\_VC\_SIMV\_Old\_Flags\_Reset@{Reset\_VC\_SIMV\_Old\_Flags\_Reset}!Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}}
+\doxysubsubsection{\texorpdfstring{Reset\_VC\_SIMV\_Old\_Flags\_Reset()}{Reset\_VC\_SIMV\_Old\_Flags\_Reset()}}
+{\footnotesize\ttfamily void Reset\+\_\+\+VC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset\+\_\+\+PC\+\_\+\+CMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. This function Reset old reset flags for VC SIMV.. 
+
+Reset\+\_\+\+VC\+\_\+\+SIMV\+\_\+\+Old\+\_\+\+Flags\+\_\+\+Reset. \Hypertarget{_mode___initial___flag___set_8c_a8b57366785795594dbeadf05ffcf18ca}\label{_mode___initial___flag___set_8c_a8b57366785795594dbeadf05ffcf18ca} 
+\index{Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}!VC\_CMV\_Initial\_Flags\_SET@{VC\_CMV\_Initial\_Flags\_SET}}
+\index{VC\_CMV\_Initial\_Flags\_SET@{VC\_CMV\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}}
+\doxysubsubsection{\texorpdfstring{VC\_CMV\_Initial\_Flags\_SET()}{VC\_CMV\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void VC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+VC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for VCCMV mode and also starts VCCMV mode. 
+
+VC\+\_\+\+CMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. \Hypertarget{_mode___initial___flag___set_8c_ad0100576c7a9ae8f894041e950a18064}\label{_mode___initial___flag___set_8c_ad0100576c7a9ae8f894041e950a18064} 
+\index{Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}!VC\_SIMV\_Initial\_Flags\_SET@{VC\_SIMV\_Initial\_Flags\_SET}}
+\index{VC\_SIMV\_Initial\_Flags\_SET@{VC\_SIMV\_Initial\_Flags\_SET}!Mode\_Initial\_Flag\_Set.c@{Mode\_Initial\_Flag\_Set.c}}
+\doxysubsubsection{\texorpdfstring{VC\_SIMV\_Initial\_Flags\_SET()}{VC\_SIMV\_Initial\_Flags\_SET()}}
+{\footnotesize\ttfamily void VC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+VC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. This function resets flags for VC SIMV mode and also starts VC SIMV mode. 
+
+VC\+\_\+\+SIMV\+\_\+\+Initial\+\_\+\+Flags\+\_\+\+SET. 

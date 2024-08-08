@@ -1,0 +1,102 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+SENSORS/\+SENSORS\+\_\+\+INTERFACE/mpx7002.h File Reference}
+\hypertarget{mpx7002_8h}{}\label{mpx7002_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_INTERFACE/mpx7002.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_INTERFACE/mpx7002.h}}
+
+
+Declaration of mpx7002 Sensor integration.  
+
+
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/sensor.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/utilities.\+h$>$}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mpx7002_8h_aa12978c524d9b8ace2bcd3e70edca527}{MPX7002\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the MPX7002 sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mpx7002_8h_ab89e4fb06100a568ab294344d944d4cc}{MPX7002\+\_\+calibrate}} ()
+\begin{DoxyCompactList}\small\item\em Calibrate the MPX7002 sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mpx7002_8h_a2e499a4486178d4bdcf437c454c956a7}{MPX7002\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em Read data from the MPX7002 sensor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{mpx7002_8h_a6c2a29d9249ff52479426317ce063ff5}{MPX7002\+\_\+read\+\_\+adc}} ()
+\begin{DoxyCompactList}\small\item\em Perform analog-\/to-\/digital conversion for the MPX7002 sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{mpx7002_8h_ab76de0cfa1ab87cb999b85b11e6ed7ff}\label{mpx7002_8h_ab76de0cfa1ab87cb999b85b11e6ed7ff} 
+\mbox{\hyperlink{struct_s_e_n_s_o_r}{SENSOR}} {\bfseries MPX7002}
+\item 
+\Hypertarget{mpx7002_8h_a2f05cf4434e95eaff3975bf6ece1bb44}\label{mpx7002_8h_a2f05cf4434e95eaff3975bf6ece1bb44} 
+\mbox{\hyperlink{struct_k_a_l_m_a_n___c_o_n_s_t_a_n_t_s}{KALMAN\+\_\+\+CONSTANTS}} {\bfseries IIR}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of mpx7002 Sensor integration. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Declaration of mpx7002 Sensor integration, including the initialization. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mpx7002_8h_ab89e4fb06100a568ab294344d944d4cc}\label{mpx7002_8h_ab89e4fb06100a568ab294344d944d4cc} 
+\index{mpx7002.h@{mpx7002.h}!MPX7002\_calibrate@{MPX7002\_calibrate}}
+\index{MPX7002\_calibrate@{MPX7002\_calibrate}!mpx7002.h@{mpx7002.h}}
+\doxysubsubsection{\texorpdfstring{MPX7002\_calibrate()}{MPX7002\_calibrate()}}
+{\footnotesize\ttfamily void MPX7002\+\_\+calibrate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calibrate the MPX7002 sensor. 
+
+Calibrate the MPX7002 sensor. \Hypertarget{mpx7002_8h_aa12978c524d9b8ace2bcd3e70edca527}\label{mpx7002_8h_aa12978c524d9b8ace2bcd3e70edca527} 
+\index{mpx7002.h@{mpx7002.h}!MPX7002\_init@{MPX7002\_init}}
+\index{MPX7002\_init@{MPX7002\_init}!mpx7002.h@{mpx7002.h}}
+\doxysubsubsection{\texorpdfstring{MPX7002\_init()}{MPX7002\_init()}}
+{\footnotesize\ttfamily void MPX7002\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the MPX7002 sensor. 
+
+Initialize the MPX7002 sensor.
+
+MPX7002\+\_\+init. This function is initialize flow sensor. \Hypertarget{mpx7002_8h_a2e499a4486178d4bdcf437c454c956a7}\label{mpx7002_8h_a2e499a4486178d4bdcf437c454c956a7} 
+\index{mpx7002.h@{mpx7002.h}!MPX7002\_read@{MPX7002\_read}}
+\index{MPX7002\_read@{MPX7002\_read}!mpx7002.h@{mpx7002.h}}
+\doxysubsubsection{\texorpdfstring{MPX7002\_read()}{MPX7002\_read()}}
+{\footnotesize\ttfamily void MPX7002\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read data from the MPX7002 sensor. 
+
+Read data from the MPX7002 sensor.
+
+MPX7002\+\_\+read. This function is Calculate the runtime Flow value in L/min.
+
+
+\begin{DoxyEnumerate}
+\item \href{https://hackaday.com/2019/09/06/sensor-filters-for-coders/}{\texttt{ https\+://hackaday.\+com/2019/09/06/sensor-\/filters-\/for-\/coders/}}
+\item \href{https://electronics.stackexchange.com/questions/30370/fast-and-memory-efficient-moving-average-calculation}{\texttt{ https\+://electronics.\+stackexchange.\+com/questions/30370/fast-\/and-\/memory-\/efficient-\/moving-\/average-\/calculation}}
+\item \href{https://stackoverflow.com/questions/12636613/how-to-calculate-moving-average-without-keeping-the-count-and-data-total}{\texttt{ https\+://stackoverflow.\+com/questions/12636613/how-\/to-\/calculate-\/moving-\/average-\/without-\/keeping-\/the-\/count-\/and-\/data-\/total}} 
+\end{DoxyEnumerate}\Hypertarget{mpx7002_8h_a6c2a29d9249ff52479426317ce063ff5}\label{mpx7002_8h_a6c2a29d9249ff52479426317ce063ff5} 
+\index{mpx7002.h@{mpx7002.h}!MPX7002\_read\_adc@{MPX7002\_read\_adc}}
+\index{MPX7002\_read\_adc@{MPX7002\_read\_adc}!mpx7002.h@{mpx7002.h}}
+\doxysubsubsection{\texorpdfstring{MPX7002\_read\_adc()}{MPX7002\_read\_adc()}}
+{\footnotesize\ttfamily float MPX7002\+\_\+read\+\_\+adc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Perform analog-\/to-\/digital conversion for the MPX7002 sensor. 
+
+Perform analog-\/to-\/digital conversion for the MPX7002 sensor.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Vout} & (in mV) \\
+\hline
+\end{DoxyRetVals}

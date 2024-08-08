@@ -1,0 +1,95 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+SENSORS/\+SENSORS\+\_\+\+INTERFACE/mpx5010.c File Reference}
+\hypertarget{mpx5010_8c}{}\label{mpx5010_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/SENSORS\_INTERFACE/mpx5010.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/SENSORS/SENSORS\_INTERFACE/mpx5010.c}}
+
+
+Implementation of 5010 Pressure sensor Configuration.  
+
+
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/constants.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/database.\+h$>$}\newline
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/mpx5010.\+h$>$}\newline
+{\ttfamily \#include "{}math.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mpx5010_8c_ad0a9d5b026f442787b6cbcbddaee0872}{MPX5010\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the MPX5010 sensor. This function sets initial values for the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mpx5010_8c_ad64e92265c35a91f8a5277d32f48fa68}{MPX5010\+\_\+calibrate}} ()
+\begin{DoxyCompactList}\small\item\em Calibrate the MPX5010 sensor. This function takes multiple readings to determine the sensor offset. It checks if the offset is within the allowable range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mpx5010_8c_ac9159b4b9ba282e99e21f1e483eeb806}{MPX5010\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em Read data from the MPX5010 sensor. This function uses Exponentially Weighted Moving Average filter and calculates the sensor value. References\+: \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{mpx5010_8c_a35af7a70a174c5a4c556be499f9361bc}{MPX5010\+\_\+read\+\_\+adc}} ()
+\begin{DoxyCompactList}\small\item\em Perform analog-\/to-\/digital value to voltage conversion for the MPX5010 sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of 5010 Pressure sensor Configuration. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Implementation of 5010 Pressure sensor, including the initialization 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mpx5010_8c_ad64e92265c35a91f8a5277d32f48fa68}\label{mpx5010_8c_ad64e92265c35a91f8a5277d32f48fa68} 
+\index{mpx5010.c@{mpx5010.c}!MPX5010\_calibrate@{MPX5010\_calibrate}}
+\index{MPX5010\_calibrate@{MPX5010\_calibrate}!mpx5010.c@{mpx5010.c}}
+\doxysubsubsection{\texorpdfstring{MPX5010\_calibrate()}{MPX5010\_calibrate()}}
+{\footnotesize\ttfamily void MPX5010\+\_\+calibrate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calibrate the MPX5010 sensor. This function takes multiple readings to determine the sensor offset. It checks if the offset is within the allowable range. 
+
+Calibrate the MPX5010 sensor. \Hypertarget{mpx5010_8c_ad0a9d5b026f442787b6cbcbddaee0872}\label{mpx5010_8c_ad0a9d5b026f442787b6cbcbddaee0872} 
+\index{mpx5010.c@{mpx5010.c}!MPX5010\_init@{MPX5010\_init}}
+\index{MPX5010\_init@{MPX5010\_init}!mpx5010.c@{mpx5010.c}}
+\doxysubsubsection{\texorpdfstring{MPX5010\_init()}{MPX5010\_init()}}
+{\footnotesize\ttfamily void MPX5010\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the MPX5010 sensor. This function sets initial values for the sensor. 
+
+Initialize the MPX5010 sensor.
+
+MPX5010\+\_\+init. This function is initialize pressure sensor. \Hypertarget{mpx5010_8c_ac9159b4b9ba282e99e21f1e483eeb806}\label{mpx5010_8c_ac9159b4b9ba282e99e21f1e483eeb806} 
+\index{mpx5010.c@{mpx5010.c}!MPX5010\_read@{MPX5010\_read}}
+\index{MPX5010\_read@{MPX5010\_read}!mpx5010.c@{mpx5010.c}}
+\doxysubsubsection{\texorpdfstring{MPX5010\_read()}{MPX5010\_read()}}
+{\footnotesize\ttfamily void MPX5010\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read data from the MPX5010 sensor. This function uses Exponentially Weighted Moving Average filter and calculates the sensor value. References\+: 
+
+Read data from the MPX5010 sensor.
+
+MPX5010\+\_\+read. This function is Calculate the runtime pressure value in cmh20.
+
+
+\begin{DoxyEnumerate}
+\item \href{https://hackaday.com/2019/09/06/sensor-filters-for-coders/}{\texttt{ https\+://hackaday.\+com/2019/09/06/sensor-\/filters-\/for-\/coders/}}
+\item \href{https://electronics.stackexchange.com/questions/30370/fast-and-memory-efficient-moving-average-calculation}{\texttt{ https\+://electronics.\+stackexchange.\+com/questions/30370/fast-\/and-\/memory-\/efficient-\/moving-\/average-\/calculation}}
+\item \href{https://stackoverflow.com/questions/12636613/how-to-calculate-moving-average-without-keeping-the-count-and-data-total}{\texttt{ https\+://stackoverflow.\+com/questions/12636613/how-\/to-\/calculate-\/moving-\/average-\/without-\/keeping-\/the-\/count-\/and-\/data-\/total}} 
+\end{DoxyEnumerate}\Hypertarget{mpx5010_8c_a35af7a70a174c5a4c556be499f9361bc}\label{mpx5010_8c_a35af7a70a174c5a4c556be499f9361bc} 
+\index{mpx5010.c@{mpx5010.c}!MPX5010\_read\_adc@{MPX5010\_read\_adc}}
+\index{MPX5010\_read\_adc@{MPX5010\_read\_adc}!mpx5010.c@{mpx5010.c}}
+\doxysubsubsection{\texorpdfstring{MPX5010\_read\_adc()}{MPX5010\_read\_adc()}}
+{\footnotesize\ttfamily float MPX5010\+\_\+read\+\_\+adc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Perform analog-\/to-\/digital value to voltage conversion for the MPX5010 sensor. 
+
+Perform analog-\/to-\/digital conversion for the MPX5010 sensor.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Vout} & (in mV) \\
+\hline
+\end{DoxyRetVals}

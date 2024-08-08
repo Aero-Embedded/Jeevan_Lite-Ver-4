@@ -1,0 +1,216 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+Bluetooth/\+Bluetooth\+\_\+\+Data\+\_\+\+Split.h File Reference}
+\hypertarget{_bluetooth___data___split_8h}{}\label{_bluetooth___data___split_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/Bluetooth/Bluetooth\_Data\_Split.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/Bluetooth/Bluetooth\_Data\_Split.h}}
+
+
+Declaration of split Blue-\/tooth data.  
+
+
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09}{Modes}} \{ \newline
+\mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09ad3fa9ae9431d6cb1772f9d9df48cab19}{Idle}} =0
+, \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a4970797c1b1079dc1bfb1996eb51520b}{Pccmv}} =1
+, \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a29f55524aad4bb0c8fb3c7a4a23fbb46}{Vccmv}} =2
+, \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09ab5c55c0d1e833e4a7fd1e1d64353b278}{Aprv}} =4
+, \newline
+\mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a3a261f69bf666a2f1b30ce5c6ee857da}{Pcsimv}} =5
+, \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09aba2b819b938d4cd0bcbfb5c807a7c0d5}{Vcsimv}} =6
+, \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a09bd14858c08dd345c322b272e111e13}{Psv}} =7
+, \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a65f902c9f8d742833070ed927158953d}{Spont}} =10
+, \newline
+\mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09abe37e2efde643abfb0caadaf8c7ccebe}{Cpap}} =11
+, \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09acd17a70ff6c29ec21e39f342a2e75210}{Bi\+Pap}} =12
+, \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09ac7c8b2f95e3dfccb6fa9386af5bafeee}{Hfnc}} =13
+, \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a262485d9bcb3f42c5229f129fdc8b53c}{Suction}} =15
+, \newline
+\mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a711caa1b6d75460f9aa07ecdc66942d1}{Backup\+\_\+\+Pccmv}} =21
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for modes in number format for identification. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_bluetooth___data___split_8h_adf70f5c34e0b9e905bc1e6f5441b7bf5}{Backup\+\_\+\+Modes}} \{ \mbox{\hyperlink{_bluetooth___data___split_8h_adf70f5c34e0b9e905bc1e6f5441b7bf5a5f506612ea2b7cd608016f74cef0e48b}{No\+\_\+\+Backup\+\_\+\+Mode}}
+, \mbox{\hyperlink{_bluetooth___data___split_8h_adf70f5c34e0b9e905bc1e6f5441b7bf5a96c0c741948cfbdf0b3daeade773ae16}{Backup\+\_\+\+PCCMV\+\_\+\+Mode}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for Backup mode. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440a}{Next\+\_\+half\+\_\+\+Breath\+\_\+\+Cycle}} \{ \mbox{\hyperlink{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440aa6caee782ea2e79f9b81aa55d421e72d9}{Generate\+\_\+\+Inspiration\+\_\+\+Cycle}} = 0
+, \mbox{\hyperlink{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440aae5f8cee983d903e35e5f388c984bf3cf}{Generate\+\_\+\+Expiration\+\_\+\+Cycle}}
+, \mbox{\hyperlink{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440aadad14e67e12daa4c7c5b7c09ba6657c2}{No\+Wave\+Form\+State}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to run a next Phase of breathcycle. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673}{Run\+\_\+current\+\_\+\+Breathe\+\_\+\+State}} \{ \mbox{\hyperlink{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673a592164e334b3cca6981602ea96ebed75}{No\+\_\+\+Run\+\_\+\+State}} =0
+, \mbox{\hyperlink{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673acbb102fe1307803e5904c6874dbdb705}{Run\+\_\+\+Inspiration\+\_\+\+Cycle}}
+, \mbox{\hyperlink{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673ad2f792fd32cd6eed9f722adfebc874f3}{Run\+\_\+\+Expiration\+\_\+\+Cycle}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to check current Phase of breathcycle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_bluetooth___data___split_8h_adc404825d32b99a395c10626eb89d457}\label{_bluetooth___data___split_8h_adc404825d32b99a395c10626eb89d457} 
+uint8\+\_\+t {\bfseries chksum8\+\_\+2} (const unsigned char \texorpdfstring{$\ast$}{*}buff, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em chksum8. This function is used to identify a data error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_bluetooth___data___split_8h_abf3f4f0213259f4b9053986bf924964b}\label{_bluetooth___data___split_8h_abf3f4f0213259f4b9053986bf924964b} 
+\mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09}{Modes}} {\bfseries Mode}
+\item 
+\Hypertarget{_bluetooth___data___split_8h_a83b7c872aba4344b184895d570a1f89f}\label{_bluetooth___data___split_8h_a83b7c872aba4344b184895d570a1f89f} 
+\mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09}{Modes}} {\bfseries Running\+\_\+\+Mode}
+\begin{DoxyCompactList}\small\item\em enumeration variable for Modes. \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___data___split_8h_ac2e55115384b9ed6d8612db1e43786b6}\label{_bluetooth___data___split_8h_ac2e55115384b9ed6d8612db1e43786b6} 
+\mbox{\hyperlink{_bluetooth___data___split_8h_adf70f5c34e0b9e905bc1e6f5441b7bf5}{Backup\+\_\+\+Modes}} {\bfseries Current\+\_\+\+Backup\+\_\+\+Mode}
+\begin{DoxyCompactList}\small\item\em enumeration variable for Backup\+\_\+\+Modes. \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___data___split_8h_ab5bcb54abbbba2bb662347047ae30574}\label{_bluetooth___data___split_8h_ab5bcb54abbbba2bb662347047ae30574} 
+\mbox{\hyperlink{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440a}{Next\+\_\+half\+\_\+\+Breath\+\_\+\+Cycle}} {\bfseries Next\+\_\+\+Half\+\_\+\+Breath\+\_\+\+Cycle}
+\begin{DoxyCompactList}\small\item\em enumeration variable for Next\+\_\+half\+\_\+\+Breath\+\_\+\+Cycle. \end{DoxyCompactList}\item 
+\Hypertarget{_bluetooth___data___split_8h_af0b4f7423471d54fabe81d626345450e}\label{_bluetooth___data___split_8h_af0b4f7423471d54fabe81d626345450e} 
+\mbox{\hyperlink{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673}{Run\+\_\+current\+\_\+\+Breathe\+\_\+\+State}} {\bfseries Run\+\_\+\+Current\+\_\+\+Breathe\+\_\+\+State}
+\begin{DoxyCompactList}\small\item\em enumeration variable for Run\+\_\+current\+\_\+\+Breathe\+\_\+\+State. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of split Blue-\/tooth data. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the implementation split Blue-\/tooth data. and pause and resume a device. 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_bluetooth___data___split_8h_adf70f5c34e0b9e905bc1e6f5441b7bf5}\label{_bluetooth___data___split_8h_adf70f5c34e0b9e905bc1e6f5441b7bf5} 
+\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Backup\_Modes@{Backup\_Modes}}
+\index{Backup\_Modes@{Backup\_Modes}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}
+\doxysubsubsection{\texorpdfstring{Backup\_Modes}{Backup\_Modes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_bluetooth___data___split_8h_adf70f5c34e0b9e905bc1e6f5441b7bf5}{Backup\+\_\+\+Modes}}}
+
+
+
+Enumeration for Backup mode. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{No\_Backup\_Mode@{No\_Backup\_Mode}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!No\_Backup\_Mode@{No\_Backup\_Mode}}}\Hypertarget{_bluetooth___data___split_8h_adf70f5c34e0b9e905bc1e6f5441b7bf5a5f506612ea2b7cd608016f74cef0e48b}\label{_bluetooth___data___split_8h_adf70f5c34e0b9e905bc1e6f5441b7bf5a5f506612ea2b7cd608016f74cef0e48b} 
+No\+\_\+\+Backup\+\_\+\+Mode&NO BACKUP PCCMV mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Backup\_PCCMV\_Mode@{Backup\_PCCMV\_Mode}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Backup\_PCCMV\_Mode@{Backup\_PCCMV\_Mode}}}\Hypertarget{_bluetooth___data___split_8h_adf70f5c34e0b9e905bc1e6f5441b7bf5a96c0c741948cfbdf0b3daeade773ae16}\label{_bluetooth___data___split_8h_adf70f5c34e0b9e905bc1e6f5441b7bf5a96c0c741948cfbdf0b3daeade773ae16} 
+Backup\+\_\+\+PCCMV\+\_\+\+Mode&BACKUP PCCMV mode. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09}\label{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09} 
+\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Modes@{Modes}}
+\index{Modes@{Modes}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}
+\doxysubsubsection{\texorpdfstring{Modes}{Modes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09}{Modes}}}
+
+
+
+Enumeration for modes in number format for identification. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Idle@{Idle}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Idle@{Idle}}}\Hypertarget{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09ad3fa9ae9431d6cb1772f9d9df48cab19}\label{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09ad3fa9ae9431d6cb1772f9d9df48cab19} 
+Idle&Idle. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Pccmv@{Pccmv}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Pccmv@{Pccmv}}}\Hypertarget{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a4970797c1b1079dc1bfb1996eb51520b}\label{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a4970797c1b1079dc1bfb1996eb51520b} 
+Pccmv&PC CMV mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Vccmv@{Vccmv}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Vccmv@{Vccmv}}}\Hypertarget{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a29f55524aad4bb0c8fb3c7a4a23fbb46}\label{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a29f55524aad4bb0c8fb3c7a4a23fbb46} 
+Vccmv&VC CMV mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Aprv@{Aprv}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Aprv@{Aprv}}}\Hypertarget{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09ab5c55c0d1e833e4a7fd1e1d64353b278}\label{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09ab5c55c0d1e833e4a7fd1e1d64353b278} 
+Aprv&APRV mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Pcsimv@{Pcsimv}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Pcsimv@{Pcsimv}}}\Hypertarget{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a3a261f69bf666a2f1b30ce5c6ee857da}\label{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a3a261f69bf666a2f1b30ce5c6ee857da} 
+Pcsimv&PC SIMV mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Vcsimv@{Vcsimv}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Vcsimv@{Vcsimv}}}\Hypertarget{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09aba2b819b938d4cd0bcbfb5c807a7c0d5}\label{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09aba2b819b938d4cd0bcbfb5c807a7c0d5} 
+Vcsimv&VC SIMV mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Psv@{Psv}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Psv@{Psv}}}\Hypertarget{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a09bd14858c08dd345c322b272e111e13}\label{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a09bd14858c08dd345c322b272e111e13} 
+Psv&PSV mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Spont@{Spont}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Spont@{Spont}}}\Hypertarget{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a65f902c9f8d742833070ed927158953d}\label{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a65f902c9f8d742833070ed927158953d} 
+Spont&SPONTANEOUS mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cpap@{Cpap}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Cpap@{Cpap}}}\Hypertarget{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09abe37e2efde643abfb0caadaf8c7ccebe}\label{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09abe37e2efde643abfb0caadaf8c7ccebe} 
+Cpap&CPAP mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BiPap@{BiPap}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!BiPap@{BiPap}}}\Hypertarget{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09acd17a70ff6c29ec21e39f342a2e75210}\label{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09acd17a70ff6c29ec21e39f342a2e75210} 
+Bi\+Pap&BIPAP mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hfnc@{Hfnc}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Hfnc@{Hfnc}}}\Hypertarget{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09ac7c8b2f95e3dfccb6fa9386af5bafeee}\label{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09ac7c8b2f95e3dfccb6fa9386af5bafeee} 
+Hfnc&HFNC mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Suction@{Suction}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Suction@{Suction}}}\Hypertarget{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a262485d9bcb3f42c5229f129fdc8b53c}\label{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a262485d9bcb3f42c5229f129fdc8b53c} 
+Suction&SUCTION mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Backup\_Pccmv@{Backup\_Pccmv}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Backup\_Pccmv@{Backup\_Pccmv}}}\Hypertarget{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a711caa1b6d75460f9aa07ecdc66942d1}\label{_bluetooth___data___split_8h_a5ba261125d0e6e60801792a10232cc09a711caa1b6d75460f9aa07ecdc66942d1} 
+Backup\+\_\+\+Pccmv&BACKUP PCCMV mode. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440a}\label{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440a} 
+\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Next\_half\_Breath\_Cycle@{Next\_half\_Breath\_Cycle}}
+\index{Next\_half\_Breath\_Cycle@{Next\_half\_Breath\_Cycle}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}
+\doxysubsubsection{\texorpdfstring{Next\_half\_Breath\_Cycle}{Next\_half\_Breath\_Cycle}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440a}{Next\+\_\+half\+\_\+\+Breath\+\_\+\+Cycle}}}
+
+
+
+Enumeration to run a next Phase of breathcycle. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Generate\_Inspiration\_Cycle@{Generate\_Inspiration\_Cycle}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Generate\_Inspiration\_Cycle@{Generate\_Inspiration\_Cycle}}}\Hypertarget{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440aa6caee782ea2e79f9b81aa55d421e72d9}\label{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440aa6caee782ea2e79f9b81aa55d421e72d9} 
+Generate\+\_\+\+Inspiration\+\_\+\+Cycle&inspiration phase \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Generate\_Expiration\_Cycle@{Generate\_Expiration\_Cycle}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Generate\_Expiration\_Cycle@{Generate\_Expiration\_Cycle}}}\Hypertarget{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440aae5f8cee983d903e35e5f388c984bf3cf}\label{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440aae5f8cee983d903e35e5f388c984bf3cf} 
+Generate\+\_\+\+Expiration\+\_\+\+Cycle&expiration phase \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NoWaveFormState@{NoWaveFormState}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!NoWaveFormState@{NoWaveFormState}}}\Hypertarget{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440aadad14e67e12daa4c7c5b7c09ba6657c2}\label{_bluetooth___data___split_8h_a88da6c0bc4e9df794e15266a8051440aadad14e67e12daa4c7c5b7c09ba6657c2} 
+No\+Wave\+Form\+State&idle phase \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673}\label{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673} 
+\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Run\_current\_Breathe\_State@{Run\_current\_Breathe\_State}}
+\index{Run\_current\_Breathe\_State@{Run\_current\_Breathe\_State}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}
+\doxysubsubsection{\texorpdfstring{Run\_current\_Breathe\_State}{Run\_current\_Breathe\_State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673}{Run\+\_\+current\+\_\+\+Breathe\+\_\+\+State}}}
+
+
+
+Enumeration to check current Phase of breathcycle. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{No\_Run\_State@{No\_Run\_State}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!No\_Run\_State@{No\_Run\_State}}}\Hypertarget{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673a592164e334b3cca6981602ea96ebed75}\label{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673a592164e334b3cca6981602ea96ebed75} 
+No\+\_\+\+Run\+\_\+\+State&idle phase \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Run\_Inspiration\_Cycle@{Run\_Inspiration\_Cycle}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Run\_Inspiration\_Cycle@{Run\_Inspiration\_Cycle}}}\Hypertarget{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673acbb102fe1307803e5904c6874dbdb705}\label{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673acbb102fe1307803e5904c6874dbdb705} 
+Run\+\_\+\+Inspiration\+\_\+\+Cycle&inspiration phase \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Run\_Expiration\_Cycle@{Run\_Expiration\_Cycle}!Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}}\index{Bluetooth\_Data\_Split.h@{Bluetooth\_Data\_Split.h}!Run\_Expiration\_Cycle@{Run\_Expiration\_Cycle}}}\Hypertarget{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673ad2f792fd32cd6eed9f722adfebc874f3}\label{_bluetooth___data___split_8h_a9ea0396bc8fe1d14837c43a6b6e02673ad2f792fd32cd6eed9f722adfebc874f3} 
+Run\+\_\+\+Expiration\+\_\+\+Cycle&expiration phase \\
+\hline
+
+\end{DoxyEnumFields}

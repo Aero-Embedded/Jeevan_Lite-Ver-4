@@ -1,0 +1,3 @@
+Sensor_Read.c:27:6:Sensor_Read_Task	16	static
+Sensor_Read.c:40:6:READ_SENSOR_TASK	8	static
+Sensor_Read.c:54:6:CALIBRATE_SENSOR_TASK	8	static

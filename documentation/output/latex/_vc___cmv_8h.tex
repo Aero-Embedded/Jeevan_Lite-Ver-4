@@ -1,0 +1,209 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+VC\+\_\+\+CMV/\+Vc\+\_\+\+Cmv.h File Reference}
+\hypertarget{_vc___cmv_8h}{}\label{_vc___cmv_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/VC\_CMV/Vc\_Cmv.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/VC\_CMV/Vc\_Cmv.h}}
+
+
+Declaration of VCCMV mode.  
+
+
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_v_c___c_m_v__mode__parameter}{VC\+\_\+\+CMV\+\_\+mode\+\_\+parameter}}
+\begin{DoxyCompactList}\small\item\em Structure Representing VCCMV Mode parameter variables. it includes expiration time ,rise time percentage variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344}{Flow\+\_\+status}} \{ \mbox{\hyperlink{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344aecbade4b3b0377311754fcf23cde17fc}{Flow\+\_\+fine}}
+, \mbox{\hyperlink{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344a6480740febd449b2635f9eded65728e5}{Low\+\_\+\+Flow\+\_\+\+Problem}}
+, \mbox{\hyperlink{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344ad3c640f0655efc0e317aabf0c765fcfd}{High\+\_\+\+Flow\+\_\+\+Problem}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for Flow achieved status type. To identify whether the flow has been achieved or not. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_vc___cmv_8h_a0edf205e8bc249b473584d1fdc3f1e27}{set\+\_\+flow\+\_\+value}} \{ \mbox{\hyperlink{_vc___cmv_8h_a0edf205e8bc249b473584d1fdc3f1e27adf3f893976b7eee79447ddf6d8e51e05}{Not\+\_\+\+Detect}}
+, \mbox{\hyperlink{_vc___cmv_8h_a0edf205e8bc249b473584d1fdc3f1e27a48a95ceab76284afa466622424eba555}{Detect}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for Set Flow achieved or not. To identify whether the achieved flow has been detected within a set value. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_vc___cmv_8h_affbc8d7edc573354bbbffd1752d52193}{Blower\+\_\+stat}} \{ \mbox{\hyperlink{_vc___cmv_8h_affbc8d7edc573354bbbffd1752d52193ad5289c88b5b7179d0616da02c5fe6c96}{Bl\+OWER\+\_\+\+ON}}
+, \mbox{\hyperlink{_vc___cmv_8h_affbc8d7edc573354bbbffd1752d52193ae9d1a0f897786688897bfb37bad4a1bb}{Bl\+OWER\+\_\+\+OFF}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for blower need to on or off in vc cmv mode control algorithm. To update the blower DAC value using this enumeration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_vc___cmv_8h_adb5642149e0a2f790a4796d40c88f043}{Vc\+\_\+\+Cmv\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Task variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_vc___cmv_8h_a58666bb6decff49700882475287e9fe4}{VC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em VC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_vc___cmv_8h_a7625afbaaa8f6b9337e542a09fc17ef9}{VC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em VC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \end{DoxyCompactList}\item 
+\Hypertarget{_vc___cmv_8h_abe1c95e69e485850a3c2b0c601ac1130}\label{_vc___cmv_8h_abe1c95e69e485850a3c2b0c601ac1130} 
+void {\bfseries Volume\+\_\+\+Not\+\_\+\+Acheieved} ()
+\begin{DoxyCompactList}\small\item\em Volume\+\_\+\+Not\+\_\+\+Acheieved. \end{DoxyCompactList}\item 
+\Hypertarget{_vc___cmv_8h_ad8e4764770eaf63720d9b5cc0c78c689}\label{_vc___cmv_8h_ad8e4764770eaf63720d9b5cc0c78c689} 
+void {\bfseries Volume\+\_\+\+Acheieved} ()
+\begin{DoxyCompactList}\small\item\em Volume\+\_\+\+Acheieved. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_vc___cmv_8h_a77732e53de153a8750abe35ccc1eaf99}{Reset\+\_\+\+Blower\+\_\+\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Reset\+\_\+\+Blower\+\_\+\+Status. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{_vc___cmv_8h_a4d1a837943b7e0cc08716b3a6322bb45}{LOW\+\_\+\+Compliance\+\_\+\+DAC\+\_\+value}} (uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em LOW\+\_\+\+Compliance\+\_\+\+DAC\+\_\+value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_vc___cmv_8h_a13b068b51b7ebc403f06ac675aef9f7a}\label{_vc___cmv_8h_a13b068b51b7ebc403f06ac675aef9f7a} 
+\mbox{\hyperlink{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344}{Flow\+\_\+status}} {\bfseries Flow\+\_\+increment}
+\begin{DoxyCompactList}\small\item\em Enumeration variable. \end{DoxyCompactList}\item 
+\Hypertarget{_vc___cmv_8h_a7081f6952cd81de31a38febf879bb676}\label{_vc___cmv_8h_a7081f6952cd81de31a38febf879bb676} 
+\mbox{\hyperlink{_vc___cmv_8h_a0edf205e8bc249b473584d1fdc3f1e27}{set\+\_\+flow\+\_\+value}} {\bfseries Set\+\_\+\+Flow\+\_\+value}
+\begin{DoxyCompactList}\small\item\em Enumeration variable. \end{DoxyCompactList}\item 
+\Hypertarget{_vc___cmv_8h_a2ffef94dba66f7b63a455fef9c1cadbf}\label{_vc___cmv_8h_a2ffef94dba66f7b63a455fef9c1cadbf} 
+uint16\+\_\+t {\bfseries LOW\+\_\+\+COMPLIANCE\+\_\+\+DAC}
+\begin{DoxyCompactList}\small\item\em identify compliance dac variable \end{DoxyCompactList}\item 
+\Hypertarget{_vc___cmv_8h_aaa36002036666e3f9f6f91733b48a13b}\label{_vc___cmv_8h_aaa36002036666e3f9f6f91733b48a13b} 
+int8\+\_\+t {\bfseries Low\+\_\+\+Flow\+\_\+\+Rate}
+\begin{DoxyCompactList}\small\item\em detect low flow rate variable \end{DoxyCompactList}\item 
+\Hypertarget{_vc___cmv_8h_a23f379fba5efd9007ccfaf6826cfebdb}\label{_vc___cmv_8h_a23f379fba5efd9007ccfaf6826cfebdb} 
+uint8\+\_\+t {\bfseries Stop\+\_\+\+Increment\+\_\+\+Count}
+\item 
+\Hypertarget{_vc___cmv_8h_abd174e303ff68603d59b24cf7484d064}\label{_vc___cmv_8h_abd174e303ff68603d59b24cf7484d064} 
+uint8\+\_\+t {\bfseries Last\+\_\+\+Flow\+\_\+increment}
+\begin{DoxyCompactList}\small\item\em Stop\+\_\+\+Increment\+\_\+\+Count, Last\+\_\+\+Flow\+\_\+increment variable. \end{DoxyCompactList}\item 
+\Hypertarget{_vc___cmv_8h_a8526e85742b4908551ac06facad072af}\label{_vc___cmv_8h_a8526e85742b4908551ac06facad072af} 
+\mbox{\hyperlink{struct_v_c___c_m_v__mode__parameter}{VC\+\_\+\+CMV\+\_\+mode\+\_\+parameter}} {\bfseries VC\+\_\+\+CMV}
+\begin{DoxyCompactList}\small\item\em Structure variable. \end{DoxyCompactList}\item 
+\Hypertarget{_vc___cmv_8h_aa338ae7c90a08163d6dd7c949b812c45}\label{_vc___cmv_8h_aa338ae7c90a08163d6dd7c949b812c45} 
+x\+Task\+Handle {\bfseries Vc\+\_\+\+Cmv\+\_\+\+Handler}
+\begin{DoxyCompactList}\small\item\em Task handler name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of VCCMV mode. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Declaration VCCMV mode variables 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_vc___cmv_8h_affbc8d7edc573354bbbffd1752d52193}\label{_vc___cmv_8h_affbc8d7edc573354bbbffd1752d52193} 
+\index{Vc\_Cmv.h@{Vc\_Cmv.h}!Blower\_stat@{Blower\_stat}}
+\index{Blower\_stat@{Blower\_stat}!Vc\_Cmv.h@{Vc\_Cmv.h}}
+\doxysubsubsection{\texorpdfstring{Blower\_stat}{Blower\_stat}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_vc___cmv_8h_affbc8d7edc573354bbbffd1752d52193}{Blower\+\_\+stat}}}
+
+
+
+Enumeration for blower need to on or off in vc cmv mode control algorithm. To update the blower DAC value using this enumeration. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BlOWER\_ON@{BlOWER\_ON}!Vc\_Cmv.h@{Vc\_Cmv.h}}\index{Vc\_Cmv.h@{Vc\_Cmv.h}!BlOWER\_ON@{BlOWER\_ON}}}\Hypertarget{_vc___cmv_8h_affbc8d7edc573354bbbffd1752d52193ad5289c88b5b7179d0616da02c5fe6c96}\label{_vc___cmv_8h_affbc8d7edc573354bbbffd1752d52193ad5289c88b5b7179d0616da02c5fe6c96} 
+Bl\+OWER\+\_\+\+ON&Bl\+OWER\+\_\+\+ON. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BlOWER\_OFF@{BlOWER\_OFF}!Vc\_Cmv.h@{Vc\_Cmv.h}}\index{Vc\_Cmv.h@{Vc\_Cmv.h}!BlOWER\_OFF@{BlOWER\_OFF}}}\Hypertarget{_vc___cmv_8h_affbc8d7edc573354bbbffd1752d52193ae9d1a0f897786688897bfb37bad4a1bb}\label{_vc___cmv_8h_affbc8d7edc573354bbbffd1752d52193ae9d1a0f897786688897bfb37bad4a1bb} 
+Bl\+OWER\+\_\+\+OFF&Bl\+OWER\+\_\+\+OFF. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344}\label{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344} 
+\index{Vc\_Cmv.h@{Vc\_Cmv.h}!Flow\_status@{Flow\_status}}
+\index{Flow\_status@{Flow\_status}!Vc\_Cmv.h@{Vc\_Cmv.h}}
+\doxysubsubsection{\texorpdfstring{Flow\_status}{Flow\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344}{Flow\+\_\+status}}}
+
+
+
+Enumeration for Flow achieved status type. To identify whether the flow has been achieved or not. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flow\_fine@{Flow\_fine}!Vc\_Cmv.h@{Vc\_Cmv.h}}\index{Vc\_Cmv.h@{Vc\_Cmv.h}!Flow\_fine@{Flow\_fine}}}\Hypertarget{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344aecbade4b3b0377311754fcf23cde17fc}\label{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344aecbade4b3b0377311754fcf23cde17fc} 
+Flow\+\_\+fine&flow achieved normal. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Low\_Flow\_Problem@{Low\_Flow\_Problem}!Vc\_Cmv.h@{Vc\_Cmv.h}}\index{Vc\_Cmv.h@{Vc\_Cmv.h}!Low\_Flow\_Problem@{Low\_Flow\_Problem}}}\Hypertarget{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344a6480740febd449b2635f9eded65728e5}\label{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344a6480740febd449b2635f9eded65728e5} 
+Low\+\_\+\+Flow\+\_\+\+Problem&low flow achieved. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{High\_Flow\_Problem@{High\_Flow\_Problem}!Vc\_Cmv.h@{Vc\_Cmv.h}}\index{Vc\_Cmv.h@{Vc\_Cmv.h}!High\_Flow\_Problem@{High\_Flow\_Problem}}}\Hypertarget{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344ad3c640f0655efc0e317aabf0c765fcfd}\label{_vc___cmv_8h_a9f90509dbc18e525646172b50fc56344ad3c640f0655efc0e317aabf0c765fcfd} 
+High\+\_\+\+Flow\+\_\+\+Problem&high flow achieved. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_vc___cmv_8h_a0edf205e8bc249b473584d1fdc3f1e27}\label{_vc___cmv_8h_a0edf205e8bc249b473584d1fdc3f1e27} 
+\index{Vc\_Cmv.h@{Vc\_Cmv.h}!set\_flow\_value@{set\_flow\_value}}
+\index{set\_flow\_value@{set\_flow\_value}!Vc\_Cmv.h@{Vc\_Cmv.h}}
+\doxysubsubsection{\texorpdfstring{set\_flow\_value}{set\_flow\_value}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_vc___cmv_8h_a0edf205e8bc249b473584d1fdc3f1e27}{set\+\_\+flow\+\_\+value}}}
+
+
+
+Enumeration for Set Flow achieved or not. To identify whether the achieved flow has been detected within a set value. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Not\_Detect@{Not\_Detect}!Vc\_Cmv.h@{Vc\_Cmv.h}}\index{Vc\_Cmv.h@{Vc\_Cmv.h}!Not\_Detect@{Not\_Detect}}}\Hypertarget{_vc___cmv_8h_a0edf205e8bc249b473584d1fdc3f1e27adf3f893976b7eee79447ddf6d8e51e05}\label{_vc___cmv_8h_a0edf205e8bc249b473584d1fdc3f1e27adf3f893976b7eee79447ddf6d8e51e05} 
+Not\+\_\+\+Detect&Flow not detect. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Detect@{Detect}!Vc\_Cmv.h@{Vc\_Cmv.h}}\index{Vc\_Cmv.h@{Vc\_Cmv.h}!Detect@{Detect}}}\Hypertarget{_vc___cmv_8h_a0edf205e8bc249b473584d1fdc3f1e27a48a95ceab76284afa466622424eba555}\label{_vc___cmv_8h_a0edf205e8bc249b473584d1fdc3f1e27a48a95ceab76284afa466622424eba555} 
+Detect&Flow detected. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_vc___cmv_8h_a4d1a837943b7e0cc08716b3a6322bb45}\label{_vc___cmv_8h_a4d1a837943b7e0cc08716b3a6322bb45} 
+\index{Vc\_Cmv.h@{Vc\_Cmv.h}!LOW\_Compliance\_DAC\_value@{LOW\_Compliance\_DAC\_value}}
+\index{LOW\_Compliance\_DAC\_value@{LOW\_Compliance\_DAC\_value}!Vc\_Cmv.h@{Vc\_Cmv.h}}
+\doxysubsubsection{\texorpdfstring{LOW\_Compliance\_DAC\_value()}{LOW\_Compliance\_DAC\_value()}}
+{\footnotesize\ttfamily uint16\+\_\+t LOW\+\_\+\+Compliance\+\_\+\+DAC\+\_\+value (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Flow\+\_\+\+Rate }\end{DoxyParamCaption})}
+
+
+
+LOW\+\_\+\+Compliance\+\_\+\+DAC\+\_\+value. 
+
+LOW\+\_\+\+Compliance\+\_\+\+DAC\+\_\+value. \Hypertarget{_vc___cmv_8h_a77732e53de153a8750abe35ccc1eaf99}\label{_vc___cmv_8h_a77732e53de153a8750abe35ccc1eaf99} 
+\index{Vc\_Cmv.h@{Vc\_Cmv.h}!Reset\_Blower\_Status@{Reset\_Blower\_Status}}
+\index{Reset\_Blower\_Status@{Reset\_Blower\_Status}!Vc\_Cmv.h@{Vc\_Cmv.h}}
+\doxysubsubsection{\texorpdfstring{Reset\_Blower\_Status()}{Reset\_Blower\_Status()}}
+{\footnotesize\ttfamily void Reset\+\_\+\+Blower\+\_\+\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset\+\_\+\+Blower\+\_\+\+Status. 
+
+Reset\+\_\+\+Blower\+\_\+\+Status. \Hypertarget{_vc___cmv_8h_a7625afbaaa8f6b9337e542a09fc17ef9}\label{_vc___cmv_8h_a7625afbaaa8f6b9337e542a09fc17ef9} 
+\index{Vc\_Cmv.h@{Vc\_Cmv.h}!VC\_CMV\_Expiration\_Time\_Variables\_Reset@{VC\_CMV\_Expiration\_Time\_Variables\_Reset}}
+\index{VC\_CMV\_Expiration\_Time\_Variables\_Reset@{VC\_CMV\_Expiration\_Time\_Variables\_Reset}!Vc\_Cmv.h@{Vc\_Cmv.h}}
+\doxysubsubsection{\texorpdfstring{VC\_CMV\_Expiration\_Time\_Variables\_Reset()}{VC\_CMV\_Expiration\_Time\_Variables\_Reset()}}
+{\footnotesize\ttfamily void VC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+VC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. 
+
+VC\+\_\+\+CMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \Hypertarget{_vc___cmv_8h_a58666bb6decff49700882475287e9fe4}\label{_vc___cmv_8h_a58666bb6decff49700882475287e9fe4} 
+\index{Vc\_Cmv.h@{Vc\_Cmv.h}!VC\_CMV\_Inspiration\_Time\_Variables\_Reset@{VC\_CMV\_Inspiration\_Time\_Variables\_Reset}}
+\index{VC\_CMV\_Inspiration\_Time\_Variables\_Reset@{VC\_CMV\_Inspiration\_Time\_Variables\_Reset}!Vc\_Cmv.h@{Vc\_Cmv.h}}
+\doxysubsubsection{\texorpdfstring{VC\_CMV\_Inspiration\_Time\_Variables\_Reset()}{VC\_CMV\_Inspiration\_Time\_Variables\_Reset()}}
+{\footnotesize\ttfamily void VC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+VC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. 
+
+VC\+\_\+\+CMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \Hypertarget{_vc___cmv_8h_adb5642149e0a2f790a4796d40c88f043}\label{_vc___cmv_8h_adb5642149e0a2f790a4796d40c88f043} 
+\index{Vc\_Cmv.h@{Vc\_Cmv.h}!Vc\_Cmv\_Task@{Vc\_Cmv\_Task}}
+\index{Vc\_Cmv\_Task@{Vc\_Cmv\_Task}!Vc\_Cmv.h@{Vc\_Cmv.h}}
+\doxysubsubsection{\texorpdfstring{Vc\_Cmv\_Task()}{Vc\_Cmv\_Task()}}
+{\footnotesize\ttfamily void Vc\+\_\+\+Cmv\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Task variable. 
+
+Task variable. 

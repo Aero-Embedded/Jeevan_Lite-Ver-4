@@ -1,0 +1,93 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+SENSORS/\+SENSORS\+\_\+\+INTERFACE/wsen10101.h File Reference}
+\hypertarget{wsen10101_8h}{}\label{wsen10101_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_INTERFACE/wsen10101.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_INTERFACE/wsen10101.h}}
+
+
+Declaration of Worth sensor integration.  
+
+
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/sensor.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{wsen10101_8h_ace13a6154ffddacc40e46c1bf6d4e2b2}{WSEN10101\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the WSEN10101 sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wsen10101_8h_a8bff7bb89f390bc664d553fd72e86d7d}{WSEN10101\+\_\+calibrate}} ()
+\begin{DoxyCompactList}\small\item\em Calibrate the WSEN10101 sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wsen10101_8h_a7d5b0bd49d94d3e8c3b5287971dd9748}{WSEN10101\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em Read data from the WSEN10101 sensor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{wsen10101_8h_a8e55de10586e80d2fb735ebf55bf7182}{WSEN10101\+\_\+read\+\_\+adc}} ()
+\begin{DoxyCompactList}\small\item\em Perform analog-\/to-\/digital conversion for the WSEN10101 sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{wsen10101_8h_aaa944a5054a5244b7a30ae655a58c826}\label{wsen10101_8h_aaa944a5054a5244b7a30ae655a58c826} 
+\mbox{\hyperlink{struct_s_e_n_s_o_r}{SENSOR}} {\bfseries WSEN10101}
+\begin{DoxyCompactList}\small\item\em WSEN10101 Sensor -\/ Defined as a generic sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of Worth sensor integration. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Declaration of Worth sensor integration, including the initialization 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{wsen10101_8h_a8bff7bb89f390bc664d553fd72e86d7d}\label{wsen10101_8h_a8bff7bb89f390bc664d553fd72e86d7d} 
+\index{wsen10101.h@{wsen10101.h}!WSEN10101\_calibrate@{WSEN10101\_calibrate}}
+\index{WSEN10101\_calibrate@{WSEN10101\_calibrate}!wsen10101.h@{wsen10101.h}}
+\doxysubsubsection{\texorpdfstring{WSEN10101\_calibrate()}{WSEN10101\_calibrate()}}
+{\footnotesize\ttfamily void WSEN10101\+\_\+calibrate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calibrate the WSEN10101 sensor. 
+
+Calibrate the WSEN10101 sensor. \Hypertarget{wsen10101_8h_ace13a6154ffddacc40e46c1bf6d4e2b2}\label{wsen10101_8h_ace13a6154ffddacc40e46c1bf6d4e2b2} 
+\index{wsen10101.h@{wsen10101.h}!WSEN10101\_init@{WSEN10101\_init}}
+\index{WSEN10101\_init@{WSEN10101\_init}!wsen10101.h@{wsen10101.h}}
+\doxysubsubsection{\texorpdfstring{WSEN10101\_init()}{WSEN10101\_init()}}
+{\footnotesize\ttfamily void WSEN10101\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the WSEN10101 sensor. 
+
+Initialize the WSEN10101 sensor. \Hypertarget{wsen10101_8h_a7d5b0bd49d94d3e8c3b5287971dd9748}\label{wsen10101_8h_a7d5b0bd49d94d3e8c3b5287971dd9748} 
+\index{wsen10101.h@{wsen10101.h}!WSEN10101\_read@{WSEN10101\_read}}
+\index{WSEN10101\_read@{WSEN10101\_read}!wsen10101.h@{wsen10101.h}}
+\doxysubsubsection{\texorpdfstring{WSEN10101\_read()}{WSEN10101\_read()}}
+{\footnotesize\ttfamily void WSEN10101\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read data from the WSEN10101 sensor. 
+
+Read data from the WSEN10101 sensor.
+
+
+\begin{DoxyEnumerate}
+\item \href{https://hackaday.com/2019/09/06/sensor-filters-for-coders/}{\texttt{ https\+://hackaday.\+com/2019/09/06/sensor-\/filters-\/for-\/coders/}}
+\item \href{https://electronics.stackexchange.com/questions/30370/fast-and-memory-efficient-moving-average-calculation}{\texttt{ https\+://electronics.\+stackexchange.\+com/questions/30370/fast-\/and-\/memory-\/efficient-\/moving-\/average-\/calculation}}
+\item \href{https://stackoverflow.com/questions/12636613/how-to-calculate-moving-average-without-keeping-the-count-and-data-total}{\texttt{ https\+://stackoverflow.\+com/questions/12636613/how-\/to-\/calculate-\/moving-\/average-\/without-\/keeping-\/the-\/count-\/and-\/data-\/total}} 
+\end{DoxyEnumerate}\Hypertarget{wsen10101_8h_a8e55de10586e80d2fb735ebf55bf7182}\label{wsen10101_8h_a8e55de10586e80d2fb735ebf55bf7182} 
+\index{wsen10101.h@{wsen10101.h}!WSEN10101\_read\_adc@{WSEN10101\_read\_adc}}
+\index{WSEN10101\_read\_adc@{WSEN10101\_read\_adc}!wsen10101.h@{wsen10101.h}}
+\doxysubsubsection{\texorpdfstring{WSEN10101\_read\_adc()}{WSEN10101\_read\_adc()}}
+{\footnotesize\ttfamily float WSEN10101\+\_\+read\+\_\+adc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Perform analog-\/to-\/digital conversion for the WSEN10101 sensor. 
+
+Perform analog-\/to-\/digital conversion for the WSEN10101 sensor.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Vout} & (in mV) \\
+\hline
+\end{DoxyRetVals}

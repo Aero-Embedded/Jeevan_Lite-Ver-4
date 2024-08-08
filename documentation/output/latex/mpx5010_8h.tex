@@ -1,0 +1,97 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Inc/\+Aero\+\_\+\+Inc/\+SENSORS/\+SENSORS\+\_\+\+INTERFACE/mpx5010.h File Reference}
+\hypertarget{mpx5010_8h}{}\label{mpx5010_8h}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_INTERFACE/mpx5010.h@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Inc/Aero\_Inc/SENSORS/SENSORS\_INTERFACE/mpx5010.h}}
+
+
+Declaration of 5010 Pressure sensor Configuration.  
+
+
+{\ttfamily \#include $<$SENSORS\+\_\+\+INTERFACE/sensor.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mpx5010_8h_ad0a9d5b026f442787b6cbcbddaee0872}{MPX5010\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the MPX5010 sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mpx5010_8h_ad64e92265c35a91f8a5277d32f48fa68}{MPX5010\+\_\+calibrate}} ()
+\begin{DoxyCompactList}\small\item\em Calibrate the MPX5010 sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mpx5010_8h_ac9159b4b9ba282e99e21f1e483eeb806}{MPX5010\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em Read data from the MPX5010 sensor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{mpx5010_8h_a35af7a70a174c5a4c556be499f9361bc}{MPX5010\+\_\+read\+\_\+adc}} ()
+\begin{DoxyCompactList}\small\item\em Perform analog-\/to-\/digital conversion for the MPX5010 sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{mpx5010_8h_a165d9f67214c9b3b2cb5e40f3efd12e9}\label{mpx5010_8h_a165d9f67214c9b3b2cb5e40f3efd12e9} 
+\mbox{\hyperlink{struct_s_e_n_s_o_r}{SENSOR}} {\bfseries MPX5010}
+\begin{DoxyCompactList}\small\item\em MPX5010 Sensor -\/ Defined as a generic sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of 5010 Pressure sensor Configuration. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the Declaration of 5010 Pressure sensor, including the initialization 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mpx5010_8h_ad64e92265c35a91f8a5277d32f48fa68}\label{mpx5010_8h_ad64e92265c35a91f8a5277d32f48fa68} 
+\index{mpx5010.h@{mpx5010.h}!MPX5010\_calibrate@{MPX5010\_calibrate}}
+\index{MPX5010\_calibrate@{MPX5010\_calibrate}!mpx5010.h@{mpx5010.h}}
+\doxysubsubsection{\texorpdfstring{MPX5010\_calibrate()}{MPX5010\_calibrate()}}
+{\footnotesize\ttfamily void MPX5010\+\_\+calibrate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calibrate the MPX5010 sensor. 
+
+Calibrate the MPX5010 sensor. \Hypertarget{mpx5010_8h_ad0a9d5b026f442787b6cbcbddaee0872}\label{mpx5010_8h_ad0a9d5b026f442787b6cbcbddaee0872} 
+\index{mpx5010.h@{mpx5010.h}!MPX5010\_init@{MPX5010\_init}}
+\index{MPX5010\_init@{MPX5010\_init}!mpx5010.h@{mpx5010.h}}
+\doxysubsubsection{\texorpdfstring{MPX5010\_init()}{MPX5010\_init()}}
+{\footnotesize\ttfamily void MPX5010\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the MPX5010 sensor. 
+
+Initialize the MPX5010 sensor.
+
+MPX5010\+\_\+init. This function is initialize pressure sensor. \Hypertarget{mpx5010_8h_ac9159b4b9ba282e99e21f1e483eeb806}\label{mpx5010_8h_ac9159b4b9ba282e99e21f1e483eeb806} 
+\index{mpx5010.h@{mpx5010.h}!MPX5010\_read@{MPX5010\_read}}
+\index{MPX5010\_read@{MPX5010\_read}!mpx5010.h@{mpx5010.h}}
+\doxysubsubsection{\texorpdfstring{MPX5010\_read()}{MPX5010\_read()}}
+{\footnotesize\ttfamily void MPX5010\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read data from the MPX5010 sensor. 
+
+Read data from the MPX5010 sensor.
+
+MPX5010\+\_\+read. This function is Calculate the runtime pressure value in cmh20.
+
+
+\begin{DoxyEnumerate}
+\item \href{https://hackaday.com/2019/09/06/sensor-filters-for-coders/}{\texttt{ https\+://hackaday.\+com/2019/09/06/sensor-\/filters-\/for-\/coders/}}
+\item \href{https://electronics.stackexchange.com/questions/30370/fast-and-memory-efficient-moving-average-calculation}{\texttt{ https\+://electronics.\+stackexchange.\+com/questions/30370/fast-\/and-\/memory-\/efficient-\/moving-\/average-\/calculation}}
+\item \href{https://stackoverflow.com/questions/12636613/how-to-calculate-moving-average-without-keeping-the-count-and-data-total}{\texttt{ https\+://stackoverflow.\+com/questions/12636613/how-\/to-\/calculate-\/moving-\/average-\/without-\/keeping-\/the-\/count-\/and-\/data-\/total}} 
+\end{DoxyEnumerate}\Hypertarget{mpx5010_8h_a35af7a70a174c5a4c556be499f9361bc}\label{mpx5010_8h_a35af7a70a174c5a4c556be499f9361bc} 
+\index{mpx5010.h@{mpx5010.h}!MPX5010\_read\_adc@{MPX5010\_read\_adc}}
+\index{MPX5010\_read\_adc@{MPX5010\_read\_adc}!mpx5010.h@{mpx5010.h}}
+\doxysubsubsection{\texorpdfstring{MPX5010\_read\_adc()}{MPX5010\_read\_adc()}}
+{\footnotesize\ttfamily float MPX5010\+\_\+read\+\_\+adc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Perform analog-\/to-\/digital conversion for the MPX5010 sensor. 
+
+Perform analog-\/to-\/digital conversion for the MPX5010 sensor.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Vout} & (in mV) \\
+\hline
+\end{DoxyRetVals}

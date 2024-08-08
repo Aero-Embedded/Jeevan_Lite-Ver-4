@@ -1,0 +1,172 @@
+\doxysection{D\+:/\+Embedded/\+Codings/\+STM32/\+Aero\+\_\+\+Embedded/\+Jeevan\+\_\+\+Lite/\+Core/\+Src/\+Aero\+\_\+\+Src/\+PC-\/\+SIMV/\+Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON.c File Reference}
+\hypertarget{_pc___simv___assist___o_n_8c}{}\label{_pc___simv___assist___o_n_8c}\index{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/PC-\/SIMV/Pc\_Simv\_Assist\_ON.c@{D:/Embedded/Codings/STM32/Aero\_Embedded/Jeevan\_Lite/Core/Src/Aero\_Src/PC-\/SIMV/Pc\_Simv\_Assist\_ON.c}}
+
+
+implementation of Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON mode.  
+
+
+{\ttfamily \#include "{}Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_pc___simv___assist___o_n_8c_a8944fe14f018480cadf0502b9322604e}\label{_pc___simv___assist___o_n_8c_a8944fe14f018480cadf0502b9322604e} 
+static void {\bfseries CHECK\+\_\+\+TRIGGER\+\_\+\+ASSIST\+\_\+\+ON} (uint16\+\_\+t Trigger\+\_\+\+Check\+\_\+\+Time)
+\begin{DoxyCompactList}\small\item\em CHECK\+\_\+\+TRIGGER\+\_\+\+ASSIST\+\_\+\+ON. This function senses the type of patient trigger that occurred during breath. \end{DoxyCompactList}\item 
+\Hypertarget{_pc___simv___assist___o_n_8c_ae0e9c060e3f8e773b193e7042bb62b64}\label{_pc___simv___assist___o_n_8c_ae0e9c060e3f8e773b193e7042bb62b64} 
+static void {\bfseries Switch\+\_\+\+TASK\+\_\+\+Inspiration\+\_\+\+CYCLE} ()
+\item 
+static void \mbox{\hyperlink{_pc___simv___assist___o_n_8c_a407aa4f98bf93dbabd795c2210bb4013}{Inspiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+SIMV\+\_\+\+ASSIST\+\_\+\+ON}} (uint16\+\_\+t Blower\+\_\+\+Signal)
+\begin{DoxyCompactList}\small\item\em Inspiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+SIMV. This function uploads a DAC value to the DAC1 peripheral to control a blower every 2 milliseconds during inspiration time. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{_pc___simv___assist___o_n_8c_ab91bc4a4a38891b25369d5154f906e10}{Expiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+SIMV\+\_\+\+ASSIST\+\_\+\+ON}} (uint16\+\_\+t Blower\+\_\+\+Signal, float PEEP, uint16\+\_\+t Expiratory\+\_\+\+Valve\+\_\+\+Open\+\_\+\+Time)
+\begin{DoxyCompactList}\small\item\em Expiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+SIMV. This function uploads a DAC value to the DAC1 peripheral to control a blower every 2 milliseconds during inspiration time. \end{DoxyCompactList}\item 
+\Hypertarget{_pc___simv___assist___o_n_8c_aefcb7c7521dd320d5144d984c5db5653}\label{_pc___simv___assist___o_n_8c_aefcb7c7521dd320d5144d984c5db5653} 
+static void {\bfseries CHECK\+\_\+\+PRESSURE\+\_\+\+TRIGGER} ()
+\begin{DoxyCompactList}\small\item\em CHECK\+\_\+\+PRESSURE\+\_\+\+TRIGGER. This function checks pressure trigger limit. \end{DoxyCompactList}\item 
+\Hypertarget{_pc___simv___assist___o_n_8c_a6886249173bf3a3f006dfc888ea21c92}\label{_pc___simv___assist___o_n_8c_a6886249173bf3a3f006dfc888ea21c92} 
+static void {\bfseries CHECK\+\_\+\+FLOW\+\_\+\+TRIGGER} ()
+\begin{DoxyCompactList}\small\item\em CHECK\+\_\+\+FLOW\+\_\+\+TRIGGER. This function checks the flow trigger limit. \end{DoxyCompactList}\item 
+\Hypertarget{_pc___simv___assist___o_n_8c_a541b1722eca7547a48b6000162ff4575}\label{_pc___simv___assist___o_n_8c_a541b1722eca7547a48b6000162ff4575} 
+static void {\bfseries CHECK\+\_\+\+TRIGGER\+\_\+\+OFFSET} ()
+\begin{DoxyCompactList}\small\item\em CHECK\+\_\+\+FLOW\+\_\+\+TRIGGER. This function finds the trigger offset. \end{DoxyCompactList}\item 
+\Hypertarget{_pc___simv___assist___o_n_8c_a5e3a25d7bc1061b260b7a8644952d465}\label{_pc___simv___assist___o_n_8c_a5e3a25d7bc1061b260b7a8644952d465} 
+static void {\bfseries Set\+\_\+\+Blower\+\_\+\+Val} ()
+\item 
+\Hypertarget{_pc___simv___assist___o_n_8c_a6781b5701439904ea2beba892efae43f}\label{_pc___simv___assist___o_n_8c_a6781b5701439904ea2beba892efae43f} 
+static void {\bfseries Smooth\+\_\+\+Ramp\+\_\+\+Pressure} ()
+\begin{DoxyCompactList}\small\item\em Smooth\+\_\+\+Ramp\+\_\+\+Pressure. This function is used to provide a pressure value smoothly based on lung characteristics. \end{DoxyCompactList}\item 
+\Hypertarget{_pc___simv___assist___o_n_8c_a0eb12d1a1d6c9246321cc7fc55c09fb6}\label{_pc___simv___assist___o_n_8c_a0eb12d1a1d6c9246321cc7fc55c09fb6} 
+static void {\bfseries Trigger\+\_\+\+Time\+\_\+\+Monitor} ()
+\begin{DoxyCompactList}\small\item\em Trigger\+\_\+\+Time\+\_\+\+Monitor. This function calculate the trigger time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc___simv___assist___o_n_8c_a19dbaddc3b59b6281fdb93d970b27615}{Pc\+\_\+\+Simv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data}} (\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}Receive\+\_\+\+Graph\+\_\+\+Packet)
+\begin{DoxyCompactList}\small\item\em Pc\+\_\+\+Simv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data. This task is to extract the Simv mode variable from NRF Bluetooth. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc___simv___assist___o_n_8c_a4bdbdfd6f5bd0d03c318e8969fe1510d}{Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Pc\+\_\+\+Simv\+\_\+\+Task. This Task calls two function based on inspiration and expiration time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc___simv___assist___o_n_8c_aee16ebedc35ec15ed13e84b302a0ff0b}{PC\+\_\+\+SIMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em PC\+\_\+\+SIMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. This function decides which function needs to be called based on assist control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc___simv___assist___o_n_8c_aa86718970d80bf4c1760e546f32d037f}{PC\+\_\+\+SIMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em PC\+\_\+\+SIMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. This function decides which function needs to be called based on assist control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc___simv___assist___o_n_8c_a6b315faceec2baf4d8be9eead804a9a1}{PC\+\_\+\+SIMV\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em PC\+\_\+\+SIMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. This function resets variables to start an inspiration cycle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pc___simv___assist___o_n_8c_a9daa4a23cb6045bc9eb93d7f8bc76b98}{PC\+\_\+\+SIMV\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em PC\+\_\+\+SIMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. This function resets variables to start an expiration cycle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_pc___simv___assist___o_n_8c_adf727f7f8b1508709d69be8de89fb11c}\label{_pc___simv___assist___o_n_8c_adf727f7f8b1508709d69be8de89fb11c} 
+uint16\+\_\+t {\bfseries Expiratory\+\_\+\+Valve\+\_\+\+Open\+\_\+\+Time} =700
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+implementation of Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON mode. 
+
+\begin{DoxyAuthor}{Author}
+Sarath Kumar 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/03/24 
+\end{DoxyDate}
+This file contains the implementation Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON mode variables 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_pc___simv___assist___o_n_8c_ab91bc4a4a38891b25369d5154f906e10}\label{_pc___simv___assist___o_n_8c_ab91bc4a4a38891b25369d5154f906e10} 
+\index{Pc\_Simv\_Assist\_ON.c@{Pc\_Simv\_Assist\_ON.c}!Expiration\_Time\_Blower\_Control\_PC\_SIMV\_ASSIST\_ON@{Expiration\_Time\_Blower\_Control\_PC\_SIMV\_ASSIST\_ON}}
+\index{Expiration\_Time\_Blower\_Control\_PC\_SIMV\_ASSIST\_ON@{Expiration\_Time\_Blower\_Control\_PC\_SIMV\_ASSIST\_ON}!Pc\_Simv\_Assist\_ON.c@{Pc\_Simv\_Assist\_ON.c}}
+\doxysubsubsection{\texorpdfstring{Expiration\_Time\_Blower\_Control\_PC\_SIMV\_ASSIST\_ON()}{Expiration\_Time\_Blower\_Control\_PC\_SIMV\_ASSIST\_ON()}}
+{\footnotesize\ttfamily static void Expiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+SIMV\+\_\+\+ASSIST\+\_\+\+ON (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Blower\+\_\+\+Signal,  }\item[{float}]{PEEP,  }\item[{uint16\+\_\+t}]{Expiratory\+\_\+\+Valve\+\_\+\+Open\+\_\+\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Expiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+SIMV. This function uploads a DAC value to the DAC1 peripheral to control a blower every 2 milliseconds during inspiration time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Blower\+\_\+\+Signal} & as Pressure\+\_\+\+Mode\+\_\+blower\+\_\+control.\+BLOWER\+\_\+\+DAC\+\_\+\+VAL. \\
+\hline
+{\em PEEP} & to lock the expiratory valve in peep area. \\
+\hline
+{\em Expiratory\+\_\+\+Valve\+\_\+\+Open\+\_\+\+Time} & to control the expiratory valve lock delay. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_pc___simv___assist___o_n_8c_a407aa4f98bf93dbabd795c2210bb4013}\label{_pc___simv___assist___o_n_8c_a407aa4f98bf93dbabd795c2210bb4013} 
+\index{Pc\_Simv\_Assist\_ON.c@{Pc\_Simv\_Assist\_ON.c}!Inspiration\_Time\_Blower\_Control\_PC\_SIMV\_ASSIST\_ON@{Inspiration\_Time\_Blower\_Control\_PC\_SIMV\_ASSIST\_ON}}
+\index{Inspiration\_Time\_Blower\_Control\_PC\_SIMV\_ASSIST\_ON@{Inspiration\_Time\_Blower\_Control\_PC\_SIMV\_ASSIST\_ON}!Pc\_Simv\_Assist\_ON.c@{Pc\_Simv\_Assist\_ON.c}}
+\doxysubsubsection{\texorpdfstring{Inspiration\_Time\_Blower\_Control\_PC\_SIMV\_ASSIST\_ON()}{Inspiration\_Time\_Blower\_Control\_PC\_SIMV\_ASSIST\_ON()}}
+{\footnotesize\ttfamily static void Inspiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+SIMV\+\_\+\+ASSIST\+\_\+\+ON (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Blower\+\_\+\+Signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Inspiration\+\_\+\+Time\+\_\+\+Blower\+\_\+\+Control\+\_\+\+PC\+\_\+\+SIMV. This function uploads a DAC value to the DAC1 peripheral to control a blower every 2 milliseconds during inspiration time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Blower\+\_\+\+Signal} & as Pressure\+\_\+\+Mode\+\_\+blower\+\_\+control.\+BLOWER\+\_\+\+DAC\+\_\+\+VAL. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_pc___simv___assist___o_n_8c_a9daa4a23cb6045bc9eb93d7f8bc76b98}\label{_pc___simv___assist___o_n_8c_a9daa4a23cb6045bc9eb93d7f8bc76b98} 
+\index{Pc\_Simv\_Assist\_ON.c@{Pc\_Simv\_Assist\_ON.c}!PC\_SIMV\_Assist\_ON\_Expiration\_Time\_Variables\_Reset@{PC\_SIMV\_Assist\_ON\_Expiration\_Time\_Variables\_Reset}}
+\index{PC\_SIMV\_Assist\_ON\_Expiration\_Time\_Variables\_Reset@{PC\_SIMV\_Assist\_ON\_Expiration\_Time\_Variables\_Reset}!Pc\_Simv\_Assist\_ON.c@{Pc\_Simv\_Assist\_ON.c}}
+\doxysubsubsection{\texorpdfstring{PC\_SIMV\_Assist\_ON\_Expiration\_Time\_Variables\_Reset()}{PC\_SIMV\_Assist\_ON\_Expiration\_Time\_Variables\_Reset()}}
+{\footnotesize\ttfamily void PC\+\_\+\+SIMV\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PC\+\_\+\+SIMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. This function resets variables to start an expiration cycle. 
+
+PC\+\_\+\+SIMV\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \Hypertarget{_pc___simv___assist___o_n_8c_a6b315faceec2baf4d8be9eead804a9a1}\label{_pc___simv___assist___o_n_8c_a6b315faceec2baf4d8be9eead804a9a1} 
+\index{Pc\_Simv\_Assist\_ON.c@{Pc\_Simv\_Assist\_ON.c}!PC\_SIMV\_Assist\_ON\_Inspiration\_Time\_Variables\_Reset@{PC\_SIMV\_Assist\_ON\_Inspiration\_Time\_Variables\_Reset}}
+\index{PC\_SIMV\_Assist\_ON\_Inspiration\_Time\_Variables\_Reset@{PC\_SIMV\_Assist\_ON\_Inspiration\_Time\_Variables\_Reset}!Pc\_Simv\_Assist\_ON.c@{Pc\_Simv\_Assist\_ON.c}}
+\doxysubsubsection{\texorpdfstring{PC\_SIMV\_Assist\_ON\_Inspiration\_Time\_Variables\_Reset()}{PC\_SIMV\_Assist\_ON\_Inspiration\_Time\_Variables\_Reset()}}
+{\footnotesize\ttfamily void PC\+\_\+\+SIMV\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PC\+\_\+\+SIMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. This function resets variables to start an inspiration cycle. 
+
+PC\+\_\+\+SIMV\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \Hypertarget{_pc___simv___assist___o_n_8c_a4bdbdfd6f5bd0d03c318e8969fe1510d}\label{_pc___simv___assist___o_n_8c_a4bdbdfd6f5bd0d03c318e8969fe1510d} 
+\index{Pc\_Simv\_Assist\_ON.c@{Pc\_Simv\_Assist\_ON.c}!Pc\_Simv\_Assist\_ON\_Task@{Pc\_Simv\_Assist\_ON\_Task}}
+\index{Pc\_Simv\_Assist\_ON\_Task@{Pc\_Simv\_Assist\_ON\_Task}!Pc\_Simv\_Assist\_ON.c@{Pc\_Simv\_Assist\_ON.c}}
+\doxysubsubsection{\texorpdfstring{Pc\_Simv\_Assist\_ON\_Task()}{Pc\_Simv\_Assist\_ON\_Task()}}
+{\footnotesize\ttfamily void Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Pc\+\_\+\+Simv\+\_\+\+Task. This Task calls two function based on inspiration and expiration time. 
+
+Pc\+\_\+\+Simv\+\_\+\+Assist\+\_\+\+ON\+\_\+\+Task. This task is used for control a pc simv mode. \Hypertarget{_pc___simv___assist___o_n_8c_aa86718970d80bf4c1760e546f32d037f}\label{_pc___simv___assist___o_n_8c_aa86718970d80bf4c1760e546f32d037f} 
+\index{Pc\_Simv\_Assist\_ON.c@{Pc\_Simv\_Assist\_ON.c}!PC\_SIMV\_Expiration\_Time\_Variables\_Reset@{PC\_SIMV\_Expiration\_Time\_Variables\_Reset}}
+\index{PC\_SIMV\_Expiration\_Time\_Variables\_Reset@{PC\_SIMV\_Expiration\_Time\_Variables\_Reset}!Pc\_Simv\_Assist\_ON.c@{Pc\_Simv\_Assist\_ON.c}}
+\doxysubsubsection{\texorpdfstring{PC\_SIMV\_Expiration\_Time\_Variables\_Reset()}{PC\_SIMV\_Expiration\_Time\_Variables\_Reset()}}
+{\footnotesize\ttfamily void PC\+\_\+\+SIMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PC\+\_\+\+SIMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. This function decides which function needs to be called based on assist control. 
+
+PC\+\_\+\+SIMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \Hypertarget{_pc___simv___assist___o_n_8c_aee16ebedc35ec15ed13e84b302a0ff0b}\label{_pc___simv___assist___o_n_8c_aee16ebedc35ec15ed13e84b302a0ff0b} 
+\index{Pc\_Simv\_Assist\_ON.c@{Pc\_Simv\_Assist\_ON.c}!PC\_SIMV\_Inspiration\_Time\_Variables\_Reset@{PC\_SIMV\_Inspiration\_Time\_Variables\_Reset}}
+\index{PC\_SIMV\_Inspiration\_Time\_Variables\_Reset@{PC\_SIMV\_Inspiration\_Time\_Variables\_Reset}!Pc\_Simv\_Assist\_ON.c@{Pc\_Simv\_Assist\_ON.c}}
+\doxysubsubsection{\texorpdfstring{PC\_SIMV\_Inspiration\_Time\_Variables\_Reset()}{PC\_SIMV\_Inspiration\_Time\_Variables\_Reset()}}
+{\footnotesize\ttfamily void PC\+\_\+\+SIMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PC\+\_\+\+SIMV\+\_\+\+Expiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. This function decides which function needs to be called based on assist control. 
+
+PC\+\_\+\+SIMV\+\_\+\+Inspiration\+\_\+\+Time\+\_\+\+Variables\+\_\+\+Reset. \Hypertarget{_pc___simv___assist___o_n_8c_a19dbaddc3b59b6281fdb93d970b27615}\label{_pc___simv___assist___o_n_8c_a19dbaddc3b59b6281fdb93d970b27615} 
+\index{Pc\_Simv\_Assist\_ON.c@{Pc\_Simv\_Assist\_ON.c}!Pc\_Simv\_Mode\_Packet\_Data@{Pc\_Simv\_Mode\_Packet\_Data}}
+\index{Pc\_Simv\_Mode\_Packet\_Data@{Pc\_Simv\_Mode\_Packet\_Data}!Pc\_Simv\_Assist\_ON.c@{Pc\_Simv\_Assist\_ON.c}}
+\doxysubsubsection{\texorpdfstring{Pc\_Simv\_Mode\_Packet\_Data()}{Pc\_Simv\_Mode\_Packet\_Data()}}
+{\footnotesize\ttfamily void Pc\+\_\+\+Simv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} \texorpdfstring{$\ast$}{*}}]{Receive\+\_\+\+Graph\+\_\+\+Packet }\end{DoxyParamCaption})}
+
+
+
+Pc\+\_\+\+Simv\+\_\+\+Mode\+\_\+\+Packet\+\_\+\+Data. This task is to extract the Simv mode variable from NRF Bluetooth. 
+
+split PC-\/\+SIMV buffer from bluetooth received data .
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_r_e_c_e_i_v_e___g_r_a_p_h___p_a_c_k_e_t}{RECEIVE\+\_\+\+GRAPH\+\_\+\+PACKET}} & structure pointer. \\
+\hline
+\end{DoxyParams}

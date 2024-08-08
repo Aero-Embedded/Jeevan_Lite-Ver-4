@@ -1,0 +1,7 @@
+Volume_Control.c:32:6:Volume_Control_Task	16	static
+Volume_Control.c:69:6:Volume_Control	16	static
+Volume_Control.c:156:6:VOLUME_STOP_POINT	16	static
+Volume_Control.c:199:10:TUNE_INITIAL_DAC_VAL	24	static
+Volume_Control.c:259:10:LOW_Compliance_DAC_value	24	static
+Volume_Control.c:287:6:Cut_Off_Region	16	static
+Volume_Control.c:329:6:Flow_Restriction_Control	16	static
